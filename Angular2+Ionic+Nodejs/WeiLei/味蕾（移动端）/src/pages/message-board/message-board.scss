@@ -1,0 +1,33 @@
+page-message-board {
+  .input-wrapper{
+    padding: 0px;
+  }
+  .person_name {
+    margin: 2px 0;
+    font-weight: normal;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 0.9em;
+    cursor: pointer;
+    color: #DD3915;
+  }
+  .label-md{
+    width: 100%;
+    height: 65%;
+  }
+  .item-md p{
+    margin-top: 45px;
+    //margin-bottom: 3px;
+    //text-align: right;
+  }
+  .hint{
+    display: block;
+    width: 281px;
+    height: 290px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 35px;
+    color: #c43313;
+  }
+}

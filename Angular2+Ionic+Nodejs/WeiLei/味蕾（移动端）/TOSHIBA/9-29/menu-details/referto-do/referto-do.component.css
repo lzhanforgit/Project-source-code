@@ -1,0 +1,82 @@
+.refer_container{
+  width: 100%;
+  margin-top: 30px;
+}
+.amount_of_recipe{
+  width: 100%;
+  height: 50px;
+}
+.part_of_recipe{
+  color: #c0ae7d;
+  font-size: 22px;
+  font-weight: bold;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+}
+.all_recipe{
+  color: #DD3915;
+  float: right;
+  margin-top: 15px;
+}
+.all_recipe:hover{
+  cursor: pointer;
+  background: #DD3915;
+  color: white;
+}
+.recipe_dishes{
+  width: 100%;
+
+}
+.recipe_dishes ul{
+  list-style: none;
+}
+.recipe_dishes ul li{
+  float: left;
+  padding-right: 15px;
+  margin-bottom: 20px;
+}
+.recipe{
+  width: 150px;
+  height: 280px;
+  border: solid 1px #f3f3f3;
+  font-size: 12px;
+}
+.recipe p{
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.recipe_img{
+  width: 148px;
+  height: 148px;
+}
+.user_head{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.upload a{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.upload{
+  width: 100%;
+  background-color: #dd3915;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.nickname{
+  list-style: none;
+  text-decoration: none;
+  color: #dd3915;
+}
+.upload a h3{
+  font-size: 20px;
+  color: white;
+
+}

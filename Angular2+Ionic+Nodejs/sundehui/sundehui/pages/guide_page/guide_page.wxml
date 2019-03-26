@@ -1,0 +1,6 @@
+<view class="container">
+<view class="select">请选择您的项目类型</view>
+<button class="quane_txt" bindtap="quane" >全额上网项目</button>
+<button class="zifa_txt" bindtap="zifa">自发自用项目</button>
+<button class="nongcun_txt" bindtap="nongcun">农村光伏项目</button>
+</view>

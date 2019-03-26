@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <p class="title">好友动态</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-card *ngFor="let item of Allupdate">
+
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="{{item.user_icon}}">
+            </ion-avatar>
+            <h2>{{item.user_name}}  <span style="color:red;">创建菜谱</span></h2>
+            <p>{{item.reccipe_name}}</p>
+          </ion-item>
+
+          <img src="{{item.cover_pic}}">
+
+          <ion-card-content>
+            <p>{{item.descripe}}</p>
+          </ion-card-content>
+
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>{{item.cook_times}} 做过 </div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="text"></ion-icon>
+                <div>{{item.collect_times}} 收藏</div>
+              </button>
+            </ion-col>
+            <ion-col center text-center>
+              <ion-note>
+                {{item.create_time.substr(0,10)}}
+              </ion-note>
+            </ion-col>
+          </ion-row>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content loadingText="加载中..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>

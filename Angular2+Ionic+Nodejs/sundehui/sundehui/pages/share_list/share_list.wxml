@@ -1,0 +1,96 @@
+<!--pages/share_list/sharelist.wxml-->
+
+<view class='top_relative' style="background-image:url('http://owlx0joyl.bkt.clouddn.com/title.jpg ');background-repeat:round">
+  <view class='icon_view'>
+    <image class="show-image" bindtap="gotoShow" src="{{list_pic}}"></image>
+  </view>
+  <view class='info'>
+    <view class='infoTop'>
+      <view class='img_spec'>
+        {{list_name}}
+      </view>
+
+    </view>
+    <view class='infoBottom'>
+      <view class='img_left'>
+        <image src='images/people.png' class='small_img1'></image>
+      </view>
+      <view class='name_right'>{{list_user}}</view>
+    </view>
+    <view class='infoBottom'>
+      <view class='img_left'>
+        <image src='images/company.png' class='small_img'></image>
+      </view>
+      <view class='name_right'>{{user_provinceName}}{{user_cityName}}</view>
+    </view>
+  </view>
+
+</view>
+
+
+<view class='center'>
+
+  <view class="jump_view jump_spec" style="{{list_self ? 'background-color:#8CD9E3':'color:gray'}}">自发自用</view>
+  <view class="jump_view" style="{{list_sum ? 'background-color:#FDE7D0':'color:gray'}}">全额上网</view>
+
+  <view class="jump_view" style="{{list_country ? 'background-color:#FBCCD2':'color:gray'}}">农村光伏</view>
+</view>
+
+<block wx:if="{{projectInfo2.length!=0}}">
+  <scroll-view scroll-y="true" style="height:{{winHeight}}px" class='project_list'>
+    <block wx:for='{{projectInfo2}}'>
+      <!-- 左边部分 -->
+      <view id='{{index}}' class='projectList' bindtap='next_project_details'>
+        <view class="view">
+          <view class="list_view">{{item.project_name}}</view>
+          <view class="list_view size_change">
+            <view class='view_inner fl'>{{item.project_user}}</view>
+            <view class='view_inner view_inner_large fr text_center'>{{item.project_provinceNmae}}{{item.project_cityName}}</view>
+          </view>
+        </view>
+
+        <!--右边部分  -->
+        <view class="fr0">
+          <!-- <view class="list_view list_right"></view> -->
+          <view class="list_view list_right">{{item.project_type}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</block>
+<block wx:else>
+  <view class='tip'>
+    <view>~ 右上角转发给朋友 ~</view>
+    <view>~ 即刻收购他们的项目 ~</view>
+  </view>
+</block>
+
+
+
+
+<view class='plus' bindtap='showDialogBtn'>
+  <!-- <image src='images/plus.png' class='plus_img'></image> -->
+  申报项目
+</view>
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title" bindtap='next_guidepage'>+ 新建项目</view>
+  <view class="modal-content">
+    <scroll-view scroll-y="true" style="height:430rpx">
+      <view class="modal-input">
+
+        <checkbox-group bindchange="checkboxgroupBindchange">
+          <view class="modal_add">投递项目</view>
+          <block wx:for='{{projectInfo3}}'>
+            <checkbox bindtap="add" id='{{index}}' class="modal-checkbox" value="{{item.project_id}}">{{item.project_name}}</checkbox>
+          </block>
+        </checkbox-group>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

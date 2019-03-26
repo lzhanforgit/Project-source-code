@@ -1,0 +1,121 @@
+<!--地区按钮加模态框-->
+<app-nav></app-nav>
+<div class="col-md-12">
+  <div class="list-div">
+
+    <!--<ul class="flo">-->
+    <!--<li>-->
+    <!--<div>-->
+    <!--<div class="list" >-->
+    <!--<div class="user">-->
+    <!--<div class="uimg">-->
+    <!--<img class="uimg" src="{{item.uimg}}" alt="">-->
+    <!--</div>-->
+    <!--<div class="uname">-->
+    <!--<p class="uname01">匠人:{{item.uname}}</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<p class="content"><a routerLink="detail/id">{{item.introduce}}</a></p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</li>-->
+    <!--</ul>-->
+
+
+    <ul class="flo">
+      <li>
+        <div *ngFor="let item of text;let i=index">
+          <div class="list1" *ngIf="i==0">
+            <form enctype="multipart/form-data" name="form1" id="myForm" #textForm="ngForm">
+              <p>
+                <input id="f" type="file" name="pic" onchange="ochange()" class="input_file"/>
+                <img class="uimg1" id="preview" alt="" name="pic"/>
+              </p>
+              <div class="uname uname_first">
+                <p class="uname02">匠人:{{username}}</p>
+              </div>
+              <textarea name="content" id="content" required maxlength="100" onkeyup="javascript:checkWords(this);"
+                        onmousedown="javascript:checkWords(this);" class="input_content"  [(ngModel)]="_content" #content="ngModel"></textarea>
+              <div class="input_span">
+                还可以输入<span id="wordCheck">100</span>个汉字
+              </div>
+              <button routerLink="/index" routerLinkActive="active" [disabled]="click || textForm.form.invalid" (click)="toText(textForm)" style="margin-left: 45px" class="sim-button button27"><span>发表你的匠心之作</span></button>
+            </form>
+          </div>
+          <div class="list" *ngIf="((i+1)%4==1)&&(i>0)">
+            <div class="user">
+              <div class="uimg">
+                <img class="uimg" src="{{'http://localhost:3000/uploads/'+item.artPic}}" alt="">
+              </div>
+              <div class="uname">
+                <p class="uname01">匠人:{{item.userName}}</p>
+              </div>
+            </div>
+            <p class="content"><a class="content_a">{{item.artContent}}</a></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+
+    <ul class="flo">
+      <li>
+        <div *ngFor="let item of text;let i=index">
+          <div class="list" *ngIf="(i+1)%4==2">
+            <div class="user">
+              <div class="uimg">
+                <img class="uimg" src="{{'http://localhost:3000/uploads/'+item.artPic}}" alt="">
+              </div>
+              <div class="uname">
+                <p class="uname01">匠人:{{item.userName}}</p>
+              </div>
+            </div>
+            <p class="content"><a class="content_a">{{item.artContent}}</a></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="flo">
+      <li>
+        <div *ngFor="let item of text;let i=index">
+          <div class="list" *ngIf="(i+1)%4==3">
+            <div class="user">
+              <div class="uimg">
+                <img class="uimg" src="{{'http://localhost:3000/uploads/'+item.artPic}}" alt="">
+              </div>
+              <div class="uname">
+                <p class="uname01">匠人:{{item.userName}}</p>
+              </div>
+            </div>
+            <p class="content"><a class="content_a">{{item.artContent}}</a></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="flo">
+      <li>
+        <div *ngFor="let item of text;let i=index">
+          <div class="list" *ngIf="(i+1)%4==0">
+            <div class="user">
+              <div class="uimg">
+                <img class="uimg" src="{{'http://localhost:3000/uploads/'+item.artPic}}" alt="">
+              </div>
+              <div class="uname">
+                <p class="uname01">匠人:{{item.userName}}</p>
+              </div>
+            </div>
+            <p class="content"><a class="content_a">{{item.artContent}}</a></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+
+  </div>
+
+
+</div>
+<app-footer></app-footer>
+

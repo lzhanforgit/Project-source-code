@@ -1,0 +1,70 @@
+page-charts{
+  .charts ion-note{
+    font-size: 1.4em;
+    color: black;
+  }
+
+  .menu-hot ion-slides {
+    height:280px !important;
+  }
+  .swiper-wrapper {
+    height: 180px !important;
+  }
+  .charts .swiper-container {
+    position: static;
+  }
+  .menu-hot .lunbo ion-slide {
+    height: 200px!important;
+    font-size: 16px;
+    display: block;
+    color: #383835;
+    margin-right: 2px;
+  }
+
+  .lunbo ion-slide img {
+    width:380px!important;
+    height: 200px!important;
+    float: left;
+    margin-top: 15px;
+    border: 1px solid #9E9C9C;
+  }
+
+  .charts .info {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    margin-top: -60px;
+    zoom: 1;
+  }
+
+  .menu-hot .info .title {
+    font-size: 1.6em;
+    color: white;
+  }
+
+  .menu-hot .info .desc {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .charts .menu div{
+    margin-bottom: 15px;
+  }
+
+  .menu-hot .menu-h {
+    font-size: 1.4em;
+    color: black;
+    width: 50%;
+    float: left;
+  }
+  .menu-hot .menu-more{
+    float: right;
+    margin: auto;
+  }
+
+  .menu-hot .menu-more a {
+    font-size: 1.2em;
+    color: #8f8f8f;
+  }
+}

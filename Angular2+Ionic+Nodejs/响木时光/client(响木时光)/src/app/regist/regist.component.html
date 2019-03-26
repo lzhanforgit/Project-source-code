@@ -1,0 +1,80 @@
+
+<div class="big">
+<div class="top">
+  <div class="header">注册</div>
+  <form #registForm="ngForm">
+    <div class="form-group">
+      <!--<label for="password">手机号</label>-->
+      <input type="text" class="form-control input" #tel="ngModel" pattern="^1[34578]\d{9}$" [(ngModel)]="_telephone"
+             id="telephone" name="telephone" placeholder="手机号" required>
+      <div *ngIf="tel.invalid && (tel.dirty || tel.touched)" class="error">
+        <div *ngIf="tel.errors.required">
+          号码不能为空
+        </div>
+        <div *ngIf="tel.errors.pattern">
+          号码格式不正确
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <!--<label for="password">手机号</label>-->
+      <input type="text" class="form-control input" #name="ngModel" [(ngModel)]="_username"
+             id="username" name="username" placeholder="用户名" required>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        <div *ngIf="name.errors.required"  class="error">
+          用户名不能为空
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <!--<label for="password">密码</label>-->
+      <input type="password" class="form-control input" #pass="ngModel" minlength="6" [(ngModel)]="_password"
+             id="password" name="password" placeholder="密码" required>
+      <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="error">
+        <div *ngIf="pass.errors.required">
+          密码不能为空
+        </div>
+        <div *ngIf="pass.errors.minlength">
+          密码大于六位
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <!--<label for="password">重复密码</label>-->
+      <input type="password" class="form-control input" #_pass="ngModel" minlength="6"  [(ngModel)]="_password_once"
+             id="password_once" name="password_once" placeholder="确认密码" required>
+      <!--<div *ngIf="_pass.invalid && (_pass.dirty || _pass.touched)" class="error">-->
+      <!--<div *ngIf="_pass.errors.required">-->
+      <!--重复密码不能为空-->
+      <!--</div>-->
+      <!--&lt;!&ndash;<div *ngIf="_pass.errors.minlength">&ndash;&gt;-->
+      <!--&lt;!&ndash;重复密码大于六位&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      </div>
+      <div class="form-group">
+        <div *ngIf=" _pass.value !=pass.value &&( _pass.dirty || _pass.touched )" class="error">
+          两次密码不一致
+        </div>
+      </div>
+    <div class="form-group">
+      <div class="yzm">
+        <div class='login_fields__password'>
+          <input name="code" id="yzm" class="form-control yzm_input" onchange="compare()"  placeholder='验证码' maxlength="4" type='text' autocomplete="off">
+          <div id="canvas_show" onclick="show_canvas()" style="display: block;float: right;padding-top: 8px">获取验证码</div>
+          <canvas class="J_codeimg" id="myCanvas" onclick="Code();" style="display: none;float: right">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
+        </div>
+      </div>
+      <div *ngIf="regist_res" class="error">
+        {{regist_res}}
+      </div>
+      <button type="button" (click)="toRegist(registForm)" [disabled]="registForm.form.invalid ||_pass.value !=pass.value"
+              class="btn btn-default regist">
+        注 册
+      </button>
+    </div>
+  </form>
+  <div class="dig">已有帐号？<a routerLink="/login" routerLinkActive="active" style="text-decoration: none">马上登录</a></div>
+  <div id="show" style="display:block;position: relative;bottom: 84px;height: 45px" ></div>
+</div>
+</div>
+

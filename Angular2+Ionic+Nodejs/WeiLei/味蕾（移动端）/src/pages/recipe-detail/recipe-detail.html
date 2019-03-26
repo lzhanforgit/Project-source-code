@@ -1,0 +1,130 @@
+<!--
+  Generated template for the RecipeDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-icon name="ios-arrow-back" (click)="back()" style="font-size: 30px !important;"></ion-icon>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <img  class="recipe_cover" src="{{_cover_pic}}">
+  <p class="recipe_name">{{_name}}</p>
+  <p class="recipe_do_it">{{_cook_times}}人做过这道菜</p>
+  <hr>
+
+  <ion-card class="recipe_intro" style="box-shadow: none!important;">
+    <ion-item>
+      <ion-avatar item-start>
+        <h2>作者:{{_creater}}</h2>
+      </ion-avatar>
+
+    </ion-item>
+    <ion-card-content>
+      <p style="font-size: 1.2em">{{_descripe}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!--用料-->
+  <ion-list>
+    <ion-item style="font-weight: 700">用料</ion-item>
+    <ion-item *ngFor="let item of details">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>{{item?.goods}}</ion-col>
+          <ion-col col-6>{{item?.count}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+  <!--步骤-->
+  <ion-list>
+    <ion-item *ngFor="let step of steps;let _index=index">
+      <h2 style="font-weight: 700">步骤{{_index+1}}</h2>
+      <p class="step">{{step?.step}}</p>
+    </ion-item>
+  </ion-list>
+
+  <!--小贴士-->
+  <div id="tip">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 style="font-size: 1.4em;font-weight: 700">小贴士</ion-col>
+      </ion-row>
+    </ion-grid>
+    <p class="step">{{_tips}}</p>
+  </div>
+
+  <!--作品-->
+  <div id="work">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8 style="font-size: 1.4em;font-weight: 700">大家做的这道菜</ion-col>
+        <ion-col col-4 style="font-size: 1.3em;color: #dd3915">{{length||0}}个作品</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-slides class="lunbo" (ionSlideDidChange)="slideChanged()" >
+      <ion-slide class="single" *ngFor="let work of MenuWorks" style="margin-left: 10px">
+        <img class="work_cover" src="{{work?.cover_pic}}" width="100" height="100">
+        <div class="info">
+          <img style="width: 50px;height: 50px;border-radius: 50%" src="{{work?.user_icon}}" align="middle">{{work?.creater}}
+          <p class="desc">{{work?.descripe.substring(0,20)+"..."}}</p>
+          <p class="desc">{{work?.create_time.substring(0,10)}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+
+  <!--被加入的菜单-->
+  <ion-grid id="menu">
+    <ion-row>
+      <ion-col col-12 style="font-size: 1.4em;font-weight: 700">被加入的菜单</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-item *ngFor="let menu of MenuLists;let _index=index">
+      <ion-thumbnail item-start>
+        <img class="menu_cover" src="{{menu.cover_pic}}">
+      </ion-thumbnail>
+      <h2>{{menu.list_name}}</h2>
+      <br>
+      <p>23道菜谱</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-note style="margin-left: 10px">菜谱创建于{{_create_time}}</ion-note>
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 style="text-align: center" *ngIf="flag" (click)="collect()">
+        <ion-icon name="heart" style="font-size: 20px !important"></ion-icon>
+        <span>收藏</span>
+      </ion-col>
+      <ion-col col-4 style="text-align: center" *ngIf="!flag" (click)="uncollect()">
+        <ion-icon name="heart" style="font-size: 20px !important;color: #dd3915"></ion-icon>
+        <span>已收藏</span>
+      </ion-col>
+      <ion-col col-4 style="text-align: center" (click)="addToMenu()">
+        <ion-icon name="ios-albums-outline" style="font-size: 20px !important"></ion-icon>
+        加菜单
+      </ion-col>
+      <ion-col col-4 style="text-align: center" (click)="toUpload()">
+        <ion-icon name="ios-camera-outline" style="font-size: 20px !important;" ></ion-icon>
+        传作品
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+

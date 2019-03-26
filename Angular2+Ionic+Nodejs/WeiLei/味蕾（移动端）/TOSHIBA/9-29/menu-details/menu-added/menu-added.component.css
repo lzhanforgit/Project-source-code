@@ -1,0 +1,41 @@
+.menu-added-title{
+  width: 100%;
+  height: 25px;
+}
+.left{
+  height: 25px;
+  line-height: 25px;
+  color: #c0ae7d;
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+}
+.right a{
+  list-style: none;
+  text-decoration: none;
+  color: #DD3915;
+}
+.right{
+  height: 25px;
+  line-height: 25px;
+  float: right;
+}
+.right a:hover{
+  background:#DD3915;
+  color: white;
+  cursor: pointer;
+}
+.menu_added a{
+  list-style: none;
+  text-decoration: none;
+  color: #333333;
+}
+.menu_added{
+  width: 300px;
+  border: solid 1px #f3f3f3;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+  overflow: hidden;
+}
+.menu_added p{margin-top: 20px}

@@ -1,0 +1,76 @@
+
+.upload_main {
+overflow: hidden;
+  height: 800px;
+  margin: auto;
+  background: #f8f8f7;
+}
+
+.upload_main h3 {
+  margin-bottom: 30px;
+}
+
+.upload_centre {
+  width: 800px;
+  padding-top: 120px;
+  margin: auto;
+
+
+}
+
+.upload_centre .upload_centrel {
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid gainsboro;
+  background: white;
+  zoom: 1;
+  padding: 30px;
+}
+
+.upload_centrel  .upload_centre_left {
+  width: 250px;
+  height: 150px;
+  background: gainsboro;
+  -webkit-box-shadow: inset 0 2px 3px rgba(34,25,25,.1);
+  border-radius: 3px;
+  overflow: hidden;
+  float: left;
+}
+.upload_centrel  .upload_centre_left span{
+  font-size: 14px;
+  color: black;
+}
+.upload_centrel  .upload_centre_left input{
+  width: 250px;
+  height: 150px;
+  border-radius: 3px;
+ position: absolute;
+  opacity: 0;
+}
+.upload_centrel .upload_centre_right {
+  width: 450px;
+  float: right;
+  padding-left: 30px;
+}
+.upload_centrel .upload_centre_right .xdtext {
+  width: 428px;
+  height: 150px;
+  line-height: 150%;
+  padding: 5px;
+  vertical-align: middle;
+  border: 1px solid #deded3;
+  background: #fff;
+  color: #999;
+}
+.upload_main .upload_btn{
+  width: 640px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+.upload_main .upload_btn .btn{
+  background: #dd3915;
+  color: white;
+  text-decoration: none;
+}

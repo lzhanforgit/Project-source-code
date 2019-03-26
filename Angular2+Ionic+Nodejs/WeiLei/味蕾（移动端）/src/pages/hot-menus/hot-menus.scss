@@ -1,0 +1,33 @@
+page-hot-menus {
+  .hot-menus ion-note {
+    font-size: 16px;
+    color: black;
+  }
+  .single_menu a {
+    font-size: 16px;
+    color: black;
+  }
+  .hot-menus ion-item .single_menu_gather div {
+    margin-bottom: 5px;
+  }
+  .single_menu_gather .include_menunum {
+    color: #9c6730;
+  }
+  .state a {
+    color: black;
+  }
+
+  .img{
+    width: 150px !important;
+    height: 100px !important;
+  }
+
+  .hot-menus ion-item .single_menu_gather .author a {
+    font-size: 16px;
+    color: #8e9093;
+  }
+  .menu_gather_name a{
+    color: black;
+  }
+
+}

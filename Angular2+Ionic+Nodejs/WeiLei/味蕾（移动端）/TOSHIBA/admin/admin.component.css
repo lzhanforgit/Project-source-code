@@ -1,0 +1,57 @@
+.admin_container{
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 0px;
+}
+.index_tabs{
+  width: 100%;
+  height: 75px;
+  padding-top: 25px;
+  padding-left: 335px;
+  border-bottom: solid 1px #d6d6d6;
+  cursor: pointer;
+}
+.index_tabs li{
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #909090;
+  margin-left: 5px;
+  /*border: solid 1px grey;*/
+  /*border-bottom: solid 3px transparent;*/
+  float: left;
+}
+.index_tabs li:hover{
+  color: #222222;
+  border-bottom: solid 3px #dd3915;
+}
+.active{
+  border-bottom: solid 3px #dd3915;
+}
+
+.single_message{
+  overflow: hidden;
+  list-style: none;
+  width: 87%;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+.content{
+  float: left;
+}
+.del{
+  width: 70px;
+  height: 35px;
+  background: #dd3915;
+  color: white;
+  float: right;
+  text-align: center;
+  line-height: 35px;
+}
+.del:hover{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}

@@ -1,0 +1,9 @@
+.tabs-md .tab-button[aria-selected=true] {
+  color:#DD3915;
+  padding: 0;
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+  color: #DD3915;
+  -webkit-transform: translate3d(0, -2px, 0);
+  transform: translate3d(0, -2px, 0);
+}

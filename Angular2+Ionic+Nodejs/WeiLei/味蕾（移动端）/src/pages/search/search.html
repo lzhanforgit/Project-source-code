@@ -1,0 +1,33 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding class="main">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2 class="back"><ion-icon ios="ios-arrow-back" md="md-arrow-back" (click)="back()"></ion-icon></ion-col>
+      <ion-col col-8>
+        <input [(ngModel)]="searchText" class="searchInput" type="text" placeholder="搜索菜谱，厨友....">
+        <button class="btn"><ion-icon name="search"></ion-icon></button>
+      </ion-col>
+      <ion-col col-2>
+        <button class="searchBtn" ion-button color="danger" clear (click)="search(searchText)">搜索</button>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col col-12>
+        <span class="popularSearch">流行搜索</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ul class="list">
+          <li class="item" *ngFor="let item of searchItem" (click)="search(item)">{{item}}</li>
+        </ul>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

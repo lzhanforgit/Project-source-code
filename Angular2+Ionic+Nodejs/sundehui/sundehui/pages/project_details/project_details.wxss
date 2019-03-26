@@ -1,0 +1,550 @@
+
+/* .comName{
+  width:100%;
+  height:120rpx;
+  background-color: red;
+} */
+/*共同部分  */
+.pen{
+  width:128rpx;
+  height:128rpx;
+  /* background-color: black;    */
+  position: fixed;
+  right:50rpx;
+  bottom: 160rpx;
+  z-index: 999;
+}
+
+.penImg{
+  width:120rpx;
+  height:120rpx;
+  border-radius: 50%;
+  background-color: #238AB6; 
+  /* background: lawngreen; */
+  box-shadow: 8rpx 6rpx 10rpx gray; 
+  position: relative;
+  /* border: 2rpx solid white;  */
+}
+.comm{
+  width:60rpx;
+  height:60rpx;
+  position: relative;
+}
+.phone_img{
+  padding-left: 32rpx;
+  padding-top: 30rpx;
+}
+.pen_img{
+  padding-left: 32rpx;
+  padding-top: 34rpx;
+   
+} 
+
+.check_img{
+  width:70rpx;
+  height:70rpx;
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+}
+
+
+
+
+/*农村项目开始  */
+
+/* 每行的总样式 */
+.mingcheng,.dizhi,.roofAera,.texture,.rongliang,.shuliang,.bianyaqi,.dianliang,.juli,.qian,.zhekou{
+height:100rpx;
+ border-bottom: 1px solid #ccc; 
+}
+.mingchengRight,.shuliangRightLeft,.rongliangRightLeft,.aeraRightLeft,.juliRightLeft,.dianliangRightLeft,.bianyaqiRightLeft,.qianRightLeft,.zhekouRightLeft{
+box-sizing: border-box;
+/* padding-top: 16rpx;*/
+padding-left: 30rpx; 
+background-color: #f8f8f8;
+margin-top: 10rpx;
+border-radius: 10rpx;
+}
+/*项目名称  */
+.mingchengLeft{
+  width:28%;
+  height:100rpx;
+  float: left;
+  padding-left:40rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.mingchengRight{
+width:66%;
+height:80rpx;
+float: left;
+
+margin-top: 10rpx;
+/* text-align: center; */
+}
+/*项目地址  */
+.dizhiLeft{
+  width:32%;
+  height:100rpx;
+  float: left;
+  padding-left:40rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.dizhiRight{
+width:68%;
+height:80rpx;
+float: left;
+ box-sizing: border-box;
+/* padding-top: 16rpx; */
+background-color: #f8f8f8;
+ /* text-align: center;   */
+}
+
+/*屋顶面积  */
+.aeraRight{
+  width:68%;
+  height:100rpx;
+  float: left;
+}
+.aeraLeft{
+  width:32%;
+  height:100rpx;
+  float: left;
+  padding-left:40rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.aeraRightLeft{
+  width: 36%;
+  height:80rpx;
+  float: left;
+}
+/* .aeraRightCenter{
+  width:10%;
+  height:100rpx;
+  float: left;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+} */
+.aeraRightRight{
+  width: 30%;
+  height:100rpx;
+  float: left;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+/*屋顶材质  */
+
+.texture_type{
+  text-align: center;
+  height:80rpx;
+   margin: 5rpx; 
+  line-height: 80rpx;
+  width:140rpx;
+  background-color:gainsboro;
+  border-radius: 10rpx;
+  float:left;
+  /* margin-top: 10rpx; */
+}
+.s-type{
+  border: 4rpx rgb(3, 169, 244) solid;
+}
+
+
+
+.textureLeft{
+  width:30%;
+  height:100rpx;
+  float: left;
+   padding-left:40rpx; 
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.textureRight{
+width:70%;
+height:80rpx;
+float: left;
+box-sizing: border-box;
+background-color: #fafafa; 
+margin-top: 10rpx;
+}
+
+
+/*安装容量  */
+.rongliangLeft{
+  width:32%;
+  height:100rpx;
+  float: left;
+   padding-left:40rpx; 
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.rongliangRightLeft{
+width:30%;
+height:80rpx;
+float: left;
+}
+.rongliangRightRight{
+  width:20%;
+  height:80rpx;
+  line-height: 80rpx;
+  /* text-align: center; */
+  padding-left: 20rpx;
+  float: left;
+  margin-top: 10rpx;
+}
+
+/*农户数量  */
+
+.shuliangRight{
+  width:66%;
+  height:100rpx;
+  float: left;
+}
+.shuliangLeft{
+  width:32%;
+  height:100rpx;
+  float: left;
+  padding-left:40rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.shuliangRightLeft{
+  width: 40%;
+  height:80rpx;
+  float: left;
+}
+
+.shuliangRightRight{
+  width: 20%;
+  height:100rpx;
+  float: left;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+
+/*其他要求  */
+
+.yaoqiu{
+  height:430rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.yaoqiuLeft{
+  width:28%;
+    height:100rpx;  
+  padding-left:40rpx;
+   line-height: 100rpx; 
+  box-sizing: border-box;
+}
+.yaoqiuRight{
+width:90%;
+height:200rpx;
+margin-left: 40rpx;
+/* padding: 0rpx 20rpx 0rpx 20rpx ; */
+box-sizing: border-box;
+}
+.txt{
+  width:95%;
+  height:270rpx;
+  background-color: #f8f8f8;
+  padding: 20rpx;
+}
+
+
+/*农村项目结束  */
+
+
+/*自发自用项目开始  */
+
+/*电用电量  */
+.dianliangLeft{
+  width:28%;
+  height:100rpx;
+  float: left;
+  padding-left:40rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.dianliangRightLeft{
+width:34%;
+height:80rpx;
+float: left;
+}
+.dianliangRightRight{
+  width:20%;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  float: left;
+  margin-top: 10rpx;
+}
+/* 变压器容量 */
+.bianyaqiLeft{
+  width:32%;
+  height:100rpx;
+  float: left;
+  padding-left:40rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.bianyaqiRightLeft{
+width:30%;
+height:80rpx;
+float: left;
+}
+.bianyaqiRightRight{
+  width:20%;
+  height:80rpx;
+  line-height: 80rpx;
+  /* text-align: center; */
+  padding-left: 20rpx;
+  float: left;
+  margin-top: 10rpx;
+}
+/*电价折扣  */
+
+.zhekouLeft{
+  width:30%;
+  height:100rpx;
+  float: left;
+  padding-left:40rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.zhekouRightLeft{
+width:30%;
+height:80rpx;
+float: left;
+}
+.zhekouRightRight{
+  width:20%;
+  height:80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  float: left;
+  margin-top: 10rpx;
+}
+
+/*自发自用项目结束  */
+
+/*全额项目开始  */
+
+/*接入点距离  */
+.juliLeft{
+  width:48%;
+  height:100rpx;
+  float: left;
+  padding-left:40rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.juliRightLeft{
+width:30%;
+height:80rpx;
+float: left;
+/* line-height: 80rpx;
+background-color: #f8f8f8;
+margin-top: 10rpx;
+text-align: center; */
+}
+.juliRightRight{
+  width:20%;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  float: left;
+  margin-top: 10rpx;
+}
+/*租金 */
+.qianRight{
+  width:78%;
+  height:100rpx;
+  float: left;
+}
+.qianLeft{
+  width:20%;
+  height:100rpx;
+  float: left;
+  padding-left:40rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.qianRightLeft{
+  width: 30%;
+  height:80rpx;
+  float: left;
+  /* background-color:#f8f8f8;  
+  margin-top: 10rpx;
+  line-height: 80rpx;
+  text-align: center; */
+}
+.qianRightCenter{
+  width:10%;
+  height:100rpx;
+  float: left;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.qianRightRight{
+  width: 30%;
+  height:100rpx;
+  float: left;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/*全额项目结束  */
+
+
+/*按钮样式  */
+ button{
+  width:100%;
+  height: 90rpx;
+  font-size: 40rpx;
+  line-height: 90rpx;
+  /* border-radius: 50rpx; */
+   /* margin-top: 18rpx;  */
+  color:white;
+  background-color:rgb(3, 169, 244);
+  /* border: 0rpx solid rgb(3, 169, 244) ; */
+} 
+
+
+
+
+
+
+/*新样式  */
+.form-item {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 15rpx 40rpx;
+    background-color: #fff;
+    height:100rpx;
+}
+
+.form-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    transform: scaleY(.5);
+    background-color: #e1e1e1;
+}
+
+.form-item-hd {
+    width: 150rpx;
+    height: 60rpx;
+    line-height: 80rpx;
+}
+
+.form-item-bd {
+    flex: 1;
+    height: 60rpx;
+  
+}
+
+.hidden {
+    opacity: 0;
+}
+.input-placeholder {
+    color: #ccc;
+}
+
+input, .input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    /* background-color: #fff; */
+    /* margin-top: 6rpx; */
+   
+}
+
+
+
+
+.area-item {
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.distpicker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 560rpx;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
+
+
+.distpicker-btn {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 40rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #fafafa;
+    color: #586C94;
+}
+
+
+.distpicker-content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 560rpx;
+    background-color: #fff;
+}
+
+.detailsImg{
+  text-align: center;
+  width: 100%;
+
+}
+
+.detail_pic{
+  margin: 15rpx 15rpx 30rpx 15rpx;
+  /* border: 5rpx solid gray; */
+  box-shadow: 10rpx 10rpx 20rpx gainsboro;
+}
+
+.public{
+  height: 75rpx;
+  width: 250rpx;
+  border: 5rpx #238AB6 solid;
+  position: fixed;
+  right:120rpx;
+  bottom: 185rpx;
+  border-radius: 20rpx;
+  z-index: 7;
+  background-color: white;
+  box-shadow: 8rpx 6rpx 10rpx gray; 
+}
+
+.project_check{
+  margin:8rpx 0rpx 0rpx 20rpx; 
+}

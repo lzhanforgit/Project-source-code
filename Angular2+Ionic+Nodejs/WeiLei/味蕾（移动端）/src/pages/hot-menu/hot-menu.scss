@@ -1,0 +1,29 @@
+page-hot-menu {
+  .hot-menu ion-item .single_menu div {
+    margin-bottom: 5px;
+  }
+  ion-item .single_menu .menu_name a,
+  .single_menu_gather .menu_gather_name a {
+    font-weight: bold;
+    color: black;
+  }
+
+  .hot-menu ion-note {
+    font-size: 16px;
+    color: black;
+  }
+  .hot-menu .item-md ion-thumbnail ion-img, .item-md ion-thumbnail img {
+    width: 150px;
+    height: 125px;
+  }
+  .include_menunum {
+    color: #9c6730;
+  }
+  .author a{
+    color: black;
+  }
+  .state a{
+    color: black;
+  }
+}
+

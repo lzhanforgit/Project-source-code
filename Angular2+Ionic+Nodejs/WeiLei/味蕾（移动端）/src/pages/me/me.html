@@ -1,0 +1,119 @@
+<!--
+  Generated template for the MePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-icon name="add" style="font-size: 25px !important; color: grey;" (click)="toCreate()"></ion-icon>
+      </ion-col>
+      <ion-col col-4 style="text-align: center">
+        <ion-note style="color: grey;font-size: 22px;">我的</ion-note>
+      </ion-col>
+      <ion-col col-4 style="text-align: right">
+        <ion-icon name="ios-settings-outline" (click)="toSetting()" style="color: #2d2d2d;font-size: 27px"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <div class="blur-background">
+<!--    <img class="blur" src="../../assets/img/dog.jpg" (click)="tomModifyInfo()" alt="">
+    <img class="user-icon" src="../../assets/img/dog.jpg" alt="">-->
+    <img class="blur" src="{{headpic}}" (click)="tomModifyInfo()" alt="">
+    <img class="user-icon" src="{{headpic}}" alt="">
+    <div class="modify" (click)="tomModifyInfo()">
+      <ion-icon name="create" style="font-size: 15px;color: #ffffff">编辑资料</ion-icon>
+    </div>
+    <div class="blur-title">
+      <ion-icon name="female" style="color: pink;font-size: 20px"></ion-icon>
+      <!--叫我甜甜君-->
+      {{myname}}
+    </div>
+    <div class="blur-subtitle"></div>
+    <div class="blur-subtitle">
+      <span>{{mysignature}}</span><br><br>
+      关注 <span (click)="toMyFocus()" style="color: gold">{{myFoucsNum}}</span>&nbsp;&nbsp;&nbsp;粉丝 <span
+      (click)="toMyFans()" style="color: gold">{{myFans}}</span></div>
+  </div>
+  <ion-item padding="false">
+    <ion-row style="border-bottom:1px solid gainsboro">
+      <ion-col  col-6 style="text-align: center" (click)="toAbout()">
+        <ion-icon name="ios-heart-outline" style="color: #DD3915;font-size: 30px"></ion-icon>
+        <br>
+        <ion-note style="color: grey" >我的收藏</ion-note>
+      </ion-col>
+      <ion-col col-6 style="text-align: center" (click)="toMessageboard()">
+        <ion-icon name="ios-create-outline" style="color: #DD3915;font-size: 30px"></ion-icon>
+        <br>
+        <ion-note style="color: grey">留言板</ion-note>
+      </ion-col>
+    </ion-row>
+    <div style="text-align: center;margin-top: 20px">我的创作</div>
+    <!--<ion-row >
+      <ion-col col-4>
+        <div class="switch">菜谱</div>
+      </ion-col>
+    </ion-row>-->
+    <div padding>
+      <ion-segment [(ngModel)]="mycreate">
+        <ion-segment-button value="recipe" style="">
+          菜谱
+        </ion-segment-button>
+        <ion-segment-button value="menu">
+          菜单
+        </ion-segment-button>
+        <ion-segment-button value="product">
+          跟学作品
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    <div [ngSwitch]="mycreate">
+      <ion-list  *ngSwitchCase="'recipe'">
+        <ion-item  *ngIf="norecipsFlag">
+          <p class="hint">你还没有创建过菜谱~</p>
+        </ion-item>
+        <ion-item *ngFor="let item of recipes2">
+          <ion-thumbnail item-start>
+            <img src="{{item.cover_pic}}"  (click)="toRecipeDetail(item.id)" style="width: 130px!important;height: 86.6px!important;">
+          </ion-thumbnail>
+          <h2>{{item.name}}</h2>
+          <ion-note>做过{{item.cook_times}}次</ion-note>
+          <br>
+          <ion-note>被收藏{{item.collect_times}}次</ion-note>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'menu'" >
+        <ion-item *ngIf="nomenuFlag">
+          <p class="hint">你还没有创建过菜单~</p>
+        </ion-item>
+        <ion-item *ngFor="let item2 of menus2">
+          <ion-thumbnail item-start>
+            <img src="{{item2.cover_pic}}" (click)="toMenuDetail(item2.id)" style="width: 130px!important;height: 86.6px!important;">
+          </ion-thumbnail>
+          <h2>{{item2.name}}</h2>
+          <ion-note>{{item2.descripe}}</ion-note>
+          <ion-note>by {{item2.creater}}</ion-note>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'product'" >
+        <ion-item *ngIf="noproducttFlag">
+          <p class="hint">你还没有上传过作品~</p>
+        </ion-item>
+        <ion-item *ngFor="let item of products;let first=first;let i=index">
+          <ion-thumbnail item-start>
+            <img src="{{item.cover_pic}}" style="width: 130px!important;height: 86.6px!important;">
+          </ion-thumbnail>
+          <h2>{{item.name}}</h2>
+          <ion-note>
+            {{item.thumb_numbers}}个赞</ion-note>
+          <ion-icon ios="ios-trash-outline" md="md-trash" (click)="delWork(i)" style="color: #999999;"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,77 @@
+page-me {
+  //.bigborder{
+  //  border-bottom: 1px solid red;
+  //  height: 180px;
+  //}
+  .blur {
+    height: 210px;
+    width: 100%;
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(20px);
+    position: relative;
+  }
+  .modify{
+    position: absolute;
+    top: 1%;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: right;
+    font-weight: 300;
+    color: #fff;
+  }
+  .blur-title {
+    position: absolute;
+    top: 21%;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+  }
+  .blur-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 29%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+  }
+  .user-icon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top:7%;
+    left:40%;
+  }
+  .switch{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    border-bottom: 3px solid #DD3915;
+  }
+  .segment-md .segment-button{
+    color: grey;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+  .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated{
+    color: #DD3915;
+    background-color: #ffffff;
+    border-bottom:2px solid #DD3915;
+  }
+  .hint{
+    display: block;
+    width: 281px;
+    height: 290px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 35px;
+    color: #c43313;
+  }
+}
+

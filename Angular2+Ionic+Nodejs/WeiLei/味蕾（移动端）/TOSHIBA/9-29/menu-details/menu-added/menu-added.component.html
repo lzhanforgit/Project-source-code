@@ -1,0 +1,15 @@
+<div class="menu-added-title">
+  <div class="left">被大家加入到以下菜单</div>
+</div>
+<ul>
+  <li *ngFor="let menu of MenuLists;let _index=index">
+    <div class="menu_added">
+      <a routerLink="/menu-gather/{{menu.list_id}}" routerLinkActive="active">
+        <img width="300px" height="196px" src="{{menu.cover_pic}}"/>
+        <p>{{menu.list_name}}</p>
+      </a>
+    </div>
+  </li>
+</ul>
+
+

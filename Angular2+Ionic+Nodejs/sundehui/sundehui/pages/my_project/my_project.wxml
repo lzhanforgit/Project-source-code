@@ -1,0 +1,35 @@
+<!--pages/share_list/sharelist.wxml-->
+  <view class='add_project' style="background-image:url('https://www.sundehui.com/uploads/haha.jpg');background-repeat:round">
+    <view class='dashed_box' bindtap="next_guidepage">
+      <image class='plus_icon' src='./images/plus.png'></image>
+      <view class='add_title'>点击创建项目</view>
+    </view>
+  </view>
+
+  <view class='project_list'>
+    <block wx:if="{{projectInfo1.length!=0}}">
+      <view wx:for='{{projectInfo1}}'>
+        <!-- 左边部分 -->
+        <view id='{{index}}' bindlongpress='DelMsg' class='projectList' bindtap='next_project_details'>
+          <view class="view">
+            <view class="list_view">{{item.project_name}}</view>
+            <view class="list_view size_change">
+              <view class='view_inner fl'>{{item.project_user}}</view>
+              <view class='view_inner view_inner_large fr text_center'>{{item.project_provinceNmae}}{{item.project_cityName}}</view>
+            </view>
+          </view>
+
+          <!--右边部分  -->
+          <view class="fr0">
+            <!-- <view class="list_view list_right"></view> -->
+            <view class="list_view list_right">{{item.project_type}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='tip'>
+        ~ 您还没有创建任何项目 ~
+      </view>
+    </block>
+  </view>

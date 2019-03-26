@@ -1,0 +1,251 @@
+
+.max{
+  width: 1200px;
+
+  margin: 0 auto;
+  /*background-color: #f3f3f3;*/
+}
+.area{
+  margin-top: 40px;
+  /*background-color: #9E9E9E;*/
+  width: 100px;
+  display: inline-block;
+  float: left;
+
+
+}
+.listright {
+  padding-top: 40px;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+.listright p{
+  font-size: 1.2em;
+  float: right;
+  margin-left: 30px;
+  /*border: 1px solid#9ca3b1;*/
+}
+.adcol{
+  color: #f1e04e;
+}
+.head{
+  width: 1145px;
+  height: 100px;
+  margin: auto;
+  box-sizing: border-box;
+}
+.list{
+  width:265px ;
+  /*height: 340px;*/
+  background-image: url("../../assets/images/wood_content.jpg");
+  margin-left: 13px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 28px;
+}
+
+.list1{
+  width:265px ;
+  /*height: 340px;*/
+  background-image: url("../../assets/images/wood_content.jpg");
+  margin-left: 13px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 28px;
+}
+
+.list:hover{
+  box-shadow:3px 3px 5px #a2a2a2;
+  transition: transform 0.3s;
+  transform: scale(1.01) translate(-5px, -5px);
+}
+.user{
+  width: 100%;
+  height:60px;
+
+}
+
+.uname{
+  display: inline-block;
+  padding-top: 8px;
+  width:150px ;
+  height:40px ;
+}
+.uname_first{
+  padding-top: 0px;
+}
+
+.petimg{
+  width: 100%;
+
+}
+.introduce{
+  padding: 10px;
+}
+.introduce span {
+
+  color: #ababab;
+}
+.con{
+  width: 284px;
+  float: left;
+}
+.flo{
+  float:left ;
+  list-style: none;
+}
+.dat{
+  margin-left: 5px;
+  margin-bottom: -5px;
+}
+.liulancishu{
+  margin-left: 80px;
+}
+.aa{
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.shoucang{
+  margin-left: 20px;
+}
+.uname01{
+
+  margin-left: 10px;
+  color: rgb(83,34,29);
+  font-weight: bold;
+
+}
+
+.uname02{
+  margin-top: 10px;
+
+  margin-left: 10px;
+  color: rgb(83,34,29);
+  font-weight: bold;
+
+}
+
+.list-div{
+  margin-top: 100px;
+  margin-left: 100px;
+
+}
+
+.content{
+  margin-top: 130px;
+
+}
+
+.content_a{
+  color: rgb(93,34,29);
+  text-decoration:none;
+}
+
+.input_content{
+  width: 100%;
+  height: 160px;
+  resize:none;
+  background-color: rgba(173,128,73,0.5);
+  color: rgb(83,34,29);
+
+}
+
+.input_span{
+  color: rgb(173,128,73);
+  text-align: right;
+  margin-top: 10px;
+  /*background-color: yellow;*/
+  /*position: relative;*/
+
+  /*bottom: 5px;*/
+}
+
+.sim-button{
+  line-height: 20px;
+  height: 30px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  cursor: pointer;
+  margin-top: 10px;
+  padding-top: 3px;
+}
+
+
+.button27 {
+  color: rgba(83,34,29,0.8);
+  font-weight: bold;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  border: 3px solid rgba(83,34,29,0.5);
+  overflow: hidden;
+  border-radius: 5px;
+}
+.button27:hover{
+  border: 3px solid rgba(83,34,29,0);
+  border-radius: 5px;
+}
+.button27 a{
+  color: rgba(51,51,51,1);
+  text-decoration: none;
+  display: block;
+}
+.button27::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translate(-100%, -600%) rotate(30deg);
+  transform: translate(-100%, -600%)  rotate(30deg);
+  background-color: rgba(83,34,29,0.5);
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+
+}
+.button27:hover::before{
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+
+.input_file{
+  width: 245px;
+  height: 150px;
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+}
+
+
+.uimg{
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  background-color: #FCE1E5;
+  border-radius: 5px;
+
+}
+
+.uimg1{
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  background-color: #FCE1E5;
+  border-radius: 5px;
+  position: relative;
+
+}

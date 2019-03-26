@@ -1,0 +1,122 @@
+.recipe_router{
+  width: 100%;
+  height: 30px;
+}
+.recipe_router ul{
+  list-style: none;
+  font-size: 16px;
+}
+.recipe_router ul li{
+  float: left;
+  height: 30px;
+  line-height: 30px;
+}
+.recipe_router ul li a{
+  list-style: none;
+  text-decoration: none;
+  color: #DD3915;
+}
+.recipe_router ul li a:hover{
+  background: #DD3915;
+  color: white;
+  cursor: pointer;
+}
+.recipe_router ul li span{color: #9d90ab}
+.recipe_name{
+  font-size: 30px;
+  font-weight: bold;
+}
+.recipe_cover{
+  width: 100%;
+  height: 490px;
+}
+.recipe_cover img{
+  width: 100%;
+  height: 420px;
+}
+.recipe_cover_bottom{
+  width: 100%;
+  height: 70px;
+  border-bottom: solid 1px #f3f3f3;
+}
+.recipe_cover_bottom_left{
+  height: 70px;
+  line-height: 70px;
+  float: left;
+}
+.recipe_cover_bottom_left span{
+  color: #DD3915;
+  font-size: 20px;
+}
+.recipe_cover_bottom_right{
+  float: right;
+  margin-top: 10px;
+}
+.uncollect{
+  width: 110px;
+  height: 45px;
+  background: #909090;
+  color: white;
+  border: none;
+}
+.collect{
+  width: 110px;
+  height: 45px;
+  background: #DD3915;
+  color: white;
+  border: none;
+}
+.recipe_detail{
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.menu_details_user{
+  margin-bottom: 20px;
+}
+.recipe_detail img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.recipe_detail a{
+  list-style: none;
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+}
+
+.materials,.method_of_recipe,.tips{
+  color: #c0ae7d;
+  font-size: 22px;
+  font-weight: bold;
+}
+table{width: 100%;}
+tr{border-bottom: solid 1px #f3f3f3}
+td{padding-left: 20px;height: 50px; }
+.step{
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.step div{
+  margin-top: 20px;
+}
+.step_index{
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #c0ae7d;
+  margin-right: 30px;
+}
+.step_detail{
+  margin: 0 0 30px 15px;
+  font-size: 18px;
+}
+.tips_container{
+  width: 100%;
+}
+.tip_detail{
+  color: #333333;
+  font-size: 16px;
+}

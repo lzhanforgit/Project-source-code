@@ -1,0 +1,66 @@
+<ion-header class="menu-type">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-icon name="arrow-back" (click)="back()" style="font-size: 30px !important; color:black;"></ion-icon>
+      </ion-col>
+      <ion-col col-4>
+        <ion-note>菜谱分类</ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="hot-type">
+    <h1>热门专题</h1>
+    <div class="hot">
+       <div *ngFor="let item of hot;let index=index">
+      <a (click)="jumpsearch(item.tag_name)"><span class="pop-category-name" >{{item.tag_name}}</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="hot-type">
+    <h1>烘培甜品</h1>
+    <div class="hot">
+       <div *ngFor="let item of sweet;let index=index">
+          <a (click)="jumpsearch(item.tag_name)">
+            <span class="pop-category-name">{{item.tag_name}}</span>
+          </a>
+        </div>
+    </div>
+  </div>
+  <div class="hot-type">
+    <h1>肉类</h1>
+    <div class="hot">
+      <div *ngFor="let item of meat ;let index=index">
+          <a (click)="jumpsearch(item.tag_name)">
+            <span class="pop-category-name">{{item.tag_name}}</span>
+          </a>
+        </div>
+    </div>
+  </div>
+  <div class="hot-type">
+    <h1>汤粥主食</h1>
+    <div class="hot">
+      <div *ngFor="let item of shoup;let index=index">
+          <a (click)="jumpsearch(item.tag_name)">
+            <span class="pop-category-name">{{item.tag_name}}</span>
+          </a>
+        </div>
+
+    </div>
+  </div>
+  <div class="hot-type">
+    <h1>蔬菜水果</h1>
+    <div class="hot">
+      <div *ngFor="let item of vagetable;let index=index">
+          <a (click)="jumpsearch(item.tag_name)" >
+            <span class="pop-category-name">{{item.tag_name}}</span>
+          </a>
+        </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/share_list/share_list",
+    "pages/guide_page/guide_page",
+    "pages/person_center/person_center",
+    "pages/project_details/project_details",
+    "pages/project_type/project_type",
+    "pages/investor_list/investor_list",
+    "pages/my_project/my_project"  
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ddd",
+    "selectedColor": "#238AB6",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/icon_house.png",
+        "selectedIconPath": "pages/images/selected_house.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/investor_list/investor_list",
+        "iconPath": "pages/images/icon_project.png",
+        "selectedIconPath": "pages/images/selected_project.png",
+        "text": "收购池"
+      },
+      {
+        "pagePath": "pages/my_project/my_project",
+        "iconPath": "pages/images/icon_join.png",
+        "selectedIconPath": "pages/images/selected_join.png",
+        "text": "我的项目"
+      },
+      {
+        "pagePath": "pages/person_center/person_center",
+        "iconPath": "pages/images/icon_my.png",
+        "selectedIconPath": "pages/images/selected_my.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

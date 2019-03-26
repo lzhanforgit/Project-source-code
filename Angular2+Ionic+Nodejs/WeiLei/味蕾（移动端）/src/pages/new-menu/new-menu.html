@@ -1,0 +1,39 @@
+<!--
+  Generated template for the NewMenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="new-menu">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-icon name="arrow-back" (click)="back()" style="font-size: 30px !important; color: black;"></ion-icon>
+      </ion-col>
+      <ion-col col-4>
+        <ion-note>最新菜谱</ion-note>
+      </ion-col>
+      <ion-col col-4  >
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-header>
+
+
+<ion-content class="new-menu" padding>
+  <ion-item *ngFor="let item1 of AllMenus | orderbytime ">
+    <ion-thumbnail item-start (click)="toRecipeDetaill(item1.id)" >
+      <img src="{{item1.cover_pic}}"  height="136" width="215"/>
+    </ion-thumbnail>
+    <div  class="single_menu">
+      <div class="menu_name"><a >{{item1.name}}</a></div>
+      <div class="include_menunum"><a >{{item1.descripe.substring(0,7)+"..."}}</a></div>
+      <div class="author" (click)="toPersonal(item1.id)"><a >{{item1.creater.substring(0,5)}}</a>创建</div>
+      <div class="state"><a >{{item1.create_time.substring(0,10)}}</a></div>
+    </div>
+  </ion-item>
+</ion-content>
+

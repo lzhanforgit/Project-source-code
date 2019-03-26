@@ -1,0 +1,17 @@
+.menu_details_container{
+  margin: 0 auto;
+  width: 1000px;
+  padding-top:90px;
+}
+.menu_details_top{
+  width: 1000px;
+}
+.menu_details_left{
+   width: 66%;
+   float: left;
+ }
+.menu_details_right{
+  width: 30%;
+  float: right;
+  margin-top: 90px;
+}

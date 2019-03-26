@@ -1,0 +1,39 @@
+page-upload-work {
+  .describe{
+    font-size: 1.2em!important;
+    width: 100%!important;
+    height:120px!important;
+    background-color: #fcfcfc!important;
+    margin-top: 30px!important;
+    border: none;
+    resize: none;
+  }
+  #menu_cover{
+    margin: 0 auto;
+    width: 80%;
+    height: 240px;
+    background: #fcfcfc;
+    position: relative;
+  }
+  .file{
+    display: block;
+    width: 80%;
+    height: 240px;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    top: -0px;
+    left: 10%;
+  }
+  .intro{
+    color: #909090;
+    text-align: center;
+    position: absolute;
+    top: 90px;
+    left: 40%;
+  }
+  .fitcss{
+    width: 100%;
+    height: 240px;
+  }
+}

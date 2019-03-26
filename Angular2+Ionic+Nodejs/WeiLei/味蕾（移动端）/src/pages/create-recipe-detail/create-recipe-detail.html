@@ -1,0 +1,108 @@
+<!--
+  Generated template for the CreateRecipeDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2>
+        <span style="color: #dd3915" (click)="cancle()">取消</span>
+      </ion-col>
+      <ion-col col-8 style="text-align: center">
+        <span>创建菜谱</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-header>
+
+
+<ion-content>
+  <form>
+    <!--<ion-input type="file"></ion-input>-->
+
+    <div class="recipe_name">
+      <input id="recipe_name" name="recipe_name"  type="text" placeholder="添加菜谱名称">
+    </div>
+    <div class="recipe_cover"></div>
+    <input name="recipe_cover1" type="file" (change)="change($event)"  class="file" >
+    <div class="intro">
+      <p>+菜谱封面</p>
+      <p>最佳尺寸：1280*1024</p>
+    </div>
+
+    <textarea name="recipe_description" required class="description-txt" cols="10" rows="10" placeholder="点击添加菜谱描述"></textarea>
+
+
+    <p style="font-size: 1.3em;margin-left: 10px">用料</p>
+    <ion-grid>
+      <table cellspacing="0" id="mytable">
+        <tr id="my_tr">
+          <td class="first"><input class="material"  name="material" type="text" placeholder="食材：如鸡蛋"></td>
+          <td class="second"><input class="material_amount" type="text" placeholder="用量：如1只"></td>
+          <td class="third"><img class="del" src="../../assets/img/close.png" height="11" width="11"/></td>
+        </tr>
+        <tr>
+          <td class="first"><input class="material" name="material" type="text" placeholder="食材：如鸡蛋"></td>
+          <td class="second"><input class="material_amount" type="text" placeholder="用量：如1只"></td>
+          <td class="third"><img class="del" (click)="del($event)" src="../../assets/img/close.png" height="11" width="11"/></td>
+        </tr>
+      </table>
+
+
+      <ion-row>
+        <ion-col col-6>
+          <span style="font-size: 1.1em;color: #dd3915" (click)="add()">再增加一行</span>
+        </ion-col>
+        <!--<ion-col col-6 style="text-align: right">-->
+          <!--<span style="font-size: 1.1em;color: #dd3915">调整用料</span>-->
+        <!--</ion-col>-->
+      </ion-row>
+    </ion-grid>
+
+
+    <h2>做法</h2>
+    <div class="steps_container">
+      <ol id="step">
+
+        <li class="steps_container_li" id="my_li">
+          <div class="add_step">
+            <textarea class="recipe_step" name="recipe_step" required="required"cols="30" rows="10" placeholder="点击添加菜谱步骤"></textarea>
+          </div>
+          <div class="del_line">
+            <img src="../../assets/img/close.png"   height="11" width="11"/>
+          </div>
+        </li>
+
+        <li class="steps_container_li">
+          <div class="add_step">
+            <textarea class="recipe_step" name="recipe_step" required="required" cols="30" rows="10" placeholder="点击添加菜谱步骤"></textarea>
+          </div>
+          <div class="del_line">
+            <img src="../../assets/img/close.png" (click)="del($event)" height="11" width="11"/>
+          </div>
+        </li>
+
+
+      </ol>
+      <div class="add">
+        <input type="button" value="追加菜谱步骤" (click)="addstep()">
+      </div>
+    </div>
+
+    <div class="tips_container">
+      <div class="tips_container_title">小贴士</div>
+      <div class="description">
+        <textarea class="description_txt" name="tips" cols="10" rows="10" placeholder="点击添加小贴士"></textarea>
+      </div>
+    </div>
+
+    <div class="upload">
+      <input class="uploadbtn" type="button"  (click)="UploadMenu($event)" value="发布菜谱">
+    </div>
+  </form>
+  <!--<ion-file>+菜谱封面</ion-file>-->
+</ion-content>

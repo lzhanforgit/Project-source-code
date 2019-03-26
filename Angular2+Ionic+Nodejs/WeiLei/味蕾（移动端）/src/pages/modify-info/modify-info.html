@@ -1,0 +1,92 @@
+<!--
+  Generated template for the ModifyInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        <ion-icon name="arrow-back" (click)="back()" style="font-size: 25px !important; color: grey;"></ion-icon>
+      </ion-col>
+      <ion-col col-6 style="text-align: center">
+        <ion-note style="color: grey;font-size: 18px;">设置个人信息</ion-note>
+      </ion-col>
+      <ion-col col-3 style="text-align: right">
+        <!--<ion-note style="color: #DD3915;font-size: 15px">保存</ion-note>-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content padding>
+  <form  #UpdateForm="ngForm" novalidate>
+    <input type="hidden" name="Id" [(ngModel)]="myid">
+    <div class="preview" id="preview">
+      <img src="{{headpic}}" alt="">
+      <input type="file" (change)="change($event)" name="user_icon" class="headpic-input">
+    </div>
+    <ion-item>
+      <ion-col col-2>
+        <span style="color: #333333">昵称</span>
+      </ion-col>
+      <ion-col col-10>
+        <input type="text" [(ngModel)]="myname" name="nickname" style="width: 250px;border: transparent" maxlength="15" placeholder="请输入你的昵称"  >
+      </ion-col>
+    </ion-item>
+<!--    <ion-item>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox>
+      <ion-label>男</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox color="danger"></ion-checkbox>
+      <ion-label>女</ion-label>
+    </ion-item>-->
+    <ion-item>
+      <ion-col col-2>
+        <span style="color: #333333">性别</span>
+      </ion-col>
+      <ion-col col-10>
+          <input type="radio" name="sex" value="男">男
+          <input type="radio" name="sex" value="女">女
+          <input type="radio" name="sex" value="其他">其他
+      </ion-col>
+    </ion-item>
+    <ion-item>
+      <ion-col col-2>
+        <span style="color: #333333">城市</span>
+      </ion-col>
+      <ion-col col-10>
+        <input type="hidden" [value]="'118'" name="now_city">
+        <input type="text"  style="width: 250px;border: transparent" maxlength="20"  placeholder="请输入你所居住的城市">
+      </ion-col>
+    </ion-item>
+    <ion-item>
+      <ion-col col-2>
+        <span style="color: #333333">家乡</span>
+      </ion-col>
+      <ion-col col-10>
+        <input type="hidden" [value]="'99'" name="home_city">
+        <input type="text"  style="width: 250px;border: transparent" maxlength="20"  placeholder="请输入你的家乡">
+      </ion-col>
+    </ion-item>
+    <ion-item>
+      <ion-col col-2>
+        <span style="color: #333333">职业</span>
+      </ion-col>
+      <ion-col col-10>
+        <!--<input type="text"  name="profession" style="width: 250px;border: transparent" maxlength="20"  placeholder="请输入你的职业">-->
+        <input type="text" name="profession"  style="width: 250px;border: transparent" maxlength="20"  placeholder="请输入你的职业">
+      </ion-col>
+    </ion-item>
+    <ion-item>
+      <ion-col col-2>
+        <span style="color: #333333">简介</span>
+      </ion-col>
+      <ion-col col-10>
+        <input type="text" [(ngModel)]="mysignature" name="introduce" style="width: 250px;border: transparent" maxlength="20"  placeholder="请输入你的昵称"  >
+      </ion-col>
+    </ion-item>
+    <input  class="button" type="button" block color="danger" (click)="UpdateInfo($event)"  value="保存">
+  </form>
+</ion-content>

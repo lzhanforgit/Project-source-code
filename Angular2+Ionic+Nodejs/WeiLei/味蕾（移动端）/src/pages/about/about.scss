@@ -1,0 +1,64 @@
+page-about {
+  .classify ion-item .single_menu div {
+    margin-bottom: 5px;
+  }
+  .classify .segment-md .segment-button {
+    color: black;
+    font-size: 1.4em;
+  }
+  .segment-md .segment-button.segment-activated {
+    border-color: #DD3915;
+    opacity: 1;
+    color: #DD3915;
+  }
+
+ .item-md ion-thumbnail img {
+    width: 150px;
+    height: 125px;
+  }
+  .classify ion-item {
+    margin-top: 10px;
+  }
+  .classify ion-item .single_menu {
+    margin-top: 10px;
+
+  }
+
+  .classify ion-item .single_menu .menu_name a, .single_menu_gather .menu_gather_name a {
+    //font-size: 1.4em;
+    font-weight: bold;
+    color: black;
+  }
+  ion-item .single_menu .author a, .single_menu_gather .include_menunum {
+    //font-size: 1.0em;
+    color: #8e9093;
+  }
+  ion-item .single_menu .state a {
+    font-size: 1.0em;
+    color: black;
+  }
+  .classify .input-wrapper {
+    display: block;
+  }
+  .menu_gather_name a{
+    font-weight: bold;
+
+    color: black;
+  }
+  ion-item .single_menu_gather {
+    margin-top: 10px;
+  }
+  ion-item .single_menu_gather .author a {
+    font-size: 1.0em;
+    color: black;
+  }
+  .hint {
+    display: block;
+    width: 281px;
+    height: 290px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 35px;
+    color: #c43313;
+  }
+}

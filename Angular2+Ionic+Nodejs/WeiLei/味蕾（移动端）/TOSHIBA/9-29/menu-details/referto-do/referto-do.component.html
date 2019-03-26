@@ -1,0 +1,26 @@
+<div class="refer_container">
+  <div class="amount_of_recipe">
+    <div class="part_of_recipe">参照这个菜谱，大家做出{{length||0}}个作品</div>
+  </div>
+  <div class="recipe_dishes">
+    <ul>
+      <li *ngFor="let work of MenuWorks">
+        <div class="recipe">
+          <a><img class="recipe_img" src="{{work.cover_pic}}"/></a>
+          <p>{{work.create_time.substring(0,10)}}</p>
+          <p>{{work.descripe.substring(0,20)+"..."}}</p>
+          <a class="nickname" routerLink="/personal-center/{{work.creater_id}}" routerLinkActive="active">
+            <img class="user_head" src="{{work.user_icon}}"/>
+            <span>{{work.creater}}</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="upload" >
+    <a routerLink='/uploading' routerLinkActive="active" >
+      <h3>上传你做的<span>小龙虾</span></h3>
+    </a>
+  </div>
+</div>
+

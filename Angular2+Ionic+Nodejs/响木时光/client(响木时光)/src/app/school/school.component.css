@@ -1,0 +1,196 @@
+.container{
+  width: 100%;
+  height: auto;
+  /*background-color: #98ff9a;*/
+}
+
+img{
+  width: 600px;
+  height: 400px;
+  padding: 0 15px 0 15px;
+}
+
+.container_inner{
+  width: 70%;
+  height: 500px;
+  /*background-color: #c559ff;*/
+  margin: 0 auto;
+}
+
+.container_bottom{
+  width: 70%;
+  height: 100px;
+  /*background-color: red;*/
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.inner_left{
+  width:60%;
+  height: 400px;
+  /*background-color: yellow;*/
+  margin-top: 100px;
+  position: relative;
+  right: 30px;
+}
+
+
+.inner_right{
+  width:40%;
+  height: 400px;
+  /*background-color: #00b399;*/
+  margin-top: 100px;
+}
+
+.inner_right{
+  width:40%;
+  height: 400px;
+  /*background-color: #00b399;*/
+  margin-top: 100px;
+  position: relative;
+  left: 10px;
+}
+
+
+
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.words_right{
+  font-size: 3em;
+  padding-left: 20px;
+  /*margin-top: 20px;*/
+}
+
+.words_left{
+  font-size: 3em;
+  padding-left: 40px;
+  margin-top: 20px;
+}
+
+.text_left{
+  font-size: 1.5em;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  text-indent:45px;
+  padding-left: 40px;
+  width: 350px;
+  height: 200px;
+  font-weight: 500;
+}
+
+.text_right{
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding-left: 20px;
+  width: 350px;
+  height: 200px;
+  /*background-color: #ff1216;*/
+  white-space: pre-wrap;
+  text-indent:45px;
+  font-weight: 500;
+}
+
+/*引入的animate文件内容*/
+.animated {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.shake:hover {
+  animation-duration: 1s;
+  animation-name: shake;
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+
+.pulse:hover {
+  animation-name: pulse;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+.flipInY:hover {
+  /*-webkit-backface-visibility: visible !important;*/
+  /*backface-visibility: visible !important;*/
+  animation-duration: 3s;
+  animation-name: flipInY;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+
+
+

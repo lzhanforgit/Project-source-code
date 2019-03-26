@@ -1,0 +1,23 @@
+page-contact {
+  .title{
+    margin:0;
+    height: 26px;
+    line-height:26px;
+    font-size:16px;
+    text-align: center;
+  }
+  .first .user_link{
+    background: none;
+    color: #dd3915;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  .first .user_link:hover{
+    text-decoration: none;
+  }
+  .first .user_link img{
+    border-radius: 50%;
+    vertical-align: middle;
+    position: relative;
+  }
+}

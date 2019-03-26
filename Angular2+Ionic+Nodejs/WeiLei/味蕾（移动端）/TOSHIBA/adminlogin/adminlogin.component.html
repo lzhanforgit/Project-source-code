@@ -1,0 +1,67 @@
+<p>
+  adminlogin works!
+</p>
+<div class="mycontainer col-md-12">
+  <div class="col-sm-6 col-sm-offset-4" style="margin-top: 80px">
+
+  </div>
+  <div class="panel panel-default col-sm-6 col-sm-offset-3 mycontent"  style="margin-top:60px;">
+    <h3 class="text-center" style="color:white">管理员登录</h3>
+    <div class="panel-body">
+      <form class="form-horizontal" id="myform" #loginForm="ngForm">
+        <div class="form-group">
+          <label for="user_id" class=" lable0 col-sm-2 control-label">账号</label>
+          <div class="col-sm-10">
+            <input #tel="ngModel"  type="text" [(ngModel)]="_admin" class="form-control" id="user_id" name="userId" placeholder="手机号码" required>
+            <i class="glyphicon glyphicon-user myI"></i>
+          </div>
+        </div>
+        <div *ngIf="tel.invalid && (tel.dirty || tel.touched)" class="col-sm-10 col-sm-offset-2" style="color:red">
+          <div *ngIf="tel.errors.required">
+            号码不能为空
+          </div>
+          <div *ngIf="tel.errors.pattern">
+            号码格式不正确
+          </div>
+        </div>
+        <div class="form-group" style="margin-top:60px;">
+          <label for="user_password" class="lable0 col-sm-2 control-label">密码</label>
+          <div class="col-sm-10">
+            <input type="password" #pass="ngModel" minlength="6" class="form-control" id="user_password" [(ngModel)]="_password" name="userPassword" placeholder="密码" required>
+            <i class="glyphicon glyphicon-lock"></i>
+          </div>
+        </div>
+        <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class=" col-sm-10 col-sm-offset-2" style="color:red">
+          <div *ngIf="pass.errors.required">
+            密码不能为空
+          </div>
+          <div *ngIf="pass.errors.minlength">
+            密码大于六位
+          </div>
+        </div>
+        <div *ngIf="login_res" class="col-sm-10 col-sm-offset-2" style="color:red">
+          <div>
+            {{login_res}}
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10" style="margin-top:60px;">
+            <div class="main-checkbox">
+              <input type="checkbox" value="none" id="checkbox1" name="check"/>
+              <label for="checkbox1"></label>
+            </div>
+            <span style="color: white" class="text" >记住密码</span>
+            <button style="color: white" type="button" *ngIf="!pass.errors&&!tel.errors" class="btn btn-danger"  id="btn_login" style="width:60%;margin-left:50px;" (click)="toLogin(loginForm)">登录</button>
+            <button type="button" *ngIf="pass.errors||tel.errors" class="btn btn-danger"  style="width:60%;margin-left:50px;" disabled>登录</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <p class="text-center">还没有账号？去<a routerLink="/register" routerLinkActive="active">注册...</a></p>
+    <p class="text-center">忘记密码？去<a routerLink="/retrieve" routerLinkActive="active">修改密码</a></p>
+    <!--<p class="text-center">我是管理员？去<a routerLink="/adminlogin" routerLinkActive="active">管理员登录页面</a></p>-->
+  </div>
+</div>
+

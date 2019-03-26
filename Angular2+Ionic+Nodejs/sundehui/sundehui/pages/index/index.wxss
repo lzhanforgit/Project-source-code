@@ -1,0 +1,411 @@
+/**index.wxss**/
+
+.main {
+  padding: 0rpx 20rpx 0rpx 20rpx; 
+}
+
+.header {
+  height: 300rpx;
+}
+
+.swiper {
+  height: 300rpx;  
+}
+
+.image_top {
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  height: 150rpx;
+  margin: 30rpx 0rpx 0rpx 0rpx;
+}
+
+.centerLeft, .centerRight {
+   width: 41%; 
+   /* padding: 0rpx 0rpx 0rpx 0rpx;   */
+  height: 150rpx;
+  
+}
+
+.centerLeft {
+  float: left;
+}
+
+.centerRight {
+  float: right;
+}
+
+.centerImg {
+  width: 110rpx;
+  height: 110rpx;
+  float: left;
+  margin-left: 40rpx;
+  /* border: 1rpx solid rgb(35, 138, 182); */
+  border-radius: 20rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+   /* background-color: rgb(35, 138, 182);  */
+}
+
+.centerName {
+  width: 45%;
+  float: right;
+  margin-right: 52rpx;
+  /* font-size: 800rpx; */
+        /* background-color: yellow;       */
+}
+
+.new_margin{
+  margin-right: 45rpx;
+}
+
+.fz {
+  font-size: 40rpx;
+  text-align: center;
+  /* padding-top: 20rpx; */
+  font-weight: bold;
+}
+
+.fz02 {
+  font-size: 28rpx;
+  color: grey;
+  font-weight: normal;
+}
+
+.center_image {
+  width: 85rpx;
+  height: 85rpx;
+  
+}
+
+.bottom {
+  height: 600rpx;
+  /* background-color: greenyellow; */
+  overflow: auto;
+}
+
+.projectList {
+   /* background-color: red;     */
+  height: 200rpx;
+  margin-right: 20rpx;
+  border-bottom: 2rpx solid lightgray;
+}
+
+.image {
+   /* background-color: yellow;   */
+  height: 200rpx;
+  width: 160rpx;
+  float: left;
+}
+
+.view{
+   /* background-color: yellow;    */
+  height: 200rpx;
+  width: 460rpx;
+  float: left;
+}
+
+.list_image {
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+  top: 20rpx;
+  left: 5rpx;
+}
+
+.list_view {
+  width: 90%;
+  height: 80rpx;
+   /* background-color: red;  */
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  line-height: 80rpx;
+   font-size: 40rpx; 
+   font-weight: bold;
+}
+
+.list_right{
+  text-align: center;
+  font-size:38rpx;
+  margin-top: 60rpx;
+  width: 80%;
+  margin-left: 30rpx;
+  border-radius: 18rpx;
+  border: 1rpx solid lightgray;
+}
+
+.size_change{
+  font-size: 30rpx;
+}
+.fl{
+  float: left;
+}
+
+.fr{
+   float: right;
+}
+
+.text_center{
+  text-align: center;
+}
+
+.view_inner{
+  width: 160rpx;
+  /* background-color: green;   */
+  height: 80rpx;
+  line-height: 65rpx;
+}
+
+.view_inner_large{
+  width: 250rpx;
+}
+
+.fr_width {
+  width: 530rpx;
+}
+
+.fr0 {
+  float: right;
+  width: 230rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  /* background-color: blue; */
+  
+}
+
+.project {
+   /* background-color: purple;       */
+  height: 70rpx;
+  float: left;
+  width: 350rpx;
+  margin-top: 5rpx;
+  margin-left: -20rpx;
+}
+
+.name {
+  font-weight: bolder;
+  font-size: 40rpx;
+  line-height: 75rpx;
+  margin: 5rpx 0rpx 0rpx 10rpx;
+
+  padding-left: 10rpx;
+  height: 70rpx;
+    /* background-color: green;    */
+   /* text-align: center;  */
+}
+
+.locationName {
+  font-weight: bolder;
+  font-size: 32rpx;
+  line-height: 75rpx;
+  margin: 0rpx 0rpx 0rpx 10rpx;
+  padding-top: 5rpx;
+  padding-left: 10rpx;
+  height: 70rpx;
+    /* background-color: green;    */
+   /* text-align: center;  */
+}
+
+.information {
+  font-weight: 600;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  margin-top: 30rpx; 
+  height: 70rpx;
+    /* background-color: blue;    */
+   /* text-align: center; */
+}
+
+.location {
+  width: 180rpx;
+  float: left;
+  /* background-color: orange;  */
+}
+
+.status {
+  float: right;
+  /* background-color: greenyellow;  */
+}
+
+.jump {
+    background-color: white;   
+  height: 200rpx;
+  width: 150rpx;
+  float: right;
+  margin-right: 40rpx;
+
+}
+
+.jump_view{
+  width: 100%;
+  height: 50rpx;
+   margin-top: 8rpx; 
+  padding-top: 5rpx;
+  text-align: center;
+  font-size: 30rpx;
+   background-color: lightgray; 
+  border-radius: 15rpx;
+  border: 1rpx #666 solid;
+}
+
+.jump_image {
+  /* background-color: burlywood;  */
+  height: 60rpx;
+  width: 60rpx;
+  margin: 50rpx 10rpx 50rpx 10rpx;
+}
+
+.default {
+  line-height: 100rpx;
+  text-align: left;
+  flex: 1;
+  /* //border-right: 1px solid gainsboro; */
+  color: gray;
+  font-weight: 800;
+  font-size: 35rpx;
+}
+
+.navigator-hover {
+  color: blue;
+}
+
+.content_project{
+  margin-left: 20rpx;
+  margin-top: 480rpx;
+  background-color: white;  
+}
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 1rpx solid #777;
+  text-align: left;
+  line-height: 120rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 50%;
+  color: black;
+  text-align: center;
+}
+
+.on {
+  color: rgb(33, 150, 243);
+  border-bottom: 5rpx solid rgb(33, 150, 243);
+}
+
+.swiper-box {
+   display: block; 
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.hair{
+  position: fixed;
+  top: -1rpx;
+  z-index: 999;
+  width: 95%;
+  background-color: white;
+  
+}
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -350rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 45rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  border-radius: 4rpx;
+  font-size: 38rpx;
+}
+
+
+.input {
+  width: 100%;
+  font-size: 35rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.modal-checkbox{
+  width: 100%;
+  padding: 20rpx 0 20rpx 0;
+  border-top: 1rpx solid #dedede;
+  color: gray;
+
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}
+
+.modal_add{
+  text-align: center;
+  margin: 20rpx 0 20rpx 0;
+  color: gray;
+  font-size: 40rpx;
+}

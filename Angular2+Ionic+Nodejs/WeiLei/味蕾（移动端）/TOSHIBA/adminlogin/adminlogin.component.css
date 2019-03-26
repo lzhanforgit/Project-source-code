@@ -1,0 +1,88 @@
+.mycontainer{
+  background: url("../../assets/images/background_pic07.jpg")  center no-repeat;
+  min-height: 758px;
+}
+
+.form-control{
+  background: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 0 20px 0 45px;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+}
+.mycontent{
+  background-color: rgba(49, 49, 49, 0.62);
+  border: none;
+}
+.lable0{
+  color: white;
+}
+.form-control + i{
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 17px;
+  color: #c8c8c8;
+  transition: all 0.5s ease 0s;
+}
+.form-control:focus{
+  background: #e0e0e0;
+  box-shadow: none;
+  outline: 0 none;
+}
+.form-control:focus + i{
+  color: #00b4ef;
+}
+
+.main-checkbox{
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: #11a3fc;
+  border-radius: 50%;
+  position: relative;
+  margin: 0px 10px 0 5px;
+  border: 1px solid #11a3fc;
+}
+.main-checkbox label{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.main-checkbox label:after{
+  content: "";
+  width: 10px;
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border: 3px solid #fff;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.main-checkbox input[type=checkbox]{
+  visibility: hidden;
+}
+.main-checkbox input[type=checkbox]:checked + label:after{
+  opacity: 1;
+}
+.btn{
+  float: right;
+  font-size: 14px;
+  color: #fff;
+  background: #00b4ef;
+  border-radius: 30px;
+  padding: 10px 25px;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.5s ease 0s;
+}

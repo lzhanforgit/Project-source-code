@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>响木时光</title>
+  <base href="/">
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  <script src="http://www.jq22.com/jquery/html5.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext' rel='stylesheet'>
+  <script src="http://www.jq22.com/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.jumpto.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.jumpto.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootsnav.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.easing.js"></script>
+  <script type="text/javascript" src="assets/js/pignose.parallaxslider.js"></script>
+  <script type="text/javascript" src="assets/js/pignose.parallaxslider.min.js"></script>
+  <script type="text/javascript" src="assets/js/iziModal.js"></script>
+  <!--<script type="text/javascript" src="assets/js/iziModal.min.js"></script>-->
+  <script type="text/javascript" src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+
+  <script type="text/javascript" src="assets/js/Treatment.js"></script>
+  <script type="text/javascript">
+    function show_canvas() {
+      document.getElementById('canvas_show').style.display='none';
+      Code();
+      document.getElementById('myCanvas').style.display='block';
+
+
+    }
+
+    function compare() {
+        var yzm=document.getElementById("yzm").value;
+        if(yzm.toLowerCase()==code.toLowerCase()){
+          if(showdiv_display = document.getElementById('show').style.display=='block'){//如果show是隐藏的
+
+            document.getElementById('show').style.display='none';//show的display属性设置为block（显示）
+
+          }
+        }else {
+          if(showdiv_display = document.getElementById('show').style.display=='none'){//如果show是隐藏的
+
+            document.getElementById('show').style.display='block';//show的display属性设置为block（显示）
+
+          }
+        }
+        console.log(result);
+//        console.log(loginForm.form.invalid);
+    }
+  </script>
+  <script type="text/javascript">
+    var canGetCookie = 0;//是否支持存储Cookie 0 不支持 1 支持
+    var CodeVal = 0;
+
+
+
+    function Code() {
+      if(canGetCookie == 1){
+        createCode("AdminCode");
+        var AdminCode = getCookieValue("AdminCode");
+        showCheck(AdminCode);
+      }else{
+        showCheck(createCode(""));
+      }
+    }
+    function showCheck(a) {
+      CodeVal = a;
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.clearRect(0, 0, 1000, 1000);
+      ctx.font = "80px 'Hiragino Sans GB'";
+      ctx.fillStyle = "#E8DFE8";
+      ctx.fillText(a, 0, 100);
+    }
+  </script>
+
+
+  <!--<script type="text/javascript">-->
+    <!--$("#modal-large").iziModal({-->
+      <!--title: "Welcome to the iziModal",-->
+      <!--subtitle: "Simple, complete and lightweight modal plugin with jquery.",-->
+      <!--iconClass: 'icon-chat',-->
+      <!--overlayColor: 'rgba(255, 255, 255, 0.4)',-->
+      <!--headerColor: '#334c7b',-->
+      <!--iconColor: '#00ffba',-->
+      <!--width: 700,-->
+      <!--padding: 20-->
+    <!--});-->
+    <!--$(document).on('click', '.trigger-large', function (event) {-->
+      <!--event.preventDefault();-->
+      <!--$('#modal-large').iziModal('open');-->
+    <!--});-->
+
+  <!--</script>-->
+  <script>
+
+
+    function ochange() {
+      var pic = document.getElementById("preview"),
+        file = document.getElementById("f");
+
+      var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+      // gif在IE浏览器暂时无法显示
+      if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+        alert("图片的格式必须为png或者jpg或者jpeg格式！");
+        return;
+      }
+      var isIE = navigator.userAgent.match(/MSIE/)!= null,
+        isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+
+      if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+        if (isIE6) {
+          pic.src = reallocalpath;
+        }else {
+          // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+          pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+          // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+          pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+        }
+      }else {
+        html5Reader(file);
+      }
+    }
+
+    function html5Reader(file){
+      var file = file.files[0];
+      var reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = function(e){
+        var pic = document.getElementById("preview");
+        pic.src=this.result;
+      }
+    }
+  </script>
+
+
+
+  <script>
+    var maxstrlen = 100;
+    function Q(s) {
+      return document.getElementById(s);
+    }
+
+    function checkWords(c) {
+      len = maxstrlen;
+      var str = c.value;
+      myLen = getStrleng(str);
+      var wck = Q("wordCheck");
+      if (myLen > len * 2) {
+        c.value = str.substring(0, i + 1);
+      } else {
+        wck.innerHTML = Math.floor((len * 2 - myLen) / 2);
+      }
+    }
+
+    function getStrleng(str) {
+      myLen = 0;
+      i = 0;
+      for (; (i < str.length) && (myLen <= maxstrlen * 2); i++) {
+        if (str.charCodeAt(i) > 0 && str.charCodeAt(i) < 128)
+          myLen++;
+        else
+          myLen += 2;
+      }
+      return myLen;
+    }
+  </script>
+
+
+  <link href='assets/css/jumpto.css' rel='stylesheet' type='text/css'>
+  <link href="assets/css/bootsnav.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/effects.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/htmleaf-demo.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+  <link href="assets/css/pignose.parallaxslider.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/demo.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/iziModal.css" rel="stylesheet" type="text/css">
+  <!--<link href="assets/css/iziModal.min.css" rel="stylesheet" type="text/css">-->
+
+
+  <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="assets/js/MTLLoader.js"></script>
+  <script src="assets/js/three.js"></script>
+  <script src="assets/js/three.module.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!--
+  Generated template for the PersonalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        <ion-icon name="arrow-back" (click)="back()" style="font-size: 25px !important; color: grey;"></ion-icon>
+      </ion-col>
+      <ion-col col-6 style="text-align: center">
+        <ion-note style="color: grey;font-size: 18px;">个人主页</ion-note>
+      </ion-col>
+      <!--<ion-col col-3 style="text-align: right" >-->
+      <!--<ion-note style="color: gold;font-size: 15px">保存</ion-note>-->
+      <!--</ion-col>-->
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content>
+  <div class="blur-background">
+    <img class="blur" src="{{headpic}}" alt="">
+    <img class="user-icon" src="{{headpic}}" alt="">
+    <div class="blur-title">
+      <ion-icon name="female" style="color: pink;font-size: 20px"></ion-icon>
+      <!--叫我甜甜君-->
+      {{name}}
+    </div>
+    <div class="blur-subtitle"></div>
+    <div class="blur-subtitle">
+      <span>{{signature}}</span><br><br>
+      关注 <span (click)="toMyFocus()" style="color: gold">{{FoucsNum}}</span>&nbsp;&nbsp;&nbsp;粉丝 <span
+      (click)="toMyFans()" style="color: gold">{{Fans}}</span></div>
+  </div>
+  <ion-item padding="false">
+    <ion-row style="border-bottom:1px solid gainsboro">
+      <ion-col col-6 style="text-align: center">
+        <button ion-button *ngIf="followFlag" color="danger"  (click)="follow()" style="width: 72.8px!important;">关注</button>
+        <button ion-button *ngIf="!followFlag" color="dark" (click)="unfollow()">已关注</button>
+      </ion-col>
+      <ion-col col-6 style="text-align: center" (click)="toMessageboard()">
+        <button ion-button color="secondary" style="width: 72.8px!important;">留言</button>
+      </ion-col>
+    </ion-row>
+    <div style="text-align: center;margin-top: 20px">我的创作</div>
+    <!--<ion-row >
+      <ion-col col-4>
+        <div class="switch">菜谱</div>
+      </ion-col>
+    </ion-row>-->
+    <div padding>
+      <ion-segment [(ngModel)]="mycreate">
+        <ion-segment-button value="recipe" style="">
+          菜谱
+        </ion-segment-button>
+        <ion-segment-button value="menu">
+          菜单
+        </ion-segment-button>
+        <ion-segment-button value="product">
+          跟学作品
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    <div [ngSwitch]="mycreate">
+      <ion-list *ngSwitchCase="'recipe'">
+        <ion-item *ngIf="norecipsFlag1">
+          <p class="hint">ta还没有创建过菜谱~</p>
+        </ion-item>
+        <ion-item *ngFor="let item of recipes2">
+          <ion-thumbnail item-start>
+            <img src="{{item.cover_pic}}" (click)="toRecipeDetail(item.id)" style="width: 130px!important;height: 86.6px!important;">
+          </ion-thumbnail>
+          <h2>{{item.name}}</h2>
+          <ion-note>做过{{item.cook_times}}次</ion-note>
+          <br>
+          <ion-note>被收藏{{item.collect_times}}次</ion-note>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'menu'" >
+        <ion-item *ngIf="nomenuFlag1">
+          <p class="hint">ta还没有创建过菜单~</p>
+        </ion-item>
+        <ion-item *ngFor="let item2 of menus2">
+          <ion-thumbnail item-start>
+            <img src="{{item2.cover_pic}}"   style="width: 130px!important;height: 86.6px!important;">
+          </ion-thumbnail>
+          <h2>{{item2.name}}</h2>
+          <ion-note>{{item2.descripe}}</ion-note>
+          <ion-note>by {{item2.creater}}</ion-note>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'product'" >
+        <ion-item *ngIf="noproducttFlag1">
+          <p class="hint">ta还没有上传过作品~</p>
+        </ion-item>
+        <ion-item *ngFor="let item of products;let first=first;let i=index">
+          <ion-thumbnail item-start>
+            <img src="{{item.cover_pic}}" style="width: 130px!important;height: 86.6px!important;">
+          </ion-thumbnail>
+          <h2>{{item.name}}</h2>
+          <ion-note>
+            <ion-icon *ngIf="zanFlag[i]" (click)="zan(i)" ios="ios-thumbs-up" md="md-thumbs-up"></ion-icon>
+            <ion-icon *ngIf="!zanFlag[i]" (click)="unzan(i)"  ios="ios-thumbs-up" style="color: #DD3915" md="md-thumbs-up"></ion-icon>
+            {{item.thumb_numbers}}个赞</ion-note>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-item>
+</ion-content>

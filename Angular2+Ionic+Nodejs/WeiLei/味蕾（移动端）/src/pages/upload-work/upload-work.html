@@ -1,0 +1,40 @@
+<!--
+  Generated template for the UploadWorkPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 (click)="close()" style="color: #dd3915">取消</ion-col>
+        <ion-col col-4 style="text-align: center">上传作品</ion-col>
+        <ion-col col-4 style="text-align: right;color: #dd3915">
+          <span>发布</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <form id="info_form" #UpdateForm="ngForm">
+    <input type="hidden" name="recipe_name" value="{{recipe_name}}">
+    <input type="hidden" name="recipe_id" value="{{recipe_id}}">
+    <input type="hidden" name="creater_id" value="{{creater_id}}">
+    <div id="menu_cover"></div>
+    <input type="file" (change)="change($event)"  class="file" name="cover_pic">
+    <div class="intro">
+      <p id="intro">+作品</p>
+    </div>
+
+    <textarea class="describe" placeholder="心得体会" name="description"></textarea>
+
+    <button ion-button block color="danger" style="margin-top: 30px" type="button" (click)="UpdateInfo($event)">发布</button>
+  </form>
+</ion-content>

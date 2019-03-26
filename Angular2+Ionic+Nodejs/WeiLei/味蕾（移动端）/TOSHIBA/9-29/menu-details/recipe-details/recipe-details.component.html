@@ -1,0 +1,53 @@
+<div class="recipe_router">
+  <ul>
+    <li><a >首页</a><span> > </span></li>
+    <li><a >菜谱</a><span> > </span></li>
+    <li><span>{{_name}}</span></li>
+  </ul>
+</div>
+
+<p class="recipe_name">{{_name}}</p>
+
+<div class="recipe_cover">
+  <div>
+    <img src="{{_cover_pic}}"/>
+  </div>
+  <div class="recipe_cover_bottom">
+    <div class="recipe_cover_bottom_left"><span>{{_cook_times}}</span>人做过这道菜</div>
+    <div class="recipe_cover_bottom_right">
+      <button *ngIf="flagcollect1" class="collect" (click)="collect()">收藏</button>
+      <button *ngIf="!flagcollect1" class="uncollect" (click)="collect()">取消收藏</button>
+    </div>
+  </div>
+</div>
+
+<div class="recipe_detail">
+  <div class="menu_details_user">
+    <span>作者：</span>
+    <a routerLink="/personal-center/{{_creater_id}}" routerLinkActive="active">{{_creater}}</a>
+  </div>
+  <p>{{_descripe}}</p>
+  <span class="materials">用料</span>
+  <div>
+    <table>
+      <tr *ngFor="let item of details">
+        <td>{{item.goods}}</td>
+        <td>{{item.amount}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="step">
+  <span class="method_of_recipe">{{_name}}的做法</span>
+  <div>
+    <ol>
+      <li *ngFor="let step of steps;let _index=index"><p class="step_detail"><span class="step_index">{{_index+1}}.</span>{{step.step}}</p></li>
+    </ol>
+  </div>
+</div>
+
+<div class="tips_container" *ngIf="flag">
+  <p class="tips">小贴士</p>
+  <p class="tip_detail">{{_tips}}</p>
+</div>

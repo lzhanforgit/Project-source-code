@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon name="add" style="font-size: 25px !important; color: grey;" (click)="toCreate()"></ion-icon>
+      </ion-col>
+      <ion-col col-8 style="text-align: center">
+        <!--<ion-note style="color: grey;font-size: 22px;">味蕾</ion-note>-->
+        <input class="searchInput" type="text" placeholder="搜索..." (click)="toSearch()">
+      </ion-col>
+      <ion-col col-2 style="text-align: right" >
+        <ion-icon name="settings" style="color: #2d2d2d;font-size: 25px"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-slides autoplay="2000" loop="true" (ionSlideDidChange)="slideChanged()" #mySlides>
+          <ion-slide *ngFor="let item of imgs" style="height: 141px">
+            <img src="assets/img/{{item?.img}}"  alt="" (click)="showImg(item?.links)">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row class="tabs">
+      <ion-col col-3 style="text-align: center">
+        <img style="width: 48px;height: 48px;" src="../../assets/img/mbe风格_布丁.png" alt="">
+        <p>流行菜单</p>
+      </ion-col >
+      <ion-col col-3 (click)="MenuType()">
+        <img style="width: 48px;height: 48px;"  src="../../assets/img/mbe风格_披萨.png" alt="">
+        <p>菜谱分类</p>
+      </ion-col >
+      <ion-col col-3 (click)="Charts()">
+        <img style="width: 48px;height: 48px;"   src="../../assets/img/mbe风格_浓汤.png" alt="">
+        <p>排行榜</p>
+      </ion-col >
+      <ion-col col-3>
+        <img style="width: 48px;height: 48px;"  src="../../assets/img/mbe风格_面包.png" alt="">
+        <p>待补充</p>
+      </ion-col >
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <p style="margin:0;padding:0">时令食材</p>
+        <ion-slides  pager>
+
+          <ion-slide style="background-color: white;height: 150px;">
+            <img (click)="toSearch()" style="width: 45%;" src="http://owigmgx25.bkt.clouddn.com/cover_pic%E5%AE%B6%E4%B9%A1%E6%89%81%E8%B1%86%E8%82%89%E9%A5%AD.png" alt="">
+            <img style="width: 45%;" width="40%"  src="http://owigmgx25.bkt.clouddn.com/cover_pic%E5%AE%B6%E4%B9%A1%E6%89%81%E8%B1%86%E8%82%89%E9%A5%AD.png" alt="">
+          </ion-slide>
+
+          <ion-slide style="background-color: white">
+            <img style="width: 45%;" src="http://owigmgx25.bkt.clouddn.com/cover_pic%E5%AE%B6%E4%B9%A1%E6%89%81%E8%B1%86%E8%82%89%E9%A5%AD.png" alt="">
+            <img style="width: 45%;" src="http://owigmgx25.bkt.clouddn.com/cover_pic%E5%AE%B6%E4%B9%A1%E6%89%81%E8%B1%86%E8%82%89%E9%A5%AD.png" alt="">
+          </ion-slide>
+
+          <ion-slide style="background-color: white">
+            <img style="width: 45%;" src="http://owigmgx25.bkt.clouddn.com/cover_pic%E5%AE%B6%E4%B9%A1%E6%89%81%E8%B1%86%E8%82%89%E9%A5%AD.png" alt="">
+            <img style="width: 45%;" src="http://owigmgx25.bkt.clouddn.com/cover_pic%E5%AE%B6%E4%B9%A1%E6%89%81%E8%B1%86%E8%82%89%E9%A5%AD.png" alt="">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <p>达人推荐</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-3 *ngFor="let user of UnfollowUsers?.slice(0,8)">
+        <img (click)="toPersonal(user.id)" class="userIcon" src="{{user?.user_icon}}" alt="">
+        <p style="font-size: 10px;color:black;">{{user?.name}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <p style="margin:0;padding:0">菜谱推荐</p>
+        <ion-slides  pager>
+          <ion-slide style="background-color: white;height: 150px;" *ngFor="let m of indexs;let i = index;">
+            <ion-row>
+              <ion-col col-6 *ngFor="let menu of indexMenus?.slice(i*2,i*2+2)">
+                <img style="height:110px;width:160px;" src="{{menu?.cover_pic}}" alt="" (click)="toRecipeDetail(menu.id)">
+              </ion-col>
+            </ion-row>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col col-12>
+      <p>菜单推荐</p>
+      <ion-slides  pager>
+
+        <ion-slide style="background-color: white;" *ngFor="let list of indexLists?.slice(0,3)" (click)="toMenuDetail(list.id)">
+          <ion-row  class="card-background-page">
+            <ion-col col-12>
+              <ion-card style="height: 300px;">
+                <img style="width: 100%;height: 60%;" src="{{list.cover_pic}}"/>
+                <ion-card-content>
+                  <ion-card-title>
+                    {{list.name}}
+                  </ion-card-title>
+                  <p>
+                   {{list.descripe.substring(0,20)+"..."}}
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+
+
+</ion-content>

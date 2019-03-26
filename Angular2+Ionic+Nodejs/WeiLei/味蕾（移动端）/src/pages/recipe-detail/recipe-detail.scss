@@ -1,0 +1,59 @@
+page-recipe-detail {
+  .recipe_cover{
+    width: 100%;
+  }
+  .recipe_name{
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  .recipe_do_it{
+    text-align: center;
+  }
+  .step{
+    font-size: 1.1em;
+    padding-left: 10px;
+  }
+  .menu_cover{
+    width: 120px!important;
+    height: 100px!important;
+  }
+
+  .lunbo{
+    height: 300px!important;
+  }
+  .single{
+    text-align: left;
+    width: 180px!important;
+    height: 280px!important;
+    border: solid 1px #cccccc;
+    font-size: 16px;
+    display: block;
+    color: #383835;
+    margin-right: 10px;
+  }
+  .swiper-wrapper{
+    height: 150px !important;
+  }
+  .work_cover{
+    width: 180px !important;
+    height: 150px !important;
+    box-sizing: border-box;
+  }
+
+  .info{
+    text-align: left;
+    margin-left: 10px;
+  }
+  .slide-zoom {
+    width: 180px !important;
+    height: 300px !important;
+  }
+  .desc{
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: black;
+  }
+
+
+}

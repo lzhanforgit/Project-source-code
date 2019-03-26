@@ -1,0 +1,30 @@
+<!--
+  Generated template for the LoginOrRegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding>
+  <ion-slides style="height:80%;" pager>
+
+    <ion-slide style="background-color: white">
+      <h2>开始准备好好吃饭</h2>
+      <p>好好吃饭用心生活，比什么都幸福，保存你最喜欢的美食，分享你的三餐，关注厨房里的达人</p>
+    </ion-slide>
+
+    <ion-slide style="background-color: white">
+      <h2>slide2</h2>
+    </ion-slide>
+
+    <ion-slide style="background-color: white">
+      <h2>slide3</h2>
+    </ion-slide>
+  </ion-slides>
+  <div style="height:20%;text-align: center">
+    <div class="btns" style="overflow: hidden; padding-top:30px; text-align: center">
+      <button ion-button color="danger"  (click)="toLogin()" >登录</button>
+      <button ion-button color="danger" (click)="toRegister()" >注册</button>
+    </div>
+    <button ion-button color="danger" clear (click)="toHomepage()">先去看看</button>
+  </div>
+</ion-content>

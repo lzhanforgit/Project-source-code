@@ -1,0 +1,89 @@
+<view class='main'>
+  <!--顶部开始  -->
+  <view class='hair'>
+    <view class='header'>
+      <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image image_top" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class='center swiper-tab'>
+      <!-- 左边部分   -->
+      <view class="centerLeft swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+        <view class='centerImg' data-current="0" bindtap="swichNav">
+          <image src="{{currentTab==0 ? '../index/images/index_list1.png':'../index/images/index_list.png'}}" class='center_image' data-current="0" bindtap="swichNav"></image>
+        </view>
+        <view class='centerName fz new_margin' data-current="0" bindtap="swichNav">
+          <view data-current="0" bindtap="swichNav">投资收购</view>
+        </view>
+      </view>
+      <!-- 右边部分    -->
+      <view class="centerRight swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+        <view class='centerImg' data-current="1" bindtap="swichNav">
+          <image src="{{currentTab==1 ? '../index/images/index_project1.png':'../index/images/index_project.png'}}" class='center_image' data-current="1" bindtap="swichNav"></image>
+        </view>
+        <view class='centerName fz new_margin' data-current="1" bindtap="swichNav">
+          <view data-current="1" bindtap="swichNav">光伏项目</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<!--底下部分开始  -->
+<view class="content_project">
+
+
+  <view wx:if='{{currentTab==0}}'>
+    <block wx:for='{{projectInfo0}}'>
+      <view id="{{index}}" class='projectList' bindtap='navigate_share_list'>
+        <view class="image">
+          <image class="list_image" src="{{item.list_pic}}"></image>
+        </view>
+
+        <view class="fr_width fr">
+          <view class="project">
+            <view class="name">{{item.list_name}}</view>
+            <view class="information">
+              <view class="locationName">{{item.user_provinceName}}{{item.user_cityName}}</view>
+            </view>
+          </view>
+          <view class="jump">
+            <!-- <image class="jump_image" src="{{item.Img_url}}"></image> -->
+            <view class="jump_view" style="{{item.list_self ? 'background-color:#8CD9E3':'color:gray'}}">自发自用</view>
+            <view class="jump_view" style="{{item.list_sum ? 'background-color:#FDE7D0':'color:gray'}}">全额上网</view>
+
+            <view class="jump_view" style="{{item.list_country ? 'background-color:#FBCCD2':'color:gray'}}">农村光伏</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view wx:if='{{currentTab==1}}'>
+    <block wx:for='{{projectInfo1}}'>
+      <!-- 左边部分 -->
+      <view id="{{index}}" class='projectList' bindtap='next_project_details'>
+        <view class="view">
+          <view class="list_view">{{item.project_name}}</view>
+          <view class="list_view size_change">
+            <view class='view_inner fl'>{{item.project_user}}</view>
+            <view class='view_inner view_inner_large fr text_center'>{{item.project_provinceNmae}}{{item.project_cityName}}</view>
+          </view>
+        </view>
+
+        <view class="fr0">
+          <!-- <view class="list_view list_right"></view> -->
+          <view class="list_view list_right">{{item.project_type}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+
+
+</view>

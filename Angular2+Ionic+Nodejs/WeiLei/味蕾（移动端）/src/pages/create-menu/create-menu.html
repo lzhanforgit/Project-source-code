@@ -1,0 +1,52 @@
+<!--
+  Generated template for the CreateMenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 (click)="close()" style="color: #dd3915">取消</ion-col>
+        <ion-col col-4 style="text-align: center">创建一个菜单</ion-col>
+        <ion-col col-4 style="text-align: right;color: #dd3915">
+          <span>创建</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!--<form [formGroup]="menuInfoForm" (ngSubmit)="createMenu(menuInfoForm.value)" novalidate>-->
+
+    <!--<div id="menu_cover"></div>-->
+    <!--<input type="file" (change)="change($event)"  class="file" [formControl]="menu_cover">-->
+    <!--<div class="intro">-->
+      <!--<p id="intro">+菜单封面</p>-->
+    <!--</div>-->
+    <!--<ion-input style="font-size: 1.2em;width: 100%;background-color:#fcfcfc;margin-top: 30px" placeholder="菜单标题" clearInput [formControl]="menu_title"></ion-input>-->
+
+    <!--<textarea class="describe" placeholder="写一段描述" [formControl]="describe"></textarea>-->
+
+    <!--<button ion-button block color="danger" style="margin-top: 30px" type="submit">创建</button>-->
+  <!--</form>-->
+
+  <form id="info_form" #UpdateForm="ngForm">
+    <input type="hidden" name="creater_id" value="{{creater_id}}">
+    <div id="menu_cover"></div>
+    <input type="file" (change)="change($event)"  class="file" name="menu_cover">
+    <div class="intro">
+      <p id="intro">+菜单封面</p>
+    </div>
+    <input name="menu_name" style="font-size: 1.2em;width: 100%;height: 35px;background-color:#fcfcfc;margin-top: 30px;border: none" placeholder="菜单标题" >
+
+    <textarea class="describe" placeholder="写一段描述" name="introduce"></textarea>
+
+    <button ion-button block color="danger" style="margin-top: 30px" type="button" (click)="UpdateInfo($event)">创建</button>
+  </form>
+</ion-content>

@@ -1,0 +1,52 @@
+<div class="col-md-12" style="position: relative;z-index: 9999">
+  <nav class="navbar navbar-default navbar-mobile bootsnav navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-menu"
+         style="background-image:url('http://owlx0joyl.bkt.clouddn.com/wood_background.png')">
+      <ul style="width: 100%" class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+        <a><img src="./../../assets/images/icon.png" style="height: 60px;float: left;margin:13px 0px 0px 10px"></a>
+        <li><a style="font-size: 18px;" routerLink="/index" routerLinkActive="active">首页</a></li>
+        <li class="dropdown">
+          <a style="font-size: 18px;" class="dropdown-toggle" data-toggle="dropdown">最新动态</a>
+          <ul class="dropdown-menu"
+              style="background-image:url('http://owlx0joyl.bkt.clouddn.com/wood_background.png')">
+            <li><a class="word" routerLink="/school" routerLinkActive="active" style="font-size: 18px;">响木家庭familiy</a></li>
+            <li><a class="word" routerLink="/company" routerLinkActive="active" style="font-size: 18px;">响木活动ing</a></li>
+            <li><a class="word" routerLink="/community" routerLinkActive="active" style="font-size: 18px;">响木手作style</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a style="font-size: 18px;" class="dropdown-toggle" data-toggle="dropdown">最热课程</a>
+          <ul class="dropdown-menu"
+              style="background-image:url('http://owlx0joyl.bkt.clouddn.com/wood_background.png')">
+            <li><a class="word" routerLink="/pen" routerLinkActive="active" style="font-size: 18px;">匠心之笔</a></li>
+            <li><a class="word" routerLink="/guitar" routerLinkActive="active" style="font-size: 18px;">创意木勺</a></li>
+            <li><a class="word" routerLink="/hairpin" routerLinkActive="active" style="font-size: 18px;">繁花发簪</a></li>
+          </ul>
+        </li>
+        <li><a style="font-size: 18px;" routerLink="/work" routerLinkActive="active">会员作品</a></li>
+        <li><a style="font-size: 18px;" onclick="window.open('http://localhost:63342/luban/luban/lubansuo.html?_ijt=ljkjjhn1q1j5apn63l8ks4j91b')">木艺-几何美学</a></li>
+        <ul class="nav navbar-nav navbar-right" style="float:right;margin-right: 1px" *ngIf="!_hiddens">
+          <li><a routerLink="/login" routerLinkActive="active" >登录</a></li>
+          <li><a  routerLink="/regist" routerLinkActive="active" >注册</a></li>
+        </ul>
+        <li class="nav navbar-nav navbar-right dropdown" style="margin-right: 80px" *ngIf="_hiddens">
+          <a style="font-size: 18px;float:right;margin-right: 1px" class="dropdown-toggle" data-toggle="dropdown">{{username}}</a>
+          <ul class="dropdown-menu"
+              style="background-image:url('http://owlx0joyl.bkt.clouddn.com/wood_background.png')">
+            <li (click)="out()"><a class="word" onchange="location.reload()" style="font-size: 18px;">退出</a></li>
+          </ul>
+        </li>
+
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+          <!---->
+
+        <!--</div>-->
+      </ul>
+    </div>
+  </nav>
+</div>

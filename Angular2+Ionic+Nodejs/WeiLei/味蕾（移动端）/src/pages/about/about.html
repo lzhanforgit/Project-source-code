@@ -1,0 +1,47 @@
+
+<ion-content class="classify">
+  <ion-list padding>
+    <div >
+      <ion-segment [(ngModel)]="pet">
+        <ion-segment-button value="收藏的菜谱" >
+          收藏的菜谱
+        </ion-segment-button>
+        <ion-segment-button value="收藏的菜单">
+          收藏的菜单
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    <div [ngSwitch]="pet"  >
+      <ion-list *ngSwitchCase="'收藏的菜谱'">
+        <h3 class="hint" *ngIf="flag">还没有收藏过菜谱哟~</h3>
+        <ion-item *ngFor="let menu of PersonalMenu" (click)="toRecipeDetail(menu.reciper_id)">
+          <ion-thumbnail item-start>
+            <img src="{{menu.cover_pic}}" height="216" width="280"/>
+          </ion-thumbnail>
+          <div  class="single_menu">
+            <div class="menu_name"><a >{{menu.name.substring(0,7)}}</a></div>
+            <div class="include_menunum">{{menu.descripe.substring(0,7)+"..."}}</div>
+            <div class="author"><a >{{menu.creater}}</a></div>
+          </div>
+        </ion-item>
+
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'收藏的菜单'">
+
+
+        <h3 class="hint" *ngIf="flag">还没有收藏过菜单哟~</h3>
+        <ion-item *ngFor="let item of favorite" (click)="toMenuDetail(item.reciper_id)">
+          <ion-thumbnail item-start>
+            <img src="{{item.cover_pic}}" height="136" width="215"/>
+          </ion-thumbnail>
+          <div class="single_menu" >
+            <div class="menu_gather_name"><a>{{item.name.substring(0,7) }}</a></div>
+            <div class="include_menunum">{{item.descripe.substring(0,7)+"..."}}</div>
+            <div class="author"><a>{{item.creater}}</a> </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-list>
+</ion-content>

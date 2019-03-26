@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="shortcut icon" href="../images/icon_header.ico">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jQuery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <style>
+        body{
+            background: url(../images/background.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">友情提示：</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="model_message"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="panel panel-default col-sm-6 col-sm-offset-3"  style="margin-top:160px;">
+            <h3 class="text-center" style="color:red">美好邂逅从一次注册开始......</h3>
+            <div class="panel-body">
+                <form class="form-horizontal" id="regist_form">
+                    <div class="form-group">
+                        <label for="user_id" class="col-sm-2 control-label">手机号</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="user_id" name="userId" placeholder="输入手机号">
+                        </div>
+                        <div class="col-sm-3 ">
+                            <button type="button" id="getCode" class="btn btn-danger">获取验证码</button>
+                        </div>
+                        <div class="text-warning col-sm-10 col-sm-offset-2" id="telephone_error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="user_id" class="col-sm-2 control-label">验证码</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="code" placeholder="请输入你收到验证码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="user_password" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" name="userPassword" placeholder="输入密码">
+                        </div>
+                        <div class="text-warning col-sm-10 col-sm-offset-2" id="password_error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sure_user_password" class="col-sm-2 control-label">确认密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password_confirm" placeholder="请再次输入密码">
+                        </div>
+                        <div class="text-warning col-sm-10 col-sm-offset-2" id="password_confirm_error"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-danger"  id="btn_regist" style="width:60%;margin-left:60px;">注册</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <p class="text-center">已有账号？去<a href="login.html">登录...</a></p>
+        </div>
+    </div>
+</div>
+<script src="../js/regist.js"></script>
+</body>
+</html>

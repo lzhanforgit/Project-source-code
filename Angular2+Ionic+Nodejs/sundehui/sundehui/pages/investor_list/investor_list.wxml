@@ -1,0 +1,119 @@
+<!--page/one/index.wxml-->
+<view class="page">
+  <form bindreset="formReset" class="page-bottom">
+    <view class='select_list'>
+      <scroll-view scroll-y="true" class="select_scroll">
+        <view>
+          <view class='select_title'>类型选择</view>
+          <view class='distpicker-type'>
+            <view bindtap='self_type' class="type {{self ? 's-type1' : ''}}">自发\n用电</view>
+            <view bindtap='sum_type' class="type {{sum ? 's-type2' : ''}}">全额\n上网</view>
+            <view bindtap='country_type' class="type {{country ? 's-type3' : ''}}">农村\n光伏</view>
+          </view>
+          <view>
+
+            <view class='select_title'>所在城市：</view>
+            <picker-view indicator-style="height: 40rpx;" class="distpicker-content" value="{{value}}" bindchange="changeArea">
+              <!-- 省 -->
+              <picker-view-column>
+                <view wx:for="{{provinceName}}" wx:key="province" class="area-item">{{item}}</view>
+              </picker-view-column>
+              <!-- 市 -->
+              <picker-view-column>
+                <view wx:for="{{cityName}}" wx:key="city" class="area-item">{{item}}</view>
+              </picker-view-column>
+              <!-- 区 -->
+            </picker-view>
+          </view>
+        </view>
+        <view wx:if="{{self}}">
+          <view class='select_title'>自发自用项目</view>
+          <view class="distpicker-input">安装容量：
+            <input type="number" bindinput="self_capacity" class='select-input-single'></input>
+            兆瓦(以上)
+          </view>
+          <view class='distpicker-input'>屋顶材质:
+          </view>
+          <view class='distpicker-texture'>
+            <view bindtap='self_shuini' class="texture_type {{self_shuini ? 's-type' : ''}}">水泥</view>
+            <view bindtap='self_zhuankuai' class="texture_type {{self_zhuankuai ? 's-type' : ''}}">彩钢</view>
+            <view bindtap='self_qita' class="texture_type {{self_qita ? 's-type' : ''}}">其他</view>
+          </view>
+          <view class="distpicker-input">电价折扣：
+            <input type="number" bindinput="self_discount" class='select-input-single'></input>
+            折扣(以下)
+          </view>
+        </view>
+        <view wx:if="{{sum}}">
+          <view class='select_title'>全额上网项目</view>
+          <view class="distpicker-input">安装容量：
+            <input type="number" bindinput="sum_capacity" class='select-input-single'></input>
+            兆瓦(以上)
+          </view>
+          <view class="distpicker-input">接入点距离：
+            <input type="number" bindinput="sum_elec_distance" class='select-input-single'></input>
+            米(以内)
+          </view>
+          <view class="distpicker-input"> 租金：
+            <input type="number" bindinput="sum_rent_max" class='select-input'></input>
+            元/平方（以内）
+          </view>
+        </view>
+        <view wx:if="{{country}}">
+          <view class='select_title'>农村光伏项目</view>
+          <view class="distpicker-input">农户数量：
+            <input type="number" bindinput="country_number" class='select-input-single'></input>
+            户(以上)
+          </view>
+        </view>
+      </scroll-view>
+      <button formType="reset" class='select_complete fl'>重置</button>
+      <button bindtap="distpickerSure" class='select_complete fr'>筛选</button>
+    </view>
+  </form>
+  <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{open ? 'c-state1' : ''}}">
+    <view class='search_nav'>
+      <view class='select-btn' bindtap="tap_ch">筛选</view>
+      <input class="textinput" bindinput="bindinput" bindconfirm="search" value="{{inputValue}}" placeholder="请输入项目名称" />
+      <image bindtap='search' style='height:80rpx;width:80rpx;margin-left:82%' src='images/search.png'></image>
+    </view>
+    <view wx:if="{{search_fold}}">
+      <scroll-view scroll-y="true" class="scrollview">
+        <view wx:for="{{bindSource}}">
+          <view id="{{item}}" bindtap="itemtap" class="itemview">{{item}}</view>
+        </view>
+      </scroll-view>
+
+    </view>
+
+
+
+
+    <block wx:if="{{projectInfo1.length!=0}}">
+      <scroll-view scroll-y="true" style="height:{{winHeight}}px" class='project_list'>
+        <block wx:for='{{projectInfo2}}'>
+          <!-- 左边部分 -->
+          <view id='{{index}}' bindlongpress='DelMsg' class='projectList' bindtap='navigate'>
+            <view class="view">
+              <view class="list_view">{{item.project_name}}</view>
+              <view class="list_view size_change">
+                <view class='view_inner fl'>{{item.project_user}}</view>
+                <view class='view_inner view_inner_large fr text_center'>{{item.project_provinceNmae}}{{item.project_cityName}}</view>
+              </view>
+            </view>
+
+            <view class="fr0">
+              <!-- <view class="list_view list_right"></view> -->
+              <view class="list_view list_right">{{item.project_type}}</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </block>
+    <block wx:else>
+      <view class='tip'>
+        ~ 您还没有创建任何项目 ~
+      </view>
+    </block>
+  </view>
+</view>

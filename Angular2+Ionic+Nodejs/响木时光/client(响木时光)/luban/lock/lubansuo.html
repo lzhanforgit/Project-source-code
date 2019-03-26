@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lock</title>
+    <script type="text/javascript" src="build/three.js"></script>
+    <script type="text/javascript" src="OrbitControls.js"></script>
+    <script type="text/javascript" src="OBJLoader.js"></script>
+    <style>
+        html,body{background: #000000;}
+    </style>
+</head>
+<body>
+<a style="position: fixed;right: 50px;top: 50px;z-index: 999"><img src="close.png "></a>
+
+<script>
+
+
+</script>
+
+<script type="text/javascript">
+
+
+    window.onload = function(){
+        // 获取屏幕高度 document.documentElement.clientHeight
+        console.log(document.documentElement.clientHeight);
+        // 获取屏幕宽度 document.documentElement.clientWidth
+        console.log(document.documentElement.clientWidth);
+    }
+
+
+    var scene = new THREE.Scene();
+    scene.background = new THREE.CubeTextureLoader()
+        .setPath( 'pisa/' )
+        .load( [ 'px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png' ] );
+
+//    var geometry = new THREE.CubeGeometry(10,10,10);
+//    var material = new THREE.MeshLambertMaterial({color:0xff0000});
+//    var mesh = new THREE.Mesh(geometry,material);
+
+//    scene.add(mesh);
+
+
+
+
+
+    var manager = new THREE.LoadingManager();
+    var texture = new THREE.Texture();
+    var loader = new THREE.ImageLoader( manager );
+    loader.load( 'woodskin.png', function ( image ) {
+        texture.image = image;
+        texture.needsUpdate = true;
+    } );
+
+    var loader1=new  THREE.OBJLoader();
+    loader1.load('finish.obj',function (lockObject1) {
+        lockObject1.scale.set(0.1,0.1,0.1);
+        lockObject1.position.y=0;
+        lockObject1.position.x=0;
+        lockObject1.position.z=-50;
+
+        lockObject1.traverse( function ( child ) {
+            if ( child instanceof THREE.Mesh ) {
+                child.material.map = texture;
+            }
+        } );
+
+        scene.add(lockObject1);
+
+
+    })
+
+
+
+
+//    var loader2=new  THREE.OBJLoader();
+//    loader2.load('lock2.obj',function (lockObject2) {
+////        dogObject.scale.set(0.1,0.1,0.1);
+//        lockObject2.position.y=0;
+//        lockObject2.position.x=500;
+//        lockObject2.position.z=0;
+//        scene.add(lockObject2);
+//
+//    })
+//
+//    var loader3=new  THREE.OBJLoader();
+//    loader3.load('lock3.obj',function (lockObject3) {
+////        dogObject.scale.set(0.1,0.1,0.1);
+//        lockObject3.position.y=0;
+//        lockObject3.position.x=500;
+//        lockObject3.position.z=0;
+//        scene.add(lockObject3);
+//
+//    })
+//
+//    var loader4=new  THREE.OBJLoader();
+//    loader4.load('lock4.obj',function (lockObject4) {
+////        dogObject.scale.set(0.1,0.1,0.1);
+//        lockObject4.position.y=0;
+//        lockObject4.position.x=500;
+//        lockObject4.position.z=0;
+//        scene.add(lockObject4);
+//
+//    })
+//
+//    var loader5=new  THREE.OBJLoader();
+//    loader5.load('lock5.obj',function (lockObject5) {
+////        dogObject.scale.set(0.1,0.1,0.1);
+//        lockObject5.position.y=0;
+//        lockObject5.position.x=500;
+//        lockObject5.position.z=0;
+//        scene.add(lockObject5);
+//
+//    })
+//
+//    var loader6=new  THREE.OBJLoader();
+//    loader6.load('lock6.obj',function (dogObject6) {
+////        dogObject.scale.set(0.1,0.1,0.1);
+//        dogObject6.position.y=0;
+//        dogObject6.position.x=500;
+//        dogObject6.position.z=0;
+//        scene.add(dogObject6);
+//
+//    })
+
+
+    var light = new THREE.PointLight(0xffffff);
+    light.position.set(300,400,200);
+    scene.add(light);
+
+    scene.add(new THREE.AmbientLight(0x333333))
+
+    var camera = new THREE.PerspectiveCamera(40 , 1340/650, 1, 1000);
+    camera.position.set(200,200,200);
+    camera.lookAt(scene.position);
+
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(1340,650);
+    document.body.appendChild(renderer.domElement);
+
+    function render() {
+        renderer.render(scene,camera);
+        
+    }
+
+    render();
+    
+
+
+    var controls=new THREE.OrbitControls(camera);
+    controls.addEventListener("change",render);
+
+    function animate() {
+        requestAnimationFrame(animate);
+        render();
+    }
+
+    animate()
+</script>
+</body>
+</html>

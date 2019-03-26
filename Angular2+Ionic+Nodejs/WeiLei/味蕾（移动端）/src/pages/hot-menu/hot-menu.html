@@ -1,0 +1,35 @@
+
+<ion-header class="hot-menu">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 (click)="back()">
+        <ion-icon name="arrow-back"  style="font-size: 30px !important; color: black;"></ion-icon>
+      </ion-col>
+      <ion-col col-4>
+        <ion-note>热门菜谱</ion-note>
+      </ion-col>
+      <ion-col col-4  >
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-header>
+
+
+<ion-content class="hot-menu" padding>
+  <ion-item class="hot-m"  *ngFor="let item of AllMenus | orderbycollect">
+    <ion-thumbnail item-start (click)="toRecipeDetail(item.id)">
+      <img  src="{{item?.cover_pic}}" >
+    </ion-thumbnail>
+    <div  class="single_menu">
+      <div class="menu_name" ><a >{{item?.name}}</a></div>
+      <div class="include_menunum">{{item.descripe.substring(0,7)+"..."}}</div>
+
+      <div class="author" (click)="toPersonal(item.id)"><a >{{item?.creater}} </a>创建</div>
+      <div class="state"><a >{{item?.collect_times}} 收藏</a></div>
+    </div>
+  </ion-item>
+
+</ion-content>

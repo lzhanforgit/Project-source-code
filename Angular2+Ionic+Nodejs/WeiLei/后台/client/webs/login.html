@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="shortcut icon" href="../images/icon_header.ico">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jQuery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script>
+        window.onload=function(){
+            var tel=document.getElementById('user_id');
+            var password=document.getElementById('user_password');
+            var check=document.getElementById('remember');
+            if(localStorage){
+                tel.value=localStorage.getItem('tel');
+                password.value=localStorage.getItem('password');
+            }
+        }
+    </script>
+    <style>
+      body{
+          background: #444444 url(../images/background.jpg);
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          overflow: hidden;
+      }
+    </style>
+</head>
+<body>
+<div class="container main_wrapper">
+    <div class="row">
+        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">友情提示：</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="model_message"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+        <div class="col-sm-6 col-sm-offset-4" style="margin-top: 80px">
+            <img src="../images/logo_pic.png" alt="">
+        </div>
+        <div class="panel panel-default col-sm-6 col-sm-offset-3"  style="margin-top:60px;">
+                <h3 class="text-center" style="color:red">开始美食发现之旅......</h3>
+            <div class="panel-body">
+                    <form class="form-horizontal" id="myform">
+                        <div class="form-group">
+                            <label for="user_id" class="col-sm-2 control-label">账号</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="user_id" name="userId" placeholder="user id">
+                            </div>
+                            <div class="text-warning col-sm-10 col-sm-offset-2" id="telephone_error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user_password" class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="user_password" name="userPassword" placeholder="Password">
+                            </div>
+                            <div class="text-warning col-sm-10 col-sm-offset-2" id="password_error"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="remember"> Remember me
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="forget"> Forget me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-danger"  id="btn_login" style="width:60%;margin-left:50px;">login in</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <p class="text-center">还没有账号？去<a href="regist.html">注册...</a></p>
+        </div>
+    </div>
+</div>
+<script src="../js/login.js"></script>
+</body>
+</html>

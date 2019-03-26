@@ -1,0 +1,27 @@
+page-new-menus {
+  .new-menus ion-item .single_menu div {
+    margin-bottom: 5px;
+  }
+
+  .new-menus ion-note {
+    font-size: 1.4em;
+    color: black;
+  }
+  .single_menu .include_menunum {
+    color: #9c6730;
+  }
+  .state a {
+    color: black;
+  }
+  .new-menus  .item-md ion-thumbnail img {
+    width: 200px;
+    height: 125px;
+  }
+  .new-menus ion-item .single_menu a{
+    color:black;
+  }
+  .new-menus ion-item .single_menu .author a {
+    font-size: 1.0em;
+    color: #8e9093;
+  }
+}

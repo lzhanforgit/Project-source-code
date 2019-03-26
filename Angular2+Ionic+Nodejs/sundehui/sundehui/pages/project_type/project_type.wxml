@@ -1,0 +1,417 @@
+<view class='headerPic'>
+  <image src='images/three01.jpg' class='header_pic'></image>
+</view>
+<form bindsubmit='formSubmit'>
+<view class='content'>
+  <view class="swiper-box">
+    <!-- 全额上网项目 -->
+    <view wx:if='{{new_status=="全额上网"}}'>
+      <!--项目名称  -->
+      <view class='mingcheng'>
+        <view class='mingchengLeft'>项目名称</view>
+        <view class='mingchengRight' style="{{nameFLAG ? '' : 'border: red 1rpx solid'}}">
+          <input type='text' name='project_name' maxlength='10'>{{project_name}}</input>
+        </view>
+      </view>
+
+      <!-- 联系人电话  -->
+      <view class='dizhi'>
+        <view class='dizhiLeft telephoneLeft'>联系人电话</view>
+        <view class='mingchengRight telephone' style="margin-top:10rpx;{{phoneFLAG ? '' : 'border: red 1rpx solid'}}">
+          <input type='number' name='project_phone' maxlength='11'>{{project_phone}}</input>
+        </view>
+      </view>
+
+
+      <!--名字  -->
+      <view class='dizhi'>
+        <view class='dizhiLeft telephoneLeft'>联系人姓名</view>
+        <view class='mingchengRight telephone' style="margin-top:10rpx;{{userFLAG ? '' : 'border: red 1rpx solid'}}">
+          <input type='text' name='project_user' maxlength='5'>{{project_user}}</input>
+        </view>
+      </view>
+
+      <!--地区  -->
+      <view class='form-item dizhi'>
+        <view class="form-item-hd">地区：</view>
+        <view class="form-item-bd" bindtap="showDistpicker">
+          <view class="input {{!provinceName[provinceSelIndex] ? 'input-placeholder' : ''}}">
+            <block wx:if="{{provinceName[provinceSelIndex]}}">{{provinceName[provinceSelIndex]}} {{cityName[citySelIndex]}} </block>
+            <block wx:else>请选择所在地区</block>
+          </view>
+          <input type="text" name="province" value="{{provinceName[provinceSelIndex]}}" class="hidden" />
+          <input type="text" name="city" value="{{cityName[citySelIndex]}}" class="hidden" />
+        </view>
+      </view>
+
+      <view wx:if="{{showDistpicker}}" class="distpicker">
+        <view class="distpicker-btn">
+          <view class="distpicker-cancel-btn" bindtap="distpickerCancel">取消</view>
+          <view class="distpicker-sure-btn" bindtap="distpickerSure">确定</view>
+        </view>
+        <picker-view indicator-style="height: 40px;" class="distpicker-content" value="{{value}}" bindchange="changeArea">
+          <!-- 省 -->
+          <picker-view-column>
+            <view wx:for="{{provinceName}}" wx:key="province" class="area-item">{{item}}</view>
+          </picker-view-column>
+          <!-- 市 -->
+          <picker-view-column>
+            <view wx:for="{{cityName}}" wx:key="city" class="area-item">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+
+
+
+
+
+
+
+      <!-- 安装容量 -->
+      <view class=' rongliang'>
+        <view class='rongliangLeft'>安装容量 </view>
+        <view class='rongliangRight'>
+          <view class='rongliangRightLeft'>
+            <input type='digit' bindinput='sum_capacity' maxlength='8'>{{sum_capacity}}</input>
+          </view>
+          <view class='rongliangRightRight'>兆瓦</view>
+        </view>
+      </view>
+
+
+      <!-- 屋顶面积 -->
+      <view class='roofAera '>
+        <view class='aeraLeft'>屋顶面积 </view>
+        <view class='aeraRight'>
+          <view class='aeraRightLeft'>
+            <input type='digit' bindinput='sum_area' maxlength='7'>{{sum_area}}</input>
+          </view>
+          <view class='aeraRightRight'>万 平方米</view>
+        </view>
+      </view>
+
+
+
+
+      <!-- 电力接入点距离 -->
+      <view class='juli'>
+        <view class='juliLeft'>电力接入点距离 ≤ </view>
+        <view class='juliRight'>
+          <view class='juliRightLeft'>
+            <input type='digit' bindinput='sum_distance' maxlength='6'>{{sum_distance}}</input>
+          </view>
+          <view class='juliRightRight '>米(以内)</view>
+        </view>
+      </view>
+
+
+
+
+
+
+      <!-- 租金 -->
+      <view class='qian'>
+        <view class='qianLeft'>租金</view>
+        <view class='qianRight'>
+          <view class='qianRightLeft'>
+            <input type='digit' bindinput='sum_rent' maxlength='6'>{{sum_rent}}</input>
+          </view>
+          <view class='qianRightRight'>元/平方米</view>
+        </view>
+      </view>
+
+
+
+      <!-- 屋顶材质 -->
+      <view class='texture'>
+        <view class='textureLeft'>屋顶材质</view>
+        <view class='textureRight'>
+          <view bindtap='sum_shuini' class="texture_type {{sum_shuini=='水泥' ? 's-type' : ''}}">水泥</view>
+          <view bindtap='sum_zhuankuai' class="texture_type {{sum_zhuankuai=='彩钢' ? 's-type' : ''}}">彩钢</view>
+          <view bindtap='sum_qita' class="texture_type {{sum_qita=='其它' ? 's-type' : ''}}">其它</view>
+        </view>
+      </view>
+
+      <!--其他要求  -->
+      <view class='yaoqiu'>
+        <view class='yaoqiuLeft'>简介</view>
+        <view class='yaoqiuRight'>
+          <textarea class='txt' name='project_require'>{{project_require}}</textarea>
+        </view>
+      </view>
+    </view>
+
+
+
+    <!-- 自发自用项目 -->
+    <view wx:if='{{new_status=="自发自用"}}'>
+
+      <!--项目名称  -->
+      <view class='mingcheng'>
+        <view class='mingchengLeft' style="{{nameFLAG ? '' : 'border: red 1rpx solid'}}">项目名称</view>
+        <view class='mingchengRight'>
+          <input type='text' name='project_name' maxlength='10'>{{project_name}}</input>
+        </view>
+      </view>
+
+      <!-- 联系人电话  -->
+      <view class='dizhi'>
+        <view class='dizhiLeft telephoneLeft'>联系人电话</view>
+        <view class='mingchengRight telephone' style="margin-top:10rpx;{{phoneFLAG ? '' : 'border: red 1rpx solid'}}">
+          <input type='number' name='project_phone' maxlength='11'>{{project_phone}}</input>
+        </view>
+      </view>
+
+      <!--名字  -->
+      <view class='dizhi'>
+        <view class='dizhiLeft telephoneLeft'>联系人姓名</view>
+        <view class='mingchengRight telephone' style="margin-top:10rpx;{{userFLAG ? '' : 'border: red 1rpx solid'}}" >
+          <input type='text' name='project_user' maxlength='5'>{{project_user}}</input>
+        </view>
+      </view>
+
+
+
+      <view class='form-item dizhi'>
+        <view class="form-item-hd">地区：</view>
+        <view class="form-item-bd" bindtap="showDistpicker">
+          <view class="input {{!provinceName[provinceSelIndex] ? 'input-placeholder' : ''}}">
+            <block wx:if="{{provinceName[provinceSelIndex]}}">{{provinceName[provinceSelIndex]}} {{cityName[citySelIndex]}}</block>
+            <block wx:else>请选择所在地区</block>
+          </view>
+          <input type="text" name="province" value="{{provinceName[provinceSelIndex]}}" class="hidden" />
+          <input type="text" name="city" value="{{cityName[citySelIndex]}}" class="hidden" />
+        </view>
+      </view>
+
+      <view class="distpicker" wx:if='{{showDistpicker}}'>
+        <view class="distpicker-btn">
+          <view class="distpicker-cancel-btn" bindtap="distpickerCancel">取消</view>
+          <view class="distpicker-sure-btn" bindtap="distpickerSure">确定</view>
+        </view>
+        <picker-view indicator-style="height: 40px;" class="distpicker-content" value="{{value}}" bindchange="changeArea">
+          <!-- 省 -->
+          <picker-view-column>
+            <view wx:for="{{provinceName}}" wx:key="province" class="area-item">{{item}}</view>
+          </picker-view-column>
+          <!-- 市 -->
+          <picker-view-column>
+            <view wx:for="{{cityName}}" wx:key="city" class="area-item">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+
+
+
+      <!-- 安装容量 -->
+      <view class=' rongliang'>
+        <view class='rongliangLeft'>安装容量 </view>
+        <view class='rongliangRight'>
+          <view class='rongliangRightLeft'>
+            <input type='digit' bindinput='self_capacity' maxlength='8'>{{self_capacity}}</input>
+          </view>
+          <view class='rongliangRightRight'>兆瓦</view>
+        </view>
+      </view>
+
+
+
+      <!-- 屋顶面积 -->
+      <view class='roofAera '>
+        <view class='aeraLeft'>屋顶面积 </view>
+        <view class='aeraRight'>
+          <view class='aeraRightLeft'>
+            <input type='digit' bindinput='self_area' maxlength='7'>{{self_area}}</input>
+          </view>
+          <view class='aeraRightRight'>万 平方米</view>
+        </view>
+      </view>
+
+      <!-- 屋顶材质 -->
+      <view class='texture'>
+        <view class='textureLeft'>屋顶材质</view>
+        <view class='textureRight'>
+
+          <view bindtap='self_shuini' class="texture_type {{self_shuini=='水泥' ? 's-type' : ''}}">水泥</view>
+          <view bindtap='self_zhuankuai' class="texture_type {{self_zhuankuai=='彩钢' ? 's-type' : ''}}">彩钢</view>
+          <view bindtap='self_qita' class="texture_type {{self_qita=='其它' ? 's-type' : ''}}">其它</view>
+        </view>
+      </view>
+
+
+
+      <!-- 年用电量 -->
+      <view class='dianliang'>
+        <view class='dianliangLeft'>年用电量</view>
+        <view class='dianliangRight'>
+          <view class='dianliangRightLeft'>
+            <input type='digit' bindinput='self_electricity' maxlength='5'>{{self_electricity}}</input>
+          </view>
+          <view class='dianliangRightRight'>万 度</view>
+        </view>
+      </view>
+
+      <!-- 变压器容量 -->
+      <view class='bianyaqi'>
+        <view class='bianyaqiLeft'>变压器容量</view>
+        <view class='bianyaqiRight'>
+          <view class='bianyaqiRightLeft'>
+            <input type='digit' bindinput='self_elec_distance' maxlength='6'>{{self_elec_distance}}</input>
+          </view>
+          <view class='bianyaqiRightRight '>千伏</view>
+        </view>
+      </view>
+
+      <!-- 电价折扣 -->
+      <view class='zhekou'>
+        <view class='zhekouLeft'>电价折扣</view>
+        <view class='zhekouRight'>
+          <view class='zhekouRightLeft'>
+            <input type='digit' bindinput='self_discount' maxlength='5'>{{self_discount}}</input>
+          </view>
+          <view class='zhekouRightRight '>折</view>
+        </view>
+      </view>
+
+      <!--其他要求  -->
+      <view class='yaoqiu'>
+        <view class='yaoqiuLeft'>简介</view>
+        <view class='yaoqiuRight'>
+          <textarea class='txt' name='project_require'>{{project_require}}</textarea>
+        </view>
+      </view>
+    </view>
+
+
+
+
+    <!-- 农村光伏项目 -->
+    <view wx:if='{{new_status=="农村光伏"}}'>
+      <!--项目名称  -->
+      <view class='mingcheng'>
+        <view class='mingchengLeft' >项目名称</view>
+        <view class='mingchengRight' style="{{nameFLAG ? '' : 'border: red 1rpx solid'}}">
+          <input type='text' name='project_name' maxlength='10'>{{project_name}}</input>
+        </view>
+      </view>
+
+      <!-- 联系人电话  -->
+      <view class='dizhi'>
+        <view class='dizhiLeft telephoneLeft'>联系人电话</view>
+        <view class='mingchengRight telephone' style="margin-top:10rpx;{{phoneFLAG ? '' : 'border: red 1rpx solid'}}">
+          <input type='number' name='project_phone' maxlength='11'>{{project_phone}}</input>
+        </view>
+      </view>
+
+
+      <!--名字  -->
+      <view class='dizhi'>
+        <view class='dizhiLeft telephoneLeft'>联系人姓名</view>
+        <view class='mingchengRight telephone' style="margin-top:10rpx;{{userFLAG ? '' : 'border: red 1rpx solid'}}" >
+          <input type='text' name='project_user' maxlength='5'>{{project_user}}</input>
+        </view>
+      </view>
+
+      <view class='form-item dizhi'>
+        <view class="form-item-hd">地区</view>
+        <view class="form-item-bd" bindtap="showDistpicker">
+          <view class="input {{!provinceName[provinceSelIndex] ? 'input-placeholder' : ''}} ">
+            <block wx:if="{{provinceName[provinceSelIndex]}}">{{provinceName[provinceSelIndex]}} {{cityName[citySelIndex]}}</block>
+            <block wx:else>请选择所在地区</block>
+          </view>
+          <input type="text" name="province" value="{{provinceName[provinceSelIndex]}}" class="hidden" />
+          <input type="text" name="city" value="{{cityName[citySelIndex]}}" class="hidden" />
+        </view>
+      </view>
+
+      <view class="distpicker" wx:if='{{showDistpicker}}'>
+        <view class="distpicker-btn">
+          <view class="distpicker-cancel-btn" bindtap="distpickerCancel">取消</view>
+          <view class="distpicker-sure-btn" bindtap="distpickerSure">确定</view>
+        </view>
+        <picker-view indicator-style="height: 40px;" class="distpicker-content" value="{{value}}" bindchange="changeArea">
+          <!-- 省 -->
+          <picker-view-column>
+            <view wx:for="{{provinceName}}" wx:key="province" class="area-item">{{item}}</view>
+          </picker-view-column>
+          <!-- 市 -->
+          <picker-view-column>
+            <view wx:for="{{cityName}}" wx:key="city" class="area-item">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+
+
+
+
+      <!-- 安装容量 -->
+      <view class=' rongliang'>
+        <view class='rongliangLeft'>安装容量 </view>
+        <view class='rongliangRight'>
+          <!-- <view class='rongliangRightstr'></view> -->
+          <view class='rongliangRightLeft'>
+            <input type='number' bindinput='country_capacity' maxlength='8'>{{country_capacity}}</input>
+          </view>
+          <view class='rongliangRightRight'>兆瓦</view>
+        </view>
+      </view>
+
+
+      <!-- 农户数量 -->
+      <view class='shuliang'>
+        <view class='shuliangLeft'>农户数量 </view>
+        <view class='shuliangRight'>
+          <view class='shuliangRightLeft'>
+            <input type='number' bindinput='country_number' maxlength='7'>{{country_number}}</input>
+          </view>
+
+          <view class='shuliangRightRight'>户</view>
+        </view>
+      </view>
+
+      <!--其他要求  -->
+      <view class='yaoqiu'>
+        <view class='yaoqiuLeft'>简介</view>
+        <view class='yaoqiuRight'>
+          <textarea class='txt' name='project_require'>{{project_require}}</textarea>
+        </view>
+      </view>
+    </view>
+
+    <form>
+      <view class="page-section">
+        <view class="weui-cells" style='margin-top:0;margin-bottom:200rpx'>
+          <view class="weui-cell" style='width:90%;height:100%'>
+            <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                <view class="weui-uploader__hd">
+                  <view class="weui-uploader__title" style="margin-left:20rpx;">项目详情</view>
+                  <view class="weui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</view>
+                  <!-- <button class="sure">确定</button> -->
+                </view>
+                <view class="weui-uploader__bd">
+                  <view class="weui-uploader__files">
+                    <block wx:for="{{imageList}}" wx:for-item="image">
+                      <view class="weui-uploader__file">
+                        <image style="height:{{winHeight}}px;width:{{winWidth}}px;margin-right:12rpx;" class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                      </view>
+                    </block>
+                  </view>
+                  <view class="weui-uploader__input-box">
+                    <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>
+
+<view class='_footer'>
+  <view class='_footerLeft'><checkbox bindtap='project_public' checked='{{project_public}}'>公开</checkbox></view>
+<view class=' _footerRight '><button form-type='submit'>完成</button></view>
+</view>
+</form>

@@ -1,0 +1,35 @@
+<div class="admin_container">
+
+  <ul class="index_tabs">
+    <li *ngFor="let item of tabs;let first=first;let i=index" [class.active]="tab_index==i" (click)="tab_index=i">
+      {{item}}
+    </li>
+  </ul>
+
+  <div [ngSwitch]="tab_index">
+
+    <div *ngSwitchCase="0">
+      <!--菜谱-->
+      <li *ngFor="let item of Allrecipes | paginate: { itemsPerPage: 12, currentPage: p };let first=first;let i=index" class="single_message">
+        <span class="content">{{item.creater}}</span> ：
+        <span >{{item.name}}</span>
+        <a class="del" (click)="delRecipe(item.id)">删除</a>
+      </li>
+      <div style=" cursor: pointer" class="text-center">
+        <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+
+
+    <div *ngSwitchCase="1">
+      <!--留言-->
+        <li *ngFor="let item of AllMessage | paginate: { itemsPerPage: 12, currentPage: p };let first=first;let i=index" class="single_message">
+          <div class="content">{{item.content}}</div>
+          <a class="del" (click)="delComment(item.id)">删除</a>
+        </li>
+      <div style=" cursor: pointer" class="text-center">
+        <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
+</div>

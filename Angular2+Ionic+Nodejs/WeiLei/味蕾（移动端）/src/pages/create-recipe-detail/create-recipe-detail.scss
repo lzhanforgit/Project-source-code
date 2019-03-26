@@ -1,0 +1,235 @@
+page-create-recipe-detail {
+  .describe{
+    font-size: 1.2em!important;
+    width: 100%!important;
+    height:80px!important;
+    background-color: #fcfcfc!important;
+    border: none;
+    resize: none;
+  }
+  .upload{
+    background-color: #dd3915;
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  .material{
+    background-color: #fcfcfc;
+    margin-top: 10px;
+  }
+
+  table{
+    width: 100%;
+   // height: 200px;
+  }
+  tr{height: 50px}
+
+  .first{
+    width: 150px;
+    height: 50px;
+    border: solid 1px #f3f3f3;
+  }
+  .first input:hover{
+    background: #fffce9;
+  }
+  .first input{
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    text-align: center;
+  }
+  .second{
+    width: 150px;
+    height: 50px;
+    border: solid 1px #f3f3f3;
+  }
+  .second input{
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    text-align: center;
+  }
+  .second input:hover{
+    background: #fffce9;
+  }
+  .third{
+    width: 40px;
+  }
+  .third img {
+    margin-left: 30px;
+  }
+  .third img:hover{
+    cursor: pointer
+  }
+
+
+  .recipe_name{
+    width: 300px;
+    height: 62px;
+    margin-top: 30px;
+  }
+  .recipe_name input{
+    height: 62px;
+    line-height: 40px;
+    padding: 10px;
+    width: 100%;
+    background-color: #fffce9;
+    color: #888;
+    font-size: 34px;
+    border: none;
+    outline: none;
+  }
+  .recipe_cover{
+    width: 300px;
+    height: 200px;
+    background: #f5f6f5;
+    position: relative;
+    margin-top: 25px;
+  }
+  .file{
+    display: block;
+    width: 300px;
+    height: 200px;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    top: 115px;
+    left: 0px;
+  }
+  .intro{
+    color: #909090;
+    text-align: center;
+    position: absolute;
+    top: 180px;
+    left: 50px;
+  }
+
+
+  .description-txt{
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #909090;
+    border: none;
+    resize: none;
+    outline: none;
+  }
+  textarea:hover{
+    background: #fffce9;
+  }
+
+  /***步骤**/
+  .steps_container{
+    width: 100%;
+  }
+  .steps_container_li{
+    list-style: decimal;
+    // width: 300px;
+    height: 88px;
+    margin-bottom: 30px;
+    margin-left: 3%;
+  }
+
+  .add_step{
+    width: 200px;
+    height: 78px;
+    float: left;
+  }
+  .del_line{
+    width: 40px;
+    height: 78px;
+    float: left;
+    text-align: center;
+  }
+  textarea{
+    width: 98%;
+    height: 100%;
+    font-size: 16px;
+    color: #909090;
+    border: none;
+    resize: none;
+    outline: none;
+  }
+  textarea:hover{
+    background: #fffce9;
+  }
+
+  .add{
+    width: 114px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 12px;
+  }
+  .add input{
+    width: 114px;
+    height: 30px;
+    background: #909090;
+    border: none;
+    outline: none;
+    color: white;
+  }
+  .add input:hover{
+    cursor: pointer;
+    background: #988d7d;
+  }
+
+  .tips_container{
+    width: 100%;
+    height: 188px;
+    margin-top: 50px;
+    background-color: #f5f6f5;
+    position: relative;
+  }
+  .tips_container_title{
+    width: 596px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+  }
+  .description{
+    width: 596px;
+    height: 78px;
+    position: absolute;
+    top: 45px;
+    left: 35px;
+  }
+  .description_txt{
+    width: 100%;
+    height: 78px;
+    font-size: 16px;
+    color: #909090;
+    border: none;
+    resize: none;
+    outline: none;
+    margin-top: 20px;
+  }
+  .description_txt:hover{
+    background: #fffce9;
+  }
+  .upload{
+    width: 100%;
+    height: 56px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .uploadbtn{
+    width: 140px;
+    height: 56px;
+    background: #dd3915;
+    color: white;
+    border: none;
+  }
+
+
+}

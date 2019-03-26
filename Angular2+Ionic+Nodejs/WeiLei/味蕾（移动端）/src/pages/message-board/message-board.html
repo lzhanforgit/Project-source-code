@@ -1,0 +1,44 @@
+<!--
+  Generated template for the MessageBoardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        <ion-icon name="arrow-back" (click)="back()" style="font-size: 25px !important; color: grey;"></ion-icon>
+      </ion-col>
+      <ion-col col-6 style="text-align: center">
+        <ion-note style="color: grey;font-size: 18px;">我的留言板</ion-note>
+      </ion-col>
+      <ion-col col-3 style="text-align: right">
+        <!--<ion-note style="color: #DD3915;font-size: 15px">写留言</ion-note>-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-textarea placeholder="请输入留言..." [(ngModel)]="messageTxt"></ion-textarea>
+  </ion-item>
+  <button ion-button block style="background-color:#DD3915;color: #ffffff " (click)="toSend(messageTxt)">留言</button>
+  <ion-list *ngIf="nomessageFlag">
+    <p class="hint">还没有人来留言哦~</p>
+  </ion-list>
+  <ion-list >
+    <ion-item *ngFor="let item of allMessage;let first=first;let i=index">
+      <ion-thumbnail item-start>
+        <img (click)="toPersonal(i)" style="width: 50px!important;height: 50px!important;" src="{{item.user_icon}}">
+        <h3 class="person_name" (click)="toPersonal(i)">{{item.commenter}}</h3>
+      </ion-thumbnail>
+      <h3>{{item.content}}</h3>
+      <p style="font-size: 12px;color: #999999">
+        <span *ngIf="shanchuFlag" (click)="delMessage(i)">删除</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>{{item.comment_date.substring(0,10)}}</span></p>
+      <!--<button ion-button clear item-end>关注</button>-->
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,34 @@
+
+<ion-header class="hot-menus">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-icon name="arrow-back" (click)="back()" style="font-size: 30px !important; color: black;"></ion-icon>
+      </ion-col>
+      <ion-col col-4>
+        <ion-note>热门菜单</ion-note>
+      </ion-col>
+      <ion-col col-4  >
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-header>
+
+
+<ion-content class="hot-menus" padding>
+  <ion-item *ngFor="let item of Alllists | orderbycollect">
+    <ion-thumbnail item-start  (click)="toMenuDetail(item.id)">
+        <img class="img" src="{{item.cover_pic}}" width="200" height="136">
+    </ion-thumbnail>
+    <div class="single_menu_gather" >
+      <div class="menu_gather_name"><a>{{item.name}}</a></div>
+      <div class="include_menunum">{{item.descripe.substring(0,7)+"..."}}</div>
+      <div class="author" (click)="toPersonal(item.id)"><a>{{item.creater}}</a> 创建 </div>
+      <div class="state"><a >{{item?.collect_times}} 收藏</a></div>
+    </div>
+  </ion-item>
+
+</ion-content>

@@ -1,0 +1,163 @@
+/*.container{*/
+  /*width: 100%;*/
+  /*height: auto;*/
+  /*!*background-color: #98ff9a;*!*/
+/*}*/
+
+/*.div_add{*/
+  /*width: 100%;*/
+  /*height: 140px;*/
+  /*!*background-color: #ff1216;*!*/
+/*}*/
+
+/*img{*/
+  /*width: 600px;*/
+  /*height: 400px;*/
+  /*!*padding: 0 15px 0 15px;*!*/
+
+/*}*/
+
+/*.inner_div{*/
+  /*width: 600px;*/
+  /*height: 400px;*/
+  /*margin: 0 auto;*/
+/*}*/
+
+/*.inner_div2{*/
+  /*width: 600px;*/
+  /*height: 200px;*/
+  /*margin: 100px auto;;*/
+  /*!*background-color: #ff1216;*!*/
+
+  /*font-size: 1.5em;*/
+  /*!*white-space: pre-wrap;*!*/
+  /*!*text-indent:45px;*!*/
+  /*font-weight: 500;*/
+  /*text-align: center;*/
+/*}*/
+
+
+/*.container_inner{*/
+  /*width: 70%;*/
+  /*height: 900px;*/
+  /*!*background-color: #c559ff;*!*/
+  /*margin: 0px auto;*/
+  /*box-sizing: border-box;*/
+/*}*/
+
+
+
+/*!*引入的animate文件内容*!*/
+/*.animated {*/
+  /*animation-duration: 2s;*/
+  /*animation-fill-mode: both;*/
+/*}*/
+
+/*.shake:hover {*/
+  /*animation-duration: 1s;*/
+  /*animation-name: shake;*/
+/*}*/
+
+/*@keyframes shake {*/
+  /*from, to {*/
+    /*transform: translate3d(0, 0, 0);*/
+  /*}*/
+
+  /*10%, 30%, 50%, 70%, 90% {*/
+    /*transform: translate3d(-10px, 0, 0);*/
+  /*}*/
+
+  /*20%, 40%, 60%, 80% {*/
+    /*transform: translate3d(10px, 0, 0);*/
+  /*}*/
+/*}*/
+
+
+/*.pulse:hover {*/
+  /*animation-name: pulse;*/
+/*}*/
+
+/*@keyframes pulse {*/
+  /*from {*/
+    /*transform: scale3d(1, 1, 1);*/
+  /*}*/
+
+  /*50% {*/
+    /*transform: scale3d(1.05, 1.05, 1.05);*/
+  /*}*/
+
+  /*to {*/
+    /*transform: scale3d(1, 1, 1);*/
+  /*}*/
+/*}*/
+
+/*@keyframes flipInY {*/
+  /*from {*/
+    /*transform: perspective(400px) rotate3d(0, 1, 0, 90deg);*/
+    /*animation-timing-function: ease-in;*/
+    /*opacity: 0;*/
+  /*}*/
+
+  /*40% {*/
+    /*transform: perspective(400px) rotate3d(0, 1, 0, -20deg);*/
+    /*animation-timing-function: ease-in;*/
+  /*}*/
+
+  /*60% {*/
+    /*transform: perspective(400px) rotate3d(0, 1, 0, 10deg);*/
+    /*opacity: 1;*/
+  /*}*/
+
+  /*80% {*/
+    /*transform: perspective(400px) rotate3d(0, 1, 0, -5deg);*/
+  /*}*/
+
+  /*to {*/
+    /*transform: perspective(400px);*/
+  /*}*/
+/*}*/
+
+/*.flipInY:hover {*/
+  /*!*-webkit-backface-visibility: visible !important;*!*/
+  /*!*backface-visibility: visible !important;*!*/
+  /*animation-duration: 3s;*/
+  /*animation-name: flipInY;*/
+/*}*/
+
+/*@keyframes fadeInDown {*/
+  /*from {*/
+    /*opacity: 0;*/
+    /*transform: translate3d(0, -100%, 0);*/
+  /*}*/
+
+  /*to {*/
+    /*opacity: 1;*/
+    /*transform: none;*/
+  /*}*/
+/*}*/
+
+/*.fadeInDown {*/
+/*animation-name: fadeInDown;*/
+/*}*/
+.Newcontent{
+  width:100%;
+  height:500px;
+  position: relative;
+background: url('../../assets/images/123.png');
+  background-position: 50% 0%;
+
+
+}
+.img01{
+  width: 100%;
+
+
+}
+.video{
+  position: absolute;
+  right: 75px;
+  top: 52px;
+}
+
+
+

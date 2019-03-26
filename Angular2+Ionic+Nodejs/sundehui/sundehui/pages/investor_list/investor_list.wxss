@@ -1,0 +1,368 @@
+page, .page {
+  height: 100%;
+  font-family: 'PingFang SC',
+                 'Helvetica Neue',
+                 Helvetica,
+                 'Droid Sans Fallback',
+                 'Microsoft Yahei',
+                 sans-serif;
+}
+
+.page-bottom {
+  height: 100%;
+  width: 750rpx;
+  position: fixed;
+  /* background-color: rgb(0, 68, 97); */
+  z-index: 0;
+}
+
+.wc {
+  color: white;
+  padding: 30rpx 0 30rpx 40rpx;
+}
+
+.page-top {
+  height: 100%;
+  position: fixed;
+  width: 750rpx;
+  background-color: whitesmoke;
+  z-index: 0;
+  transition: All 0.4s ease;
+  -webkit-transition: All 0.4s ease;
+}
+
+.page-top image {
+  position: absolute;
+  width: 68rpx;
+  height: 38rpx;
+  left: 20rpx;
+  top: 20rpx;
+}
+
+.c-state1 {
+  transform: rotate(0deg) scale(1) translate(81%, 0%);
+  -webkit-transform: rotate(0deg) scale(1) translate(81%, 0%);
+}
+
+/* .c-state2{
+   position: fixed;
+}  */
+
+/* .c-state2{
+  transform: rotate(0deg) scale(.8) translate(75%,0%); 
+  -webkit-transform: rotate(0deg) scale(.8) translate(79%,0%); 
+} */
+
+/* 实时搜索 */
+
+.search {
+  padding: 5rpx 20rpx 5rpx 20rpx;
+}
+
+.textinput {
+  height: 100rpx;
+  border-bottom: 1rpx solid #09bb07;
+  font-size: 40rpx;
+  /* background-color: red;  */
+  float: left;
+  padding-left: 10rpx;
+}
+
+/* 侧边导航栏 */
+.type{
+  text-align: center;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx;
+  padding: 20rpx;
+  background-color: white;
+  border-radius: 10rpx;
+}
+
+.s-type{
+  background-color: rgb(3, 169, 244);
+  color: white;
+}
+
+.s-type1{
+  background-color:#8CD9E3;
+}
+.s-type2{
+  background-color:#FDE7D0;
+}
+.s-type3{
+  background-color:#FBCCD2;
+}
+
+.texture_type{
+  text-align: center;
+  height: 50rpx;
+  margin: 5rpx;
+  padding: 20rpx 40rpx 20rpx 40rpx;
+  border-radius: 10rpx;
+}
+
+.select {
+  float: right;
+  border-left: 1rpx #b1b1b1 solid;
+  padding: 0rpx 10rpx 0rpx 30rpx;
+}
+
+.scrollview {
+  height: 50%;
+  position: absolute;
+  top: 100rpx;
+  /* background: white; */
+  z-index: 200;
+}
+
+.itemview {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  border-bottom: 1px solid #b1b1b1;
+  background-color: white;
+}
+
+.select_view {
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  background: white;
+  height: 99.99%;
+  width: 100%;
+  z-index: 5;
+}
+
+.select_title {
+  margin: 20rpx;
+}
+
+.select_list {
+  height: 100%;
+  width: 80%;
+}
+
+.select_scroll {
+  height: 87.5%;
+  width: 100%;
+  background-color: gainsboro;
+  /* padding-left: 20rpx; *//* padding-right: 50rpx; */
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.select_complete {
+  height: 8.5%;
+  color: white;
+  background-color: orange;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  line-height: 200%;
+  width: 49%;
+  margin-top: 10rpx;
+}
+
+.area-item {
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.distpicker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 560rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.distpicker-btn {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 99%;
+  padding: 0 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  /* background-color: #fafafa; *//* color: #586C94; */
+}
+
+.distpicker-content {
+  box-sizing: border-box;
+  width: 99%;
+  height: 250rpx;
+  background-color: #fff;
+}
+
+.distpicker-input {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 99%;
+  padding: 6rpx 20rpx 0rpx 20rpx;
+  height: 80rpx;
+  line-height: 65rpx;
+  background-color: #fafafa;
+  color: #586c94;
+}
+
+.distpicker-type {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 99%;
+  padding: 6rpx 20rpx 0rpx 20rpx;
+  background-color: #fafafa;
+  color: #586c94;
+  height: 180rpx;
+}
+
+.distpicker-texture {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 99%;
+  padding: 6rpx 20rpx 0rpx 20rpx;
+   background-color: #fafafa; 
+  color: #586c94;
+  height: 125rpx;
+}
+.select-input {
+  width: 100rpx;
+  height: 40rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+  padding: 1rpx 20rpx 2rpx 20rpx;
+  border: 1rpx #586c94 solid;
+}
+
+.select-input-single {
+  width: 100rpx;
+  height: 60rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+  padding: 1rpx 20rpx 2rpx 20rpx;
+  float: left;
+  border: 1rpx #586c94 solid;
+}
+
+.select-line {
+  border-bottom: 5rpx #586c94 solid;
+  height: 20rpx;
+  width: 30rpx;
+}
+
+/* 上搜索栏 */
+
+.select-btn {
+  line-height: 100rpx;
+  width: 20%;
+  font-size: 40rpx;
+  height: 100rpx;
+  color: white;
+   background-color: #99CCFF; 
+  border-right: #b1b1b1 1rpx solid;
+  text-align: center;
+  float: left;
+}
+
+.search_nav {
+  width: 100%;
+  height: 115rpx;
+  background: white;
+  position: fixed;
+  top: -1rpx;
+}
+
+/* 项目列表 */
+
+.projectList {
+  /* background-color: red;     */
+  height: 200rpx;
+  margin-right: 20rpx;
+  border-bottom: 2rpx solid lightgray;
+}
+
+.view {
+  /* background-color: yellow;    */
+  height: 200rpx;
+  width: 460rpx;
+  float: left;
+}
+
+.list_view {
+  width: 90%;
+  height: 80rpx;
+  /* background-color: red;  */
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.size_change {
+  font-size: 30rpx;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.view_inner {
+  width: 160rpx;
+  /* background-color: green;   */
+  height: 80rpx;
+  line-height: 65rpx;
+}
+
+.view_inner_large {
+  width: 250rpx;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.fr0 {
+  float: right;
+  width: 230rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  /* background-color: blue; */
+}
+
+.list_right {
+  text-align: center;
+  font-size: 38rpx;
+  margin-top: 60rpx;
+  width: 80%;
+  margin-left: 30rpx;
+  border-radius: 18rpx;
+  border: 1rpx solid lightgray;
+}
+
+.project_list {
+  margin: 120rpx 0rpx 0rpx 2.9%;
+}
+
+.tip{
+  color: grey;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  margin-top: 300rpx;
+}

@@ -1,0 +1,78 @@
+
+<ion-header class="charts">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-icon name="arrow-back" (click)="back()" style="font-size: 30px !important; color: black;"></ion-icon>
+      </ion-col>
+      <ion-col col-4>
+        <ion-note>排行榜</ion-note>
+      </ion-col>
+      <ion-col col-4  >
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-header>
+
+
+<ion-content class="menu-hot charts" padding>
+
+  <div class="menu">
+    <div class="menu-h">热门菜谱</div>
+    <div class="menu-more" ><a (click)="hotMenu()">查看更多</a></div>
+  </div>
+
+  <ion-slides class="lunbo"   >
+    <ion-slide *ngFor="let item4 of AllMenush |orderbycollect ">
+      <a (click)="toRecipeDetail(item4.id)"><img style="" src="{{item4?.cover_pic}}"></a>
+      <div class="info">
+        <header class="title">{{item4?.name}}</header>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
+  <div class="menu">
+    <div class="menu-h">热门菜单</div>
+    <div class="menu-more"><a (click)="hotMenus()">查看更多</a></div>
+  </div>
+  <ion-slides class="lunbo"  >
+    <ion-slide  *ngFor="let item1 of Alllistsh |orderbycollect ">
+      <a ><img src="{{item1.cover_pic}}" (click)="toMenuDetail(item1.id)"></a>
+      <div class="info">
+        <header class="title">{{item1.name}}</header>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+
+  <div class="menu">
+    <div class="menu-h">最新菜谱</div>
+    <div class="menu-more"><a (click)="newMenu()">查看更多</a></div>
+  </div>
+  <ion-slides class="lunbo"  >
+    <ion-slide *ngFor="let item3 of  AllMenus |orderbytime ">
+      <a (click)="toRecipeDetail(item3.id)"><img src="{{item3.cover_pic}}" height="136" width="215"/></a>
+      <div class="info">
+        <header class="title">{{item3.name}}</header>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="menu">
+    <div class="menu-h" >最新菜单</div>
+    <div class="menu-more"><a (click)="newMenus()">查看更多</a></div>
+  </div>
+  <ion-slides class="lunbo"  >
+    <ion-slide *ngFor="let item2 of Alllists |orderbytime" (click)="toMenuDetail(item2.id)">
+      <a > <img src="{{item2?.cover_pic}}"></a>
+      <div class="info">
+        <header class="title">{{item2?.name}}</header>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
