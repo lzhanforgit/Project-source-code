@@ -1,0 +1,135 @@
+/*推荐的最顶部*/
+.category .cat_top,.artist_top{
+  height: 45px;
+  border-bottom:solid 1px #b7b7b7;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+.category .cat_top .cat_top1{
+  /*224px*/
+  width: 224px;
+  /*45px*/
+  height: 45px;
+  float: left;
+  font-size: 20px;
+}
+.category .cat_top .cat_top1 span{
+  font-weight: 600;
+  /*45px*/
+  line-height: 45px;
+}
+.category .cat_top .cat_top2{
+  /*50px*/
+  width: 50px;
+  /*45px*/
+  height: 45px;
+  float: left;
+  margin-left: 50px;
+  /*20px*/
+  font-size: 16px;
+  text-align: center;
+}
+.category .cat_top .cat_top2 a{
+  text-decoration: none;
+  color: #000;
+  line-height: 45px;
+  /*14px*/
+  font-size: 14px;
+}
+.category .cat_top .cat_top2 a:hover{
+  cursor: pointer;
+}
+.category .cat_img{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-content:space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+.category .cat_top .cat_task{
+  width: 100px;
+  /*45px*/
+  height: 35px;
+  margin-top: 5px;
+  float: right;
+  margin-right: 16px;
+  line-height: 35px;
+  /*20px*/
+  font-size: 16px;
+  text-align: center;
+  background: black;
+  border-radius: 5px;
+}
+.category .cat_top .cat_task a{
+  /*45px*/
+  height: 45px;
+  text-decoration: none;
+  color: white;
+}
+.category .cat_img .cat_model{
+  height: 80px;
+  width: 500px;
+  min-width: 500px;
+  min-height: 80px;
+  box-shadow: 3px 3px 3px #9F9F9F;
+}
+.category .cat_img .cat_model:hover{
+  cursor: pointer;
+}
+.category .cat_img .cat_model .cat_model_1{
+  width: 0;
+  height: 0;
+  border-top:solid 80px #d4d4d4;
+  border-right:solid 80px transparent;
+  float: left;
+}
+.category .cat_img .cat_model .cat_model_1>p{
+  font-size: 12px;
+}
+.category .cat_img .cat_model  .center_model_1{
+   width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-left: 60px solid #d4d4d4;
+  border-bottom: 40px solid transparent;
+  margin-right: 10px;
+  float: left;
+}
+.category .cat_img .cat_model .cat_model_1 p{
+  position: absolute;
+  margin-top: -60px;
+  margin-left: 5px;
+  /*透明度*/
+  opacity: 0.8;
+}
+.category .cat_img .cat_model .cat_model_2{
+  width: 250px;
+  height: 100%;
+  float: left;
+}
+.category .cat_img .cat_model span{
+  width: 100%;
+  line-height: 30px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+.category .cat_img .cat_model .lineheight{
+  font-size: 18px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+}
+.category .cat_img .cat_model .cat_model_3{
+  width:100px;
+  height: 100%;
+  float: left;
+}
+.category .cat_img .cat_model .cat_model_4{
+  width: 60px;
+  height: 100%;
+  display: inline-block;
+}
+/*---------end-------------*/
+
+

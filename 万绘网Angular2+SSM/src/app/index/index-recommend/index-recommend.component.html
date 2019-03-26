@@ -1,0 +1,37 @@
+<div class="col-md-12">
+  <section>
+    <!--category 推荐 -->
+    <div class="recommend exterior">
+      <div class="cat_top">
+        <div class="cat_top1">
+          <span>推 荐 / C A T E G O R Y</span>
+        </div>
+        <div class="cat_top2">
+          <a routerLink="/recently" id="cat_more1">更多</a>
+        </div>
+        <div class="cat_publish">
+          <a routerLink="/publish">发布作品</a>
+        </div>
+      </div>
+      <!--ts动态添加数据-->
+      <div class="cat_img" id="cat_img">
+        <div id="cat_model_01" class="cat_model" routerLink='/detailsPhoto/{{item.photoId}}' routerLinkActive="active" *ngFor="let item of allPhoto index as lens">
+          <div id="cat_model_img_01" class="cat_model_img">
+            <!--<img src='http://127.0.0.1:8080/${photoUrl[0]}'/>-->
+            <a><img src="../../../assets/images/zja/{{photourls[lens]}}"/></a>
+          </div>
+          <div id="cat_model_present_01" class="cat_model_present">
+            <div id="pre" class="pre">
+              <h5><a href="task">{{item.photoUserId}}</a></h5>
+              <h5><a href="task">{{item.photoName}}</a>,2015</h5>
+              <p>{{item.photoTypeId}}200*200cm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+
+  </section>
+</div>

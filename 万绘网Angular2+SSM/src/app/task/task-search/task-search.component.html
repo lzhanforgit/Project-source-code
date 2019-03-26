@@ -1,0 +1,79 @@
+<!--search 搜索-->
+<article>
+  <section>
+    <div class="row">
+      <div class="col-md-12 search_center">
+        <div class="col-md-9">
+          <div>搜索心仪的任务</div>
+          <div>
+            <form name="search_center" #selectTask="ngForm">
+              <input type="text" class="search_title" placeholder="标题" name="search_title" [(ngModel)]="search_title" class="search_title">
+              <select class="search_sel"  aria-labelledby="dropdownMenu1" name="search_style" [(ngModel)]="search_style">
+                <option value= {{size}} *ngFor="let item of selectType index as size">{{item}}</option>
+              </select>
+              <select class="search_sel" name="search_money" [(ngModel)]="search_money">
+                <option value= {{size}} *ngFor="let item of seletcMoney index as size">{{item}}</option>
+              </select>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-3" (click)="search()">
+          <span id="search_go" >GO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row" >
+      <div class="col-md-1"></div>
+      <div class="col-md-10" [ngClass]="{search:searchTask.length>0}">
+        <div [ngStyle]="{'display':searchTask.length>0?'block':'none'}">查询结果</div>
+        <div class="col-sm-12 col-md-6"  *ngFor="let item of searchTask | slice:(page_container*(page_index-1)):page_index*page_container index as lens">
+          <div class="cat_img" id="task_model">
+            <div class="cat_model" id="{{item.taskId}}">
+              <div class="center_model_1"></div>
+              <div class="cat_model_2">
+                <span>标题</span>
+                <h1 class="lineheight" id="task_model_title">{{item.taskTitle}}</h1>
+              </div>
+              <div class="cat_model_3">
+                <span>天数</span>
+                <p class="lineheight" id="task_model_day">剩余{{item.remaining}}天</p>
+              </div>
+              <div class="cat_model_4">
+                <span>佣金</span>
+                <h1 class="lineheight" id="task_model_money">{{item.taskPay}}￥</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--分页-->
+    <div class="row" [ngStyle]="{'display':searchTask.length>0?'block':'none'}">
+      <div class="col-md-12">
+        <div class="ulFlex">
+          <nav aria-label="Page navigation">
+            <ul class="pagination " *ngIf="page_account>1">
+              <li>
+                <a aria-label="Previous" (click)="page_index!=1?page_index=page_index-1:page_index=1" >
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li *ngFor="let item of arr_page_container index as i"[class.active]="page_index==i+1"
+                  (click)="page_index=item">
+                <a href="javascript:void 0" >{{item}}</a>
+              </li>
+              <li>
+                <a  aria-label="Next" (click)="page_index<page_account?page_index=page_index+1:page_index=page_account">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

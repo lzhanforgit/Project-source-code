@@ -1,0 +1,114 @@
+*{
+  font-family: '微软雅黑';
+}
+body{
+
+}
+div{
+  /*border:1px red solid;*/
+}
+.container{
+  margin-top:3em;
+}
+.top{
+  height: 3.5em;
+  margin-bottom:1.5em;
+  background: #FFFFFF;
+}
+
+.top div{
+  height: 3em;
+  line-height: 3em;
+  font-size:16px;
+}
+
+.bottom{
+  background: #FFFFFF;
+  height: 15em;
+}
+
+.bottom-detail{
+  height: 12em;
+  margin-top:1.5em;
+  margin-bottom:1.5em;
+}
+.bottom-detail div{
+  margin-right:1em;
+}
+.bottom-detail .detail-left,.detail-right{
+  height: 12em;
+}
+
+.detail-right .row{
+  height:3em;
+  line-height:3em;
+}
+.detail-right .row .gz{
+  background: #75C940;
+  width:5.5em;
+  height:1.8em;
+  line-height: 1.8em;
+  color: #FFFFFF;
+}
+.detail-right .row .gz:hover{
+  cursor: pointer;
+  background:#456f2a;
+}
+
+.more{
+   width:4.5em;
+   height:10.7em;
+   line-height:10.7em;
+   border:solid 1px hotpink;
+   color: hotpink;
+   margin-left:1.2em;
+}
+
+.more:hover{
+   cursor: pointer;
+   background:hotpink;
+   color: #FFFFFF;
+}
+img{
+  cursor: pointer;
+}
+.num{
+  color: hotpink;
+  font-weight:800;
+  font-size:16px;
+}
+
+.loadMore{
+  height:3em;
+  line-height:3em;
+  margin-top:2em;
+  background:#FFFFFC;
+  font-weight: 800;
+}
+.loadMore:hover{
+  cursor: pointer;
+  background:#FFFCC3;
+}
+
+.loadNoMore{
+  height:3em;
+  line-height:3em;
+  margin-top:2em;
+  background:#FFFFFC;
+  font-weight: 800;
+}
+.footer{
+  border-top:1px solid gainsboro;
+  height:8em;
+  background:#FFFFFF;
+  margin-top:2em;
+}
+.fabulous{
+  width:7em;
+  height:1.8em;
+  line-height: 1.8em;
+  margin-top:-0.2em;
+  font-weight:800;
+  color:hotpink;
+  font-size:16px;
+}

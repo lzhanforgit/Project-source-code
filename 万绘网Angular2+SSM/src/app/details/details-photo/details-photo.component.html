@@ -1,0 +1,296 @@
+<!--顶部导航栏-->
+<div class="row wid">
+  <div class="col-md-12">
+    <app-nav></app-nav>
+  </div>
+</div>
+
+<!--作者导航-->
+<div class="author_navigation" id="author_navigation">
+  <div class="author_navigation_author">
+    <img src="../../../assets/images/zja/{{photoAuthor.userAvatar}}" alt="">
+    <p>{{photoAuthor.userNikeName}}</p>
+    <!--<input type="button" value="关注" >-->
+  </div>
+  <div class="author_navigation_title">
+    <p>《{{photoDetails.photoName}}》</p>
+  </div>
+  <div class="author_navigation_photo">
+    <div class="left">
+      <img src="../../../assets/images/zja/left.png"  (click)="left(photoId)" alt="" >
+    </div>
+    <div class="right">
+      <img src="../../../assets/images/zja/right.png" (click)="right(photoId)" alt="" >
+    </div>
+  </div>
+</div>
+
+<div class="photo_show" id="photo_show">
+  <div class="photo_show_img">
+    <ul>
+      <li *ngFor="let item of photoUrls index as lens">
+        <img src="../../../assets/images/zja/{{item}}" alt="1">
+      </li>
+    </ul>
+  </div>
+  <div class="photo_show_contant">
+    <p>版权提示：此作品版权属作者所有，未经许可请勿商用。</p>
+  </div>
+</div>
+
+<!--作品内容-->
+<div class="photo_contant">
+  <!--作品详情-->
+  <div class="photo_introduction">
+    <!--作品细节-->
+    <div class="photo_detail">
+      <h4>《{{photoDetails.photoName}}》</h4>
+      <div class="span">
+        <span>{{photoDetails.photoExplanation}}</span>
+      </div>
+      <div class="alllabel">
+        <div class="label">
+          <p>时间：{{photoDetails.photoUploadTime2}}</p>
+        </div>
+        <div class="label">
+          <p>风格：</p>
+          <input type="button" [(ngModel)]="photoStyle">
+        </div>
+        <div class="label">
+          <p>类型：</p>
+          <input type="button" [(ngModel)]="photoType">
+        </div>
+        <div class="label">
+          <p>标签：</p>
+          <div *ngFor="let item of photoLabels index as lens">
+            <input type="button" value="{{item}}">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="good_comment_number">
+      <img src="../../../assets/images/zja/qxz.png" alt="">
+      <p>{{likesNumber}}人喜欢</p>
+      <img src="../../../assets/images/zja/wpl.png" alt="">
+      <p>{{commentNumber}}条评论</p>
+      <input type="button" value="举报">
+    </div>
+    <!--评论-->
+    <div class="comment">
+      <div class="comment_number">
+        <p>评论({{commentNumber}})</p>
+      </div>
+      <!--发布评论-->
+      <div class="comment_new">
+        <img src="../../../assets/images/zja/middle.jpg" alt="">
+        <textarea  placeholder="有什么感想，你也来说说吧" id="textarea" [(ngModel)]="photoCommentNew"></textarea>
+        <div class="face">
+          <input type="button" value="发布" (click)="addComment(photoId)">
+          <input type="button" id="face_text" value="表情" (click)="onclick1()">
+        </div>
+      </div>
+      <!--颜文字-->
+      <div class="img_text" id="img_text" style="display: none">
+
+        <div class="img_text_text">
+          <p>颜文字</p>
+        </div>
+        <div class="img_text_emoji">
+          <a class="emoji-text" data-emoji-text="( •̀ .̫ •́ )✧" (click)="imgText('( •̀ .̫ •́ )✧')">( •̀ .̫ •́ )✧</a>
+          <a class="emoji-text" data-emoji-text="(つд⊂)" (click)="imgText('(つд⊂)')">(つд⊂)</a>
+          <a class="emoji-text" data-emoji-text="(o´ω`o)" (click)="imgText('(o´ω`o)')">(o´ω`o)</a>
+          <a class="emoji-text" data-emoji-text="(•౪• )" (click)="imgText('(•౪• )')">(•౪• )</a>
+          <a class="emoji-text" data-emoji-text="(๑•̀ㅂ•́) ✧" (click)="imgText('(๑•̀ㅂ•́) ✧')">(๑•̀ㅂ•́) ✧</a>
+          <a class="emoji-text" data-emoji-text="ლ(╹◡╹ლ)" (click)="imgText('ლ(╹◡╹ლ)')">ლ(╹◡╹ლ)</a>
+          <a class="emoji-text" data-emoji-text="_(:з」∠)_" (click)="imgText('_(:з」∠)_')">_(:з」∠)_</a>
+          <a class="emoji-text" data-emoji-text="_( :⁍ 」 )_" (click)="imgText('_( :⁍ 」 )_')">_( :⁍ 」 )_</a>
+          <a class="emoji-text" data-emoji-text="Ծ‸Ծ" (click)="imgText('Ծ‸Ծ')">Ծ‸Ծ</a>
+          <a class="emoji-text" data-emoji-text="(⺣◡⺣)" (click)="imgText('(⺣◡⺣)')">(⺣◡⺣)</a>
+          <a class="emoji-text" data-emoji-text="(๑•́ ∀ •̀๑)" (click)="imgText('(๑•́ ∀ •̀๑)')">(๑•́ ∀ •̀๑)</a>
+          <a class="emoji-text" data-emoji-text="(ง •̀_•́)ง" (click)="imgText('(ง •̀_•́)ง')">(ง •̀_•́)ง</a>
+          <a class="emoji-text" data-emoji-text="( ´͈ ᵕ `͈ )◞♡" (click)="imgText('( ´͈ ᵕ `͈ )◞♡')">( ´͈ ᵕ `͈ )◞♡</a>
+          <a class="emoji-text" data-emoji-text="(⁄ ⁄•⁄ω⁄•⁄ ⁄)" (click)="imgText('(⁄ ⁄•⁄ω⁄•⁄ ⁄)')">(⁄ ⁄•⁄ω⁄•⁄ ⁄)</a>
+          <a class="emoji-text" data-emoji-text="o(〃'▽'〃)o" (click)="imgText('o(〃‘▽’〃)o')">o(〃'▽'〃)o</a>
+          <a class="emoji-text" data-emoji-text="o(｀ω´ )o" (click)="imgText('o(｀ω´ )o')">o(｀ω´ )o</a>
+          <a class="emoji-text" data-emoji-text="ψ(｀∇´)ψ" (click)="imgText('ψ(｀∇´)ψ')">ψ(｀∇´)ψ</a>
+          <a class="emoji-text" data-emoji-text="ᶘ ᵒᴥᵒᶅ" (click)="imgText('ᶘ ᵒᴥᵒᶅ')">ᶘ ᵒᴥᵒᶅ</a>
+          <a class="emoji-text" data-emoji-text="(=￣ω￣=)" (click)="imgText('(=￣ω￣=)')">(=￣ω￣=)</a>
+          <a class="emoji-text" data-emoji-text="ԅ( ¯་། ¯ԅ)" (click)="imgText('ԅ( ¯་། ¯ԅ)')">ԅ( ¯་། ¯ԅ)</a>
+          <a class="emoji-text" data-emoji-text="（￣▽￣）" (click)="imgText('（￣▽￣）')">（￣▽￣）</a>
+          <a class="emoji-text" data-emoji-text="(￣3￣)" (click)="imgText('(￣3￣)')">(￣3￣)</a>
+          <a class="emoji-text" data-emoji-text="(〜￣△￣)〜" (click)="imgText('(〜￣△￣)〜')">(〜￣△￣)〜</a>
+          <a class="emoji-text" data-emoji-text="( ´_ゝ｀)" (click)="imgText('( ´_ゝ｀)')">( ´_ゝ｀)</a>
+          <a class="emoji-text" data-emoji-text="｀・ω・´)" (click)="imgText('｀・ω・´)')">｀・ω・´)</a>
+          <a class="emoji-text" data-emoji-text=">（#-_-)┯━┯" (click)="imgText('（#-_-)┯━┯')">&gt;（#-_-)┯━┯</a>
+          <a class="emoji-text" data-emoji-text="(;¬_¬)" (click)="imgText('(;¬_¬)')">(;¬_¬)</a>
+          <a class="emoji-text" data-emoji-text="(&quot;▔□▔)/" (click)="imgText('(▔□▔)/')">("▔□▔)/</a>
+          <a class="emoji-text" data-emoji-text="(ﾟДﾟ≡ﾟдﾟ)!?" (click)="imgText('(ﾟДﾟ≡ﾟдﾟ)!?')">(ﾟДﾟ≡ﾟдﾟ)!?</a>
+          <a class="emoji-text" data-emoji-text="Σ(ﾟдﾟ;)" (click)="imgText('Σ(ﾟдﾟ;)')">Σ(ﾟдﾟ;)</a>
+          <a class="emoji-text" data-emoji-text="Σ( ￣□￣||)" (click)="imgText('Σ( ￣□￣||)')">Σ( ￣□￣||)</a>
+          <a class="emoji-text" data-emoji-text="(´；ω；`)" (click)="imgText('(´；ω；`)')">(´；ω；`)</a>
+          <a class="emoji-text" data-emoji-text="（/TДT)/" (click)="imgText('（/TДT)/')">（/TДT)/</a>
+          <a class="emoji-text" data-emoji-text="(^・ω・^ )" (click)="imgText('(^・ω・^ )')">(^・ω・^ )</a>
+          <a class="emoji-text" data-emoji-text="(｡･ω･｡)" (click)="imgText('(｡･ω･｡)')">(｡･ω･｡)</a>
+          <a class="emoji-text" data-emoji-text="(●￣(ｴ)￣●)" (click)="imgText('(●￣(ｴ)￣●)')">(●￣(ｴ)￣●)</a>
+          <a class="emoji-text" data-emoji-text="ε=ε=(ノ≧∇≦)ノ" (click)="imgText('ε=ε=(ノ≧∇≦)ノ')">ε=ε=(ノ≧∇≦)ノ</a>
+        </div>
+      </div>
+
+      <!--评论显示-->
+      <div class="comment_user" id="comment_user">
+        <!--评论显示-->
+        <div class="xianshiCommment" *ngFor="let item of comments2 index as i">
+          <!--一级评论-->
+          <div class="comment_user_detail" *ngIf="item.commentAimsUserId==null">
+            <div class="comment-pinglun">
+              <img src="../../../assets/images/zja/{{item.user.userAvatar}}" alt="">
+              <div class="comment_user_contant">
+                <p class="p1">
+                  <a>{{item.user.userNikeName}}</a>
+                  <span>{{item.commentTime2}}</span>
+                </p>
+
+                <div class="delete">
+                  <a href="">删除</a>
+                </div>
+                <div class="tool">
+                  <a  (click)="huifu(item.commentId)">回复</a>
+                </div>
+
+                <!--评论内容-->
+                <div class="huifu-comment">
+                  <p class="p2">{{item.commentContent}}
+                    <span></span>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <!--点击回复显示回复框-->
+            <div class="huifu-kuang" id="{{item.commentId}}" style="display: none;">
+              <div class="huifu-kuang-comment">
+                <textarea  [(ngModel)]="huifucomment2"></textarea>
+              </div>
+              <input type="button" value="发布" (click)="addComment2(item.commentUserId,item.commentSumId,photoId)">
+            </div>
+
+          </div>
+
+          <!--二级以及多级评论-->
+          <div class="comment_user_detail2" *ngIf="item.commentAimsUserId!=null">
+            <div class="comment-pinglun">
+              <img src="../../../assets/images/zja/{{item.user.userAvatar}}" alt="">
+              <div class="comment_user_contant2">
+                <p class="p2">
+                  <a>{{item.user.userNikeName}}</a>
+                  <span>{{item.commentTime2}}</span>
+                </p>
+
+                <div class="delete">
+                  <a href="">删除</a>
+                </div>
+                <div class="tool">
+                  <a  (click)="huifu(item.commentId)">回复</a>
+                </div>
+                <!--评论内容-->
+                <div class="huifu-comment2">
+                  <div class="huifu-user">
+                    <span>回复 <p class="yaya">@{{item.commentAimsUser}}</p>:</span>
+                  </div>
+                  <div class="huifu-user-comment">
+                    <p class="huifup">{{item.commentContent}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--点击回复显示回复框-->
+            <div class="huifu-kuang2" id="{{item.commentId}}" style="display: none;">
+              <div class="huifu-kuang-comment2">
+                <textarea  [(ngModel)]="huifucomment2"></textarea>
+              </div>
+              <input type="button" value="发布" (click)="addComment2(item.commentUserId,item.commentSumId,photoId)">
+            </div>
+          </div>
+         <!-- <div class="huifu-kuang2">
+
+          </div>-->
+        </div>
+      </div>
+      <!--查看更多评论-->
+      <div class="comment_more" id="gengduo" (click)="addMoreComment()">
+        <p>查看更多评论</p>
+      </div>
+      <div class="comment_more2" id="shouqi" (click)="endMoreComment()">
+        <p>收起评论</p>
+      </div>
+    </div>
+  </div>
+
+  <!--作者介绍以及网站推荐-->
+  <div class="author_introduction">
+    <img src="../../../assets/images/zja/{{photoAuthor.userAvatar}}" alt="">
+    <h4>{{photoAuthor.userNikeName}}</h4>
+    <span class="fence1">
+            <p>关注：0</p>
+            <p>粉丝：0</p>
+        </span>
+    <p>{{photoAuthor.userSignature}}</p>
+    <span class="authentication">
+            <img src="../../../assets/images/zja/renzheng.png" alt="">
+            <p>万绘认证：绘画师</p>
+        </span>
+    <span class="fence2">
+            <input type="button" value="＋关注" id="guanzhu1" (click)="addRelationship()" style="display: none;">
+            <input type="button" value="已关注" id="guanzhu2" (click)="deleteRelationship(photoAuthor.userId,localStorage.getItem('UD'))" style="display: none;">
+            <input type="button" value="点赞({{likesNumber}})" id="zan1" (click)="addLikePhoto(photoId,localStorage.getItem('UD'))" style="display: none;">
+            <input type="button" value="已赞({{likesNumber}})"id="zan2" (click)="deleteLikePhoto(photoId,localStorage.getItem('UD'))" style="display: none;">
+        </span>
+  </div>
+</div>
+
+<!--更多作品-->
+<!--<div class="moreworks">
+  <div class="moreworks2" >
+    <p routerLink="/{{photoAuthor.userId}}">更多作品>></p>
+    <a  class="a" routerLink="/{{photoAuthor.userId}}">更多</a>
+    <ul id="ul_morephoto">
+      <li *ngFor="let item of morePhoto2 index as i">
+        <div class="moreworks_photo_img">
+          <a href="">
+            <img src="../../../assets/images/zja/{{photoOne[i]}}" alt="">
+          </a>
+        </div>
+        <p class="p01">{{item.photoName}}</p>
+        <span class="moreworks_span">
+                <img src="../../../assets/images/zja/qxz.png" alt="">
+                <p>{{item.likePhoto}}</p>
+                <img src="../../../assets/images/zja/wpl.png" alt="">
+                <p>{{item.likePhoto}}</p>
+         </span>
+
+
+      </li>
+    </ul>
+  </div>
+</div>-->
+
+<!--访问主页-->
+<div class="main">
+  <a routerLink="/{{photoAuthor.userId}}">访问主页</a>
+</div>
+
+
+<!--底部-->
+
+<div class="container-fluid">
+  <div class="row">
+    <!--底部-->
+    <div class="col-md-12 bot">
+      <app-bottom></app-bottom>
+    </div>
+  </div>
+</div>
+
+

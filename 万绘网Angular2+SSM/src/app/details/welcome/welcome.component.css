@@ -1,0 +1,41 @@
+
+
+/*欢迎*/
+.welcome{
+  width: 400px;
+  margin: auto;
+  margin-top: 100px;
+}
+.welcome input{
+  border: none;
+  font-size: 3em;
+  font-family: 华文细黑;
+}
+
+/*参观*/
+.look{
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+}
+.look>div{
+  text-align: center;
+  width: 130px;
+  margin: auto;
+  margin-top: 60px;
+  outline:none;
+  border: none;
+  border-radius:10px;
+  border:1px solid white;
+  height: 40px;
+  line-height: 40px;
+  background: black;
+  color: white;
+}
+.look input{
+  width: 300px;
+  border: none;
+  font-size: 3em;
+  font-family: 华文细黑;
+}
+

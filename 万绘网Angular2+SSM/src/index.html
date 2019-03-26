@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Wanhui</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <style type="text/css">
+    /*图片显示区*/
+    .cover{
+      float: top;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+    .cover_photo{
+      float: left;
+      background: #e5e5e5;
+    }
+
+    .cover_photo ul li {
+      list-style: none;
+      float: left;
+      width: 15%;
+      vertical-align: middle;
+      display: list-item;
+      margin: 0px 15px;
+    }
+    .preview-item {
+      position: relative;
+      width: 130px;
+      height: 200px;
+      text-align: center;
+      vertical-align: middle;
+      margin: 5px;
+    }
+    .preview-item:hover{
+      background: #bdbdbd;
+    }
+    .preview-item:hover img:nth-child(2){
+      display: inline;
+    }
+    .cover_photo ul li img:first-child{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .cover_photo ul li img:nth-child(2){
+      position: absolute;
+      width: 20%;
+      margin-top: 0px;
+      margin-left: -25px;
+      display: none;
+    }
+    .preview-item span{
+      position: absolute;
+      width: 100%;
+      background: #ff6fa2;
+      color: white;
+      margin-top: 180px;
+      margin-left: -130px;
+    }
+    /*封面截取*/
+    .face_img{
+      float: top;
+      width: 100%;
+      background: white;
+      overflow: hidden;
+      /*display: block;*/
+    }
+    .face_img span{
+      float: left;
+      color: #666666;
+      margin: 28px 32px;
+      font-family: 宋体;
+    }
+    .file_img_pane{
+      position: relative;
+      width: 700px;
+      margin-left: 200px;
+      padding-top: 30px;
+      padding-bottom: 170px;
+    }
+
+    #target{
+      width: 200px;
+    }
+    #preview-pane {
+      display: block;
+      position: absolute;
+      z-index: 2000;
+      top: 0px;
+      right: -420px;
+      height: 400px;
+      border: 1px rgba(0,0,0,.4) solid;
+      background-color: white;
+      border-radius: 2px;
+      box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    #preview-pane .preview-container {
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .jcrop-holder {
+      direction: ltr;
+      text-align: left;
+      /* IE10 touch compatibility */
+      -ms-touch-action: none;
+    }
+    /* Selection Border */
+    .jcrop-vline,
+    .jcrop-hline {
+      background: #ffffff url("assets/images/zja/Jcrop.gif");
+      font-size: 0;
+      position: absolute;
+    }
+    .jcrop-vline {
+      height: 100%;
+      width: 1px !important;
+    }
+    .jcrop-vline.right {
+      right: 0;
+    }
+    .jcrop-hline {
+      height: 1px !important;
+      width: 100%;
+    }
+    .jcrop-hline.bottom {
+      bottom: 0;
+    }
+    /* Invisible click targets */
+    .jcrop-tracker {
+      height: 100%;
+      width: 100%;
+      /* "turn off" link highlight */
+      -webkit-tap-highlight-color: transparent;
+      /* disable callout, image save panel */
+      -webkit-touch-callout: none;
+      /* disable cut copy paste */
+      -webkit-user-select: none;
+    }
+    /* Selection Handles */
+    .jcrop-handle {
+      background-color: #333333;
+      border: 1px #eeeeee solid;
+      width: 7px;
+      height: 7px;
+      font-size: 1px;
+    }
+    .jcrop-handle.ord-n {
+      left: 50%;
+      margin-left: -4px;
+      margin-top: -4px;
+      top: 0;
+    }
+    .jcrop-handle.ord-s {
+      bottom: 0;
+      left: 50%;
+      margin-bottom: -4px;
+      margin-left: -4px;
+    }
+    .jcrop-handle.ord-e {
+      margin-right: -4px;
+      margin-top: -4px;
+      right: 0;
+      top: 50%;
+    }
+    .jcrop-handle.ord-w {
+      left: 0;
+      margin-left: -4px;
+      margin-top: -4px;
+      top: 50%;
+    }
+    .jcrop-handle.ord-nw {
+      left: 0;
+      margin-left: -4px;
+      margin-top: -4px;
+      top: 0;
+    }
+    .jcrop-handle.ord-ne {
+      margin-right: -4px;
+      margin-top: -4px;
+      right: 0;
+      top: 0;
+    }
+    .jcrop-handle.ord-se {
+      bottom: 0;
+      margin-bottom: -4px;
+      margin-right: -4px;
+      right: 0;
+    }
+    .jcrop-handle.ord-sw {
+      bottom: 0;
+      left: 0;
+      margin-bottom: -4px;
+      margin-left: -4px;
+    }
+    /* Dragbars */
+    .jcrop-dragbar.ord-n,
+    .jcrop-dragbar.ord-s {
+      height: 7px;
+      width: 100%;
+    }
+    .jcrop-dragbar.ord-e,
+    .jcrop-dragbar.ord-w {
+      height: 100%;
+      width: 7px;
+    }
+    .jcrop-dragbar.ord-n {
+      margin-top: -4px;
+    }
+    .jcrop-dragbar.ord-s {
+      bottom: 0;
+      margin-bottom: -4px;
+    }
+    .jcrop-dragbar.ord-e {
+      margin-right: -4px;
+      right: 0;
+    }
+    .jcrop-dragbar.ord-w {
+      margin-left: -4px;
+    }
+    /* The "jcrop-light" class/extension */
+    .jcrop-light .jcrop-vline,
+    .jcrop-light .jcrop-hline {
+      background: #ffffff;
+      filter: alpha(opacity=70) !important;
+      opacity: .70!important;
+    }
+    .jcrop-light .jcrop-handle {
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background-color: #000000;
+      border-color: #ffffff;
+      border-radius: 3px;
+    }
+    /* The "jcrop-dark" class/extension */
+    .jcrop-dark .jcrop-vline,
+    .jcrop-dark .jcrop-hline {
+      background: #000000;
+      filter: alpha(opacity=70) !important;
+      opacity: 0.7 !important;
+    }
+    .jcrop-dark .jcrop-handle {
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background-color: #ffffff;
+      border-color: #000000;
+      border-radius: 3px;
+    }
+    /* Simple macro to turn off the antlines */
+    .solid-line .jcrop-vline,
+    .solid-line .jcrop-hline {
+      background: #ffffff;
+    }
+    /* Fix for twitter bootstrap et al. */
+    .jcrop-holder img,
+    img.jcrop-preview {
+      max-width: none;
+    }
+
+  </style>
+<!--  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.Jcrop.js"></script>-->
+  <script src="https://cdn.bootcss.com/jquery-jcrop/0.9.12/js/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-jcrop/0.9.13/js/jquery.Jcrop.js"></script>
+  <script src="assets/js/zja.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

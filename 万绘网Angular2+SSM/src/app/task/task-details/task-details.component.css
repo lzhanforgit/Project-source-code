@@ -1,0 +1,183 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 微软雅黑;
+}
+div{
+  margin: 0;
+}
+.back{
+  text-align: left;
+  padding-top: 10px;
+}
+.details {
+  height: 100%;
+  font-family: 微软雅黑;
+  display: block;
+  height: 100%;
+  min-height: 675px;
+  /*background-color: #eee;*/
+  overflow: hidden;
+  min-width: 968px;
+}
+
+.detailsLeft{
+  height: 100%;
+  min-height: 675px;
+  background: #000000;
+  padding: 0 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.51);
+}
+.detailsHeader{
+  margin: 50px auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.detailsHeader img{
+  height: 100px;
+  object-fit: cover;
+  transition: all 1s;
+}
+.detailsHeader img:hover{
+  transform: scale(1.3);
+ }
+/*昵称*/
+.detailsUserName{
+  width: 100%;
+  color: white;
+  height: 30px;
+  text-align: center;
+}
+.detailsUserName>p{
+  line-height: 30px;
+  font-size: 20px;
+}
+.detailsUserName>p>a{
+  color: white;
+  text-decoration: none;
+}
+.detailsUserName>p>a:hover{
+  cursor: pointer;
+}
+.detailsUserPostTask{
+  height: 320px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+.table-hover tr td{
+  cursor: pointer;
+}
+.table-hover img{
+  height: 20px;
+  width: 20px;
+}
+.table-hover img:hover{
+  cursor: pointer;
+}
+/*个性签名*/
+.detailsSignature{
+  height: 60px;
+  margin: auto;
+  color: grey;
+  font-size: 14px;
+  width: 80%;
+}
+
+
+
+
+.detailsRight{
+  height: 100%;
+  min-height: 675px;
+  /*background: #a2d587;*/
+}
+.detailsTask{
+  width: 100%;
+  /*background: #aaaaaa;*/
+  height: 400px;
+  margin-top: 100px;
+  padding: 20px;
+}
+.detailsTask>div{
+  height: 100%;
+}
+.detailsImg{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.detailsImg img{
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s;
+}
+.detailsImg img:hover{
+  box-shadow: 0 0 5px black;
+  border-radius: 5px;
+  transform: scale(1.5);
+}
+.detailsForm{
+  width: 90%;
+  max-width: 350px;
+  height: 340px;
+  margin: auto;
+  margin-top: 10px;
+  /*background: yellow;*/
+  text-align: center;
+  padding: 10px;
+ }
+.content{
+  width: 90%;
+  height: 220px;
+  margin: auto;
+  margin-top: 10px;
+  /*background: #aaaaaa;*/
+  text-align:left;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px;
+}
+.taskmt{
+  width: 90%;
+  padding: 5px;
+  text-align: left;
+  margin: auto;
+}
+.taskmt>p{
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.detailsSubmit{
+  width: 100%;
+  /*background: #4363aa;*/
+  height: 100px;
+  padding-top: 60px;
+}
+.accept{
+  width: 120px;
+  height: 40px;
+  background: blue;
+  margin-top: 50px;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+.accept:hover{
+  cursor: pointer;
+}
+.succ{
+  margin: auto;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #adadad;
+}

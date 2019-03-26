@@ -1,0 +1,47 @@
+<!--顶部导航栏-->
+<div class="row wid">
+  <div class="col-md-12">
+    <app-nav></app-nav>
+  </div>
+</div>
+
+<!--最新发布-->
+<div class="release_new">
+  <p>---------------最新发布---------------</p>
+</div>
+
+<!--发布作品内容-->
+<div id="container" class="container">
+  <div class="row">
+    <!--<div class="col-md-12" (scroll)="onscroll()" *ngFor="let item of imgData index as lens">-->
+    <div class="col-md-12">
+      <div class="box"  routerLinkActive="active"   *ngFor="let item of photos index as i">
+        <div class="box_contant">
+          <!--作品标题-->
+          <div class="title">
+            <img src="../../../assets/images/zja/{{item.user.userAvatar}}"  alt="" id="boximg" routerLink="/detail/{{item.user.userId}}">
+            <p>{{item.photoName}}</p>
+          </div>
+          <!--作品内容-->
+          <div class="item_img" routerLink="/detailsPhoto/{{item.photoId}}">
+            <img src="../../../assets/images/zja/{{photourls[i]}}" alt="">
+          </div>
+          <!--作品详情-->
+          <div class="item_contant" id="item_contant">
+            <p>{{item.photoExplanation}}</p>
+            <div class="item_contant_love">
+              <a href="#" id="item_contant_a">
+                <img src="../../../assets/images/zja/love1.svg" alt="" id="img1">
+                <!--<img src="./img/love2.svg" alt="" id="img2">-->
+              </a>
+              <p>{{item.likePhoto}}人喜欢</p>
+            </div>
+          </div>
+        </div>
+        <div class="boxdiv">
+    </div>
+  </div>
+  </div>
+  </div>
+  <div style="clear:both;"></div>
+</div>

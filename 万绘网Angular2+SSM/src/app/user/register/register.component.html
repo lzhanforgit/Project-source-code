@@ -1,0 +1,56 @@
+<section class="row">
+  <div id="container" class="container col-md-12">
+    <div></div>
+    <div class="row" style="height:80%;">
+      <div class="col-md-12 center-vertical">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 login-content">
+          <div id="log"></div>
+          <span id="log-name">
+            WanHui
+          </span>
+          <div id="regist-content">
+            <form id="form">
+              <h1 class="login-name">注册</h1>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10"><input type="text" name="userNikeName" [(ngModel)]="userNikeName" id="regist-nkn" placeholder="昵称" maxlength="12"/></div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10"><input type="text" name="userPhone" [(ngModel)]="userPhone" id="regist-tel" placeholder="手机号" maxlength="18"/></div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10"><input type="password" name="userPassword" [(ngModel)]="userPassword" id="regist-pwd" placeholder="密码"/></div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-10">
+                <div class="row" id="sub_reg">
+                  <div id="hint_Info">{{hint_Info}}</div>
+                  <div id="btn" (click)="user_register()">
+                    注册
+                  </div>
+                  <a routerLink="/login">已有账号？用户登录</a>
+                </div>
+              </div>
+              <div class="col-md-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</section>

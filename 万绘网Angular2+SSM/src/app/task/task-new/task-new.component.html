@@ -1,0 +1,46 @@
+<!--task 任务-->
+<div class="row" style="margin-top: 40px">
+  <!--复用 category 推荐 样式-->
+  <div class="col-md-1"></div>
+  <div class="col-md-10 category">
+    <ng-container *ngIf="newTask">
+      <section>
+        <div class="cat_top col-md-12">
+          <div class="cat_top1">
+            <span>任 务 / T A S K</span>
+          </div>
+          <div class="cat_top3">
+            <ul>
+              <a (click)="liBack(0)"><li [ngClass]="{'liBack':liStart[0]}">风景画</li></a>
+              <a (click)="liBack(1)"><li [ngClass]="{'liBack':liStart[1]}">素描</li></a>
+              <a (click)="liBack(2)"><li [ngClass]="{'liBack':liStart[2]}">版画</li></a>
+              <a (click)="liBack(3)"><li [ngClass]="{'liBack':liStart[3]}">油画</li></a>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6" *ngFor="let item of newTask index as lens">
+          <div class="cat_img" id="task_model">
+            <div class="cat_model" id="{{item.taskId}}" [routerLink]="['/taskDetails',item.taskPostUserId,item.taskOrderNumber]">
+              <div class="center_model_1"></div>
+              <div class="cat_model_2">
+                <span>标题</span>
+                <h1 class="lineheight" id="task_model_title">{{item.taskTitle}}</h1>
+              </div>
+              <div class="cat_model_3">
+                <span>天数</span>
+                <p class="lineheight" id="task_model_day">剩余{{item.remaining}}天</p>
+              </div>
+              <div class="cat_model_4">
+                <span>佣金</span>
+                <h1 class="lineheight" id="task_model_money">￥{{item.taskPay}}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </ng-container>
+
+  </div>
+</div>
+

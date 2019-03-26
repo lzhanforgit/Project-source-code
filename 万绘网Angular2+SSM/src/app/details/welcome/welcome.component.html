@@ -1,0 +1,33 @@
+<!--<div class="welcome">-->
+  <!--<input value="你好啊：{{userName}}" readonly><br>-->
+  <!--<input value="欢迎回到万绘王国" readonly>-->
+<!--</div>-->
+
+
+<!--<div class="look">-->
+  <!--<input value="你好啊，旅行者" readonly>-->
+  <!--<br>-->
+  <!--<button class="col-md-2">关注我吧</button>-->
+<!--</div>-->
+<div [ngSwitch]="number" class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <!--个人信息-->
+    <div *ngSwitchCase="1">
+      <div class="welcome">
+        <input value="你好啊：{{userName}}" readonly><br>
+        <input value="欢迎回到万绘王国" readonly>
+      </div>
+
+    </div>
+    <!--修改-->
+    <div *ngSwitchCase="2">
+      <div class="look">
+        <input value="你好啊，旅行者" readonly>
+        <br>
+        <div (click)="like()">关注我吧</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>

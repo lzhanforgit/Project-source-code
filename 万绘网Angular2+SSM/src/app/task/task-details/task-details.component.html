@@ -1,0 +1,73 @@
+
+<div class="row details">
+  <div class="col-md-3 detailsLeft">
+    <div class="row back">
+      <a href="javascript:history.back(-1)"><img src="../../../assets/images/zyl/back.svg"></a>
+    </div>
+    <div class="row detailsHeader">
+      <img src="../../../assets/images/avatar/{{avatar}}">
+    </div>
+    <div class="row detailsUserName">
+      <p><a routerLink='/detail/{{postUser.userId}}'>{{postUser.userNikeName}}</a></p>
+    </div>
+    <div class="row detailsSignature">
+      <p>{{postUser.userSignature}}</p>
+    </div>
+    <div class="row detailsUserPostTask">
+      <table class="table table-hover">
+        <tr>
+          <th colspan="3">发布过的悬赏</th>
+        </tr>
+        <tr *ngFor="let item of taskList index as i" (click)="infoTask(item.taskPostUserId,item.taskOrderNumber)">
+          <td colspan="2" width="70%" style="text-align: left">{{i+1}}.&nbsp;{{item.taskTitle}}</td>
+          <td><div (click)="delTask(item.taskOrderNumber)"><img src="../../../assets/images/zyl/del.svg" [ngStyle] = "{'display':del[i]?'black':'none'}"></div></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-9 detailsRight">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="row detailsTask">
+        <div class="col-md-6">
+          <div class="detailsImg">
+            <img src="../../../assets/images/task/{{task.taskPhotoUrl}}">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detailsForm">
+            <h4>{{task.taskTitle}}</h4>
+            <div class="content">
+              <span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{task.taskContent}}
+              </span>
+            </div>
+            <div class="taskmt">
+              <p>佣金：{{task.taskPay}}&nbsp;元</p>
+              <p>剩余：{{task.taskPostTime}}&nbsp;天</p>
+              <p>已接受人数： {{getNum}} 人</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row detailsSubmit" *ngIf="!isMe">
+        <div class="row">
+          <div class="col-md-8"></div>
+          <div class="col-md-4" [ngSwitch]="sOrF" *ngIf="show">
+            <div class="accept" *ngSwitchCase="631" (click)="accept()">接受任务</div>
+            <div class="accept" *ngSwitchCase="633" (click)="accept()">接受任务</div>
+            <div class="accept" *ngSwitchCase="630" [routerLink]="['/taskSubmit',taskOrderNumber,task.taskTitle]" style="background: red">提交任务</div>
+            <div class="accept" *ngSwitchCase="632" [routerLink]="['/taskSubmit',taskOrderNumber,task.taskTitle]" style="background: red">提交任务</div>
+          </div>
+          <div class="col-md-4" [ngSwitch]="sOrF" *ngIf="!show">
+            <div class="succ">已完成</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+
+

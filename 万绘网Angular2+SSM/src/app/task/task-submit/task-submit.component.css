@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 微软雅黑;
+}
+div{
+  margin: 0;
+}
+
+.details {
+  height: 100%;
+  font-family: 微软雅黑;
+  display: block;
+  height: 100%;
+  min-height: 675px;
+  /*background-color: #eee;*/
+  overflow: hidden;
+  min-width: 968px;
+}
+
+.detailsLeft{
+  height: 100%;
+  min-height: 675px;
+  background: #000000;
+  padding: 0 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.51);
+}
+.back{
+  text-align: left;
+  padding-top: 10px;
+}
+.back a:hover{
+  cursor: pointer;
+}
+.jiantou{
+  height: 150px;
+  display: inline-block;
+  color: white;
+}
+.jiantou span{
+  display: inline-block;
+  margin-top: 12px;
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+.jiantou img{
+  margin-top: -3px;
+  height: 32px;
+}
+.submitTitle{
+  height: 200px;
+  text-align: center;
+  margin-top: 200px;
+  color: white;
+}
+
+
+
+
+.detailsRight{
+  height: 100%;
+  min-height: 675px;
+  /*background: #a2d587;*/
+}
+.submitTask{
+  margin-top: 80px;
+  padding: 0 50px;
+}
+.submitDetail{
+  height: 230px;
+  width: 100%;
+}
+.submitDetail>div:first-child,.submitPhone>div:first-child{
+  text-align: right;
+  padding-top: 10px;
+  font-size: 20px;
+}
+.textInput{
+  margin-top: 15px;
+  margin-left: 20px;
+  resize:none;
+  padding: 8px 11px;
+  width: 478px;
+  height: 150px;
+  font-size: 14px;
+  line-height: 25px;
+  border: 0;
+  background-color: #f8f8f8
+}
+.add{
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 0 3px #9F9F9F;
+  margin-left:20px;
+  margin-top: 15px;
+  background: url("../../../assets/images/zyl/add.svg");
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.add>input{
+  height: 100px;
+  opacity: 0;
+  width: 100px;
+  margin: 0;
+}
+.showAdd_img{
+  object-fit:contain;
+  height: 100px;
+  width: 100px;
+  margin-left: 20px;
+}
+.showAdd_img>img {
+  object-fit: contain;
+  height: 100px;
+}
+
+
+.submitPhone{
+  height: 230px;
+  width: 100%;
+}
+
+.submit{
+  height: 80px;
+  width: 100%;
+}
+.accept{
+  width: 120px;
+  height: 40px;
+  background: blue;
+  margin:20px auto;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+.accept:hover{
+  cursor: pointer;
+}

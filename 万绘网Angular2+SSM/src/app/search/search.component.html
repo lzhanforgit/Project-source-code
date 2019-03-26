@@ -1,0 +1,98 @@
+<div class="container-fluid">
+  <div class="row">
+    <!--导航栏-->
+    <div class="col-md-12" style="z-index: 2;">
+      <app-nav></app-nav>
+    </div>
+  </div>
+  <!--搜索-->
+  <div class="row" style="padding: 0 15px">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <form #sea="ngForm">
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" (click)="search()">Go!</button>
+              </span>
+              <input type="text" class="form-control" name="searchData" [(ngModel)]="searchData" placeholder="请输入...">
+            </div>
+          </form>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+  <div class="row" style="padding: 0 15px">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <ul class="nav nav-tabs">
+        <li role="presentation" [ngClass]="{'active':flag[0]}"><a (click)="show(1)">作品</a></li>
+        <li role="presentation" [ngClass]="{'active':flag[1]}"><a (click)="show(2)">悬赏</a></li>
+        <li role="presentation" [ngClass]="{'active':flag[2]}"><a (click)="show(3)">绘师</a></li>
+      </ul>
+      <div class="col-md-12 searchResult" *ngIf="showData">
+        <!--一条数据-->
+        <div class="row" [routerLink]="['/taskDetails',item.taskPostUserId,item.taskOrderNumber]" *ngFor="let item of showData | slice:(page_container*(page_index-1)):page_index*page_container index as lens">
+          <div class="col-md-12 result">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="searchTitle">
+                  <h4>{{item.taskTitle}}</h4>
+                  <p>悬赏金额:{{item.taskPay}}元</p>
+                  <p>悬赏期限:{{item.taskCompleteTime}}天</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="searchContent">
+                  <p>{{item.taskContent}}</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="searchImg">
+                  <img src="../../assets/images/task/{{item.taskPhotoUrl}}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--分页-->
+        <div class="row" [ngStyle]="{'display':showData.length>0?'block':'none'}">
+          <div class="col-md-12">
+            <div class="ulFlex">
+              <nav aria-label="Page navigation" class="position">
+                <ul class="pagination" *ngIf="page_account>1">
+                  <li>
+                    <a aria-label="Previous" (click)="page_index!=1?page_index=page_index-1:page_index=1" >
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li *ngFor="let item of arr_page_container index as i"[class.active]="page_index==i+1"
+                      (click)="page_index=item">
+                    <a href="javascript:void 0" >{{item}}</a>
+                  </li>
+                  <li>
+                    <a  aria-label="Next" (click)="page_index<page_account?page_index=page_index+1:page_index=page_account">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-12 searchResult sorry" *ngIf="!showData">
+        <span>抱歉，没有数据</span>
+      </div>
+
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+img{
+  width: 200px;
+  height: 200px;
+  /*圆形头像*/
+  border-radius:100px;
+}
+select{
+  width: 8em;
+  font-size: 1.2em;
+}

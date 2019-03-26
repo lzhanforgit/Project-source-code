@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <!--顶部导航栏-->
+  <div class="row">
+    <div class="col-md-12">
+      <app-nav></app-nav>
+    </div>
+  </div>
+
+  <!--添加任务-->
+  <div class="row" [ngStyle]="{'display':[showAdd]?'block':'none'}" #showAdd>
+    <div class="col-md-12">
+      <app-add-task></app-add-task>
+    </div>
+  </div>
+
+  <!--添加成功-->
+  <div class="row" [ngStyle]="{'display':![showAdd]?'block':'none'}">
+    <div class="col-md-12">
+      <app-add-success></app-add-success>
+    </div>
+  </div>
+</div>

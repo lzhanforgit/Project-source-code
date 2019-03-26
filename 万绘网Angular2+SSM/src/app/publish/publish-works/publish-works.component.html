@@ -1,0 +1,195 @@
+<!--顶部导航栏-->
+<div class="row wid">
+  <div class="col-md-12">
+    <app-nav></app-nav>
+  </div>
+</div>
+
+
+<!--发表作品内容-->
+<div class="col-md-12" style="background: #EDEDEF;height: 1300px;margin:auto;position: relative">
+  <form id="form01" class="col-md-8">
+    <!--上传声明-->
+    <div class="statement">
+      <h4>发布绘画</h4>
+      <img src="../../../assets/images/zja/fish.png" alt="">
+      <p>要做一条会翻身的咸鱼酱</p>
+    </div>
+
+    <!--上传图片-->
+    <div class="upload_photo">
+      <h4>上传作品</h4>
+      <div class="upload_photo_addimg">
+        <a class="file" >添加图片
+          <input type="file" id="file" multiple="multiple" onchange="readAsDataURL()" name="files" [(ngModel)]="files">
+        </a>
+      </div>
+      <br>
+      <p class="p">可以上传多张图片，单张图片不能超过20M。</p><br>
+      <p class="p">图片上传失败可能是由360浏览器造成的，请切换极速模式，或者更换其他浏览器。</p>
+    </div>
+
+    <!--图片显示区-->
+    <div class="cover">
+      <div class="cover_photo">
+        <ul id="result" name="result">
+        </ul>
+      </div>
+    </div>
+
+    <!--封面截取-->
+    <div id="face_id" class="face_img" >
+    </div>
+
+    <!--标题-->
+    <div class="title">
+      <h4>标题</h4>
+      <input type="text" placeholder="请输入标题" name="photoName" [(ngModel)]="photoName">
+      <h4>想说的话</h4>
+      <textarea  placeholder="有神马想说的就写在这里吧o(*≧▽≦)ツ"  name="photoExplanation" [(ngModel)]="photoExplanation"></textarea>
+    </div>
+
+    <!--风格类型-->
+    <div class="style_type">
+      <!--风格单选-->
+      <div class="smart-form">
+        <span>风格</span>
+        <label class="radio" style="margin-top: -3.5px;">
+          <input type="radio" name="photoStyleId" checked="checked" value="1" (click)="photoStyle(1)">
+          <i></i>古典主义</label>
+        <label class="radio">
+          <input type="radio" name="photoStyleId" value="2" (click)="photoStyle(2)">
+          <i></i>浪漫主义</label>
+        <label class="radio">
+          <input type="radio" name="photoStyleId" value="3" (click)="photoStyle(3)">
+          <i></i>现实主义</label>
+        <label class="radio">
+          <input type="radio" name="photoStyleId" value="4" (click)="photoStyle(4)">
+          <i></i>印象派</label>
+        <label class="radio">
+          <input type="radio" name="photoStyleId" value="5" (click)="photoStyle(5)">
+          <i></i>现实派</label>
+        <label class="radio">
+          <input type="radio" name="photoStyleId" value="6" (click)="photoStyle(6)">
+          <i></i>未来派</label>
+        <label class="radio">
+          <input type="radio" name="photoStyleId" value="6" (click)="photoStyle(7)">
+          <i></i>其他</label>
+      </div>
+      <!--类型多选-->
+      <div class="smart-form2">
+        <span>类型</span>
+        <label class="checkbox" style="margin-top: -3.5px;">
+          <input type="radio" name="photoTypeId" checked="checked" value="1" (click)="photoType(1)">
+          <i></i>风景画</label>
+        <label class="checkbox">
+          <input type="radio" name="photoTypeId" value="2" (click)="photoType(3)">
+          <i></i>素描</label>
+        <label class="checkbox">
+          <input type="radio" name="photoTypeId" value="3" (click)="photoType(3)">
+          <i></i>色彩</label>
+        <label class="checkbox">
+          <input type="radio" name="photoTypeId" value="4" (click)="photoType(4)">
+          <i></i>漫画</label>
+        <label class="checkbox">
+          <input type="radio" name="photoTypeId" value="5" (click)="photoType(5)">
+          <i></i>油画</label>
+        <label class="checkbox">
+          <input type="radio" name="photoTypeId" value="6" (click)="photoType(6)">
+          <i></i>简笔画</label>
+        <label class="checkbox">
+          <input type="radio" name="photoTypeId" value="7" (click)="photoType(7)">
+          <i></i>国画</label>
+        <label class="checkbox">
+          <input type="radio" name="photoTypeId" value="8" (click)="photoType(8)">
+          <i></i>版画</label>
+        <label class="checkbox">
+          <input type="radio" name="photoTypeId" value="9" (click)="photoType(9)">
+          <i></i>其他</label>
+      </div>
+
+      <!--标签多选加自创-->
+      <div class="img_label">
+        <span>更多标签</span>
+        <!--标签内容-->
+        <div class="img_label_contant">
+          <!--已选标签-->
+          <div class="img_label_checked">
+            <!--选择的标签-->
+            <div class="img_label_checked_choose">
+              <!--<ul id="ul" *ngFor="let item of labels index as lens">-->
+              <ul id="ul">
+                <li class="li"  *ngFor="let item of labels index as lens">
+                  <a href="javascript:;">
+                    <p class="p1" id="p1" name="photoLabel" value="1">{{item}}</p>
+                    <img src="../../../assets/images/zja/close2.png" (click)="de(item)" >
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--原创标签-->
+            <div class="img_label_checked_choose2" id="addone">
+              <img src="../../../assets/images/zja/close3.png" alt="" id="dele">
+              <input type="text" id="text" name="aa" [(ngModel)]="addOneLabel" value={{aa}} />
+              <img src="../../../assets/images/zja/add.png" alt="" id="add">
+            </div>
+            <!--添加标签-->
+            <div class="img_label_checked_add" id="addtwo">
+              <p>添加标签</p>
+              <img src="../../../assets/images/zja/add.png" alt="" id="add_new">
+            </div>
+          </div>
+          <!--提示内容-->
+          <div class="img_label_alert">
+            <h4>一推荐标签一</h4>
+            <p style="margin-top: 9px;">合适的标签能带来更多赞哦</p>
+          </div>
+          <!--系统提供的选择标签-->
+          <div class="img_label_window" >
+            <a href="javascript:;" class="a100" (click)="aAllNew('古风')">古风</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('欧美')">欧美</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('故事漫画')">故事漫画</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('临摹')">临摹</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('绝对领域')">绝对领域</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('Q版')">Q版</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('手绘')">手绘</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('萝莉')">萝莉</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('原创设计')">原创设计</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('制服')">制服</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('正太')">正太</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('大叔')">大叔</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('水着')">水着</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('双马尾')">双马尾</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('电视剧')">电视剧</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('电影')">电影</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('偶像')">偶像</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('美食')">美食</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('社会热点')">社会热点</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('搞笑')">搞笑</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('情感')">情感</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('新时代')">新时代</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('美妆')">美妆</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('萌宠')">萌宠</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('运动健身')">运动健身</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('美女模特')">美女模特</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('旅游')">旅游</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('正能量')">正能量</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('养生')">养生</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('数码科技')">数码科技</a>
+            <a href="javascript:;" class="a100" (click)="aAllNew('游戏人物')">游戏人物</a>
+          </div>
+        </div>
+      </div>
+      <!--end风格类型-->
+</div>
+
+    <!--发表作品-->
+    <div class="uploading">
+      <input type="button" value="发布" id="btn_login" (click)="checkAll()">
+    </div>
+  </form>
+</div>
+
+
+
+<!--底部-->

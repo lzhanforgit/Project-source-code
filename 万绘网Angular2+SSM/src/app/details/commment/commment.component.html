@@ -1,0 +1,21 @@
+<div class="list-group col-md-10">
+  <ul class="list-group " *ngFor="let item of comment ; let i = index;">
+
+
+    <li class="list-group-item list-group-item-success" id={{i}}>
+      <!--<span class="badge">14</span>-->
+      <button class="btn btn-warning badge" (click)="remove(i)">删除评论</button>
+      <input class="col-md-2" value={{getMyDate(comment[i].commentTime)}} readonly>
+      <a class="col-md-1">用户:{{comment[i].userName}}</a><input class="col-md-4" value={{comment[i].commentContent}} readonly><a [routerLink]="['/detailsPhoto',comment[i].commentPhotoId]">点我查看</a>
+    </li>
+
+
+    <!--<li class="list-group-item list-group-item-success">-->
+      <!--&lt;!&ndash;<span class="badge">14</span>&ndash;&gt;-->
+      <!--<button class="btn btn-warning badge">删除评论</button>-->
+      <!--<input class="col-md-2" value="2017-10-10" readonly>-->
+      <!--<a class="col-md-1">用户:</a><input class="col-md-4" value="saonima" readonly>在<a>某个地方</a>-->
+    <!--</li>-->
+
+  </ul>
+</div>

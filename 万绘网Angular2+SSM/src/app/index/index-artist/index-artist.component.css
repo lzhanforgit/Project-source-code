@@ -1,0 +1,106 @@
+.exterior{
+  width: 100%;
+  /*85px*/
+  margin-top: 5.3125em;
+  height: 480px;
+}
+.cat_top,.artist_top{
+  height: 45px;
+  width: 100%;
+  border-bottom:solid 0.0625em #b7b7b7;
+  box-sizing: border-box;
+}
+.cat_top .cat_top1{
+  /*250px*/
+  width: 15.625em;
+  /*45px*/
+  height: 2.8125em;
+  float: left;
+  font-size: 1.5em;
+}
+.cat_top .cat_top1 span{
+  font-weight: 600;
+  /*45px*/
+  line-height: 2.8125rem;
+}
+.cat_top .cat_top2{
+  /*50px*/
+  width: 3.125rem;
+  /*45px*/
+  height: 2.8125rem;
+  float: left;
+  margin-left: 3.125rem;
+  /*20px*/
+  font-size: 1.25em;
+  text-align: center;
+}
+.cat_top .cat_top2 a{
+  text-decoration: none;
+  color: #000;
+  line-height: 2.8125rem;
+  /*14px*/
+  font-size: 0.875rem;
+}
+.cat_top .cat_top2 a:hover{
+  cursor: pointer;
+}
+
+/*艺术家 顶部栏 字*/
+.artist_top .artist_top1{
+  width: 100%;
+  height: 45px;
+  font-size: 24px;
+  text-align: center;
+}
+.artist_top .artist_top1 span{
+  font-weight: 600;
+  line-height: 45px;
+}
+.artist .artist_img{
+  display: flex;
+  width: 100%;
+  height: 280px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.artist .artist_img>div{
+  width: 280px;
+  height: 280px;
+  text-align: center;
+}
+
+.artist .artist_img div div{
+  height: 210px;
+  width: 210px;
+}
+.artist .artist_img div div img{
+  display: block;
+  position: absolute;
+  /*显示中心*/
+  object-fit:cover;
+  height: 200px;
+  width: 200px;
+  box-shadow: 0em 0em 0.625em rgba(128, 128, 128, 0.67);
+}
+.artist .artist_img div div img:nth-child(1){
+  margin-top: 0.625em;
+  margin-left: 0.625em;
+  transition: all 1s;
+  z-index: 2;
+}
+.artist .artist_img div div img:nth-child(1):hover{
+  margin-top: 1em;
+  margin-left: 1em;
+  transition: margin-top 1s, margin-left 1s;
+}
+.artist .artist_img div div img:nth-child(2){
+  opacity: 0.3;
+  z-index: 1;
+}
+.artist .artist_img div p{
+  line-height: 80px;
+}
+.artist .artist_img div>div{
+  display: inline-block;
+}

@@ -1,0 +1,40 @@
+.addTask{
+  /*85 90*/
+  margin-top: 5.3125em;
+  border: solid 1px rgba(128, 128, 128, 0.4);
+  box-sizing: border-box;
+}
+.addTask .add_header{
+  width: 100%;
+  height: 5em;
+  border-bottom: solid 1px rgba(128, 128, 128, 0.4);
+  box-sizing: border-box;
+  line-height: 5em;
+}
+.addTask .add_header>div{
+  float: left;
+  margin-left: 80px;
+}
+
+.addSuccess{
+  width: 100%;
+  height: 600px;
+  text-align: center;
+}
+.addSuccess>div:nth-child(1){
+  margin-top: 150px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.addSuccess>div:nth-child(1)>span{
+  font-size: 36px;
+
+}
+.addSuccess>div:nth-child(2){
+  margin-top: 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}

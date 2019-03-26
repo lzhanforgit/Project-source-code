@@ -1,0 +1,107 @@
+<!--<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="city">
+      <div class="row">
+        原地址：<input value = "{{user_address}}" id="oldaddress" readonly="readonly">
+      </div>
+      <div class="row">
+        <table>
+          <tr>
+            <td class="col-md-8" colspan="3" >
+              <div class="row">
+                <div class="col-md-4 row">
+                  <div class="col-md-3 area" >省</div>
+                  <div class="col-md-9">
+                    <select name="province" id="province" [(ngModel)]="selectedProvince">
+                      <option *ngFor="let item of provinces">{{item}}</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-4 row">
+                  <div class="col-md-3 area"> 市</div>
+                  <div class="col-md-9"> <select name="city" id="city" [(ngModel)]="selectedCity">
+                    <option *ngFor="let item of cities[selectedProvince]">{{item}}</option>
+                  </select>
+                  </div>
+                </div>
+
+                <div class="col-md-4 row">
+                  <div class="col-md-3 area">区</div>
+                  <div class="col-md-9"><select name="area" id="area" [(ngModel)]="selectedArea">
+
+                    <option *ngFor="let item of area[selectedCity]">{{item}}</option>
+                  </select>
+                  </div>
+
+                </div>
+              </div>
+              <br>
+          </tr>
+        </table>
+      </div>
+        <button  (click)="getValue()" id="city_btn">确认修改</button></div>
+  </div>
+  <div class="col-md-3"></div>
+</div>-->
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6 address">
+    <div class="row add1">
+      <div class="col-md-2">
+        <span>原地址：</span>
+      </div>
+      <div class="col-md-10">
+        <span>{{user_address}}</span>
+      </div>
+    </div>
+    <div class="row add2">
+      <div class="col-md-2">
+        <span>修改为:</span>
+      </div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-9">
+                <select name="selectedProvince" id="province" [(ngModel)]="selectedProvince">
+                  <option *ngFor="let item of provinces">{{item}}</option>
+                </select>
+              </div>
+              <div class="col-md-3" >省</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-9">
+                <select name="selectedCity" id="city" [(ngModel)]="selectedCity">
+                  <option *ngFor="let item of cities[selectedProvince]">{{item}}</option>
+                </select>
+              </div>
+              <div class="col-md-3">市</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-9">
+                <select name="selectedArea" id="area" [(ngModel)]="selectedArea">
+                  <option *ngFor="let item of area[selectedCity]">{{item}}</option>
+                </select>
+              </div>
+              <div class="col-md-3">区</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+  <button  (click)="getValue()" id="city_btn">确认修改</button>
+
+</div>
+
+
+
+

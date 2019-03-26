@@ -1,0 +1,266 @@
+.nav{
+  width: 100%;
+  height: 3000px;
+  background: #f4f4f4;
+}
+.main{
+  position: relative;
+  width: 1140px;
+  height: 3000px;
+  margin: 0px auto;
+}
+/*排行榜导航:绘师排行 周榜 月榜 新人榜*/
+.rank-nav{
+  float: top;
+  width: 1140px;
+  height: 100px;
+  border-bottom: 1px solid rgba(36,33,46,0.08);
+}
+.rank-nav p:nth-child(1){
+  float: left;
+  margin-left: 500px;
+  color: #333;
+  font-size: 18px;
+  padding-top: 50px;
+}
+.rank-nav p:nth-child(1):hover{
+  color: #ff6fa2;
+}
+.rank-nav p:nth-child(1):hover{
+  color: #ff6fa2;
+}
+.rank-nav p:nth-child(2){
+  float: left;
+  margin-left: 20px;
+  color: #333;
+  font-size: 18px;
+  padding-top: 50px;
+}
+/*月榜周榜新人榜*/
+.rank-container{
+  float: top;
+  width: 100%;
+  height: 1000px;
+  margin-top: 25px;
+}
+/*排行榜前三名*/
+.rank-three{
+  width: 100%;
+  height: 340px;
+}
+.rank-three1{
+  width: 355px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.rank-three1:nth-child(2){
+  margin-left: 35px;
+}
+.rank-three1:nth-child(3){
+  margin-left: 40px;
+}
+.rank-three1-img{
+  float: top;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.rank-three1-img img{
+  width: 100%;
+  transition: 1s;
+  transform: scale(1);
+}
+.rank-three1-img img:hover{
+  transition: 1s;
+  transform: scale(1.1);
+}
+.yuanhu{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #ff6fa2;
+  z-index: 9999;
+  margin-left: 305px;
+  margin-top: -250px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 12px;
+}
+.yuanhu p{
+  position: relative;
+  color: white;
+  padding-top: 10px;
+  font-size: 20px;
+  padding-left: 17px;
+}
+/*作品信息：标题、作者头像和昵称*/
+.rank-three1-details{
+  float: top;
+  width: 100%;
+  height: 89px;
+  margin-top: 200px;
+  background: white;
+}
+.rank-three1-details span{
+  width: 100%;
+  float: top;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 20px;
+}
+.rank-three1-user{
+  width: 100%;
+  float: top;
+  height: 60px;
+}
+.rank-three1-user img:nth-child(1){
+  width: 35px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 20px;
+  margin-top: 16px;
+}
+.dianzan{
+  width: 35px;
+  float: left;
+  margin-left: 130px;
+  margin-top: 18px;
+  display: block;
+}
+.dianzanhou{
+  width: 35px;
+  float: left;
+  margin-left: 130px;
+  margin-top: 18px;
+  display: none;
+}
+.rank-three1-user p{
+  float: left;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 15px;
+  margin-left: 25px;
+  color: grey;
+}
+.rank-three1-user p:hover{
+  color: #ff6fa2;
+}
+/*排行榜剩余17名--*/
+.rank-last{
+  float: top;
+  width: 100%;
+  height: 1000px;
+  margin-top: 70px;
+
+}
+.yuanhu2{
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: #2b2138;
+  z-index: 9999;
+  margin-left: 172px;
+  margin-top: -150px;
+  border-bottom-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.yuanhu2 p{
+  position: absolute;
+  color: white;
+  padding-top: 10px;
+  font-size: 15px;
+  padding-left: 0px;
+  margin-top: -10px;
+  margin-left: 6px;
+  opacity: 1;
+}
+
+.rank-last1{
+  float: left;
+  width: 200px;
+  height: 220px;
+  margin-right: 35px;
+  overflow: hidden;
+  border-radius: 11px;
+  margin-bottom: 20px;
+}
+.rank-last1:nth-child(5n){
+  margin-right: 0px;
+}
+.rank-last1-img{
+  float: top;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.rank-last1-img img{
+  width: 100%;
+  transition: 1s;
+  transform: scale(1);
+}
+.rank-last1-img img:hover{
+  transition: 1s;
+  transform: scale(1.2);
+}
+/*作品信息：标题、作者头像和昵称*/
+.rank-last1-img-details{
+  float: top;
+  width: 100%;
+  height: 70px;
+  background: white;
+
+}
+.rank-last1-img-details span{
+  width: 100%;
+  float: top;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 20px;
+}
+.rank-last1-user{
+  width: 100%;
+  float: top;
+  height: 40px;
+}
+.rank-last1-user img:nth-child(1){
+  width: 25px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.dianzan1{
+  width: 23px;
+  float: left;
+  margin-left: 40px;
+  margin-top: 10px;
+  display: block;
+}
+.dianzanhou1{
+  width: 23px;
+  float: left;
+  margin-left: 40px;
+  margin-top: 10px;
+  display: none;
+}
+.rank-last1-user p{
+  float: left;
+  display: block;
+  height: 13px;
+  font-size: 12px;
+  margin-top: 12px;
+  line-height: 13px;
+  margin-left: 10px;
+  color: grey;
+}
+.rank-last1-user p:hover{
+  color: #ff6fa2;
+}
+
+.bot{
+  background: #34353D;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}

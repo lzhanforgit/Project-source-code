@@ -1,0 +1,58 @@
+html, body, h1, h2, h3, h4,hr, h5, h6, p, a, table, div, span, ul, ol, li, input, textarea, header, nav, section, article, aside, footer, form, option{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+h1{
+  height: 100px;
+  text-align: center;
+  padding-top: 25px;
+
+  background: gray;
+  color: white;
+  font-size: 3em;
+}
+
+h3{
+  height: 100px;
+  /*background: grey;*/
+  padding-top: 75px;
+  padding-left: 350px;
+}
+html, body, h1, h2, h3, h4,hr, h5, h6, p, a, table, div, span, ul, ol, li, input, textarea, header, nav, section, article, aside, footer, form, option{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li{
+
+
+  height: 60px;
+
+
+  background: white;
+  /*border: solid 1px white;*/
+  line-height: 60px;
+  text-align: center;
+
+
+  border-right: 1px solid #cbcbcb;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+
+
+  /*设置字体*/
+  font-family: 微软雅黑;
+  font-size: 1.2em;
+  color: black;
+}
+
+li:hover{
+  background: #808080;
+  color: white;
+}

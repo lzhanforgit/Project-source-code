@@ -1,0 +1,91 @@
+
+<div class="container">
+
+  <div class="row">
+    <!--导航栏-->
+    <div class="col-md-12" style="z-index: 2;">
+      <app-nav></app-nav>
+    </div>
+  </div>
+  <div class="row one">
+    <div class="col-md-1 text-center" (click)="contentClick()" id="content"
+         style="font-size:14px; height:2.4em;line-height:2.4em;border-radius:3px;">内容</div>
+    <div class="col-md-1 text-center" (click)="labelClick()" id="label"
+         style="font-size:14px; height:2.4em;line-height:2.4em;border-radius:3px;">标签</div>
+  </div>
+  <div class="row two">
+    <input type="text" style="width: 35em;height:2.8em;margin-right:1em;">
+    <button style="width:5em;height:2.5em;background:#343A40;color:#FFFFFF;border-radius:6px;">搜索</button>
+  </div>
+  <div class="row three">
+    <div class="col-md-1 popularity">根据人气</div>
+    <div class="col-md-1 time">根据时间</div>
+  </div>
+  <div class="row four">
+        <div class="col-md-12 result" style="height:3em;line-height:3em;margin-bottom:2.5em;">
+             21567个结果
+        </div>
+        <div class="col-md-12">
+          <div *ngFor="let val of arr">
+            <div class="col-md-3" style="height:25em;position: relative;">
+              <div class="col-md-12" style="border-radius:3px;height:18em;background-image: url(../../assets/images/drawer-search/sc1.jpg);background-size:cover;"></div>
+              <div class="col-md-12 zz"></div>
+              <div class="col-md-12 text-center" style="height:2em;line-height:2em;background:#FFFFFF;">孤独的美食家 中国版</div>
+              <div class="col-md-12 text-center" style="height:2em;line-height:2em;background:#FFFFFF;">点赞数 关注数</div>
+              <div class="col-md-12 " style="height:3em;line-height:3em;background:#FFFFFF;">
+                <div class="col-md-2" style="height:3em;line-height:3em;background-image: url(../../assets/images/drawer-search/tx1.jpg);background-size:cover;"></div>
+                <div class="col-md-2" style="height:3em;line-height:3em;width:12em;">
+                  <div class="row" style="height:1.5em;line-height:1.5em;font-size:14px;">user_nikeName</div>
+                  <div class="row" style="height:1.5em;line-height:1.5em;font-size:14px;">user_regist_time</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" style="height:25em;">
+              <div class="col-md-12" style="border-radius:3px;height:18em;background-image: url(../../assets/images/drawer-search/sc1.jpg);background-size:cover;"></div>
+              <div class="col-md-12 zz"></div>
+              <div class="col-md-12 text-center" style="height:2em;line-height:2em;background:#FFFFFF;">孤独的美食家 中国版</div>
+              <div class="col-md-12 text-center" style="height:2em;line-height:2em;background:#FFFFFF;">点赞数 关注数</div>
+              <div class="col-md-12 " style="height:3em;line-height:3em;background:#FFFFFF;">
+                <div class="col-md-2" style="height:3em;line-height:3em;
+             background-image: url(../../assets/images/drawer-search/tx1.jpg);background-size:cover;"></div>
+                <div class="col-md-2" style="height:3em;line-height:3em;width:12em;">
+                  <div class="row" style="height:1.5em;line-height:1.5em;font-size:14px;">user_nikeName</div>
+                  <div class="row" style="height:1.5em;line-height:1.5em;font-size:14px;">user_regist_time</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" style="height:25em;">
+              <div class="col-md-12" style="border-radius:3px;height:18em;background-image: url(../../assets/images/drawer-search/sc1.jpg);background-size:cover;"></div>
+              <div class="col-md-12 zz"></div>
+              <div class="col-md-12 text-center" style="height:2em;line-height:2em;background:#FFFFFF;">孤独的美食家 中国版</div>
+              <div class="col-md-12 text-center" style="height:2em;line-height:2em;background:#FFFFFF;">点赞数 关注数</div>
+              <div class="col-md-12 " style="height:3em;line-height:3em;background:#FFFFFF;">
+                <div class="col-md-2" style="height:3em;line-height:3em;
+             background-image: url(../../assets/images/drawer-search/tx1.jpg);background-size:cover;"></div>
+                <div class="col-md-2" style="height:3em;line-height:3em;width:12em;">
+                  <div class="row" style="height:1.5em;line-height:1.5em;font-size:14px;">user_nikeName</div>
+                  <div class="row" style="height:1.5em;line-height:1.5em;font-size:14px;">user_regist_time</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" style="height:25em;">
+              <div class="col-md-12" style="border-radius:3px;height:18em;background-image: url(../../assets/images/drawer-search/sc1.jpg);background-size:cover;"></div>
+              <div class="col-md-12 zz"></div>
+              <div class="col-md-12 text-center" style="height:2em;line-height:2em;background:#FFFFFF;">孤独的美食家 中国版</div>
+              <div class="col-md-12 text-center" style="height:2em;line-height:2em;background:#FFFFFF;">点赞数 关注数</div>
+              <div class="col-md-12 " style="height:3em;line-height:3em;background:#FFFFFF;">
+                <div class="col-md-2" style="height:3em;line-height:3em;
+             background-image: url(../../assets/images/drawer-search/tx1.jpg);background-size:cover;"></div>
+                <div class="col-md-2" style="height:3em;line-height:3em;width:12em;">
+                  <div class="row" style="height:1.5em;line-height:1.5em;font-size:14px;">user_nikeName</div>
+                  <div class="row" style="height:1.5em;line-height:1.5em;font-size:14px;">user_regist_time</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12" style="height:1.6em;"></div>
+          </div>
+          <div class="col-md-12 text-center more">加载更多</div>
+          <div class="col-md-12" style="height:4em;background:#FFFFFF;"></div>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+
+<div class="row">
+  <!--导航栏-->
+  <div class="col-md-12" style="z-index: 2;">
+    <app-nav></app-nav>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row top">
+     <div class="col-md-2 text-left">Top 绘师</div>
+  </div>
+  <div *ngFor="let val of loadData">
+    <div class="row" style="border-bottom:1px gainsboro solid;">
+      <div class="col-md-6 bottom">
+        <div class="bottom-detail">
+          <div class="col-md-4 detail-left">
+            <a routerLink = "/detail/{{val.painterUserId}}"><img src="../../assets/images/zja/{{val.user.userAvatar}}" height="150em" width="150em" style="border-radius:50%;"/></a>
+            <div class="col-md-1" style="float: right;margin-top:-2.5em;margin-right:1.5em;">
+              <p *ngIf="val.user.userSex === 0">
+              <img src="../../assets/images/drawer/man.svg" />
+              </p>
+              <p *ngIf="val.user.userSex === 1">
+                <img src="../../assets/images/drawer/women.svg" />
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 detail-right" >
+            <div class="row">{{val.user.userNikeName}}</div>
+              <div class="row">作品数量:<span class="num">{{val.photo.length}}</span></div>
+            <div class="row"><a routerLink = "/detail/{{val.painterUserId}}">个人中心</a></div>
+            <!--[routLink] = "['/detail',val.user.userId]"-->
+            <div class="row">
+              <h6>
+                <div class="col-md-4 gz" id="{{val.user.userNikeName}}" (click)="follow(val.painterId)">{{val.gz}}</div>
+              </h6>
+
+              <div class="col-md-4 fabulous">
+                <img src="../../assets/images/drawer/icon-已关注.svg">
+                {{val.fans.length}}
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 bottom">
+        <div class="bottom-detail row">
+          <div *ngIf="val.photo.length > 4">
+            <div class="col-md-2">
+              <img src="../../assets/images/zja/{{val.photo[0].photoUrl.split(',')[0]}}" height="150em" width="100em"/>
+            </div>
+            <div class="col-md-2">
+              <img src="../../assets/images/zja/{{val.photo[1].photoUrl.split(',')[0]}}" height="150em" width="100em"/>
+            </div>
+            <div class="col-md-2">
+              <img src="../../assets/images/zja/{{val.photo[2].photoUrl.split(',')[0]}}" height="150em" width="100em"/>
+            </div>
+            <div class="col-md-2">
+              <img src="../../assets/images/zja/{{val.photo[3].photoUrl.split(',')[0]}}" height="150em" width="100em"/>
+            </div>
+            <div class="col-md-2 more text-center" routerLink="/detailsPhoto/{{val.painterUserId}}">更多</div>
+          </div>
+          <div *ngIf="val.photo.length < 4">
+            <div class="col-md-2" *ngFor="let cot of val.photo">
+              <img src="../../assets/images/zja/{{cot.photoUrl.split(',')[0]}}" height="150em" width="100em"/>
+            </div>
+            <div class="col-md-2 more text-center" style="background:gray;color:#FFFFFF;border:0px;">暂无更多</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="loadData.length < 10 || loadData.length === 10" class="row text-center loadNoMore" >暂无更多内容</div>
+  <div *ngIf="loadData.length > 10" class="row text-center loadMore" >加载更多</div>
+
+  <div class="row footer"></div>
+
+
+</div>

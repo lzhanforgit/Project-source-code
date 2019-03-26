@@ -1,0 +1,250 @@
+<!--顶部导航栏-->
+<div class="row wid">
+  <div class="col-md-12">
+    <app-nav></app-nav>
+  </div>
+</div>
+
+<!--排行榜：月榜周榜新人榜-->
+<div class="app">
+  <!--排行榜内容-->
+  <div class="main">
+    <!--排行榜导航:绘师排行 周榜 月榜 新人榜-->
+    <div class="rank-nav">
+      <p>作品排行</p>
+    </div>
+
+    <!--排行榜内容-->
+    <div class="rank-container">
+      <!--周榜-->
+      <div class="rank-container-rank">
+        <a href="#" routerLink="/rankingDetailsWeek">周榜</a>
+        <div class="rank-list-container">
+          <!--周榜第一名-->
+          <div class="rank-list-first">
+            <!--图片-->
+            <div class="rank-list-first-img">
+              <div class="rank-list-first-img0">
+                <img src="../../../assets/images/zja/{{photourls1[0]}}" class="photoimg" alt="">
+              </div>
+              <div class="one">
+                <div class="one1">
+                  <p>1</p>
+                </div>
+                <div class="jiao"></div>
+              </div>
+            </div>
+
+
+            <!--作品标题-->
+            <span class="die">{{photosWeekNow[0].photoName}}</span>
+
+            <!--作者名字-->
+            <div class="user">
+              <img src="../../../assets/images/zja/用户.png" class="userImg" alt="">
+              <span class="zuozhe">{{photosWeekNow[0].user.userNikeName}}</span>
+            </div>
+
+            <!--图片信息-->
+            <div class="date">
+              <!--收藏：只是显示-->
+              <img src="../../../assets/images/zja/收藏.png" class="userImg" alt="">
+              <span class="collection">{{photosWeekNow[0].collect}}</span>
+              <!--点赞：只是显示-->
+              <img src="../../../assets/images/zja/点赞.png" class="userImg" alt="">
+              <span class="likes">{{photosWeekNow[0].likePhoto}}</span>
+            </div>
+          </div>
+          <!--周榜前五名-->
+          <div class="rank-list-five">
+            <div class="rank-list-five1" *ngFor="let item of items index as i">
+              <!--图片-->
+              <div class="rank-list-item">
+                <img src="../../../assets/images/zja/{{photourls1[i+1]}}" class="photoimg" alt="">
+              </div>
+
+              <!--图片信息-->
+              <div class="rank-list-details">
+                <!--作品标题-->
+                <span class="die">{{photosWeekNow[i+1].photoName}}</span>
+                <!--作者名字-->
+                <div class="user">
+                  <img src="../../../assets/images/zja/用户.png" class="userImg" alt="">
+                  <span class="zuozhe">{{photosWeekNow[i+1].user.userNikeName}}</span>
+                </div>
+                <div class="rank-photo">
+                  <!--收藏：只是显示-->
+                  <img src="../../../assets/images/zja/收藏.png" class="userImg" alt="">
+                  <span class="collection">{{photosWeekNow[i+1].collect}}</span>
+                  <!--点赞：只是显示-->
+                  <img src="../../../assets/images/zja/点赞.png" class="userImg"  alt="">
+                  <span class="likes">{{photosWeekNow[i+1].likePhoto}}</span>
+                </div>
+              </div>
+
+            </div>
+            <!--浏览更多-->
+            <a href="#" routerLink="/rankingDetailsWeek">
+              <span class="gengduo">浏览更多&nbsp;></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!--月榜-->
+      <div class="rank-container-rank">
+        <a href="#" routerLink="/rankingDetailsMonth">月榜</a>
+        <div class="rank-list-container">
+          <!--月榜第一名-->
+          <div class="rank-list-first">
+
+            <!--图片-->
+            <div class="rank-list-first-img">
+              <img src="../../../assets/images/zja/{{photourls2[0]}}" class="photoimg" alt="">
+            </div>
+            <div class="one">
+              <div class="one1">
+                <p>1</p>
+              </div>
+              <div class="jiao"></div>
+            </div>
+
+            <!--作品标题-->
+            <span class="die">{{photosMonthNow[0].photoName}}</span>
+
+            <!--作者名字-->
+            <div class="user">
+              <img src="../../../assets/images/zja/用户.png" class="userImg" alt="">
+              <span class="zuozhe">{{photosMonthNow[0].user.userNikeName}}</span>
+            </div>
+
+            <!--图片信息-->
+            <div class="date">
+              <!--收藏：只是显示-->
+              <img src="../../../assets/images/zja/收藏.png" class="userImg" alt="">
+              <span class="collection">{{photosMonthNow[0].collect}}</span>
+              <!--点赞：只是显示-->
+              <img src="../../../assets/images/zja/点赞.png" class="userImg" alt="">
+              <span class="likes">{{photosMonthNow[0].likePhoto}}</span>
+            </div>
+          </div>
+          <!--月榜前五名-->
+          <div class="rank-list-five">
+            <div class="rank-list-five1" *ngFor="let item of items index as i">
+              <!--图片-->
+              <div class="rank-list-item">
+                <img src="../../../assets/images/zja/{{photourls2[i+1]}}" class="photoimg" alt="">
+              </div>
+
+              <!--图片信息-->
+              <div class="rank-list-details">
+                <!--作品标题-->
+                <span class="die">{{photosMonthNow[i+1].photoName}}</span>
+                <!--作者名字-->
+                <div class="user">
+                  <img src="../../../assets/images/zja/用户.png" class="userImg" alt="">
+                  <span class="zuozhe">{{photosMonthNow[i+1].user.userNikeName}}</span>
+                </div>
+                <div class="rank-photo">
+                  <!--收藏：只是显示-->
+                  <img src="../../../assets/images/zja/收藏.png" class="userImg" alt="">
+                  <span class="collection">{{photosMonthNow[i+1].collect}}</span>
+                  <!--点赞：只是显示-->
+                  <img src="../../../assets/images/zja/点赞.png" class="userImg"  alt="">
+                  <span class="likes">{{photosMonthNow[i+1].likePhoto}}</span>
+                </div>
+              </div>
+
+            </div>
+            <!--浏览更多-->
+            <a href="#" routerLink="/rankingDetailsMonth">
+              <span class="gengduo">浏览更多&nbsp;></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!--新人榜-->
+      <div class="rank-container-rank">
+        <a href="#" routerLink="/rankingDetailsNewcomer">新人榜</a>
+        <div class="rank-list-container">
+          <!--新人榜第一名-->
+          <div class="rank-list-first">
+
+            <!--图片-->
+            <div class="rank-list-first-img">
+              <img src="../../../assets/images/zja/{{photourls2[0]}}" class="photoimg" alt="">
+            </div>
+            <div class="one">
+              <div class="one1">
+                <p>1</p>
+              </div>
+              <div class="jiao"></div>
+            </div>
+
+            <!--作品标题-->
+            <span class="die">{{photosMonthNow[0].photoName}}</span>
+
+            <!--作者名字-->
+            <div class="user">
+              <img src="../../../assets/images/zja/用户.png" class="userImg" alt="">
+              <span class="zuozhe">{{photosMonthNow[0].user.userNikeName}}</span>
+            </div>
+
+            <!--图片信息-->
+            <div class="date">
+              <!--收藏：只是显示-->
+              <img src="../../../assets/images/zja/收藏.png" class="userImg" alt="">
+              <span class="collection">{{photosMonthNow[0].collect}}</span>
+              <!--点赞：只是显示-->
+              <img src="../../../assets/images/zja/点赞.png" class="userImg" alt="">
+              <span class="likes">{{photosMonthNow[0].likePhoto}}</span>
+            </div>
+          </div>
+          <!--新人榜前五名-->
+          <div class="rank-list-five">
+            <div class="rank-list-five1" *ngFor="let item of items index as i">
+              <!--图片-->
+              <div class="rank-list-item">
+                <img src="../../../assets/images/zja/{{photourls2[i+1]}}" class="photoimg" alt="">
+              </div>
+
+              <!--图片信息-->
+              <div class="rank-list-details">
+                <!--作品标题-->
+                <span class="die">{{photosMonthNow[i+1].photoName}}</span>
+                <!--作者名字-->
+                <div class="user">
+                  <img src="../../../assets/images/zja/用户.png" class="userImg" alt="">
+                  <span class="zuozhe">{{photosMonthNow[i+1].user.userNikeName}}</span>
+                </div>
+                <div class="rank-photo">
+                  <!--收藏：只是显示-->
+                  <img src="../../../assets/images/zja/收藏.png" class="userImg" alt="">
+                  <span class="collection">{{photosMonthNow[i+1].collect}}</span>
+                  <!--点赞：只是显示-->
+                  <img src="../../../assets/images/zja/点赞.png" class="userImg"  alt="">
+                  <span class="likes">{{photosMonthNow[i+1].likePhoto}}</span>
+                </div>
+              </div>
+
+            </div>
+            <!--浏览更多-->
+            <a href="#" routerLink="/rankingDetailsNewcomer">
+              <span class="gengduo">浏览更多&nbsp;></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--底部-->
+<div class="col-md-12 bot">
+  <app-bottom></app-bottom>
+</div>

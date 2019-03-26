@@ -1,0 +1,108 @@
+<div class="col-md-12">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="addTask">
+      <div class="add_header">
+        <div><a>>1. 发布任务</a></div>
+        <div><a>>2. 指定任务接受者</a></div>
+        <div><a>>3. 接收作品确认任务完成</a></div>
+      </div>
+      <form #addForm="ngForm">
+        <div class="add_form">
+          <!--悬赏标题-->
+          <div>
+            <div>
+              <span>悬赏标题:</span>
+            </div>
+            <div class="title_input">
+              <input type="text" name="taskTitle" (blur)="titleNotNull()" [(ngModel)]="taskTitle">
+            </div>
+            <span style="display: none" [ngClass]="{'notNull':titleStart}">
+              请输入标题，标题不能为空
+            </span>
+          </div>
+          <!--具体要求 detailed-->
+          <div class="add_detailed">
+            <div>
+              <span>具体要求:</span>
+            </div>
+            <div class="text_detailed">
+              <textarea maxlength="140" name="taskContent" [(ngModel)]="taskContent" (blur)="contentNotNull()"></textarea>
+            </div>
+            <span name="detailedIsNull" style="display: none" [ngClass]="{'notNull':contentStart}">
+              请输入具体要求，且不能少于十个字。
+            </span>
+          </div>
+          <!--照片-->
+          <div class="add_img">
+            <div>
+              <span>*照片:</span>
+            </div>
+            <div>
+              <span>可以对需求的作品进行大体的描绘，或者是一张您拍的照片。最多可上传一张^_^</span>
+            </div>
+            <div>
+              <input type="file" name="photo" [ngModel]="photo" accept="image/jpeg,image/jpg,image/png" (change)="getUpload($event)" id="photo" multiple>
+            </div>
+            <div id="showAdd_img" class="showAdd_img" (click)="delPhoto()">
+              <img src="" id="closeimg1">
+            </div>
+          </div>
+          <!--所属类型 type-->
+          <div class="add_type">
+            <div>
+              <span>所属类型:</span>
+            </div>
+            <div class="photo_type">
+              <select name="taskPhotoTypeId" [(ngModel)]="taskPhotoTypeId" class="selType">
+                <option value="1">风景画</option>
+                <option value="2">素描</option>
+                <option value="3">色彩</option>
+                <option value="4">漫画</option>
+                <option value="5">油画</option>
+                <option value="6">简笔画</option>
+                <option value="7">国画</option>
+                <option value="8">版画</option>
+              </select>
+            </div>
+            <span style="display: none" [ngClass]="{'notNull':typeStart}">
+              请选择。
+            </span>
+          </div>
+          <!--悬赏期限 deadline-->
+          <div class="add_deadline">
+            <div>
+              <span>悬赏期限:</span>
+            </div>
+            <div class="deadline">
+              <select name="taskCompleteTime" [(ngModel)]="taskCompleteTime" class="selDeadline" >
+                <option value="5">5天</option>
+                <option value="15">15天</option>
+                <option value="30">30天</option>
+              </select>
+            </div>
+            <span style="display: none" [ngClass]="{'notNull':timeStart}">
+              请选择。
+            </span>
+          </div>
+          <!--悬赏金额-->
+          <div class="add_money">
+            <div>
+              <span>悬赏金额:</span>
+            </div>
+            <div class="task_money">
+              <input type="text" name="taskPay" [(ngModel)]="taskPay" (blur)="moneyNotNull()"/>
+            </div>
+            <span style="display: none" [ngClass]="{'notNull':moneyStart}">
+              请输入正确的金额。
+            </span>
+          </div>
+          <!--提交-->
+          <div class="add_submit">
+            <a (click)="release()"><div>发布悬赏</div></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

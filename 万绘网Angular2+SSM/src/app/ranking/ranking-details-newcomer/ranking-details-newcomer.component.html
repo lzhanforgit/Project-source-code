@@ -1,0 +1,74 @@
+<!--顶部导航栏-->
+<div class="row wid">
+  <div class="col-md-12">
+    <app-nav></app-nav>
+  </div>
+</div>
+
+<!--排行榜详情-->
+<div class="nav">
+  <div class="main">
+    <!--排行榜导航:绘师排行 周榜 月榜 新人榜-->
+    <div class="rank-nav">
+      <p routerLink="/ranking">排行榜</p>
+      <p>画友周榜</p>
+    </div>
+
+    <!--排行榜内容-->
+    <div class="rank-container">
+      <!--排行榜前三名-->
+      <div class="rank-three">
+        <div class="rank-three1"  *ngFor="let item of photosWeekNow1 index as i">
+          <!--图片-->
+          <div class="rank-three1-img">
+            <img src="../../../assets/images/zja/{{photoUrls[i]}}" alt="" routerLink="/detailsPhoto/{{item.photoId}}">
+          </div>
+          <div class="yuanhu">
+            <p>{{i+1}}</p>
+          </div>
+          <!--作品信息：标题、作者头像和昵称-->
+          <div class="rank-three1-details">
+            <span>{{item.photoName}}</span>
+            <div class="rank-three1-user">
+              <img src="../../../assets/images/zja/{{item.user.userAvatar}}" alt="" routerLink="/detail/{{item.user.userId}}">
+              <p>{{item.user.userNikeName}}</p>
+              <img src="../../../assets/images/zja/未点赞.png" class="dianzan" alt="">
+              <p>{{item.likePhoto}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--排行榜剩余17名-->
+      <div class="rank-last">
+        <div class="rank-last1" *ngFor="let item of photosWeekNow2 index as i">
+          <!--图片-->
+          <div class="rank-last1-img">
+            <img src="../../../assets/images/zja/{{photoUrls[i+3]}}" alt="" routerLink="/detailsPhoto/{{item.photoId}}">
+          </div>
+          <div class="yuanhu2">
+            <p>{{i+4}}</p>
+          </div>
+          <!--作品信息：标题、作者头像和昵称-->
+          <div class="rank-last1-img-details">
+            <span>{{item.photoName}}</span>
+            <div class="rank-last1-user">
+              <img src="../../../assets/images/zja/{{item.user.userAvatar}}" alt="" routerLink="/detail/{{item.user.userId}}">
+              <p>{{item.user.userNikeName}}</p>
+              <img src="../../../assets/images/zja/未点赞.png" class="dianzan1" alt="">
+              <p>{{item.likePhoto}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!--底部-->
+<div class="col-md-12 bot">
+  <app-bottom></app-bottom>
+</div>

@@ -1,0 +1,45 @@
+<div class="row" style="margin-top: 40px">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <ng-container *ngIf="allTask">
+      <section>
+        <!--category 推荐 -->
+        <div class="category">
+          <div class="cat_top col-md-12">
+            <div class="cat_top1">
+              <span>推 荐 / C A T E G O R Y</span>
+            </div>
+            <div class="cat_top2">
+              <a href="#" id="cat_more1">更多</a>
+            </div>
+            <div class="cat_task">
+              <a routerLink="/realeaseTask">发布悬赏</a>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6" *ngFor="let item of allTask index as lens">
+            <div class="cat_img" id="cat_model">
+              <div class="cat_model" [routerLink]="['/taskDetails',item.taskPostUserId,item.taskOrderNumber]" >
+                <div class="cat_model_1">
+                  <p>{{photoType[item.taskPhotoTypeId-1]}}</p>
+                </div>
+                <div class="cat_model_2">
+                  <span>标题</span>
+                  <h1 class="lineheight">{{item.taskTitle}}</h1>
+                </div>
+                <div class="cat_model_3">
+                  <span>天数</span>
+                  <p class="lineheight">剩余{{item.taskPostTime}}天</p>
+                </div>
+                <div class="cat_model_4">
+                  <span>佣金</span>
+                  <h1 class="lineheight">￥{{item.taskPay}}</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </ng-container>
+  </div>
+</div>

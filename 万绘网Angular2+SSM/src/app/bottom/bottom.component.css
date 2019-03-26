@@ -1,0 +1,30 @@
+body{
+  font-family: '微软雅黑';
+}
+.topMeun{
+  height: 400px;
+}
+.top{
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+ul{
+  color: white;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 20px;
+}
+ul>li{
+  padding-top: 15px;
+  font-size: 14px;
+}
+.topMeun>h1{
+  color: white;
+  padding-top: 80px;
+}
+.contact{
+  color:white;
+  line-height: 80px;
+}

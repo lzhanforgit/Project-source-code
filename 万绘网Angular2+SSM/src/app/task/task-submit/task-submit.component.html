@@ -1,0 +1,49 @@
+<div class="row details">
+  <div class="col-md-3 detailsLeft">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row back">
+          <a onClick="javascript :history.back(-1);"><img src="../../../assets/images/zyl/back.svg"></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 submitTitle">
+        <h3>{{title}}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9 detailsRight">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 submitTask">
+      <form>
+        <div class="row submitDetail">
+          <div class="col-md-2">
+            <span>作品详情：</span>
+          </div>
+          <div class="col-md-10">
+            <textarea maxlength="140" name="taskSubmitDetail" [(ngModel)]="taskSubmitDetail" class="textInput"></textarea>
+          </div>
+        </div>
+        <div class="row submitPhone">
+          <div class="col-md-2">
+            <span>图片：</span>
+          </div>
+          <div class="col-md-10">
+            <div class="add">
+              <input type="file" name="photo" [(ngModel)]="photo" accept="image/jpeg,image/jpg,image/png" (change)="getUpload($event)" id="photo" multiple>
+            </div>
+            <div id="showAdd_img" class="showAdd_img" (click)="delPhoto()">
+              <img src="" id="closeimg1">
+            </div>
+          </div>
+        </div>
+        <div class="row submit">
+          <div class="accept" (click)="taskSubmit()">提交任务</div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+

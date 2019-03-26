@@ -1,0 +1,61 @@
+
+/*地址*/
+/*.city{*/
+/*margin-left: 700px;*/
+/*margin-top: 200px;*/
+/*}*/
+/*.city{*/
+  /*margin-top: 200px;*/
+  /*font-size: 1.4em;*/
+  /*font-family: 华文细黑;*/
+  /*color: black;*/
+/*}*/
+
+
+/*.city input{*/
+  /*margin-top: 30px;*/
+  /*height: 40px;*/
+  /*width: 300px;*/
+
+  /*border-radius:4px;*/
+  /*border:1px solid gray;*/
+/*}*/
+
+/*.city  button{*/
+  /*height: 30px;*/
+  /*width: 90px;*/
+  /*margin-left: 90px;*/
+  /*margin-top: 30px;*/
+
+  /*background: black;*/
+  /*color: white;*/
+  /*font-size: 0.9em;*/
+  /*border: none;*/
+  /*!*圆角*!*/
+  /*border-radius:4px;*/
+  /*border:1px solid #000;*/
+/*}*/
+
+
+.address{
+  margin-top: 150px;
+  font-size: 16px;
+  font-family: 微软雅黑;
+}
+.add1{
+  height: 50px;
+  line-height: 50px;
+}
+.add1>div:last-child>span{
+  line-height: 50px;
+}
+.add2{
+  height: 50px;
+  margin-top: 50px;
+  line-height: 50px;
+}
+select{
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 108px;
+}

@@ -1,0 +1,85 @@
+.container{
+  margin-top:5em;
+}
+*{
+  font-family: '微软雅黑';
+}
+
+.one{
+    height:2.5em;
+    margin-bottom:2em;
+  }
+.two{
+  height:3em;
+  margin-bottom:2em;
+}
+.three{
+  height:2.5em;
+  margin-bottom:2em;
+}
+.popularity{
+  height:2.5em;
+  margin-right:1em;
+  text-align: center;
+  line-height:2.5em;
+  background:#FFFFFF;
+  border-radius:4px;
+}
+.popularity:hover{
+   cursor: pointer;
+   background:lightslategray;
+   color: #FFFFFF;
+}
+.time{
+  height:2.5em;
+  text-align: center;
+  line-height:2.5em;
+  background:#FFFFFF;
+  border-radius:4px;
+}
+.time:hover{
+  cursor: pointer;
+  background:lightslategray;
+  color: #FFFFFF;
+}
+.four{
+
+}
+.result{
+  background:#D4EDDA;
+}
+.zz{
+  height:18em;
+  width:18em;
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background:rgba(0,0,0,0);
+  margin-left:1em;
+}
+.zz:hover{
+  cursor: pointer;
+  background: rgba(0,0,0,0.1);
+}
+#content{
+  background:#007BFF;
+  color: #FFFFFF;
+}
+
+#content,#label:hover{
+  cursor: pointer;
+}
+/*加载更多*/
+.more{
+  line-height:3em;
+  height:3em;
+  background:#FFFFFF;
+  margin-bottom:1.8em;
+}
+.more:hover{
+  cursor: pointer;
+  background:lightslategray;
+  color: #FFFFFF;
+}

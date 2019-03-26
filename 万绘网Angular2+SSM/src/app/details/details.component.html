@@ -1,0 +1,103 @@
+<div class="container-fluid">
+  <div class="row">
+    <!--导航栏-->
+    <div class="col-md-12" style="z-index: 2;">
+      <app-nav></app-nav>
+    </div>
+  </div>
+</div>
+<div class="container col-md-12">
+  <div class="row">
+    <div class="col-xs-12 col-md-8"><h1 class="banner1 col-md-3" style="padding-top: 25px">个人中心</h1></div>
+    <!--<div class="col-xs-6 col-md-4"><h3 class="banner">基本信息</h3></div>-->
+  </div>
+  <!--<app-my-nav></app-my-nav>-->
+  <div class="row">
+    <div class="col-md-2  nav-all">
+      <ul class="nav-stacked" id = "liebiao">
+        <li role="presentation" (click)="re(1)">查看个人信息</li>
+        <li role="presentation" (click)="re(2)" id="shezhi" style="display: block">设置个人信息</li>
+        <li role="presentation" (click)="re(3)">关注</li>
+        <li role="presentation" (click)="re(4)">粉丝</li>
+        <li role="presentation" (click)="re(5)" id="xiaoxi">消息</li>
+        <li role="presentation" (click)="re(6)">投稿</li>
+        <li role="presentation" (click)="re(7)">收藏</li>
+        <li role="presentation" (click)="re(10)" id="dizhi">完善地址</li>
+        <li role="presentation" (click)="re(8)" id="mima">修改密码</li>
+        <li role="presentation" (click)="re(9)" id="yuegao">约稿</li>
+        <li role="presentation" (click)="re(0)">欢迎</li>
+      </ul>
+    </div>
+
+    <hr>
+
+
+    <div [ngSwitch]="number" class="col-md-10">
+
+      <!--个人信息-->
+      <div *ngSwitchCase="1">
+        <app-find-user></app-find-user>
+      </div>
+      <!--修改-->
+      <div *ngSwitchCase="2">
+        <app-upuser></app-upuser>
+      </div>
+      <!--关注-->
+      <div *ngSwitchCase="3">
+        <app-follow></app-follow>
+      </div>
+      <!--粉丝-->
+      <div *ngSwitchCase="4">
+        <app-fan></app-fan>
+      </div>
+
+      <!--消息-->
+      <div *ngSwitchCase="5">
+        <app-commment></app-commment>
+      </div>
+
+      <!--投稿-->
+      <div *ngSwitchCase="6">
+        <app-work></app-work>
+      </div>
+      <!--收藏-->
+      <div *ngSwitchCase="7">
+        <app-collction></app-collction>
+      </div>
+      <!--修改密码-->
+      <div *ngSwitchCase="8">
+        <app-pwd></app-pwd>
+      </div>
+      <!--约稿-->
+      <div *ngSwitchCase="9">
+        <app-task></app-task>
+      </div>
+      <!--欢迎-->
+      <div *ngSwitchCase="0">
+        <app-welcome></app-welcome>
+      </div>
+
+      <!--地址-->
+      <div *ngSwitchCase="10">
+        <app-address></app-address>
+      </div>
+    </div>
+  </div>
+
+  <!--收藏 投稿-->
+  <!--<app-collction></app-collction>-->
+  <!--个人信息-->
+  <!--<app-find-user></app-find-user>-->
+  <!--修改-->
+  <!--<app-upuser></app-upuser>-->
+  <!--粉丝 关注-->
+  <!--<app-fan></app-fan>-->
+  <!--修改密码-->
+  <!--<app-pwd></app-pwd>-->
+  <!--消息-->
+  <!--<app-commment></app-commment>-->
+  <!--欢迎-->
+  <!--<app-welcome></app-welcome>-->
+  <!--任务-->
+  <!--<app-task></app-task>-->
+</div>

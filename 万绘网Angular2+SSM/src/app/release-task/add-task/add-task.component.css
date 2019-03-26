@@ -1,0 +1,212 @@
+.addTask{
+  /*85 90*/
+  margin-top: 5.3125em;
+  border: solid 1px rgba(128, 128, 128, 0.4);
+  box-sizing: border-box;
+}
+.addTask .add_header{
+  width: 100%;
+  height: 5em;
+  border-bottom: solid 1px rgba(128, 128, 128, 0.4);
+  box-sizing: border-box;
+  line-height: 5em;
+}
+.addTask .add_header>div{
+  float: left;
+  margin-left: 80px;
+}
+
+
+.addTask .add_form{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  width: 100%;
+  height: 900px;
+}
+.addTask .add_form>div{
+  width: 100%;
+}
+
+.addTask .add_form .add_title,.addTask .add_form .add_type,.addTask .add_form .add_deadline,.addTask .add_form .add_money,.addTask .add_form .add_code{
+  height: 50px;
+}
+.addTask .add_form .add_title>div{
+  height: 100%;
+}
+.addTask .add_form>div>div{
+  float: left;
+}
+.addTask .add_form>div>div:first-child{
+  width: 150px;
+  line-height: 50px;
+  text-align: right;
+  margin-left: 80px;
+}
+.addTask .add_form>div .title_input,.text_detailed,.photo_type,.deadline,.task_money,.task_code{
+  margin-left: 50px;
+}
+
+/*悬赏标题*/
+.addTask .add_form .add_title>div:last-child{
+  width: 500px;
+  line-height: 50px;
+}
+.addTask .add_form .title_input input{
+  box-sizing: border-box;
+  width: 190px;
+  padding: 0;
+  border: 0;
+  padding-left: 10px;
+  margin-right: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #333333;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #f8f8f8
+}
+
+/*具体要求*/
+.addTask .add_form .add_detailed{
+  height: 150px;
+}
+.addTask .add_form .add_detailed .text_detailed{
+  height: 150px;
+  width: 500px;
+  margin-right: 30px;
+}
+.addTask .add_form .add_detailed textarea{
+  resize:none;
+  padding: 8px 11px;
+  width: 478px;
+  height: 134px;
+  font-size: 14px;
+  line-height: 25px;
+  border: 0;
+  background-color: #f8f8f8
+}
+
+/*图片*/
+.addTask .add_form .add_img{
+  height: 150px;
+}
+.addTask .add_form .add_img>div:nth-child(2){
+  width: 600px;
+  line-height: 50px;
+  margin-left: 20px;
+  font-size: 0.8em;
+  color: #9F9F9F;
+}
+.addTask .add_form .add_img>div:nth-child(3){
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 0 3px #9F9F9F;
+  margin-left:280px;
+  background: url("../../../assets/images/zyl/add.svg");
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.addTask .add_form .add_img>div:nth-child(3)>input{
+  height: 100px;
+  opacity: 0;
+  width: 100px;
+  margin: 0;
+}
+.addTask .add_form .add_img>div:nth-child(4){
+  height: 100px;
+  width: 210px;
+  display: inline-block;
+}
+.addTask .add_form .add_img .showAdd_img{
+  object-fit:contain;
+  height: 100px;
+  width: 100px;
+  margin-left: 50px;
+}
+.addTask .add_form .add_img .showAdd_img>img {
+  object-fit: contain;
+  height: 100px;
+}
+
+/*所属类型 type*/
+.addTask .add_form .add_type .selType {
+  width: 190px;
+  padding: 0;
+  border: 0;
+  padding-left: 10px;
+  margin-right: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #333333;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+
+/*悬赏期限 deadline*/
+.addTask .add_form .add_deadline .selDeadline{
+  width: 190px;
+  padding: 0;
+  border: 0;
+  padding-left: 10px;
+  margin-right: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #333333;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #f8f8f8
+}
+
+/*悬赏金额*/
+.addTask .add_form .add_money .task_money>input{
+  width: 190px;
+  padding: 0;
+  border: 0;
+  padding-left: 10px;
+  margin-right: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #333333;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+/*提交*/
+.addTask .add_form .add_submit{
+  text-align: center;
+}
+.addTask .add_form .add_submit>div:first-child{
+  height: 50px;
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  color: white;
+  background: #000000;
+}
+.addTask .add_form .add_submit>div:first-child:hover{
+  cursor: pointer;
+}
+
+
+.notNull{
+  display: block !important;
+  font-size: 12px;
+  color: red;
+  line-height: 44px;
+}

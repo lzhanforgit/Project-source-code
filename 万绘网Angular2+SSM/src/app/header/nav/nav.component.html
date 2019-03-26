@@ -1,0 +1,44 @@
+<!--header-->
+<div class="row header navbar-fixed-top" id="header">
+  <!--logo-->
+  <div class="col-md-1 header_loger">
+    <span><a class="header_fontcolor" href="javascript:0" routerLink="/index">万绘</a></span>
+  </div>
+  <!--nav-->
+  <div class="col-md-5 navbar-header header_ul_background">
+    <ul class="nav navbar-nav header_ul">
+      <li *ngFor="let item of navIteam index as i" routerLinkActive="active_a">
+        <a routerLink="/{{navIteamLink[i]}}">{{item}}</a>
+      </li>
+    </ul>
+  </div>
+  <!--搜索-->
+  <div class="col-md-3 navSearch">
+    <div class="row">
+      <div class="col-md-2">
+        <a (click)="search()"><img src="../../../assets/images/zyl/search.svg"></a>
+      </div>
+      <div class="col-md-10">
+        <input type="text" class="showInput" name="searchInput" [(ngModel)]="searchInput">
+      </div>
+    </div>
+  </div>
+  <!--登陆或头像-->
+  <!--<div class="col-md-2" style="background-color: #000000;height: 70px">
+    <app-login-state></app-login-state>
+  </div>-->
+  <div class="col-md-3" style="background-color: #000000;height: 70px">
+    <ng-container [ngSwitch]="loginState">
+      <div *ngSwitchCase="2" class="success">
+        <div class="avatar"><img src="../../../assets/images/avatar/{{avatar}}"></div>
+        <div class="nikename" routerLink='/detail/{{userId}}'>{{userNikeName}}</div>
+        <input type="button" class="btn btn-primary btn-sm" routerLink='/detail/{{userId}}' value="个人中心">
+        <input type="button"class="btn btn-primary btn-sm" (click)="quit()" value="退出" >
+      </div>
+      <div *ngSwitchCase="1" class="failure">
+        <input type="button" class="btn btn-primary btn-lg contain" routerLink='/login' value="登录/注册">
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div style="height: 70px"></div>

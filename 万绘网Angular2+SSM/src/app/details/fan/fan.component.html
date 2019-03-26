@@ -1,0 +1,14 @@
+<div class="list-group col-md-10" id = "main_content">
+  <ul class="list-group " *ngFor="let item of name ; let i = index;">
+    <!--循环-->
+    <li class="list-group-item list-group-item-success" id={{i}} [ngSwitch]="number">
+
+      <button *ngSwitchCase="1" class="btn btn-warning badge" (click)="removeFan(i)">删除粉丝</button>
+      <button *ngSwitchCase="2" class="btn btn-warning badge" (click)="addfollow(name[i].userId)">关注他</button>
+      <img src="../../../assets/images/zja/auto2.jpg" [routerLink]="['/detail',name[i].userId]"/>&nbsp;&nbsp;
+      <input value={{name[i].userNikeName}} style="background: none; border: none" readonly>
+      <input style="visibility: hidden">{{name[i].userSignature}}
+    </li>
+  </ul>
+  <a href="#">1</a>
+</div>

@@ -1,0 +1,94 @@
+<div class="loading" *ngIf="showLoading">
+  <div class="spinner">
+    <div class="spinner-container container1">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container2">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container3">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+    </div>
+  </div>
+</div>
+
+
+<section class="row">
+  <div id="container" class="container col-md-12">
+    <div></div>
+    <div class="row" style="height:80%;">
+      <div class="col-md-12 center-vertical">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 login-content">
+          <div id="log"></div>
+          <span id="log-name">
+            WanHui
+          </span>
+          <form id="form">
+            <div>
+              <h1 class="login-name">登录</h1>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10"><input type="text" class="btn-group btn" name="userPhone" [(ngModel)]="userPhone" id="login-tel" placeholder="手机号" maxlength="18"/></div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10"><input type="password" class="btn-group btn" name="userPassword" [(ngModel)]="userPassword" id="login-pwd" placeholder="密码" /></div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <div class="checkbox" style="margin-left: 20px">
+                      <input type="checkbox" name="keepDayNum" id="ckbox"/><span id="save-pwd-label">记住密码</span>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div id="yzm">
+                      <input type="text" name="valiCode" [(ngModel)]="valiCode" class="btn-group btn" id="login-alias" placeholder="验证码" maxlength="6" />
+                    <div id="show-alias"><a (click)="validateCode()">{{alias}}</a></div>
+                  </div>
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+              <div class="col-md-12">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <div id="sub_reg">
+                    <div id="hint_Info">{{hint_Info}}</div>
+                    <div id="btn" (click)="user_login()">
+                      <a >登陆</a>
+                    </div>
+                    <a routerLink="/register">还没有账号？用户注册</a>
+                  </div>
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+            </div>
+          </form>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

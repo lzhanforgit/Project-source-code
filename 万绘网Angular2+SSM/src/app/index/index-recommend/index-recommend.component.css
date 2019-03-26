@@ -1,0 +1,124 @@
+/*recommend 推荐*/
+.recommend{
+  margin-top: 5.3125em;
+}
+
+/*推荐的最顶部*/
+.cat_top,.artist_top{
+  height: 45px;
+  width: 100%;
+  border-bottom:solid 0.0625em #b7b7b7;
+  box-sizing: border-box;
+  line-height: 45px;
+}
+.cat_top .cat_top1{
+  /*250px*/
+  width: 250px;
+  /*45px*/
+  height: 45px;
+  float: left;
+  font-size: 1.5em;
+}
+.cat_top .cat_top1 span{
+  font-weight: 600;
+  /*45px*/
+  line-height: 2.8125rem;
+}
+.cat_top .cat_top2{
+  /*50px*/
+  width: 3.125rem;
+  /*45px*/
+  height: 2.8125rem;
+  float: left;
+  margin-left: 3.125rem;
+  /*20px*/
+  font-size: 1.25em;
+  text-align: center;
+}
+.cat_top .cat_top2 a{
+  text-decoration: none;
+  color: #000;
+  line-height: 2.8125rem;
+  /*14px*/
+  font-size: 0.875rem;
+}
+.cat_top .cat_top2 a:hover{
+  cursor: pointer;
+}
+.cat_publish{
+  width: 100px;
+  /*45px*/
+  height: 35px;
+  margin-top: 5px;
+  float: right;
+  margin-right: 16px;
+  line-height: 35px;
+  /*20px*/
+  font-size: 16px;
+  text-align: center;
+  background: black;
+  border-radius: 5px;
+}
+.cat_publish a{
+  /*45px*/
+  height: 45px;
+  text-decoration: none;
+  color: white;
+}
+
+.recommend .cat_img{
+  display: flex;
+  height: 25em;
+  width: 100%;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content:space-around;
+}
+.recommend .cat_img>div{
+  /*280px*/
+  width: 17.5em;
+  height: 25em;
+  box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.28);
+}
+.recommend .cat_img .cat_model_img{
+  width: 100%;
+  height: 245px;
+}
+.recommend .cat_img .cat_model_img img{
+  /*显示中心*/
+  object-fit:cover;
+  height: 245px;
+  width: 245px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.recommend .cat_img .cat_model_img img:hover{
+  transform: scale(1.1);
+}
+
+.recommend .cat_img .cat_model_present{
+  padding: 10px 15px;
+  width: 100%;
+  text-align: center;
+}
+.recommend .cat_img .cat_model_present .pre{
+  height: 50px;
+  width: 240px;
+  display: inline-block;
+  text-align: left;
+  font-size: 12px;
+}
+/*pre 里的第二个元素*/
+.recommend .cat_img .cat_model_present .pre h4:nth-child(2){
+  font-weight: 400;
+  color: #aaaaaa;
+}
+/*pre 里的最后一个元素*/
+.recommend .cat_img .cat_model_present .pre p:last-child{
+  font-weight: 700;
+}
+/*pre 里的第三个元素*/
+.recommend .cat_img .cat_model_present .pre p:nth-of-type(odd){
+  color: #aaaaaa;
+}

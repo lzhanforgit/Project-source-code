@@ -1,0 +1,246 @@
+.wid{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.app {
+  background-color: #f4f4f4;
+  margin: auto;
+  width: 100%;
+  height: 1400px;
+  min-height: 1000px;
+}
+/*排行榜内容*/
+.app .main{
+  position: relative;
+  width: 1140px;
+  height: 1400px;
+  margin: 0px auto;
+}
+
+/*排行榜导航:绘师排行 周榜 月榜 新人榜*/
+.rank-nav{
+  float: top;
+  width: 1140px;
+  height: 100px;
+  border-bottom: 1px solid rgba(36,33,46,0.08);
+}
+.rank-nav p{
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/*月榜周榜新人榜*/
+.rank-container{
+  float: top;
+  margin-top: 60px;
+}
+.rank-container-rank{
+  width: 360px;
+  height: 945px;
+  background-color: #f4f4f4;
+  float: left;
+}
+.rank-container-rank a{
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  color: #333;
+  height: 50px;
+  line-height: 50px;
+  float: top;
+  width: 100%;
+}
+.rank-container-rank a:hover{
+  color: #fd74a2;
+}
+.rank-container-rank:nth-child(2){
+  margin-left: 30px;
+}
+.rank-container-rank:nth-child(3){
+  margin-left: 30px;
+}
+.rank-list-container{
+  width: 100%;
+  float: top;
+  height: 915px;
+  padding-top: 5px;
+  background: white;
+  border-radius: 10px;
+}
+
+/*周榜*/
+/*榜单第一名*/
+.rank-list-first{
+  float: top;
+  background-color: #f4f4f4;
+  width: 310px;
+  height: 290px;
+  margin: 25px;
+}
+.rank-list-first-img{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.rank-list-first-img0{
+  float: top;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.rank-list-first-img img{
+  width: 100%;
+}
+.one{
+  position: absolute;
+  width: 50px;
+  height: 80px;
+
+  margin-top: -200px;
+  margin-left: 260px;
+}
+.one1{
+  float: top;
+  width: 100%;
+  height: 50px;
+  z-index: 9999;
+  background: #f3b04d;
+}
+.one1 p{
+  position: absolute;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 微软雅黑;
+  color: white;
+  margin-top: -5px;
+  margin-left: 13px;
+}
+.jiao{
+  float: top;
+  height: 0px;
+  border: 25px solid transparent;
+  border-top: 18px solid  #f3b04d;
+}
+.die{
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 6px;
+  margin-left: 20px;
+}
+.user{
+  float: top;
+  width: 100%;
+  height: 30px;
+}
+.zuozhe{
+  float: left;
+  margin-left: 15px;
+  font-size: 12px;
+  color: #999;
+  line-height: 30px;
+}
+.user img{
+  height: 15px;
+  line-height: 30px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 7.5px;
+}
+.date{
+  float: top;
+  width: 100%;
+  height: 38px;
+}
+.collection{
+  float: left;
+  margin-left: 15px;
+  margin-top: 11px;
+  font-size: 12px;
+  color: #999;
+  max-height: 18px;
+}
+.likes{
+  float: left;
+  margin-left: 15px;
+  font-size: 12px;
+  color: #999;
+  margin-top: 11px;
+  max-height: 18px;
+}
+.userImg{
+  height: 15px;
+  line-height: 30px;
+  float: left;
+  margin-top: 11px;
+  margin-left: 20px;
+}
+
+.rank-list-five{
+  float: top;
+}
+.rank-list-five1{
+  float: top;
+  width: 310px;
+  height: 130px;
+  margin:0px 25px;
+  border-bottom: 1px solid rgba(36,33,46,0.08);
+}
+.rank-container-rank .rank-list-container a{
+  float: top;
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 52px;
+  line-height: 52px;
+  background-color: #fafafa;
+  bottom: 0;
+  border-radius: 0px 0px 10px 10px;
+}
+.rank-list-item{
+  float: left;
+  width: 130px;
+  height: 105px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.rank-list-item img{
+  width: 100%;
+}
+.rank-list-details{
+  float: left;
+  margin-left: 10px;
+  width: 170px;
+  height: 105px;
+  margin-top: 5px;
+}
+.rank-photo{
+  float: top;
+  width: 100%;
+  height: 30px;
+  margin-top: 17px;
+}
+
+
+.gengduo{
+  font-size: 14px;
+  color: #666;
+  vertical-align: top;
+}
+.gengduo:hover{
+  color: #fd74a2;
+}
+/*鼠标移动图片的透明度改变*/
+.photoimg:hover{
+  opacity: 0.8;
+}
+
+.bot{
+  background: #34353D;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}

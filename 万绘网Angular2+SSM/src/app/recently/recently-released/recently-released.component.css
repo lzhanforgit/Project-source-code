@@ -1,0 +1,126 @@
+.active1{
+  background:red;
+}
+.wid{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/*最近发布*/
+.release_new{
+  float: top;
+  width: 100%;
+  height: 100px;
+  background: #ededef;
+}
+.release_new p{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+/*发布作品的内容*/
+#container{
+  width: 100%;
+  padding-left: 5%;
+}
+.box{
+  /*margin: 50px 2% 50px 0;*/
+  width: 23%;
+  float: left;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 2%;
+ /* background: #ededef;*/
+
+}
+.box_contant{
+  width: 96%;
+  margin-left: 2%;
+  border-radius: 5px;
+ /* box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.3);*/
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  background: white;
+  box-shadow: 4px 5px 20px #d8d8da;
+}
+.title{
+  overflow: hidden;
+  float: top;
+  padding: 20px 8px 10px 8px;
+}
+.title img{
+  float: left;
+  width: 35px;
+}
+.title p{
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 15px;
+  font-size: 14px;
+}
+.title #inp1{
+  float: right;
+  border: solid 1px #6fbd04;
+  border-radius: 4px;
+  color: #6fbd04;
+  padding: 5px 13px;
+  background: white;
+}
+.title #inp2{
+  float: right;
+  border: solid 1px #eeeeee;
+  border-radius: 4px;
+  color: #666666;
+  padding: 5px 13px;
+  background: #eeeeee;
+  /*display: none;*/
+}
+.item_img{
+  float: top;
+  width: 100%;
+}
+.item_img img{
+  width: 100%;
+}
+.item_contant_love{
+  width: 100%;
+  border-top:solid 1px #dddddd;
+}
+.item_contant_love p{
+  display: inline;
+  height: 30px;
+  line-height: 30px;
+}
+.item_contant{
+  float: top;
+  width: 100%;
+}
+.item_contant p{
+  float: top;
+  width: 93%;
+  padding:20px 10px 20px 5%;
+  font-size: 14px;
+  color: #777777;
+  /*border-bottom: solid 1px #dddddd;*/
+}
+.item_contant #item_contant_a img{
+  width: 20px;
+  float: left;
+  margin-left: 5%;
+  margin-top: 4px;
+}
+.bott{
+  float: top;
+  background:#ededef;
+  width: 100%;
+  height: 40px;
+  margin-top: 80px;
+}
+.boxdiv{
+  width: 100%;
+  height: 20px;
+  float: top;
+  background: white;
+  margin-top: 10px;
+}
+
