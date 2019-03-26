@@ -1,0 +1,14 @@
+.listing-item .overlay-container img{
+    width: 268px;
+    height: 201px;
+}
+.listing-item .overlay-container span{
+    color: red;
+}
+.listing-item-body .price{
+    color: #ff0000;
+    font-weight: bold;
+}
+.listing-item-body .price:hover{
+    font-size: 1.5em;
+}

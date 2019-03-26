@@ -1,0 +1,50 @@
+body{
+    background:#F4F4F4;
+}
+#blog{
+    background:#F4F4F4;
+    margin-left:5em;
+    margin-right: 0em;
+}
+[id^=blog_left_],[id^=blog_right_]{
+    background:#FFFFFF;
+}
+/*#blog_left{
+    position:relative;
+    text-align:left;
+}*/
+/*[id^=blog_left_]{
+    left:1em;
+}*/
+[id^=blog_right_]{
+    right:1em;
+}
+.font_body-main{
+    font-size: 1.2em;
+    color:#888888;
+}
+.font_a{
+    color:#777777;
+}
+.button-connect{
+    width: 6.5em;
+    height: 2.5em;
+    /*background: #4ACAA8;*/
+}
+.blog_one-connects_img{
+    height:15em;
+    width: 20em;
+}
+[id^=connection_]{
+    background:#FFFFFF;
+}
+.center{
+    text-align: center;
+}
+.content_padding{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+h1{
+    display: inline-block;
+}

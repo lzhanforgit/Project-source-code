@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>爱皮皮-支付</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/pay.css"/>
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/about.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/注册.css"/>
+
+</head>
+<body>
+<div class="container-fluid font">
+    <nav id="nav-header" class="row navbar-fixed-top">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logosmaller_white.png" alt="app" class="index_img"/>
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="col-md-8">
+            <div id="nav-navbar" class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html"><span>首页 <span class="border"></span></span></a></li>
+                    <!--<li><a href="index.html"><span>catherine<span class="border"></span></span></a></li>-->
+                    <li class="active"><a href="personal.html"><span>我的爱皮皮 <span class="border"></span></span></a></li>
+                    <li><a href="xiadan.html"><span>下单<span class="border"></span></span></a></li>
+                    <li><a href="app-zixun.html"><span>咨询<span class="border"></span></span></a></li>
+                    <li><a href="app-anli.html"><span>案例<span class="border"></span></span></a></li>
+                    <li><a href="about.html"><span>关于我们<span class="border"></span></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="pay_main">
+    <div class="container">
+        <div class="main_h">
+            <div>
+                <img src="../img/cli_300px.png" alt="二维码" id="ewm"/>
+                <div class="main_h_info">
+                    <p>收货信息：xx省-xx市-xx区-xxx 132xxxx1234</p>
+                    <p>送货时间：2016-4-11</p>
+                </div>
+            </div>
+        </div>
+        <div class="main_m">
+            <div>
+                <form action="" id="form_bank">
+                    <ul class="ui-list-icons clrfix">
+                        <li>
+                            <input type="radio" name="bank" id="ABC" value="" checked="checked">
+                            <label class="icon-box current" for="ABC">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon ABC" title="中国农业银行"></span>
+                                <span class="bank-name">中国农业银行</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bank" id="ICBC" value="">
+                            <label class="icon-box" for="ICBC">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon ICBC" title="中国工商银行"></span>
+                                <span class="bank-name">中国工商银行</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bank" id="CCB" value="">
+                            <label class="icon-box" for="CCB">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon CCB" title="中国建设银行"></span>
+                                <span class="bank-name">中国建设银行</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bank" id="PSBC" value="">
+                            <label class="icon-box" for="PSBC">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon PSBC" title="中国邮政储蓄银行"></span>
+                                <span class="bank-name">中国邮政储蓄银行</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bank" id="BOC" value="">
+                            <label class="icon-box" for="BOC">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon BOC" title="中国银行"></span>
+                                <span class="bank-name">中国银行</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bank" id="CMB" value="">
+                            <label class="icon-box" for="CMB">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon CMB" title="招商银行"></span>
+                                <span class="bank-name">招商银行</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bank" id="COMM" value="">
+                            <label class="icon-box" for="COMM">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon COMM" title="交通银行"></span>
+                                <span class="bank-name">交通银行</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bank" id="SPDB" value="">
+                            <label class="icon-box" for="SPDB">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon SPDB" title="浦发银行"></span>
+                                <span class="bank-name">浦发银行</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bank" id="zfb" value="">
+                            <label class="icon-box" for="zfb">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon COMM" title="支付宝"></span>
+                                <span class="bank-name">支付宝</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="bank" id="more" value="">
+                            <label class="icon-box" for="more">
+                                <span class="icon-box-sparkling" bbd="false"> </span>
+                                <span class="false icon SPDB" title="更多"></span>
+                                <span class="bank-name">更多</span>
+                            </label>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="main_f">
+            <div>
+                <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" style="padding-top:1em;"></span>&nbsp;你在安全的环境中，请放心使用！
+                <p>支付密码：</p>
+                <input type="password"/><span class="rem">忘记密码？</span><br/>
+                <input type="submit" value="确认订单" class="sub"/>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="pub_f">
+    <div class="main_c">
+        <div><a href="http://www.aapppp.cn" title="关于我们" rel="nofollow" class="plr15">关于我们</a>|<a href="http://www.aapppp.cn" title="功能介绍" class="plr15">功能介绍</a>|<a href="http://www.aapppp.cn" title="常见问题" class="plr15">常见问题</a>|<a href="http://www.aapppp.cn" title="使用协议" rel="nofollow" class="plr15">使用协议</a>|<a href="http://www.aapppp.cn" title="联系我们" rel="nofollow" class="plr15">联系我们</a>|<a href="http://www.aapppp.cn" title="网站地图" class="plr15">网站地图</a></div>
+        <div><a href="http://www.aapppp.cn" class="plr15">APP开发</a>|<a href="http://www.aapppp.cn" class="plr15">APP制作</a>|<a href="http://www.aapppp.cn" class="plr15">手机APP</a> |<a href="http://www.aapppp.cn" class="plr15">手机APP制作</a>|<a href="http://www.aapppp.cn" class="plr15">APP软件开发</a>|<a href="http://www.aapppp.cn" class="plr15">APP公司</a></div>
+        <div class=" mt10"><a href="http://aapppp.cn" title="爱皮皮" class="pub_f_logo inlineblock"></a>&copy;2016 aapppp.cn  <a href="http://www.aapppp.cn" title="" rel="nofollow"></a></div>
+    </div>
+</div>
+
+</body>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+    $(function(){
+//Bank Hover
+        $('.ui-list-icons > li').hover(function(){
+            $(this).children('.icon-box').addClass('hover');
+        }, function(){
+            $(this).children('.icon-box').removeClass('hover');
+        });
+
+//Bank Click
+        $('.ui-list-icons > li').click(function(){
+            for ( var i=0; i<$('.ui-list-icons > li').length; i++ ){
+                $('.ui-list-icons > li').eq(i).children('.icon-box').removeClass('current');
+            }
+            $(this).children('.icon-box').addClass('current');
+        });
+    })
+</script>
+</html>

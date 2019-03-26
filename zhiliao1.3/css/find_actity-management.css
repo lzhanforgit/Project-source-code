@@ -1,0 +1,140 @@
+body{
+    background:#EDEDEB;
+}
+.actity-management{
+    display: flex;
+    flex-direction: row;
+    margin-left:7em;
+}
+.hero-search{
+    margin-left: 18em;
+}
+.oneli{
+    list-style: none;
+    background-color: #4ACAA8;
+    border-color: #4ACAA8;
+    color: #FFFFFF;
+    border: none;
+}
+.nav_actity-management{
+    /*background-color: #4ACAA8;*/
+    font-size: 1.5em;
+    text-align: center;
+    width:18%;
+    line-height: 3em;
+    height:35em;
+}
+.oneintro,.oneintro:focus,.oneintro:hover,.oneintro:active,.oneactive.active{
+    background-color: #4ACAA8;
+    color: #333333;
+    border-color:#4ACAA8 ;
+    display: block;
+    line-height: 3em;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #FFFFFF;
+    background-color: #4ACAA8;
+    border-color: #4ACAA8;
+}
+.content_actity-management{
+    width: 69%;
+    margin-left: 1%;
+}
+.one-a{
+    color: black;
+}
+.one-a:hover{
+    border-bottom: solid;
+    border-bottom-color: #E96C1F;
+    text-decoration: none;
+    list-style: none;
+}
+.one-a:checked{
+    text-decoration: none;
+    list-style: none;
+}
+.onemyintro{
+    position: absolute;
+}
+.newsee{
+    position: absolute;
+    background-color: pink;
+
+}
+.hero-infoshow,
+.hero-infoshow:focus,
+.hero-infoshow:active,
+.hero-infoshow:hover{
+    background-color: #FAFAFA;
+    border-color: #FAFAFA;
+    color: #666666;
+}
+.hero-infoshow li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 2em;
+}
+.onetale tr td{
+    margin: 14em;
+}
+.hero-infoshow1{
+    color: #FCB2B2;
+}
+.onetale{
+    width: 58em;
+    text-align: center;
+}
+
+
+/*连  修改样式*/
+.nav_actity-btn-big{
+    background:#51AEEB;
+    width: 9.8em;
+    height: 2.5em;
+    text-align: center;
+    line-height: 2.5em;
+    border-radius: 5px;
+    cursor: pointer;/*鼠标光标聚集   小手*/
+}
+.my-actity_div{
+    width:62em;
+    height:4em;
+    background:#FFFFFF;
+    line-height: 4em;
+    border-radius: 3px;
+}
+.find_form-actity-input{
+    height: 2.5em;
+    width:18em;
+    border-radius: 5px;
+    line-height: 2.5em;
+}
+.find_form-actity-label{
+    text-align:left;
+    height: 2.5em;
+    width:6em;
+    line-height: 2.5em;
+}
+.find_form-input_small{
+    height: 2em;
+    width:9.5em;
+    border-radius: 5px;
+    line-height: 2.5em;
+}
+.find_form-actity-btn{
+    width:9em;
+    height:2.5em;
+    background:#FC9F72;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}

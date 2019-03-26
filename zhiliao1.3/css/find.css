@@ -1,0 +1,43 @@
+body{
+    position: relative;
+}
+#find{
+    background:#F4F4F4;
+    margin-left: -15px;
+    width: 70em;
+}
+.font_body-main{
+    font-size: 1.2em;
+    color:#888888;
+}
+.font_a{
+    color:#777777;
+}
+#find_topic img,#find_topic span{
+    width:3.5em;
+    height:2.5em;
+}
+#find_topic span{
+    left: 3em;
+    font-size: 2em;
+}
+.find_hot-topic_img{
+    height:15em;
+    width: 20em;
+}
+[id^=find_]{
+    background:#FFFFFF;
+}
+.find_big-screen{
+    /*height: 750px;*/
+    height: 10em;
+    top: 0em;
+    margin:0em;
+}
+.center{
+    text-align: center;
+}
+
+h1{
+    display: inline-block;
+}

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布者详情界面</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/bottom.css"/>
+    <link rel="stylesheet" href="../css/find_actity-management.css">
+</head>
+<script src="../js/jquery-2.1.1.js"></script>
+<script>
+    $(document).ready(function() {
+        /*nav1 发布活动*/
+        $('#nav_actity-release').click(function () {
+            $('#form_actity-release').show();
+            $('#content_actity-effective').hide();
+            $('#content_actity-offline').hide();
+            $('#content_actity_my-apply').hide();
+            $('#content_actity_my-attend').hide();
+            $('#content_actity_my-finish').hide();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+
+        })
+        /*nav2 有效活动*/
+        $('#nav_actity-effective').click(function () {
+            $('#form_actity-release').hide();
+            $('#content_actity-effective').show();
+            $('#content_actity-offline').hide();
+            $('#content_actity_my-apply').hide();
+            $('#content_actity_my-attend').hide();
+            $('#content_actity_my-finish').hide();
+            $('.newsee').hide();
+        });
+        /* nav3 下线活动*/
+        $('#nav_actity-offline').click(function () {
+            $('#form_actity-release').hide();
+            $('#content_actity-effective').hide();
+            $('#content_actity-offline').show();
+            $('#content_actity_my-apply').hide();
+            $('#content_actity_my-attend').hide();
+            $('content_actity_my-finish').hide();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+        });
+        /*nav4 我申请的活动*/
+        $('#nav_actity_my-apply').click(function () {
+            $('#form_actity-release').hide();
+            $('#content_actity-effective').hide();
+            $('#content_actity-offline').hide();
+            $('#content_actity_my-apply').show();
+            $('#content_actity_my-attend').hide();
+            $('#content_actity_my-finish').hide();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+        });
+        /*nav5 我参加的活动*/
+        $('#nav_actity_my-attend').click(function () {
+            $('#form_actity-release').hide();
+            $('#content_actity-effective').hide();
+            $('#content_actity-offline').hide();
+            $('#content_actity_my-apply').hide();
+            $('#content_actity_my-attend').show();
+            $('#content_actity_my-finish').hide();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+        });
+        /*nav6 已完成的活动*/
+        $('#nav_actity_my-finish').click(function () {
+            $('#form_actity-release').hide();
+            $('#content_actity-effective').hide();
+            $('#content_actity-offline').hide();
+            $('#content_actity_my-apply').hide();
+            $('#content_actity_my-attend').hide();
+            $('content_actity_my-finish').show();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+
+        });
+        /*点击AA制按钮   出现所需付出费用*/
+        $("#cost-option1").click(function(){
+            $("#find_form-actity-cost").show();
+        });
+        $('#timeintro').click(function () {
+            $('.onemyintro').hide();
+            $('.newsee').show();
+        })
+        $('#newintro').click(function () {
+            $('.onemyintro').show();
+            $('.newsee').hide();
+        })
+        $('#newhero').click(function () {
+            $('.onemyintro').show();
+            $('.newsee').hide();
+        })
+    })
+</script>
+<body>
+<!--导航栏-->
+<div class="container-fluid " id="nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 top_height">
+                <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                <span>知了</span>
+            </div>
+            <div class="col-md-10 nav_height">
+                <nav class="navbar navbar-right">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+                                <li><a href="findperson.html">人脉</a></li>
+                                <li><a href="find.html" id="nav_find">发现</a></li>
+                                <li><a href="hero.html">英雄帖</a></li>
+                                <li><a href="one.html">个人博客</a></li>
+                            </ul>
+                            <form class="navbar-form navbar-right" form-inline role="search" id="nav_search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="glyphicon glyphicon-search"></button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container actity-management">
+    <!--left  导航nav部分-->
+    <div class="nav_actity-management">
+        <ul id="nav_actity-release" class="nav_actity-btn-big">发布新活动</ul>
+        <ul class="btn btn-primary oneintro " role="button"
+            data-toggle="collapse" href="#oneask"
+            aria-expanded="false" aria-controls="collapseExample">
+            <li style="padding-left: 1em;list-style: none;font-size: 1.5em">我发布的活动</li>
+            <div class="collapse" id="oneask">
+                <div class="well oneli">
+                    <li class="oneli" id="nav_actity-effective">有效活动<span>0</span></li>
+                    <li class="oneli" id="nav_actity-offline">下线活动<span>0</span></li>
+                </div>
+            </div>
+        </ul>
+        <ul class="btn btn-primary oneintro " role="button"
+            data-toggle="collapse" href="#twoask"
+            aria-expanded="false" aria-controls="collapseExample">
+            <li style="padding-left: 1em;list-style: none;font-size: 1.5em">我关注的活动</li>
+            <div class="collapse" id="twoask">
+                <div class="well oneli">
+                    <li class="oneli" id="nav_actity_my-apply">我申请的活动<span>0</span></li>
+                    <li class="oneli" id="nav_actity_my-attend">我参加的活动<span>0</span></li>
+                    <li class="oneli" id="nav_actity_my-finish">已完成的活动<span>0</span></li>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <!--right 内容content-->
+    <div class="content_actity-management" id="content_actity-management"  style="background: #ffffff">
+        <div class="my-actity_div">
+            <span style="font-size: 2em">我发布的活动</span></div><hr/>
+        <div id="form_actity-release">
+            <div class="row">
+                <div class="col-lg-10" id="find_hot-topic_left" style="padding-left:10em">
+                    <table>
+                        <tr class="find_form-actity-tr">
+                            <td class="find_form-actity-label">姓名*：</td>
+                            <td colspan="2" class="find_form-actity-input">
+                                <input type="text" name="u_name" value="" class="find_form-actity-input"/></td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">性别：</td>
+                            <td colspan="2"  >
+                                <input type="radio" name="sex" value="" id="male" checked/>
+                                <label for="male">男</label>
+                                <input type="radio" name="sex" value="" id="female"/>
+                                <label for="male">女</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">手机：</td>
+                            <td colspan="2">
+                                <input type="text" name="telephone" value="" class="find_form-actity-input"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">验证码：</td>
+                            <td>
+                                <input type="text" name="telphone" value="" class="find_form-input_small"/>
+                            </td>
+                            <td>
+                                <img src="../img/444.png" alt=""/>
+                                <span style="font-size: small">看不清？</span>
+                                <a href="#" style="font-size: small">换一张</a>
+                            </td>
+                        </tr><tr>
+                        <td class="find_form-actity-label">短信验证码：</td>
+                        <td>
+                            <input type="text" name="telphone" value="" class="find_form-input_small"/>
+                        </td>
+                        <td>
+                            <a >
+                                <img src="../img/555.png"/>
+                            </a>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="find_form-actity-label">活动标题*：</td>
+                            <td colspan="2">
+                                <input type="text" name="actity_title" value="" class="find_form-actity-input"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">活动时间*：</td>
+                            <td><input type="date"checked="datetime" class="find_form-input_small"/>
+                                <span>&nbsp;到&nbsp;</span>
+                                <input type="date"checked="datetime" class="find_form-input_small"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">共<span>3</span>天</td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">活动地点*：</td>
+                            <td colspan="2">
+                                <input type="text" name="actity_title" value="" class="find_form-actity-input"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">费用*：</td>
+                            <td colspan="2">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-primary active">
+                                        <input type="radio" name="options" autocomplete="off" checked>
+                                        <a  id="cost-option1">AA制</a>
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="options" id="cost-option2" autocomplete="off">免费
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr hidden="hidden" id="find_form-actity-cost">
+                            <td class="find_form-actity-label">金额*：</td>
+                            <td colspan="2">
+                                <input type="text" name="actity_title" value="" class="find_form-actity-input"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">类型标签*：</td>
+                            <td colspan="2">
+                                <input type="text" name="actity_title" value="" class="find_form-actity-input"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">内容描述*：</td>
+                            <td colspan="2">
+                                <textarea name=""  cols="35" rows="6" style="border-radius: 5px"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="text_left">
+                                <input type="checkbox"/>
+                                <span class="font">允许所有参与活动的成员邀请自己的朋友来参加</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="text_left">
+                                <input type="checkbox"/>
+                                <span class="font">我已阅读并同意《知了活动安全协议》</span>
+                            </td>
+                        </tr><br/>
+                        <tr>
+                            <td colspan="3" style="text-align: center">
+                                <button type="button" class="find_form-actity-btn">取消</button>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <button type="button" class="find_form-actity-btn">确认</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="content_actity-effective" hidden="hidden" >
+            <div class="row">
+                <ul class="col-md-3">收藏的英雄帖</ul>
+                <ul class="col-md-3">收藏的热门话题</ul>
+                <ul class="col-md-3">谁收藏了我的信息</ul>
+                <ul class="col-md-3">关注的人的文章</ul>
+            </div>
+            <div class="onemyintro">
+                <ul class="hero-infoshow">
+                    <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                        href="#collapseExam" aria-expanded="false"
+                        aria-controls="collapseExam">html5</li>
+                    <li>求简洁大方的时间轴</li>
+                    <li>发布时间</li>
+                    <li>截止时间</li>
+                    <li><a href="#" class="one-a">查看申请者</a></li>
+                    <div class="collapse" id="collapseExam">
+                        <div class="well hero-ask">
+                            <li>1、css文件与js文件分开</li>
+                            <li>2、代码需要简洁</li>
+                            <li>3、外观简洁大方</li>
+                        </div>
+                    </div>
+                </ul>
+                <ul class="hero-infoshow">
+                    <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                        href="#collapseExample2" aria-expanded="false"
+                        aria-controls="collapseExample2">html5</li>
+                    <li>求简洁大方的时间轴</li>
+                    <li>发布时间</li>
+                    <li>截止时间</li>
+                    <div class="collapse" id="collapseExample2">
+                        <div class="well hero-ask">
+                            <li>1、css文件与js文件分开</li>
+                            <li>2、代码需要简洁</li>
+                            <li>3、外观简洁大方</li>
+                        </div>
+                    </div>
+                </ul>
+
+            </div>
+            <div class="newsee" hidden="hidden">
+                <table class="onetale">
+                    <tr>
+                        <td>信息标题</td>
+                        <td>更新时间</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>加入收藏</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>加入收藏</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div id="content_actity-offline" hidden="hidden" class="row">
+            <ul class="col-md-3 one-a" id="newhero">最新发布</ul>
+            <ul class="col-md-3">显示中的信息</ul>
+            <ul class="col-md-3">审核中的信息</ul>
+            <ul class="col-md-3">已删除的信息</ul>
+        </div>
+        <div id="content_actity_my-apply" hidden="hidden"class="row">
+            <ul class="col-md-3">活动详情</ul>
+            <ul class="col-md-3">活动发起者</ul>
+            <ul class="col-md-3">活动时间</ul>
+        </div>
+        <div id="content_actity_my-attend" hidden="hidden" class="row">
+            <ul class="col-md-4">浏览人数</ul>
+            <ul class="col-md-4">发布英雄帖boss动态</ul>
+            <ul class="col-md-4">我的评价</ul>
+        </div>
+        <div id="content_actity_my-finish" hidden="hidden" class="row">
+            <img src="../img/one.png" alt="">
+            <div class="row">
+                <ul class="col-md-6">
+                    <a href="#" class="one-a" id="newintro">最近发布信息</a>
+                </ul>
+                <ul class="col-md-6">
+                    <a href="#" class="one-a" id="timeintro">最近浏览信息</a>
+                </ul>
+            </div>
+            <div class="onemyintro">
+
+                hahahhaha
+            </div>
+            <div class="newsee" hidden="hidden">
+                <table class="onetale">
+                    <tr>
+                        <td>信息标题</td>
+                        <td>更新时间</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>加入收藏</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>加入收藏</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="bottom_all">
+        <div class="row">
+            <div class="col-lg-6">
+                <a href="#" class="font_bottom">关于我们</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">联系我们</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">企业入驻</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">友情链接</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">知了公益</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">知了社区</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <a href="#" class="font_bottom"> 京公网安备 11000002000088号</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">京ICP证070359号</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">网络文化经营许可证京网文[2014]2148-348号</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <a href="#" class="font_bottom">违法和不良信息举报电话：4006561155  Copyright © 2004-2016  知了ZL.com 版权所有</a>
+            </div>
+        </div>
+    </div>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

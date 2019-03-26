@@ -1,0 +1,10 @@
+#scroll_menu {
+	font-size:1.4em;
+}
+/*.scroll_menu li.current a,*/ .scroll_menu li.current span/*,#scroll_back span */{
+	text-align: center;
+	font-size: x-large;
+    /*background: #5bc0de;*/
+    color: #fff;
+    text-decoration:none;
+}

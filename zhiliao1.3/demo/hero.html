@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>知了-英雄帖界面</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/bottom.css"/>
+</head>
+<script src="../js/jquery-2.1.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#heroask').click(function () {
+        $('#heroname').html(this.id);
+    })
+    })
+</script>
+<body>
+<!--整个div头部导航栏-->
+<div class="container-fluid " id="nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 top_height">
+                <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                <span>知了</span>
+            </div>
+            <div class="col-md-10 nav_height">
+                <nav class="navbar navbar-right">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+                                <li><a href="findperson.html">人脉</a></li>
+                                <li><a href="find.html">发现</a></li>
+                                <li><a href="hero.html">英雄帖</a></li>
+                                <li><a href="one.html">个人博客</a></li>
+                            </ul>
+                            <form class="navbar-form navbar-right" form-inline role="search" id="nav_search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="glyphicon glyphicon-search"></button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--hero整体界面-->
+<div class="hero container">
+    <!--搜索发布模块-->
+    <div class="hero-left">
+        <div class="hero-top">
+            <!--搜索筛选-->
+        <div>
+            <!--搜索框-->
+            <ul>
+                <input type="text" id="herosearch">
+                <input type="button" value="搜索" onclick="herosearch()"/>
+            </ul>
+            <!--筛选条件-->
+            <ul>
+                <span style="margin-right: 1.2em;">酬金</span>
+                <select>
+                    <option value="1">不限</option>
+                    <option value="2">100以下</option>
+                    <option value ="3">100-200</option>
+                    <option value ="4">200-500</option>
+                    <option value="5">500以上</option>
+                </select>
+                <span style="margin-right: 1.2em;margin-left: 1.2em">截止时间</span>
+                    <input type="date">
+            </ul>
+        </div>
+        <div>
+        <!-- 发布 -->
+        <!-- Button trigger modal -->
+        <button type="button"id ='herofabu'
+                class="btn btn-primary btn-lg "
+                data-toggle="modal" data-target="#myModa">
+            发布
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModa"
+             tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close"
+                                data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabe">发布英雄帖</h4>
+                    </div>
+                    <div class="modal-body herohero">
+                        <ul><input type="text" placeholder="请输入需求名称，例商业模式和股权设计原理" 
+                                   style="width: 22em" maxlength="20" 1/></ul>
+                        <ul><select  style="width: 22em">
+                            <option value="1">职业发展</option>
+                            <option value="2">企业服务</option>
+                            <option value="3">创业投资</option>
+                            <option value="4">法律咨询</option>
+                            <option value="5">法律咨询</option>
+                            <option value="6">找老师</option>
+                            <option value="7">找医生</option>
+                            <option value="8">个人服务</option>
+                            <option value="9">找单身</option>
+                        </select></ul>
+                        <ul><textarea cols="41" rows="10" placeholder="请描述您的服务内容和注意事项"></textarea></ul>
+                        <ul><input type="number" placeholder="请输入价格，建议50-200元"
+                                   style="outline: none;border: none;width: 18em"/>
+                            <span style="margin-left: 2em">元</span></ul>
+                        <ul><input type="number" placeholder="可选，限定每次服务的时间"/>
+                            <select style="height: 1.9em" >
+                                <option value="1">次</option>
+                                <option value="2">月</option>
+                                <option value="3">周</option>
+                                <option value="4">小时</option>
+                            </select>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">发布</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    <!--筛选模块-->
+    <div>
+        <!--选择标签-->
+        <div class="row">
+            <!--筛选标签-->
+            <div class="col-lg-12 heroleftbq">
+                <li class="heroleftli">
+                    <span class="module_topic active">
+                        <a href="#hero_index" data-toggle="tab"class="heroleftlifont" >首页</a>
+                    </span>
+                </li>
+                <li class="heroleftli">
+                    <span class="module_topic">
+                        <a href="#hero_zy" data-toggle="tab"class="heroleftlifont" >职业发展</a>
+                    </span>
+                </li>
+                <li class="heroleftli">
+                    <span class="module_topic">
+                    <a href="#hero_qy" class="heroleftlifont" data-toggle="tab">企业服务</a>
+                    </span>
+                </li>
+                <li class="heroleftli">
+                    <span class="module_topic">
+                    <a href="#hero_cy" class="heroleftlifont" data-toggle="tab">创业投资</a>
+                    </span>
+                </li>
+                <li class="heroleftli">
+                    <span class="module_topic">
+                    <a href="#hero_fl" class="heroleftlifont" data-toggle="tab">法律咨询</a>
+                    </span>
+                </li>
+                <li class="heroleftli">
+                    <span class="module_topic">
+                    <a href="#hero_zyzd" class="heroleftlifont" data-toggle="tab">职业指导</a>
+                    </span>
+                </li>
+                <li class="heroleftli">
+                    <span class="module_topic">
+                    <a href="#hero_zls" class="heroleftlifont" data-toggle="tab">找老师</a>
+                    </span>
+                </li>
+                <li class="heroleftli">
+                    <span class="module_topic">
+                    <a href="#hero_zys" class="heroleftlifont" data-toggle="tab">找医生</a>
+                    </span>
+                </li>
+                <li class="heroleftli">
+                    <span class="module_topic">
+                    <a href="#hero_person" class="heroleftlifont" data-toggle="tab">个人服务</a>
+                    </span>
+                </li>
+                <li class="heroleftli"><span class="module_topic">
+                    <a href="#hero_zdans" class="heroleftlifont" data-toggle="tab">找单身</a>
+                </span>
+                </li>
+            </div>
+        </div>
+        <div class="row"><!--这部分是一个container，跟上面标签分组对应，标签对应热门话题标签-->
+            <div class="container-fluid tab-content active"  id="find_module-content">
+                <!--首页-->
+                <div class="container-fluid tab-pane " id="fp_index" role="tabpanel">
+
+                </div>
+                <!--职业发展-->
+                <div class="container-fluid tab-pane active" role="tabpanel"  id="hero_zy">
+                    <div class="hero-info">
+                        <!--hero-infoshow盖掉原有的颜色-->
+                        <ul class="btn btn-primary hero-infoshow" role="button" data-toggle="collapse"
+                            href="#heroxq" aria-expanded="false" aria-controls="collapseExample" id="heroul1">
+                            <li>98元/次</li>
+                            <li>职业能力评估和选择目标公司和岗位</li>
+                            <li>
+                                <!--发布者详情信息-->
+                                <!-- Button trigger modal -->
+                                <!--heromy盖掉原有的颜色-->
+                                <button type="button" class="btn btn-primary btn-lg heromy"
+                                        data-toggle="modal" data-target="#heromy">
+                                    劲叔
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="heromy" tabindex="-1"
+                                     role="dialog" aria-labelledby="herorm">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close"
+                                                        data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="herorm">人脉详情</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <ul>
+                                                    <ul class="row">
+                                                        <img src="../img/tx-1.jpg" class="col-md-6"
+                                                             style="width:6em;height:6em;border-radius: 50%;text-align: center"/>
+                                                        <ul  class="col-md-4">
+                                                            <span>劲叔</span><br/>
+                                                            <span>劲说创始人</span><br/>
+                                                            <span>IT互联网</span></ul>
+                                                        <br/>
+                                                    </ul>
+                                                    <ul style="margin-left: -20em">手机号：仅好友可见</ul>
+                                                    <ul style="margin-left: -20em">地区：北京朝阳区</ul>
+                                                </ul>
+                                                <ul style="margin-left: -20em;color: #888888">
+                                                    发布过的英雄帖
+                                                </ul>
+                                                <ul style="border: solid #F4F4F4 0.1em">
+                                                    职业能力评估和选择目标公司和岗位
+                                                    <span style="float: right">共119人申请</span>
+                                                </ul> <ul style="border: solid #F4F4F4 0.1em">
+                                                讨论大数据相关的商业问题
+                                                <span style="float: right">共1人申请</span>
+                                            </ul> <ul style="border: solid #F4F4F4 0.1em">
+                                                每天学习的问题和疑惑
+                                                <span style="float: right">共7人申请</span>
+                                            </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关注TA</button>
+                                                <button type="button" class="btn btn-primary">发消息</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>发布人：<span>劲叔|劲说创始人</span></li>
+                            <div class="collapse" id="heroxq">
+                                <div class="well hero-ask">
+                                    <h3>英雄帖详情</h3>
+                                    <li>1、沟通确定职业能力等级</li>
+                                    <li>2、选择和确定目标公司和等级</li>
+                                    <li>注：简历熟悉也可以</li>
+                                </div>
+                            </div>
+                            <div class="heroask">
+                                <!--申请-->
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary btn-lg hero-intro"
+                                        data-toggle="modal" data-target="#herosq" id="heroask">
+                                    申请
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="herosq" tabindex="-1" role="dialog" aria-labelledby="heroqsy">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="heroqsy">揭英雄帖</h4>
+                                            </div>
+                                            <div class="modal-body herohero">
+                                                <ul>您申请的英雄帖是：
+                                                    <li id="heroname"></li>
+                                                </ul>
+                                                <ul>
+                                                    姓名
+                                                    <input type="text">
+                                                </ul>
+                                                <ul>
+                                                    手机号
+                                                    <input type="text">
+                                                </ul>
+                                                <ul>
+                                                    介绍自己
+                                                    <input type="text">
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                                <button type="button" class="btn btn-primary">申请</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                        <ul class="btn btn-primary hero-infoshow" role="button" data-toggle="collapse"
+                            href="#heroxq3" aria-expanded="false" aria-controls="collapseExample" id="heroul3">
+                            <li>98元/次</li>
+                            <li>职业能力评估和选择目标公司和岗位</li>
+                            <li>
+                                <!--发布者详情信息-->
+                                <!-- Button trigger modal -->
+                                <!--heromy盖掉原有的颜色-->
+                                <button type="button" class="btn btn-primary btn-lg heromy"
+                                        data-toggle="modal" data-target="#heromy2">
+                                    劲叔
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="heromy2" tabindex="-1"
+                                     role="dialog" aria-labelledby="herorm2">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close"
+                                                        data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="herorm2">人脉详情</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <ul>
+                                                    <ul class="row">
+                                                        <img src="../img/tx-1.jpg" class="col-md-6"
+                                                             style="width:6em;height:6em;border-radius: 50%;text-align: center"/>
+                                                        <ul  class="col-md-4">
+                                                            <span>劲叔</span><br/>
+                                                            <span>劲说创始人</span><br/>
+                                                            <span>IT互联网</span></ul>
+                                                        <br/>
+                                                    </ul>
+                                                    <ul style="margin-left: -20em">手机号：仅好友可见</ul>
+                                                    <ul style="margin-left: -20em">地区：北京朝阳区</ul>
+                                                </ul>
+                                                <ul style="margin-left: -20em;color: #888888">
+                                                    发布过的英雄帖
+                                                </ul>
+                                                <ul style="border: solid #F4F4F4 0.1em">
+                                                    职业能力评估和选择目标公司和岗位
+                                                    <span style="float: right">共119人申请</span>
+                                                </ul> <ul style="border: solid #F4F4F4 0.1em">
+                                                讨论大数据相关的商业问题
+                                                <span style="float: right">共1人申请</span>
+                                            </ul> <ul style="border: solid #F4F4F4 0.1em">
+                                                每天学习的问题和疑惑
+                                                <span style="float: right">共7人申请</span>
+                                            </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关注TA</button>
+                                                <button type="button" class="btn btn-primary">加好友</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>发布人：<span>劲叔|劲说创始人</span></li>
+                            <div class="collapse" id="heroxq3">
+                                <div class="well hero-ask">
+                                    <h3>英雄帖详情</h3>
+                                    <li>1、沟通确定职业能力等级</li>
+                                    <li>2、选择和确定目标公司和等级</li>
+                                    <li>注：简历熟悉也可以</li>
+                                </div>
+                            </div>
+                            <div class="heroask">
+                                <!--申请-->
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary btn-lg hero-intro"
+                                        data-toggle="modal" data-target="#herosq" id="heroask2">
+                                    申请
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="herosq2" tabindex="-1" role="dialog" aria-labelledby="heroqsy">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="heroqsy2">揭英雄帖</h4>
+                                            </div>
+                                            <div class="modal-body herohero">
+                                                <ul>您申请的英雄帖是：
+                                                    <li id="heroname3"></li>
+                                                </ul>
+                                                <ul>
+                                                    姓名
+                                                    <input type="text">
+                                                </ul>
+                                                <ul>
+                                                    手机号
+                                                    <input type="text">
+                                                </ul>
+                                                <ul>
+                                                    介绍自己
+                                                    <input type="text">
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                                <button type="button" class="btn btn-primary">申请</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                        <ul class="btn btn-primary hero-infoshow" role="button" data-toggle="collapse"
+                            href="#heroxq4" aria-expanded="false" aria-controls="collapseExample" id="heroul4">
+                            <li>98元/次</li>
+                            <li>职业能力评估和选择目标公司和岗位</li>
+                            <li>
+                                <!--发布者详情信息-->
+                                <!-- Button trigger modal -->
+                                <!--heromy盖掉原有的颜色-->
+                                <button type="button" class="btn btn-primary btn-lg heromy"
+                                        data-toggle="modal" data-target="#heromy2">
+                                    劲叔
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="heromy3" tabindex="-1"
+                                     role="dialog" aria-labelledby="herorm3">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close"
+                                                        data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="herorm3">人脉详情</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <ul>
+                                                    <ul class="row">
+                                                        <img src="../img/tx-1.jpg" class="col-md-6"
+                                                             style="width:6em;height:6em;border-radius: 50%;text-align: center"/>
+                                                        <ul  class="col-md-4">
+                                                            <span>劲叔</span><br/>
+                                                            <span>劲说创始人</span><br/>
+                                                            <span>IT互联网</span></ul>
+                                                        <br/>
+                                                    </ul>
+                                                    <ul style="margin-left: -20em">手机号：仅好友可见</ul>
+                                                    <ul style="margin-left: -20em">地区：北京朝阳区</ul>
+                                                </ul>
+                                                <ul style="margin-left: -20em;color: #888888">
+                                                    发布过的英雄帖
+                                                </ul>
+                                                <ul style="border: solid #F4F4F4 0.1em">
+                                                    职业能力评估和选择目标公司和岗位
+                                                    <span style="float: right">共119人申请</span>
+                                                </ul> <ul style="border: solid #F4F4F4 0.1em">
+                                                讨论大数据相关的商业问题
+                                                <span style="float: right">共1人申请</span>
+                                            </ul> <ul style="border: solid #F4F4F4 0.1em">
+                                                每天学习的问题和疑惑
+                                                <span style="float: right">共7人申请</span>
+                                            </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关注TA</button>
+                                                <button type="button" class="btn btn-primary">加好友</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>发布人：<span>劲叔|劲说创始人</span></li>
+                            <div class="collapse" id="heroxq4">
+                                <div class="well hero-ask">
+                                    <h3>英雄帖详情</h3>
+                                    <li>1、沟通确定职业能力等级</li>
+                                    <li>2、选择和确定目标公司和等级</li>
+                                    <li>注：简历熟悉也可以</li>
+                                </div>
+                            </div>
+                            <div class="heroask">
+                                <!--申请-->
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary btn-lg hero-intro"
+                                        data-toggle="modal" data-target="#herosq" id="heroask3">
+                                    申请
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="herosq3" tabindex="-1" role="dialog" aria-labelledby="heroqsy">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="heroqsy3">揭英雄帖</h4>
+                                            </div>
+                                            <div class="modal-body herohero">
+                                                <ul>您申请的英雄帖是：
+                                                    <li id="heroname4"></li>
+                                                </ul>
+                                                <ul>
+                                                    姓名
+                                                    <input type="text">
+                                                </ul>
+                                                <ul>
+                                                    手机号
+                                                    <input type="text">
+                                                </ul>
+                                                <ul>
+                                                    介绍自己
+                                                    <input type="text">
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                                <button type="button" class="btn btn-primary">申请</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <!--企业服务-->
+                <div class="container-fluid tab-pane" role="tabpane2"  id="hero_qy">
+                    <ul class="btn btn-primary hero-infoshow" role="button" data-toggle="collapse"
+                        href="#heroxq1" aria-expanded="false" aria-controls="heroxq2" id="heroul2">
+                        <li>10/次</li>
+                        <li>求Java专业指导提供解决方案参考</li>
+                        <li>
+                            <!--发布者详情信息-->
+                            <!-- Button trigger modal -->
+                            <!--heromy盖掉原有的颜色-->
+                            <button type="button" class="btn btn-primary btn-lg heromy"
+                                    data-toggle="modal" data-target="#heromy1">
+                                陈大立
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="heromy1" tabindex="-1"
+                                 role="dialog" aria-labelledby="herorm1">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close"
+                                                    data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="herorm1">人脉详情</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul>
+                                                <ul class="row">
+                                                    <img src="../img/tx-1.jpg" class="col-md-6"
+                                                         style="width:6em;height:6em;border-radius: 50%;text-align: center"/>
+                                                    <ul  class="col-md-4">
+                                                        <span>陈大立</span><br/>
+                                                        <span>百度开发工程师</span><br/>
+                                                        <span>IT互联网|开发</span></ul>
+                                                    <br/>
+                                                </ul>
+                                                <ul style="margin-left: -20em">手机号：仅好友可见</ul>
+                                                <ul style="margin-left: -20em">地区：北京朝阳区</ul>
+                                            </ul>
+                                            <ul style="margin-left: -20em;color: #888888">
+                                                发布过的英雄帖
+                                            </ul>
+                                            <ul style="border: solid #F4F4F4 0.1em">
+                                                求Java专业指导提供解决方案参考
+                                                <span style="float: right">共5人申请</span>
+                                            </ul> <ul style="border: solid #F4F4F4 0.1em">
+                                            陪逛在北京，陪吃在北京
+                                            <span style="float: right">共1人申请</span>
+                                        </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关注TA</button>
+                                            <button type="button" class="btn btn-primary">加好友</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>发布人：<span>劲叔|劲说创始人</span></li>
+                        <div class="collapse" id="heroxq1">
+                            <div class="well hero-ask">
+                                专业指导，解决it编程疑难问题
+                            </div>
+                        </div>
+                        <div class="heroask">
+                            <!--申请-->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary btn-lg hero-intro"
+                                    data-toggle="modal" data-target="#herosq1" id="heroask1">
+                                申请
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="herosq1" tabindex="-1" role="dialog" aria-labelledby="heroqsy1">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="heroqsy1">揭英雄帖</h4>
+                                        </div>
+                                        <div class="modal-body herohero">
+                                            <ul>您申请的英雄帖是：
+                                                <li id="heroname1"></li>
+                                            </ul>
+                                            <ul>
+                                                姓名
+                                                <input type="text">
+                                            </ul>
+                                            <ul>
+                                                手机号
+                                                <input type="text">
+                                            </ul>
+                                            <ul>
+                                                介绍自己
+                                                <input type="text">
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                            <button type="button" class="btn btn-primary">申请</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <!--创业投资-->
+                <div class="container-fluid tab-pane" role="tabpane3"  id="hero_cy">
+                </div>
+                <!--法律咨询-->
+                <div class="container-fluid tab-pane" role="tabpane3"  id="hero_fl">
+                </div>
+                <!--职业指导-->
+                <div class="container-fluid tab-pane" role="tabpane3"  id="hero_zyzd">
+                </div>
+                <!--找老师-->
+                <div class="container-fluid tab-pane" role="tabpane3"  id="hero_zls">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--右模块-->
+    <div class="hero-right">
+            <ul class="hero-find">
+                <h3>可能感兴趣英雄帖</h3>
+                <span style="float: right;color:#7F7F87">阅读：120</span>
+                <li>前端技术问题</li>
+                <span style="float: right;color:#7F7F87">阅读：132</span>
+                <li>互联网技术面试咨询服务</li>
+                <span style="float: right;color:#7F7F87">阅读：122</span>
+                <li>开发者、程序员与谷歌生态</li>
+                <span style="float: right;color:#7F7F87">阅读：122</span>
+                <li>滕讯级别与薪资结构</li>
+                <span style="float: right;color:#7F7F87">阅读：112</span>
+            </ul>
+            <ul class="hero-find">
+                <h3>最热英雄帖</h3>
+                <li>h5游戏培训</li>
+                <span style="float: right;color:#7F7F87">阅读：1342</span>
+                <li>百度简历内推</li>
+                <span style="float: right;color:#7F7F87">阅读：12132</span>
+                <li>ios技能培训</li>
+                <span style="float: right;color:#7F7F87">阅读：1232</span>
+                <li>微信公众号开发</li>
+                <span style="float: right;color:#7F7F87">阅读：1212</span>
+            </ul>
+            <ul class="hero-find">
+                <h3>最新英雄帖</h3>
+                <span style="float: right;color:#7F7F87">阅读：12</span>
+                <li>web前端设计开发</li>
+                <span style="float: right;color:#7F7F87">阅读：22</span>
+                <li>专业面试指导</li>
+                <span style="float: right;color:#7F7F87">阅读：13</span>
+                <li>应届生毕业设计</li>
+                <span style="float: right;color:#7F7F87">阅读：14</span>
+                <li>php外包项目</li>
+                <span style="float: right;color:#7F7F87">阅读：15</span>
+            </ul>
+            <ul class="hero-find">
+                <h3>最豪英雄帖</h3>
+                <span style="float: right;color:#7F7F87">阅读：142</span>
+                <li>手机定制开发</li>
+                <span style="float: right;color:#7F7F87">阅读：152</span>
+                <li>ios应用开发</li>
+                <span style="float: right;color:#7F7F87">阅读：132</span>
+                <li>batch脚本编写</li>
+                <span style="float: right;color:#7F7F87">阅读：122</span>
+                <li>前端html5实战</li>
+            </ul>
+    </div>
+</div>
+    <!--知了底部-->
+<div class="container-fluid" id="bottom_all">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="#" class="font_bottom">关于我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">联系我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">企业入驻</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">友情链接</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了公益</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了社区</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom"> 京公网安备 11000002000088号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">京ICP证070359号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">网络文化经营许可证京网文[2014]2148-348号</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom">违法和不良信息举报电话：4006561155  Copyright © 2004-2016  知了ZL.com 版权所有</a>
+                </div>
+            </div>
+    </div>
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

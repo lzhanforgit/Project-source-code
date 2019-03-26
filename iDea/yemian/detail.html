@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>detail</title>
+    <link rel="stylesheet" type="text/css" href="../cssNew/detail.css"/>
+
+    <meta name="description" content="iDea a Bootstrap-based, Responsive HTML5 Template">
+    <meta name="author" content="htmlcoder.me">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../imagesNew/favicon.ico">
+
+    <!-- Web Fonts -->
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../cssNew/bootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="../fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Fontello CSS -->
+    <link href="../fonts/fontello/css/fontello.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="../cssNew/magnific-popup.css" rel="stylesheet">
+    <link href="../cssNew/animations.css" rel="stylesheet">
+    <link href="../cssNew/owl.carousel.css" rel="stylesheet">
+
+    <!-- iDea core CSS file -->
+    <link href="../cssNew/style.css" rel="stylesheet">
+
+    <!-- Color Scheme (In order to change the color scheme, replace the red.css with the color scheme that you prefer)-->
+    <link href="../cssNew/red.css" rel="stylesheet">
+
+    <!-- Custom css -->
+    <link href="../cssNew/custom.css" rel="stylesheet">
+</head>
+
+<!-- body classes:
+        "boxed": boxed layout mode e.g. <body class="boxed">
+        "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1">
+-->
+<body>
+<!-- scrollToTop -->
+<!-- ================ -->
+<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+<!-- page wrapper start -->
+<!-- ================ -->
+<div class="page-wrapper">
+
+    <!-- header-top start -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+
+				<span id="" style="line-height: 30px;">
+					Hi,欢迎来到爱厨房
+				</span>
+
+                <div class="col-xs-10 col-sm-6" style="float: right;">
+                    <div id="header-top-second" class="clearfix">
+                        <div class="header-top-dropdown">
+
+                            <!--搜索-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-search"></i> 搜索
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                    <li>
+                                        <form role="search" class="search-box">
+                                            <div class="form-group has-feedback">
+                                                <input type="text" class="form-control" placeholder="搜索">
+                                                <i class="fa fa-search form-control-feedback"></i>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!--登录-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-user"></i> 登录
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                    <li>
+                                        <form class="login-form">
+                                            <div class="form-group has-feedback">
+                                                <label class="control-label">用户名:</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                                <i class="fa fa-user form-control-feedback"></i>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <label class="control-label">密码:</label>
+                                                <input type="password" class="form-control" placeholder="">
+                                                <i class="fa fa-lock form-control-feedback"></i>
+                                            </div>
+                                            <!--登录按钮-->
+                                            <button type="submit" class="btn btn-group btn-dark btn-sm">登录</button>
+                                            <span>or</span>
+
+                                            <button type="submit" class="btn btn-group btn-default btn-sm">注册</button>
+                                            <ul>
+                                                <li><a href="#">忘记密码？</a></li>
+                                            </ul>
+                                            <div class="divider"></div>
+                                            <span class="text-center">其他方式</span>
+                                            <ul class="social-links clearfix">
+                                                <li class="facebook"><a target="_blank" href="http://sc.chinaz.com"><i
+                                                        class="fa fa-qq"></i></a></li>
+                                                <li class="twitter"><a target="_blank" href="http://sc.chinaz.com"><i
+                                                        class="fa fa-weixin"></i></a></li>
+                                                <li class="googleplus"><a target="_blank" href="http://sc.chinaz.com"><i
+                                                        class="fa fa-weibo"></i></a></li>
+                                            </ul>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!--购物车-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-shopping-cart"></i> 购物车
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation cart">
+                                    <li>
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th class="quantity">数量</th>
+                                                <th class="product">产品</th>
+                                                <th class="amount">总价</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="quantity">2 x</td>
+                                                <td class="product"><a href="shop-product.html">Android 4.4
+                                                    Smartphone</a><span class="small">4.7" Dual Core 1GB</span></td>
+                                                <td class="amount">$199.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="quantity">3 x</td>
+                                                <td class="product"><a href="shop-product.html">Android 4.2
+                                                    Tablet</a><span class="small">7.3" Quad Core 2GB</span></td>
+                                                <td class="amount">$299.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="quantity">3 x</td>
+                                                <td class="product"><a href="shop-product.html">Desktop PC</a><span
+                                                        class="small">Quad Core 3.2MHz, 8GB RAM, 1TB Hard Disk</span>
+                                                </td>
+                                                <td class="amount">$1499.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="total-quantity" colspan="2">总共8项</td>
+                                                <td class="total-amount">$1997.00</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-body text-right">
+                                            <a href="shop-cart.html" class="btn btn-group btn-default btn-sm">查看</a>
+                                            <a href="shop-checkout.html" class="btn btn-group btn-default btn-sm">结算</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- header-top end -->
+
+    <!-- header start (remove fixed class from header in order to disable fixed navigation mode) -->
+    <header class="header fixed clearfix">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <!--logo图标-->
+                    <div class="logo">
+                        <a href="#">
+                            <div>
+                                <img id="logo" src="../imagesNew/logo_red.png" alt="iDea">
+                            </div>
+                        </a>
+                    </div>
+                    <!--logo下面的字-->
+                    <div class="site-slogan">&nbsp;爱厨房</div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="header-right clearfix">
+                        <div class="main-navigation animated">
+
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div class="container-fluid">
+
+                                    <!-- Toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+
+                                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+                                        <!--导航开始-->
+                                        <ul class="nav navbar-nav navbar-right">
+
+                                            <li>
+                                                <a href="../index.html">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="菜谱_精选.html">菜谱</a>
+                                            </li>
+                                            <li>
+                                                <a href="xieshipai.html">写食派</a>
+                                            </li>
+                                            <li>
+                                                <a href="daren.html">达人馆</a>
+                                            </li>
+                                            <li>
+                                                <a href="市集.html">市集</a>
+                                            </li>
+                                            <li>
+                                                <a href="活动.html">活动</a>
+                                            </li>
+                                            <li>
+                                                <a href="personal.html">个人中心</a>
+                                            </li>
+
+                                        </ul>
+                                        <!--导航结束-->
+
+
+                                    </div>
+                                </div>
+                            </nav>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- page-intro start-->
+    <div class="page-intro">
+        <div class="container">
+            <ol class="breadcrumb">
+                <!--<li><i class="fa fa-home"></i><a href="../首页.html">首页</a></li>-->
+                <li class=""><a href="菜谱_精选.html">精选</a></li>
+                <li class=""><a href="菜谱_分类.html">分类</a></li>
+                <li class=""><a href="菜谱_食材.html">食材</a></li>
+                <li class=""><a href="菜谱_菜单.html">菜单</a></li>
+                <li class=""><a href="菜谱_菜单.html">智能选菜</a></li>
+            </ol>
+        </div>
+    </div>
+    <!-- page-intro end -->
+
+
+    <div id="fengleihuizong">
+        <div class="head01">
+            <span class="span01">首页</span>
+            <span>></span>
+            <span class="span01">菜谱大全</span>
+            <span>></span>
+            <span class="span01">#热菜#</span>
+            <span class="span01">#家常菜#</span>
+        </div>
+
+        <div class="container01">
+            <div class="left01">
+                <img src="../imagesNew/detail01.jpg" alt=""/>
+            </div>
+            <div class="right01">
+                <div class="nav01" id="nav01" style="">
+                    <table border="0">
+                        <tr>
+                            <td style="width: 300px;">
+                                <span class="span01">番茄酱焖排骨</span>
+                            </td>
+                            <td></td>
+                            <td style="width: 100px">
+                                <input type="button" value="收藏(9354)"/>
+                            </td>
+                            <td>
+                                <ul>
+                                    <span style="font-size: 1em; float: left;">分享到:</span>
+                                    <li class="li01">
+                                        <!--<img src="../imagesNew/detail_tubiao.png" alt=""/>-->
+                                    </li>
+                                    <li class="li02">
+                                        <!--<img src="../imagesNew/detail_tubiao.png" alt=""/>-->
+                                    </li>
+                                    <li class="li03">
+                                        <!--<img src="../imagesNew/detail_tubiao.png" alt=""/>-->
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="nav01" id="nav01-2" style="height: 52%">
+                    <img src="../imagesNew/detail02.png" alt=""/>
+                </div>
+                <div class="nav01" style="height: 35%" ;>
+                    <div id="user">
+                        <div id="user01">
+                            <div></div>
+                        </div>
+
+                        <div id="user02">
+                            <a style="cursor: pointer">涛涛妈咪的西点屋</a><br/>
+                            <span>菜谱:8 关注:0 粉丝:1107</span><br/>
+                            <span><a style="cursor: pointer">番茄酱焖排骨的原文</a> / 2016-04-16 / 16251人看过</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="setup01">
+            <div id="jieshao01">
+                <p style="font-weight: bolder">
+                    “新年菜式，总是要选个好的吉祥寓意，
+                    希望能给新的一年带来吉祥如意，顺顺利利，
+                    今天，涛妈最先做的不是主菜的鸡或鱼，
+                    而是为了有孩子的家庭做了不好看，
+                    但却超级受孩子欢迎的一道菜——番茄酱焖排骨
+                    ，红红的番茄，焖出来红火的一道菜，不只开胃，
+                    更寓意新的一年红运当头喜庆来!
+                    番茄酱，大家是不是认为是外面买的番茄酱呢，
+                    不是的，是涛妈自己用新鲜番茄做出来的哦，新鲜的酸甜美味，
+                    不只没有添加剂，味道也更新鲜酸甜呢，而且排骨也有许多人是做不好的，
+                    涛妈在这道菜里，也教大家怎么样做出能让孩子咬得动，吃的开胃的排骨做法，
+                    所以，大家也来学学，红运当头哦!”
+                </p>
+                <span style="font-size: 2em;font-family: 微软雅黑;margin-left: 10px;">用料</span>
+                <hr style=""/>
+                <table style="height: 60px;width: 100%;" border="0">
+                    <tr>
+                        <td>
+                            <input type="button" value="主料"/>
+                        </td>
+                        <td>
+                            <img src="../imagesNew/detail-zhuliao01.png" alt=""/>
+                        </td>
+                        <td>
+                            <img src="../imagesNew/detail-zhuliao02.png" alt=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="辅料"/>
+                        </td>
+                        <td>
+                            <img src="../imagesNew/detail-zhuliao01.png" alt=""/>
+                        </td>
+                        <td>
+                            <img src="../imagesNew/detail-zhuliao02.png" alt=""/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="setup011">
+                <span style="font-size: 2em;font-family: 微软雅黑;margin-left: 10px;">番茄酱焖排骨的做法</span>
+                <hr/>
+                <table border="0" style="height: 50px;width: 100%">
+                    <tr>
+                        <th style="color: #ff0000;font-size: 2em;width: 40px;font-family: 微软雅黑">1.</th>
+                        <td>
+                            <span style="float: left;margin-left: 10px">排骨切小块(可以请卖排骨的代劳)，用水清洗干净，生姜切片备用</span>
+                        </td>
+                    </tr>
+                </table>
+                <table border="0" style="height: 50px;width: 100%">
+                    <tr>
+                        <th style="color: #ff0000;font-size: 2em;width: 40px;font-family: 微软雅黑">2.</th>
+                        <td>
+                            <span style="float: left;margin-left: 10px">排骨放入排骨腌料和姜片，放进大碗里搅拌均匀</span>
+                        </td>
+                    </tr>
+                </table>
+                <table border="0" style="height: 50px;width: 100%">
+                    <tr>
+                        <th style="color: #ff0000;font-size: 2em;width: 40px;font-family: 微软雅黑">3.</th>
+                        <td>
+                            <span style="float: left;margin-left: 10px">高压锅放入一点的水，在水上面架个架子，将腌排骨的大碗放在架子上面，隔水炖25分钟后将排骨取出，排骨炖好后会有</span>
+                            <span style="float: left;margin-left: 10px">水出，这样炖排骨的水千万不要倒掉，要留下备用</span>
+                        </td>
+                    </tr>
+                </table>
+                <table border="0" style="height: 50px;width: 100%">
+                    <tr>
+                        <th style="color: #ff0000;font-size: 2em;width: 40px;font-family: 微软雅黑">4.</th>
+                        <td>
+                            <span style="float: left;margin-left: 10px">趁着炖排骨的时间，将番茄放进碗里，加入开水泡2分钟，就可以轻易的将番茄的皮剥下来，然后将去皮的番茄切小粒备用</span>
+                        </td>
+                    </tr>
+                </table>
+                <table border="0" style="height: 50px;width: 100%">
+                    <tr>
+                        <th style="color: #ff0000;font-size: 2em;width: 40px;font-family: 微软雅黑">5.</th>
+                        <td>
+                            <span style="float: left;margin-left: 10px">炒锅内放入一点油(不用多，本身排骨已经炖出油了)，将炖好的排骨块取出，煎至排骨微焦，倒入番茄粒和倒入炖排骨的</span>
+                            <span style="float: left;margin-left: 10px">汤汁，小火焖煮到番茄块软烂，用锅铲将番茄粒压烂，尽量压烂，这样就会成为新鲜的番茄酱了</span>
+                        </td>
+                    </tr>
+                </table>
+                <table border="0" style="height: 50px;width: 100%">
+                    <tr>
+                        <th style="color: #ff0000;font-size: 2em;width: 40px;font-family: 微软雅黑">6.</th>
+                        <td>
+                            <span style="float: left;margin-left: 10px">番茄软烂后再加入一小勺的白醋和适量的白糖。中火将番茄汤汁煮至浓稠即可</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <span style="font-size: 2em;font-family: 微软雅黑;margin-left: 10px;">烹饪技巧</span>
+            <hr/>
+            <p>1、排骨用高压锅压后会软烂，这样的排骨孩子能更好的食用。</p>
+
+            <p>2、番茄购买时尽量选择自然成熟的番茄，要是太生和用药催熟的番茄，容易会一直煮也不烂，基本成块状的样子的。</p>
+
+            <p>3、加入了一点的白醋是我认为番茄还不够酸，涛妈家能吃酸点的食物，要是认为番茄足够酸了，就不用再添加白醋了。</p>
+
+            <p>4、排骨汁本身就有咸味了，所以后期不用再加入任何的盐了，反而要加入适量的糖，将汁调成酸甜口味的哦。</p>
+
+            <p>5、涛妈的调味没有写清楚具体的量，是因为发现每家人的口味都不一样，适合涛妈的，未必适合你们，所以，我只把调料写出 &nbsp;&nbsp;来，具体的量，大家可以边煮的时候，边试一点，然后根据自家的口味来进行调整。</p>
+        </div>
+        <div id="setup02">
+        </div>
+        <div id="kongbai">
+
+        </div>
+    </div>
+
+
+    <footer id="footer" style="margin-bottom: 0px">
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" style="text-align: center;">
+                        <p>Copyright &copy; 2015.Company name All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <!-- Toggle get grouped for better mobile display -->
+                            <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                                <ul class="nav navbar-nav" style="text-align: center; float: left;">
+                                    <li><a href="../首页.html">首页</a></li>
+                                    <li><a href="page-about.html">关于</a></li>
+                                    <li><a href="blog-right-sidebar.html">博客</a></li>
+                                    <li><a href="portfolio-3col.html">记录</a></li>
+                                    <li><a href="page-contact.html">联系我们</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .subfooter end -->
+
+    </footer>
+    <!-- footer end -->
+
+</div>
+<!-- page-wrapper end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster
+================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script type="text/javascript" src="../jsNew/jquery.min.js"></script>
+<script type="text/javascript" src="../jsNew/bootstrap.min.js"></script>
+
+<!-- Modernizr javascript -->
+<script type="text/javascript" src="../jsNew/modernizr.js"></script>
+
+<!-- Isotope javascript -->
+<script type="text/javascript" src="../jsNew/isotope.pkgd.min.js"></script>
+
+<!-- Owl carousel javascript -->
+<script type="text/javascript" src="../jsNew/owl.carousel.js"></script>
+
+<!-- Magnific Popup javascript -->
+<script type="text/javascript" src="../jsNew/jquery.magnific-popup.min.js"></script>
+
+<!-- Appear javascript -->
+<script type="text/javascript" src="../jsNew/jquery.appear.js"></script>
+
+<!-- Count To javascript -->
+<script type="text/javascript" src="../jsNew/jquery.countTo.js"></script>
+
+<!-- Parallax javascript -->
+<script src="../jsNew/jquery.parallax-1.1.3.js"></script>
+
+<!-- Contact form -->
+<script src="../jsNew/jquery.validate.js"></script>
+
+<!-- Initialization of Plugins -->
+<script type="text/javascript" src="../jsNew/template.js"></script>
+
+<!-- Custom Scripts -->
+<script type="text/javascript" src="../jsNew/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+#scroll_menu {
+	height:100%;
+}
+.scroll_menu {
+    z-index:1000;
+    position: fixed;
+    list-style-type: none;
+	margin-top: 10em;
+	margin-right:10em;
+    padding:0em;
+}
+#scroll_menu .nav, #scroll_show_menu_button, .scroll_menu li a ,.scroll_menu li span{
+    display: block;
+    min-height: 2.3em;
+    min-width: 2.3em;
+    line-height: 2.3em;
+}
+.scroll_menu li
+{
+	/*position:relative;*/
+
+}
+
+.scroll_menu li span
+{
+	/*position:absolute;*/
+	top:0px;
+	padding:0px;
+	margin:0px;
+	white-space:nowrap;
+}
+/*侧边导航条颜色设置*/
+#scroll_menu {
+	font-size:1.4em;
+}
+/*.scroll_menu li.current a,*/
+.scroll_menu li.current span/*,#scroll_back span */{
+								   text-align: center;
+								   font-size: x-large;
+								   color: #fff;
+								   text-decoration:none;
+							   }
+
+/*
+@media all and (max-width: 600px){
+
+	.scroll_menu li:not(.current) a:hover{ */
+/* colors of hover element in menu *//*
+
+   	 	background: inherit;
+    	color: inherit;
+    	text-decoration:none;
+	}
+
+	.scroll_menu li:hover, .scroll_menu li:hover a, .scroll_menu li:hover span{
+
+		background: inherit;
+    	color: inherit;
+    	text-decoration:none;
+	}
+
+
+	#scroll_back span
+	{
+		width:50%;
+		font-size:11px;
+	}
+
+	#scroll_back span:after
+	{
+		display:none;
+	}
+}
+*/
+
+
+
+
+
+
+ 

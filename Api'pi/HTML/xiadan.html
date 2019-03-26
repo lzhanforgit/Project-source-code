@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/personal.css"/>
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/xiadan.css"/>
+    <!--<link rel="stylesheet" href="../css/about.css"/>-->
+    <link rel="stylesheet" href="../css/index.css"/>
+    <script src="../js/jquery-2.2.2.js"></script>
+
+</head>
+<body>
+<div class="container-fluid font">
+    <nav id="nav-header" class="row navbar-fixed-top">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logosmaller_white.png" alt="app" class="index_img"/>
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="col-md-8">
+            <div id="nav-navbar" class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html"><span>首页 <span class="border"></span></span></a></li>
+                    <li><a href="personal.html"><span>我的爱皮皮 <span class="border"></span></span></a></li>
+                    <li class="active"><a href="xiadan.html"><span>下单<span class="border"></span></span></a></li>
+                    <li><a href="app-zixun.html"><span>咨询<span class="border"></span></span></a></li>
+                    <li><a href="app-anli.html"><span>案例<span class="border"></span></span></a></li>
+                    <li><a href="about.html"><span>关于我们<span class="border"></span></span></a></li>
+                    <li>
+                        <button style="position: absolute;opacity: 0;z-index: 9999"
+                                type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target=".bs-example-modal-lg">Large modal
+                        </button>
+                        <a href="#" style="padding-right: 0px"><span>登录<span class="border"></span></span></a></li>
+                    <li><a href="#"><span>注册<span class="border"></span></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="row content_notice font">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 notice">
+        <p class="glyphicon glyphicon-bullhorn">&nbsp;&nbsp;</p>
+        <span style="color: red">系统公告：</span>
+        &nbsp;&nbsp;
+        <span>如果您有一个完整的项目需要委托爱皮皮开发,您可以注册为雇主直接发布项目。
+     </span>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<div class="row font">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 article">
+        <div class="row">
+            <div class="col-lg-3">
+                <!--模块一-->
+                <div id="headshot">
+                    <img src="../img/10.jpg" alt="..." class="img-circle">
+                </div>
+                <!--模块二-->
+                <div id="information">
+
+                    <ul style="background-color: #ffffff">
+                        <li id="li_user"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户中心</li>
+                        <li><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;个人信息</li>
+                        <li><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</li>
+                        <li><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;我的消息</li>
+                        <li id="li_protect"><span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;安全服务</li>
+                        <li><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;我的账户</li>
+                        <li><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;我的订单</li>
+                        <li><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;退出</li>
+                    </ul>
+                </div>
+            </div>
+            <!--模块三-->
+            <!--用户中心-->
+            <div class="col-lg-8 xiadan_table">
+                <!--<img src="../img/6.png" alt=""/>-->
+                <table>
+                    <tr>
+                        <th>发布项目</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">如果有任何疑问，请咨询客服028-83233736 每周工作时间：9:30-18:00</td>
+                    </tr>
+                    <tr>
+                        <td>项目名称</td>
+                        <td><input type="text" value="您申请的项目名称"/></td>
+                    </tr>
+                    <tr>
+                        <td>项目预算</td>
+                        <td><input type="text" value="您申请的项目预算，如10000.00"/></td>
+                    </tr>
+                    <tr>
+                        <td>联系人</td>
+                        <td><input type="text" value="请输入您的姓名"/></td>
+                    </tr>
+                    <tr>
+                        <td>公司/个人名称</td>
+                        <td><input type="text" value="您的公司/个人名称"/></td>
+                    </tr>
+                    <tr>
+                        <td>联系电话</td>
+                        <td><input type="text" value="xxxxxxxxxxx"/></td>
+                    </tr>
+                    <tr>
+                        <td>邮箱</td>
+                        <td><input type="text" value="xxxxxxx@qq.com"/></td>
+                    </tr>
+                    <tr>
+                        <td>项目类型</td>
+                        <td><select name="pro_type" id="pro_type">
+                            <option value="01">电商</option>
+                            <option value="01">出行</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>项目介绍</td>
+                        <td><textarea name="pro_info" id="pro_info" cols="47" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><a href="订单详情.html">
+                            <button class="btn btn-warning">提交
+                            </button>
+                        </a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#div_user_message_img').hide();
+        $('#div_protect').hide();
+        $('#li_user').click(function () {
+            $('#div_protect').hide();
+            $('#div_user').show();
+        });
+
+        $('#li_protect').click(function () {
+            $('#div_protect').show();
+            $('#div_user').hide();
+        });
+
+    });
+</script>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../js/jquery-2.2.2.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>

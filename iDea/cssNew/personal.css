@@ -1,0 +1,112 @@
+.home-fluid{
+    border: 1px;
+    background-color: rgba(255, 128, 43, 0.29);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.home-content{
+    border: 1px;
+    background-color: #ffffff;
+    margin-bottom: 1.2em;
+    display: flex;
+}
+
+.picture{
+    background: #ccc;
+    margin: auto;
+    margin-right: 2em;
+}
+
+.home-content-center{
+    margin-right: auto;
+    width: 80%
+}
+.username{
+    font-size: 2em;
+    display: inline-flex;
+    margin-top: 0.5em;
+    height: 100%;
+}
+.home-content-center hr{
+    border:1px solid #cccccc;
+    width: 95%;
+    margin-right: 5em;
+}
+.person-menu{
+    margin-left: -2em;
+}
+.person-menu li{
+    display: inline-block;
+    font-size: 1.2em;
+    margin-right: 5%;
+    /*border: solid 1px red;*/
+}
+
+.person-label-0{
+    display: inline-flex;
+}
+
+.person-label-1,.person-label-2,.person-label-3,.person-label-4{
+    width: 4.7em;
+    height: 4.7em;
+    text-align: center;
+    line-height: 5em;
+    margin: 0.2em 0.2em;
+    background-color: #5bc0de;
+}
+.person-label-1{
+     border-radius: 40% 40% 0 40%;
+ }
+
+.person-label-2{
+     border-radius: 40% 40% 40% 0;
+ }
+
+.person-label-3{
+     border-radius: 40% 0 40% 40%;
+ }
+
+.person-label-4{
+     border-radius: 0 40% 40% 40%;
+ }
+
+@media screen and (min-width: 600px) {
+    /*当屏幕尺寸大于600px时，应用下面的CSS样式*/
+    .picture {
+        min-width: 10em;
+        height: 10em;
+    }
+    .person-label{
+        width: 10em;
+        height: 10em;
+    }
+}
+@media screen and (max-width: 600px) {
+    /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+    .picture {
+        min-width: 8em;
+        height: 8em;
+    }
+    .person-label{
+        display: none;
+    }
+    .username{
+        font-size: 1.5em;
+    }
+}
+
+.home-content-left{
+    width: 70%;
+    /*border: solid 1px #000000;*/
+}
+.home-content-right{
+    width: 30%;
+    /*border: solid 1px #000000;*/
+}
+.index-item{
+    width: 100%;
+    height: 320px;
+    display: inline-flex;
+    /*border: solid 1px red;*/
+}

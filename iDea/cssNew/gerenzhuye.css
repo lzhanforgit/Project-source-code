@@ -1,0 +1,407 @@
+#main{
+	width: 85%;
+	/*height: 600px;*/
+	margin: auto;
+	/*background: pink;*/
+	margin-bottom: 20px;
+}
+#main #welcome{
+	width: 100%;
+	height: 150px;
+	background: #FAFAD2;
+	text-align: center;
+	line-height: 150px;
+}
+#main #welcome span{
+	font-size: 1em;
+	font-family: 微软雅黑;
+}
+#main #welcome span:hover{
+	font-size: 2em;
+}
+#main #user{
+	width: 100%;
+	height: 200px;
+	/*background: #008000;*/
+}
+#main #user #left{
+	width: 18%;
+	height: 100%;
+	background: whitesmoke;
+	float: left;
+	background: url("../imagesNew/gerenzhuye01.png") no-repeat center center;
+	background-size: 100% 100%;
+}
+
+
+
+#main #user #middle{
+	width: 64%;
+	height: 100%;
+	/*background: greenyellow;*/
+	float: left;
+}
+#main #user #middle .middle-top001{
+
+	width: 100%;
+	height: 50%;
+	/*background: url("../imagesNew/gerenzhuye-level.png") 87px 3px;*/
+	background: whitesmoke;
+}
+#main #user #middle .middle-top001 ul #tupian{
+	list-style: none;
+	width: 50px;
+	height: 25px;
+	background: url("../imagesNew/gerenzhuye-level.png") 0px 0px;
+	margin-top: -2em;
+	margin-left: 3em;
+	overflow: hidden;
+	cursor: pointer;
+	/*background: deepskyblue;*/
+}
+#main #user #middle .middle-top001 ul #wenzi{
+	list-style: none;
+	float: right;
+	margin-right: 20px;
+	margin-top: -20px;
+	cursor: pointer;
+	background: darkgrey;
+}
+#main #user #middle .middle-top001 ul #wenzi:hover{
+	background: grey;
+}
+#main #user #middle .middle-top001 a:hover{
+	cursor: pointer;
+	color: orangered;
+}
+
+
+#main #user #right{
+	width: 18%;
+	height: 100%;
+	background: #ffffff;
+	float: left;
+}
+#main #user #right .top01{
+	width: 100%;
+	height: 50%;
+	text-align: center;
+	background: #ffffff;
+}
+#main #user #right .top01 .top001{
+	width: 50%;
+	height: 100%;
+	float: left;
+	/*background: red;*/
+}
+#main #user #right .top01 .top001 #a{
+	width: 80px;
+	height: 80px;
+	border-radius: 45% 45% 0 45%;
+	margin-top: 15px;
+	margin-left: 25px;
+	background: #F8F8F8;
+}
+#main #user #right .top01 .top001 #a:hover{
+	background: red;
+	cursor: pointer;
+	color: #ffffff;
+}
+#main #user #right .top01 .top002{
+	width: 50%;
+	height: 100%;
+	float: left;
+	/*background: pink;*/
+}
+#main #user #right .top01 .top002 #b{
+	width: 80px;
+	height: 80px;
+	border-radius: 45% 45% 45% 0;
+	margin-top: 15px;
+	margin-left: 5px;
+	background: #F8F8F8;
+}
+#main #user #right .top01 .top002 #b:hover{
+	background: red;
+	cursor: pointer;
+	color: #ffffff;
+}
+#main #user #right .bottom01{
+	width: 100%;
+	height: 50%;
+	text-align: center;
+	background: #ffffff;
+}
+#main #user #right .bottom01 .bottom001{
+	width: 50%;
+	height: 100%;
+	float: left;
+	/*background: pink;*/
+}
+#main #user #right .bottom01 .bottom001 #c{
+	width: 80px;
+	height: 80px;
+	border-radius: 45% 0 45% 45%;
+	margin-top: 5px;
+	margin-left: 25px;
+	background: #F8F8F8;
+}
+#main #user #right .bottom01 .bottom001 #c:hover{
+	background: red;
+	cursor: pointer;
+	color: #ffffff;
+}
+#main #user #right .bottom01 .bottom002{
+	width: 50%;
+	height: 100%;
+	float: left;
+	/*background: red;*/
+}
+
+#main #user #right .bottom01 .bottom002 #d{
+	width: 80px;
+	height: 80px;
+	border-radius: 0 45% 45% 45%;
+	margin-top: 5px;
+	margin-left: 5px;
+	background: #F8F8F8;
+}
+#main #user #right .bottom01 .bottom002 #d:hover{
+	background: red;
+	cursor: pointer;
+	color: #ffffff;
+}
+#main #biaoqian{
+	width: 60%;
+	height: 50px;
+	background: red;
+	margin: 0;
+}
+#main #biaoqian table{
+	width: 100%;
+	height: 100%;
+	border:  solid 1px red;
+	text-align: center;
+}
+#main #biaoqian table tr td{
+	cursor: pointer;
+	font-family: 微软雅黑;
+	font-weight: bold;
+	font-size: 1em;
+}
+#main #biaoqian table tr td:hover{
+	color: orangered;
+	text-decoration: underline;
+}
+
+/*看看*/
+#container .title001{
+	height: 50px;
+	background: lightgoldenrodyellow;
+}
+#container #title li {
+	float: left;
+	list-style-type: none;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	margin-right: 50px;
+	margin-top: 10px;
+	color: #ff0000;
+}
+#container #title ul {
+	height: 28px;
+}
+#container #content {
+	height: 300px;
+	/*padding: 10px;*/
+	margin-top: 0;
+}
+.content1 {
+	/*width: 100%;*/
+	/*height: 100%;*/
+	border: solid 1px red;
+	/*background-color: #ffff00;*/
+}
+#content1{
+	width: 100%;
+	height: 100%;
+}
+#content1 #seven01left{
+	width: 65%;
+	height: 100%;
+	float: left;
+	background: #ffffff;
+	text-align: center;
+	line-height: 300px;
+}
+#content1 #seven01right{
+	width: 35%;
+	height: 100%;
+	float: left;
+	background: #FAFAFA;
+}
+
+
+.content2 {
+	width: 100%;
+	height: 100%;
+	border: solid 1px dodgerblue;
+	/*background-color: dodgerblue;*/
+}
+#content2{
+	width: 100%;
+	height: 100%;
+}
+#content2 #seven02top{
+	width: 100%;
+	height: 20%;
+	background: #ffffff;
+	text-align: center;
+}
+#content2 #seven02bottom{
+	width: 100%;
+	height: 80%;
+	background: #FAFAFA;
+	text-align: center;
+}
+
+
+
+.content3 {
+	width: 100%;
+	height: 100%;
+	border: solid 1px blue;
+	/*background-color: blue;*/
+}
+#content3{
+	width: 100%;
+	height: 100%;
+}
+#content3 #seven03top{
+	width: 100%;
+	height: 20%;
+	background: #ffffff;
+}
+#content3 #seven03bottom{
+	width: 100%;
+	height: 80%;
+	background: #FAFAFA;
+	text-align: center;
+	line-height: 200px;
+}
+
+
+
+
+.content4 {
+	width: 100%;
+	height: 100%;
+	border: solid 1px pink;
+	/*background-color: pink;*/
+}
+#content4{
+	width: 100%;
+	height: 100%;
+}
+#content4 #all{
+	width: 100%;
+	height: 100%;
+	background: #ffff00;
+	background: url("../imagesNew/gerenzhuye-xihao.png") no-repeat center center;
+}
+#content4 #all .gerenzhuye-xihao1{
+	width: 251px;
+	height: 55px;
+	margin-top: 180px;
+	margin-left: 700px;
+	background: url("../imagesNew/gerenzhuye-xihao1.png") no-repeat;
+	position: absolute;
+}
+
+
+.content5 {
+	width: 100%;
+	height: 100%;
+	border: solid 1px #ff0000;
+	/*background-color: #ff0000;*/
+}
+#content5{
+	width: 100%;
+	height: 100%;
+}
+#content5 #seven05top{
+	width: 100%;
+	height: 20%;
+	background: #ffffff;
+}
+#content5 #seven05bottom{
+	width: 100%;
+	height: 80%;
+	background: #FAFAFA;
+}
+#content5 #seven05bottom div{
+	width: 25%;
+	height: 100%;
+	/*border: solid 2px blue;*/
+	float: left;
+}
+
+
+.content6 {
+	width: 100%;
+	height: 100%;
+	border: solid 1px deeppink;
+	/*background-color: deeppink;*/
+}
+#content6{
+	width: 100%;
+	height: 100%;
+}
+#content6 #seven06top{
+	width: 100%;
+	height: 20%;
+	background: #ffffff;
+}
+#content6 #seven06bottom{
+	width: 100%;
+	height: 80%;
+	background: #FAFAFA;
+	text-align: center;
+	line-height: 200px;
+}
+
+
+
+
+.content7 {
+	width: 100%;
+	height: 100%;
+	border: solid 1px deepskyblue;
+	/*background-color: deepskyblue;*/
+}
+#content7{
+	width: 100%;
+	height: 100%;
+}
+#content7 #seven07top{
+	width: 100%;
+	height: 20%;
+	background: #ffffff;
+	line-height: 50px;
+}
+#content7 #seven07bottom{
+	width: 100%;
+	height: 80%;
+	background: #FAFAFA;
+	text-align: center;
+}
+
+
+
+
+.hidecontent {
+	display: none;
+}
+
+

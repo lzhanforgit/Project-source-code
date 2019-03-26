@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>菜谱_食材</title>
+    <link rel="stylesheet" type="text/css" href="../cssNew/食材汇总.css"/>
+
+    <meta name="description" content="iDea a Bootstrap-based, Responsive HTML5 Template">
+    <meta name="author" content="htmlcoder.me">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../imagesNew/favicon.ico">
+
+    <!-- Web Fonts -->
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../cssNew/bootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="../fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Fontello CSS -->
+    <link href="../fonts/fontello/css/fontello.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="../cssNew/magnific-popup.css" rel="stylesheet">
+    <link href="../cssNew/animations.css" rel="stylesheet">
+    <link href="../cssNew/owl.carousel.css" rel="stylesheet">
+
+    <!-- iDea core CSS file -->
+    <link href="../cssNew/style.css" rel="stylesheet">
+
+    <!-- Color Scheme (In order to change the color scheme, replace the red.css with the color scheme that you prefer)-->
+    <link href="../cssNew/red.css" rel="stylesheet">
+
+    <!-- Custom css -->
+    <link href="../cssNew/custom.css" rel="stylesheet">
+</head>
+
+<!-- body classes:
+        "boxed": boxed layout mode e.g. <body class="boxed">
+        "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1">
+-->
+<body>
+<!-- scrollToTop -->
+<!-- ================ -->
+<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+<!-- page wrapper start -->
+<!-- ================ -->
+<div class="page-wrapper">
+
+    <!-- header-top start -->
+    <!-- ================ -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+						<span id="" style="line-height: 30px;">
+							Hi,欢迎来到爱厨房
+						</span>
+
+                <div class="col-xs-10 col-sm-6" style="float: right;">
+
+                    <!-- header-top-second start -->
+                    <!-- ================ -->
+                    <div id="header-top-second" class="clearfix">
+
+                        <!-- header top dropdowns start -->
+                        <!-- ================ -->
+
+
+                        <!--搜索-->
+                        <div class="header-top-dropdown">
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-search"></i> 搜索
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                    <li>
+                                        <form role="search" class="search-box">
+                                            <div class="form-group has-feedback">
+                                                <input type="text" class="form-control" placeholder="搜索">
+                                                <i class="fa fa-search form-control-feedback"></i>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="btn-group dropdown">
+
+
+                                <!--登录-->
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-user"></i> 登录
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                    <li>
+                                        <form class="login-form">
+                                            <div class="form-group has-feedback">
+                                                <label class="control-label">用户名:</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                                <i class="fa fa-user form-control-feedback"></i>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <label class="control-label">密码:</label>
+                                                <input type="password" class="form-control" placeholder="">
+                                                <i class="fa fa-lock form-control-feedback"></i>
+                                            </div>
+                                            <!--登录按钮-->
+                                            <button type="submit" class="btn btn-group btn-dark btn-sm">登录</button>
+                                            <span>or</span>
+
+                                            <button type="submit" class="btn btn-group btn-default btn-sm">注册</button>
+                                            <ul>
+                                                <li><a href="#">忘记密码？</a></li>
+                                            </ul>
+                                            <div class="divider"></div>
+                                            <span class="text-center">其他方式</span>
+                                            <ul class="social-links clearfix">
+                                                <li class="facebook"><a target="_blank" href="http://sc.chinaz.com"><i
+                                                        class="fa fa-qq"></i></a></li>
+                                                <li class="twitter"><a target="_blank" href="http://sc.chinaz.com"><i
+                                                        class="fa fa-weixin"></i></a></li>
+                                                <li class="googleplus"><a target="_blank" href="http://sc.chinaz.com"><i
+                                                        class="fa fa-weibo"></i></a></li>
+                                            </ul>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <!--购物车-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-shopping-cart"></i> 购物车
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation cart">
+                                    <li>
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th class="quantity">数量</th>
+                                                <th class="product">产品</th>
+                                                <th class="amount">总价</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="quantity">2 x</td>
+                                                <td class="product"><a href="shop-product.html">Android 4.4
+                                                    Smartphone</a><span class="small">4.7" Dual Core 1GB</span></td>
+                                                <td class="amount">$199.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="quantity">3 x</td>
+                                                <td class="product"><a href="shop-product.html">Android 4.2
+                                                    Tablet</a><span class="small">7.3" Quad Core 2GB</span></td>
+                                                <td class="amount">$299.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="quantity">3 x</td>
+                                                <td class="product"><a href="shop-product.html">Desktop PC</a><span
+                                                        class="small">Quad Core 3.2MHz, 8GB RAM, 1TB Hard Disk</span>
+                                                </td>
+                                                <td class="amount">$1499.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="total-quantity" colspan="2">总共8项</td>
+                                                <td class="total-amount">$1997.00</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-body text-right">
+                                            <a href="shop-cart.html" class="btn btn-group btn-default btn-sm">查看</a>
+                                            <a href="shop-checkout.html" class="btn btn-group btn-default btn-sm">结算</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <!--  header top dropdowns end -->
+
+                    </div>
+                    <!-- header-top-second end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header-top end -->
+
+    <!-- header start (remove fixed class from header in order to disable fixed navigation mode) -->
+    <header class="header fixed clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <!--logo图标-->
+                    <div class="logo">
+                        <a href="#">
+                            <div>
+                                <img id="logo" src="../imagesNew/logo_red.png" alt="iDea">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--logo下面的字-->
+                    <div class="site-slogan">&nbsp;爱厨房</div>
+                </div>
+
+
+                <div class="col-md-9">
+                    <!-- header-right start -->
+                    <!-- ================ -->
+                    <div class="header-right clearfix">
+                        <!-- main-navigation start -->
+                        <!-- ================ -->
+                        <div class="main-navigation animated">
+                            <!-- navbar start -->
+                            <!-- ================ -->
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div class="container-fluid">
+
+                                    <!-- Toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+
+                                        <!--导航开始-->
+                                        <ul class="nav navbar-nav navbar-right">
+
+                                            <li>
+                                                <a href="../index.html">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="菜谱_精选.html">菜谱</a>
+                                            </li>
+                                            <li>
+                                                <a href="xieshipai.html">写食派</a>
+                                            </li>
+                                            <li>
+                                                <a href="daren.html">达人馆</a>
+                                            </li>
+                                            <li>
+                                                <a href="市集.html">市集</a>
+                                            </li>
+                                            <li>
+                                                <a href="活动.html">活动</a>
+                                            </li>
+                                            <li>
+                                                <a href="personal.html">个人中心</a>
+                                            </li>
+
+
+                                        </ul>
+                                        <!--导航结束-->
+
+
+                                    </div>
+                                </div>
+                            </nav>
+                            <!-- navbar end -->
+                        </div>
+                        <!-- main-navigation end -->
+                    </div>
+                    <!-- header-right end -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- page-intro start-->
+    <div class="page-intro">
+        <div class="container">
+            <ol class="breadcrumb">
+                <!--<li><i class="fa fa-home"></i><a href="../index.html">首页</a></li>-->
+                <li class=""><a href="菜谱_精选.html">精选</a></li>
+                <li class=""><a href="菜谱_分类.html">分类</a></li>
+                <li class=""><span>食材</span></li>
+                <li class=""><a href="菜谱_菜单.html">菜单</a></li>
+                <li class=""><a href="zucai.html">智能选菜</a></li>
+
+            </ol>
+        </div>
+    </div>
+    <!-- page-intro end -->
+
+    <!-- main-container start -->
+    <!-- ================ -->
+    <div id="shicaihuizong">
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <th colspan="10">肉类 <a href="#">(全部)</a></th>
+                </tr>
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>猪</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/pig1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/pig2.png"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/pig3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/pig4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/pig5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/pig6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/pig7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/pig8.jpg"/>
+                    </td>
+                    <td class="wenzi1" height="80px" width="80px">
+                        <span>更多</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪腰</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2">猪肚</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <th colspan="10"></th>
+                </tr>
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>牛</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/ox1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/ox2.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/ox9.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/ox4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/ox5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/ox6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/ox7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/ox8.jpg"/>
+                    </td>
+                    <td height="80px" width="80px">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20px" height=""></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2">猪肚</td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <th colspan="10"></th>
+                </tr>
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>羊</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/sheep1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/sheep2.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/sheep3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/sheep4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/sheep5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/sheep6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/sheep7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/sheep8.jpg"/>
+                    </td>
+                    <td height="80px" width="80px">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20px" height=""></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2">猪肚</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <th colspan="10"></th>
+                </tr>
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>鸡</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/checken1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/checken2.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/checken3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/checken4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/checken5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/checken6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/checken7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/checken8.jpg"/>
+                    </td>
+                    <td height="80px" width="80px">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20px" height=""></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2">猪肚</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <th colspan="10"></th>
+                </tr>
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>鸭</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/duck1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/duck2.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/duck3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/duck4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/duck5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/duck6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/duck7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/duck8.jpg"/>
+                    </td>
+                    <td height="80px" width="80px">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20px" height=""></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2">猪肚</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <th colspan="10"></th>
+                </tr>
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>其他肉类</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/qt1.png"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/qt2.png"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/qt3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/qt4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/qt5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/qt6.jpg" style="visibility: hidden;"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/qt6.jpg" style="visibility: hidden;"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/qt6.jpg" style="visibility: hidden;"/>
+                    </td>
+                    <td height="80px" width="80px">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20px" height=""></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2"></td>
+                    <td class="wenzi2"></td>
+                    <td class="wenzi2"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <th colspan="10"></th>
+                </tr>
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>制品</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/zp1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/zp2.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/zp3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/zp4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/zp5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/zp6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/zp7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="imagesNew/zp8.jpg" style="visibility: hidden;"/>
+                    </td>
+                    <td height="80px" width="80px">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20px" height=""></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <th colspan="10">肉水果，花茶，坚果 <a href="#">(全部)</a></th>
+                </tr>
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>鲜果</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/fruit1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/fruit2.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/fruit3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/fruit4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/fruit5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/fruit6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/fruit7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/fruit8.jpg"/>
+                    </td>
+                    <td class="wenzi1" height="80px" width="80px">
+                        <span>更多</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2">猪肚</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>花</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/flower1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/flower2.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/flower3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/flower4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/flower5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/flower6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/flower7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="imagesNew/flower8.jpg" style="visibility: hidden;"/>
+                    </td>
+                    <td class="wenzi1" height="80px" width="80px">
+                        <span>更多</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>坚果，干果类</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/gg1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/gg2.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/gg3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/gg4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/gg5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/gg6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/gg7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/gg8.jpg"/>
+                    </td>
+                    <td class="wenzi1" height="80px" width="80px">
+                        <span>更多</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2">猪肚</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="1">
+                <tr>
+                    <th colspan="10">调味品<a href="#">(全部)</a></th>
+                </tr>
+                <tr>
+                    <td height="80px" width="80px" class="wenzi1">
+                        <span>香辛料</span>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/xxl1.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/xxl2.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/xxl3.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/xxl4.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/xxl5.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/xxl6.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/xxl7.jpg"/>
+                    </td>
+                    <td>
+                        <img src="../imagesNew/xxl8.jpg"/>
+                    </td>
+                    <td class="wenzi1" height="80px" width="80px">
+                        <span>更多</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">排骨</td>
+                    <td class="wenzi2">五花肉</td>
+                    <td class="wenzi2">猪肉</td>
+                    <td class="wenzi2">火腿</td>
+                    <td class="wenzi2">里脊</td>
+                    <td class="wenzi2">猪蹄</td>
+                    <td class="wenzi2">猪肚</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div02">
+            <p style="margin-top: 20px;">
+                <span style="margin: 20px 0 0 20px;padding-top: 20px;">当前位置:<a href="../index.html">爱厨房>></a>食材</span>
+                <span style="float: right; margin: 0 20px 0 0;"><a href="#">更多食材>></a></span>
+            </p>
+        </div>
+        <div class="div02"></div>
+    </div>
+    <footer id="footer">
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" style="text-align: center;">
+                        <p>Copyright &copy; 2015.Company name All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <!-- Toggle get grouped for better mobile display -->
+                            <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                                <ul class="nav navbar-nav" style="text-align: center; float: left;">
+                                    <li><a href="index.html">首页</a></li>
+                                    <li><a href="page-about.html">关于</a></li>
+                                    <li><a href="blog-right-sidebar.html">博客</a></li>
+                                    <li><a href="portfolio-3col.html">记录</a></li>
+                                    <li><a href="page-contact.html">联系我们</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- Jquery and Bootstap core js files -->
+<script type="text/javascript" src="../jsNew/jquery.min.js"></script>
+<script type="text/javascript" src="../jsNew/bootstrap.min.js"></script>
+<!-- Modernizr javascript -->
+<script type="text/javascript" src="../jsNew/modernizr.js"></script>
+<!-- Isotope javascript -->
+<script type="text/javascript" src="../jsNew/isotope.pkgd.min.js"></script>
+<!-- Owl carousel javascript -->
+<script type="text/javascript" src="../jsNew/owl.carousel.js"></script>
+<!-- Magnific Popup javascript -->
+<script type="text/javascript" src="../jsNew/jquery.magnific-popup.min.js"></script>
+<!-- Appear javascript -->
+<script type="text/javascript" src="../jsNew/jquery.appear.js"></script>
+<!-- Count To javascript -->
+<script type="text/javascript" src="../jsNew/jquery.countTo.js"></script>
+<!-- Parallax javascript -->
+<script src="../jsNew/jquery.parallax-1.1.3.js"></script>
+<!-- Contact form -->
+<script src="../jsNew/jquery.validate.js"></script>
+<!-- Initialization of Plugins -->
+<script type="text/javascript" src="../jsNew/template.js"></script>
+<!-- Custom Scripts -->
+<script type="text/javascript" src="../jsNew/custom.js"></script>
+</body>
+</html>

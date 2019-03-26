@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/find_module.css"/>
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/side_nav.css"/>
+    <link rel="stylesheet" href="../css/bottom.css"/>
+</head>
+<body>
+<!--模态框-->
+<div class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" id="find_group-apply">
+    <div class="modal-dialog" role="document" style="width: 25em">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="add-collection">创建小组</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">话题
+                            <span style="color: red;font-size: 0.6em">（20字以内）</span>
+                        </div>
+                    </div>
+                    <input type="text" style="width:20em;height:2em;border-radius: 5px"/>
+                    <p>描述（必选）</p>
+                    <textarea  style="width:20em;height:10em;border-radius: 5px"></textarea>
+
+                    <h6>
+                        <label for="open">公开</label>
+                        <input type="radio"  name="1" value="open" id="open"/>
+                        <span>公开后不能设置为私密</span></h6>
+                    <h6>
+                        <label for="private">私密</label>
+                        <input type="radio" checked="checked" name="1" value="open" id="private"/>
+                        <span>只有你其他同组组员可以看见</span></h6>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">创建</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div class="container-fluid">
+    <!--头部top  nav-->
+    <div class="container-fluid" id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 top_height">
+                    <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                    <span>知了</span>
+                </div>
+                <div class="col-md-10 nav_height">
+                    <nav class="navbar navbar-right">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+                                    <li><a href="connection.html">人脉</a></li>
+                                    <li><a href="find.html" id="nav_find">发现</a></li>
+                                    <li><a href="hero2.html">英雄帖</a></li>
+                                    <li><a href="blog.html">个人博客</a></li>
+                                </ul>
+                                <form class="navbar-form navbar-right" form-inline role="search" id="nav_search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="glyphicon glyphicon-search"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主体main-->
+    <div class="container" id="find_group-topic">
+        <div class="row">
+            <!--左侧  我的小组话题-->
+            <div class="col-lg-9" id="find_hot-topic_left">
+                <div class="row">
+                    <div class="col-md-4 content_padding">
+                        <h4>
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            我的小组话题
+                        </h4>
+                    </div>
+                    <div class="col-md-8" style="padding-left:31em;padding-top: 1em">
+                        <a href="#" class="font_small-tag_title">
+                            共加入<span>4</span>个小组</a>
+                    </div>
+                </div>
+                <hr/>
+                <!--自己关注话题分组标签-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span class="module_topic  active"><a href="#" data-toggle="tab">背包客的人文地理</a></span>
+                        <span class="module_topic"><a href="#find_module-food" data-toggle="tab">最爱尤克里里</a></span>
+                        <span class="module_topic"><a href="#find_module-int" data-toggle="tab">摄影</a></span>
+                        <span class="module_topic active"><a href="#find_group-topic-h5" data-toggle="tab">h5公社</a></span>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row"><!--这部分是一个container，跟上面标签分组对应，标签对应热门话题标签-->
+                    <div class="container-fluid tab-content " id="find_module-content">
+                        <!--h5公社部分-->
+                        <div class="container-fluid tab-pane active" role="tabpanel"  id="find_group-topic-h5">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <span class="font_small-tag_title">来自我的小组：</span>
+                                        <a href="find_group-h5.html" >h5公社</a>
+                                </div>
+                                <div class="col-md-8" style="padding-left:27em;padding-top:0em">
+                                    <a href="#" class="font_small-tag_title">热门排序</a>
+                                    <span class="font_small-tag_title">|</span>
+                                    <a href="#" class="font_small-tag_title">时间排序</a>
+                                </div>
+                            </div><hr/>
+                            <!--小组内容-->
+                            <div class="row">
+                                <div class="col-lg-12 container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">程序猿得“血泪人生”</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>345</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>4</span>分钟前
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">HTML5中国•版主管理奖励</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>200</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>10</span>分钟前
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">程序猿得“血泪人生”</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>345</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>20</span>分钟前
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">HTML5中国•版主管理奖励</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>200</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>50</span>分钟前
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">程序猿得“血泪人生”</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>345</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>今天15:20</span>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">HTML5中国•版主管理奖励</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>200</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>今天12:05</span>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">程序猿得“血泪人生”</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>345</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>今天09:08</span>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">HTML5中国•版主管理奖励</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>200</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>今天01:08</span>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">程序猿得“血泪人生”</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>345</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>昨天23:12</span>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">HTML5中国•版主管理奖励</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>200</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>昨天16:35</span>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">程序猿得“血泪人生”</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>345</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>昨天15:20</span>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-lg-6 font_group-main">
+                                            <a href="#" class="a_bg">HTML5中国•版主管理奖励</a>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>200</span>回应
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <span>昨天09:56</span>
+                                        </div>
+                                        <div class="col-lg-2 font_group-main col_text-right">
+                                            <a href="#" class="a_bg">h5公社</a>
+                                        </div>
+                                    </div><br/>
+                                </div>
+                            </div><hr/>
+                        </div>
+                        <!--美食部分-->
+                        <div class="container-fluid tab-pane" role="tabpanel"  id="find_module-food">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <a href="#"><img src="../img/find_module-internet.png" class="img_radius" alt=""/></a>
+                                    <a href="#">美食</a>
+                                </div>
+                                <div class="col-md-8" style="padding-left:29em;padding-top: 1em">
+                                    <a href="#" class="font_small-tag_title">热门排序</a>
+                                    <span class="font_small-tag_title">|</span>
+                                    <a href="#" class="font_small-tag_title">时间排序</a>
+                                </div>
+                            </div><hr/>
+
+                        </div>
+                    </div>
+                </div>
+                <!--加载中-->
+                <div style="width:55em;height:2em;background:#DDDDDD;text-align: center">加载中</div>
+            </div>
+            <!--右侧 话题广场和其他人关注的话题-->
+            <div class="col-lg-3" style="padding-left: 2em" id="find_group-topic_right">
+                <!--我-->
+                <div class="row" id="find_group-topic_me">
+                <div class="col-lg-12" style="padding-top:5em">
+                    <div class="row" style="background:#EFF6FA">
+                        <div class="col-lg-2">
+                            <img src="../img/my_img.png" alt=""/>
+                        </div>
+                        <div class="col-lg-8 module_find-other" style="font-size:1.2em;color:#888888;padding-top: 0em" id="find_hot-topic_right1">
+                            <a href="#">我的小组主页</a>
+                            <p class="font-tag_modul-game">
+                                <a href="#">发起（1）</a><span>&nbsp;|&nbsp;</span><a href="#">回应（0）</a></p>
+                        </div>
+                    </div>
+                </div>
+                </div><br/>
+                <p><a href="#" class="find_group-apply" data-toggle="modal" data-target="#find_group-apply">申请创建小组</a></p><hr/>
+                <div class="row" id="find_group-topic_apply" style="padding-top:0em;padding-left: -3em">
+                        <div class="col-lg-12">
+
+                        </div>
+                    </div>
+                <!--常去的小组-->
+                <div class="row" id="find_group-topic_right_other">
+                    <div class="row">
+                        <div class="col-lg-8 module_find-other" style="font-size: 1.2em;color:#888888">常去小组</div>
+                        <div class="col-lg-3 module_find-other">
+                            <a href="#">>>更多</a>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-lg-8 module_find-other">
+                            <a href="#">
+                                <img src="../img/find_module-other1.png" alt="" class="img_radius"/></a>
+                            <a href="#" class="font_module-find_side-title">法律</a>
+                        </div>
+                        <div class="col-lg-3 module_find-other">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 module_find-other">
+                            <a href="#">
+                                <img src="../img/find_module-other2.png" alt="" class="img_radius"/></a>
+                            <a href="#" class="font_module-find_side-title">动漫</a>
+                        </div>
+                        <div class="col-lg-3 module_find-other">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="row" id="find_group-topic_other" style="margin-left: -2em">
+                    <div class="col-lg-12">
+                        <img src="../img/find_group-topic_other2.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <!--底部bottom-->
+    <div class="container-fluid" id="bottom_all">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="#" class="font_bottom">关于我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">联系我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">企业入驻</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">友情链接</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了公益</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了社区</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom"> 京公网安备 11000002000088号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">京ICP证070359号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">网络文化经营许可证京网文[2014]2148-348号</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom">违法和不良信息举报电话：4006561155 Copyright © 2004-2016 知了ZL.com 版权所有</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>

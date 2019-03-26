@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/注册.css"/>
+    <title></title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/icomoon.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery-2.2.2.js">
+    </script>
+
+</head>
+<body>
+<!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <!--改了宽度值-->
+    <div class="modal-dialog modal-lg modal-lg_c">
+        <div class="modal-content modal-content_c">
+            <div id="title">
+                <div id="div_login">登录</div>
+                <div id="div_sign">注册</div>
+            </div>
+            <!--<ul class="nav nav-pills">-->
+                <!--<li role="presentation" class="active"id="span_login"><a href="#">注册</a></li>-->
+                <!--<li role="presentation" class="active"id="span_sign"><a href="#">登录</a></li>-->
+            <!--</ul>-->
+              <!--模块一-->
+            <div id="sign">
+                <table>
+                    <!--<tr>-->
+                        <!--<td><p>用户注册</p></td>-->
+
+                    <!--</tr>-->
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><input type="text" id="text_tel" placeholder="请输入手机号" /></td>
+                                    <td><form action="http://www.helloweba.com/" method="post" name="myform">
+                                        <input type="button" class="button" value="获取手机验证码" id="phone_btn" name="phone" onclick="showtime(60)">
+                                    </form></td>
+                                </tr>
+                            </table>
+                            <!--<a href=""><div id="div_code">获取验证码</div></a>-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <input type="text" id="text_code" placeholder="请输入验证码"/>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td >
+                            <input type="text" id="text_pass" placeholder="请输入密码"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <input type="text" id="text_again"placeholder="确认密码"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <input type="button" id="btn_sign" value="立即注册"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--模块二   -->
+            <div id="login">
+             <table>
+                 <!--<tr>-->
+                     <!--<td><p>登录</p></td>-->
+                 <!--</tr>-->
+                 <tr>
+                     <td>
+                         <input type="text" id="text_ltel" placeholder="请输入手机号或用户名"/>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                         <input type="text"  id="text_lpass" placeholder="请输入密码"/>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td><input type="button" id="btn_login" value="立即登录"/></td>
+                 </tr>
+                 <tr>
+                     <td></td>
+                 </tr>
+             </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>

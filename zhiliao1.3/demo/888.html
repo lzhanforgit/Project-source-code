@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 实例 - 滚动监听（Scrollspy）插件</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation"
+        style="position: fixed;right: 0px;top:10em">
+    <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+        <ul class="nav navbar-nav">
+            <li><a href="#ios">iOS</a></li><br/>
+            <li><a href="#svn">SVN</a></li><br/>
+            <li><a href="#jmeter">jmeter</a></li>
+        </ul>
+    </div>
+</nav>
+<!--data-offset="0"  overflow:auto;-->
+<div data-spy="scroll" data-target="#navbar-example"
+     style="height:200px; overflow:auto;position: relative;">
+    <div id="ios">
+        <h4>iOS</h4>
+        <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+            TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。
+        </p>
+    </div>
+    <div id="svn">
+        <h4>SVN</h4>
+        <p>Apache Subversion，通常缩写为 SVN，是一款开源的版本控制系统软件。Subversion 由 CollabNet 公司在 2000 年创建。但是现在它已经发展为 Apache Software Foundation 的一个项目，因此拥有丰富的开发人员和用户社区。
+        </p>
+    </div>
+    <div id="jmeter">
+        <h4>jMeter</h4>
+        <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。
+        </p>
+    </div>
+</div>
+</body>
+</html>

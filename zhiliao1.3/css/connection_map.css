@@ -1,0 +1,24 @@
+#tagsList{
+    position:relative;
+    /*top: -11em;*/
+}
+#tagsList {
+    /* margin: 150px auto 0;*/
+    /*background:#24313d;*/
+    background-color: #A5C1F1;
+    width:16em;
+    height:18em
+}
+#tagsList a {
+    position:absolute;
+    top:0em;
+    left:0px;
+    color:#fff;
+    font-weight:bold;
+    text-decoration:none;
+    padding: 3px 6px;
+}
+#tagsList a:hover { /*当云标签内容是文字时，可以设置鼠标悬停时，文字内容的格式*/
+    color:#FF0000;
+    letter-spacing:2px;
+}

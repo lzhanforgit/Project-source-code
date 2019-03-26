@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>知了首页</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/bottom.css"/>
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('#indexordinary').click(function(){
+               <!--模态框普通登录的id-->
+               $('.indexlocenter').show();
+               $('.indexnocenter').hide();
+           })
+           $('#indexnopwd').click(function(){
+               $('.indexlocenter').hide();
+               $('.indexnocenter').show();
+           })
+           $('#indexall').click(function(){
+               $('.indexlocenter').show();
+               $('.indexnocenter').hide();
+               $('#myModa').hide();
+           })
+       })
+    </script>
+
+</head>
+<body>
+<!--首页巨幕第一部分-->
+<a name="index-top"></a>
+<!--设置锚点-->
+<div class=" index-first">
+    <!--logo-->
+    <div class="indexlogo">
+        <img src="../img/logo.png" style="width: 16em;height: 12em"/>
+    </div>
+    <!--登录注册模块-->
+    <div class="indexlogin">
+        <!--登录弹出模态框-->
+        <li type="button" class="btn btn-primary btn-lg indexdeng"
+            data-toggle="modal" data-target="#myModal" >
+            <b>登录</b>
+        </li><!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content indexmologin">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <span class="col-md-2"></span>
+                                <!--模态框普通登录的id-->
+                                <a class="col-md-4" id="indexordinary" style="color:#333333 "><b>普通登录</b></a>
+                                <!--模态框手机无密码登录的id-->
+                                <a class="col-md-4" id="indexnopwd" style="color: #AAAAAA"><b>手机无密码登录</b></a>
+                                <span class="col-md-2"></span>
+                            </div>
+                            <div class="indexlocenter">
+                            <ul class="indexlocenterul">
+                                <input type="text" placeholder="昵称/邮箱/手机号" style="width: 18em"/></ul>
+                            <ul><input type="text" placeholder="密码" style="width: 18em"/></ul>
+                            <ul>
+                                <input type="radio"/>
+                                <span style="color: #999999">2周内自动登录</span>
+                                <span style="margin-left: 6em;color: #999999">忘记密码</span>
+                            </ul>
+                            <ul><button style="width: 18em;background-color: #39AC6A;outline: none;border: none;line-height: 2em" data-dismiss="modal">
+                                登录</button></ul>
+                            <ul style="margin-left: 13em;margin-bottom: 3em;color: #999999" data-toggle="modal" data-target="#myModa"><a>新用户注册</a></ul>
+                            <ul>你也可以用以下方式登录</ul>
+                            <ul><img src="../img/qqqq.jpg" alt=""/></ul>
+                            </div>
+                            <div class="indexnocenter" hidden="hidden">
+                                <ul class="indexlocenterul">
+                                    <input type="text" placeholder="手机号码" style="width: 18em";/></ul>
+                                <ul><input type="text" placeholder="动态密码" style="width: 18em"/></ul>
+                                <ul><button style="width: 18em;outline: none;border: none;line-height: 2em">获取手机动态密码</button></ul>
+                                <ul><button style="width: 18em;background-color: #39AC6A;outline: none;
+                                border: none;line-height: 2em"data-dismiss="modal">
+                                    登录</button></ul>
+                                <ul style="margin-left: 13em;margin-bottom: 3em;color: #999999"data-toggle="modal" data-target="#myModa">新用户注册</ul>
+                                <ul>你也可以用以下方式登录</ul>
+                                <ul><img src="../img/qqqq.jpg" alt=""/></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <li type="button" class="btn btn-primary btn-lg indexdeng" data-toggle="modal" data-target="#myModa" >
+            <b>注册</b>
+        </li><!-- Modal -->
+       <!--注册模块-->
+        <div class="modal fade" id="myModa" tabindex="-1" role="dialog" aria-labelledby="myModalLabe">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content indexre">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title" id="myModalLabe" style="margin-left: 2em">新用户注册</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="indexre">
+                           <ul><input type="text" style="width: 18em"/></ul>
+                            <ul>
+                                <input type="text" style="width: 11.78em"/>
+                                <button style="background-color: #FCB2B2;outline: none;border: none;height: 1.8em">发送验证码</button>
+                            </ul>
+                            <ul><button style="width: 18em;background-color: #39AC6A;outline: none;border: none;line-height: 2em" data-dismiss="modal">注册</button></ul>
+                            <ul>
+                                <input type="radio"/>
+                                <span style="font-size: 0.8em">我已阅读并且同意《知了网络服务使用协议》</span>
+                            </ul>
+                            <ul style="margin-left: 14em;"  data-toggle="modal" data-target="#myModal" >
+                                <a id="indexall">已有帐号</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--第二三部分-->
+<!--导航条-->
+<a name="goto"></a>
+<div class="container-fluid " id="nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 top_height">
+                <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                <span>知了</span>
+            </div>
+            <div class="col-md-10 nav_height">
+                <nav class="navbar navbar-right">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+                                <li><a href="findperson.html">人脉</a></li>
+                                <li><a href="find.html">发现</a></li>
+                                <li><a href="hero.html">英雄帖</a></li>
+                                <li><a href="one.html">个人博客</a></li>
+                            </ul>
+                            <form class="navbar-form navbar-right" form-inline role="search" id="nav_search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="glyphicon glyphicon-search"></button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--第二部分模块展示-->
+<a name="index-main"></a>
+<div class="container-fluid">
+    <div class="index-second">
+    <div class="row">
+        <div class="col-md-12 indexwhat">
+            What Can we Do?
+        </div>
+        <div class="col-md-6 ">
+            <!--<img src="img/QQ图片20160402161316.png" alt="">-->
+            <ul >
+                <img src="../img/2.jpg" style="width: 360px;margin-left: 70px" alt="">
+                <li class="index-manito">大神推荐</li>
+                <li class="index-active">带你飞，一起up，up，up！！！</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <img src="../img/4.jpg" style="width: 360px;height: 360px;margin-left: 70px" alt="">
+                <li class="index-manito">职场干货</li>
+                <li class="index-active">精选干货，一起get,get,get！！！</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <img src="../img/3.jpg" style="width: 360px;height: 260px;margin-left: 70px"  alt="">
+                <li class="index-manito">找人办事</li>
+                <li class="index-active">有难题，帮,帮,帮！！！</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <img src="../img/1.jpg" style="width: 360px;margin-left: 70px" alt="">
+                <li class="index-manito">线下活动</li>
+                <li class="index-active">涨知识，嗨，嗨，嗨！！！</li>
+            </ul>
+        </div>
+    </div>
+        <!--<div class="indexbtn-style">-->
+            <!--<li><a href="#index-top" id="indextop" class="indexbtn">自恋知了</a></li>-->
+            <!--<li><a href="#index-main" class="indexbtn">全能知了</a></li>-->
+            <!--<li><a href="#indexfooter" class="indexbtn">特色知了</a></li>-->
+        <!--</div>-->
+    </div>
+    <!--第三部分模块展示-->
+    <a name="indexfooter"></a>
+        <!--<div class="row">-->
+            <!--<li class="col-md-6 indexhero">英雄帖</li>-->
+            <!--<li class="col-md-6 indexhelp">缘助圈</li>-->
+        <!--</div>-->
+    <div class="index-third">
+           <div class="index-tleft">
+               <p style="color: #53D0C6;font-size: 4em;text-align: center">英雄帖简介</p>
+                <p style="color: #888888;text-align: center">发英雄帖招同道中人，勇者至。</p>
+               <img src="../img/mv.png" alt="" style="margin-left: 6em">
+           </div>
+           <div class="index-tright row">
+               <div class="col-md-5 indexfour">
+                   <div class="indeximg"><img src="../img/in1.png" alt=""></div>
+                   <p class="index-tright1 ">方便</p>
+                   <p style="color: #888888">随时随地发布您的需求</p>
+                   </div>
+               <div class="col-md-5 indexfour">
+                   <div class="indeximg"> <img src="../img/in1.png" alt=""></div>
+                   <p class="index-tright1 ">快速</p>
+                   <p style="color: #888888">聚集行业精英及时响应</p>
+               </div>
+               <div class="col-md-5 indexfour">
+                   <div class="indeximg"> <img src="../img/in1.png" alt=""></div>
+                   <p class="index-tright1">可靠</p>
+                   <p style="color: #888888"> 值得您信任的平台</p>
+               </div>
+               <div class="col-md-5 indexfour">
+                   <div class="indeximg"><img src="../img/in1.png" alt=""></div>
+                   <p class="index-tright1 ">省心</p>
+               <p style="color: #888888">方便快捷解决烦心事</p>
+               </div>
+           </div>
+    </div>
+    <div class="container-fluid" id="bottom_all">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="#" class="font_bottom">关于我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">联系我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">企业入驻</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">友情链接</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了公益</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了社区</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom"> 京公网安备 11000002000088号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">京ICP证070359号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">网络文化经营许可证京网文[2014]2148-348号</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom">违法和不良信息举报电话：4006561155  Copyright © 2004-2016  知了ZL.com 版权所有</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#indexbtn').click(function () {
+            $('.index-first').hide();
+        })
+        $('#indextop').click(function () {
+            $(".index-first").fadeIn("slow");
+        })
+    })
+</script>
+</body>
+</html>

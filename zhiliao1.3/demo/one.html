@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布者详情界面</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/bottom.css"/>
+    <link rel="stylesheet" href="../css/one.css">
+</head>
+<script src="../js/jquery-2.1.1.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#my').click(function () {
+            $('#mine').show();
+            $('#mine1').hide();
+            $('#mine2').hide();
+            $('#mine3').hide();
+            $('#mine4').hide();
+            $('#mine5').hide();
+            $('#mine6').hide();
+            $('#mine8').hide();
+            $('#mine9').hide();
+            $('.newsee').hide();
+            $('.onemyintro').show();
+
+        })
+        $('#my1').click(function () {
+            $('#mine').hide();
+            $('#mine1').show();
+            $('#mine2').hide();
+            $('#mine3').hide();
+            $('#mine4').hide();
+            $('#mine5').hide();
+            $('#mine6').hide();
+            $('#mine8').hide();
+            $('#mine9').hide();
+            $('.newsee').hide();
+            $('.onemyintro').show();
+        });
+        $('#my2').click(function () {
+            $('#mine').hide();
+            $('#mine2').show();
+            $('#mine1').hide();
+            $('#mine3').hide();
+            $('#mine4').hide();
+            $('#mine5').hide();
+            $('#mine6').hide();
+            $('#mine8').hide();
+            $('#mine9').hide();
+            $('.newsee').hide();
+            $('.onemyintro').show();
+        });
+        $('#my3').click(function () {
+            $('#mine').hide();
+            $('#mine3').show();
+            $('#mine2').hide();
+            $('#mine1').hide();
+            $('#mine4').hide();
+            $('#mine5').hide();
+            $('#mine6').hide();
+            $('#mine8').hide();
+            $('#mine9').hide();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+        });
+        $('#my4').click(function () {
+            $('#mine').hide();
+            $('#mine4').show();
+            $('#mine2').hide();
+            $('#mine3').hide();
+            $('#mine1').hide();
+            $('#mine5').hide();
+            $('#mine6').hide();
+            $('#mine8').hide();
+            $('#mine9').hide();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+        });
+        $('#my5').click(function () {
+            $('#mine').hide();
+            $('#mine5').show();
+            $('#mine2').hide();
+            $('#mine3').hide();
+            $('#mine4').hide();
+            $('#mine1').hide();
+            $('#mine6').hide();
+            $('#mine8').hide();
+            $('#mine9').hide();
+            $('.newsee').hide();
+            $('.onemyintro').show();
+
+        });
+        $('#my6').click(function () {
+            $('#mine').hide();
+            $('#mine6').show();
+            $('#mine2').hide();
+            $('#mine3').hide();
+            $('#mine4').hide();
+            $('#mine5').hide();
+            $('#mine1').hide();
+            $('#mine8').hide();
+            $('#mine9').hide();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+        });
+//        $('#my7').click(function () {
+//            $('#mine7').show();
+//            $('#mine2').hide();
+//            $('#mine3').hide();
+//            $('#mine4').hide();
+//            $('#mine5').hide();
+//            $('#mine6').hide();
+//            $('#mine1').hide();
+//            $('#mine8').hide();
+//        });
+        $('#my8').click(function () {
+            $('#mine').hide();
+            $('#mine8').show();
+            $('#mine2').hide();
+            $('#mine3').hide();
+            $('#mine4').hide();
+            $('#mine5').hide();
+            $('#mine6').hide();
+            $('#mine1').hide();
+            $('#mine9').hide();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+        });
+        $('#my9').click(function () {
+            $('#mine').hide();
+            $('#mine9').show();
+            $('#mine8').hide();
+            $('#mine2').hide();
+            $('#mine3').hide();
+            $('#mine4').hide();
+            $('#mine5').hide();
+            $('#mine6').hide();
+            $('#mine1').hide();
+            $('.newsee').hide();
+            $('.onemyintro').hide();
+        });
+        $('#timeintro').click(function () {
+            $('.onemyintro').hide();
+            $('.newsee').show();
+        })
+        $('#newintro').click(function () {
+            $('.onemyintro').show();
+            $('.newsee').hide();
+        })
+        $('#newhero').click(function () {
+            $('.onemyintro').show();
+            $('.newsee').hide();
+        })
+        $('#acxq').click(function () {
+            $('.onemyintro').show();
+        })
+        $('#newac').click(function () {
+            $('.onemyintro').show();
+        })
+        $('.raterate').click(function(){
+            $('#onerate').show();
+        })
+        $('.ratesub').click(function(){
+            $('#onerate').hide();
+        })
+        $('.dd').click(function(){
+            $('#ddxq').show();
+        })
+    })
+</script>
+<body>
+<!--导航栏-->
+<div class="container-fluid " id="nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 top_height">
+                <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                <span>知了</span>
+            </div>
+            <div class="col-md-10 nav_height">
+                <nav class="navbar navbar-right">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+                                <li><a href="findperson.html">人脉</a></li>
+                                <li><a href="find.html">发现</a></li>
+                                <li><a href="hero.html">英雄帖</a></li>
+                                <li><a href="one.html">个人博客</a></li>
+                            </ul>
+                            <form class="navbar-form navbar-right" form-inline role="search" id="nav_search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="glyphicon glyphicon-search"></button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container one-main">
+           <div class="oneleft">
+               <ul id="my">
+                   <h1>个人中心</h1>
+               </ul>
+               <ul id="my1">我的收藏</ul>
+               <ul id="my9">我的订单</ul>
+               <ul class="btn btn-primary oneintro " role="button"
+                   data-toggle="collapse" href="#oneask"
+                   aria-expanded="false" aria-controls="collapseExample">
+                   <li style="padding-left: 1em;list-style: none;font-size: 1.5em">英雄帖</li>
+                   <div class="collapse" id="oneask">
+                       <div class="well oneli">
+                           <li class="oneli" id="my2">我的发布</li>
+                           <li class="oneli" id="my3">我的申请</li>
+                           <li class="oneli" id="my4">已完成</li>
+                       </div>
+                   </div>
+               </ul>
+               <ul class="btn btn-primary oneintro " role="button"
+               data-toggle="collapse" href="#onehero"
+               aria-expanded="false" aria-controls="collapseExample">
+                   <li style="padding-left: 0.6em;list-style: none;font-size: 1.5em">活动</li>
+                   <div class="collapse" id="onehero">
+                       <div class="well oneli">
+                          <li class="oneli" id="my5">发布</li>
+                          <li class="oneli" id="my6">参加</li>
+                       </div>
+                   </div>
+               </ul>
+               <ul id="my7">
+                   <a href="blog.html" class="one-a">我的博客</a>
+               </ul>
+               <ul id="my8">个人资料</ul>
+           </div>
+           <div class="oneright" id="oneright" >
+               <div id="mine">
+                   <img src="../img/one.png" alt="">
+                   <div class="row">
+                   <ul class="col-md-6">
+                       <a href="#" class="one-a" id="newintro">最近发布信息</a>
+                   </ul>
+                   <ul class="col-md-6">
+                       <a href="#" class="one-a" id="timeintro">最近浏览信息</a>
+                   </ul>
+                   </div>
+                   <!--我的发布-->
+                   <div class="onemyintro">
+                       <div class="row">
+                           <ul class="col-md-2">
+                           <img src="../img/fp1.jpg" alt=""
+                                style="width: 6em;height: 6em;border-radius: 50%"/>
+                           </ul>
+                           <ul class="col-md-10 oneinfo">
+                               <li >coco|职位信息未填写</li>
+                               <br/>
+                               <li>河南 it 2016/04/16 12:05</li>
+                               <li style="font-size: 2em;margin-top: 2em">
+                                   发布英雄帖：谁来帮我做html5评论界面？</li>
+                               <li><a href="hero.html">coco发布的英雄帖</a></li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="newsee" hidden="hidden">
+                      <table class="onetale">
+                          <tr>
+                              <td>信息标题</td>
+                              <td>更新时间</td>
+                              <td>操作</td>
+                          </tr>
+                          <tr>
+                              <td>架构设计以及以后后端开发</td>
+                              <td>2016/04/08</td>
+                              <td>加入收藏</td>
+                          </tr>
+                          <tr>
+                              <td>学生互联网研发求职咨询</td>
+                              <td>2016/04/10</td>
+                              <td>加入收藏</td>
+                          </tr>
+                      </table>
+                   </div>
+               </div>
+               <div id="mine1" hidden="hidden" >
+                   <div class="row">
+                   <ul class="col-md-3">收藏的英雄帖</ul>
+                   <ul class="col-md-3">收藏的热门话题</ul>
+                   <ul class="col-md-3">谁收藏了我的信息</ul>
+                   <ul class="col-md-3">关注的人的文章</ul>
+                   </div>
+                   <div class="onemyintro">
+                       <ul class="hero-infoshow">
+                          <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                              href="#collapseExam" aria-expanded="false"
+                              aria-controls="collapseExam">html5</li>
+                           <li>求简洁大方的时间轴</li>
+                           <li>发布时间</li>
+                           <li>截止时间</li>
+                           <li><a href="#" class="one-a">取消收藏</a></li>
+                           <div class="collapse" id="collapseExam">
+                               <div class="well hero-ask">
+                                   <li>1、css文件与js文件分开</li>
+                                   <li>2、代码需要简洁</li>
+                                   <li>3、外观简洁大方</li>
+                               </div>
+                           </div>
+                       </ul>
+                       <ul class="hero-infoshow">
+                          <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                              href="#collapseExample2" aria-expanded="false"
+                              aria-controls="collapseExample2">html5</li>
+                           <li>求简洁大方的时间轴</li>
+                           <li>发布时间</li>
+                           <li>截止时间</li>
+                           <div class="collapse" id="collapseExample2">
+                               <div class="well hero-ask">
+                                   <li>1、css文件与js文件分开</li>
+                                   <li>2、代码需要简洁</li>
+                                   <li>3、外观简洁大方</li>
+                               </div>
+                           </div>
+                       </ul>
+                   </div>
+                   <div class="newsee" hidden="hidden">
+                       <table class="onetale">
+                           <tr>
+                               <td>信息标题</td>
+                               <td>更新时间</td>
+                               <td>操作</td>
+                           </tr>
+                           <tr>
+                               <td>架构设计以及以后后端开发</td>
+                               <td>2016/04/08</td>
+                               <td>加入收藏</td>
+                           </tr>
+                           <tr>
+                               <td>学生互联网研发求职咨询</td>
+                               <td>2016/04/10</td>
+                               <td>加入收藏</td>
+                           </tr>
+
+                       </table>
+                   </div>
+               </div>
+               <div id="mine2" hidden="hidden" class="row">
+                   <ul class="col-md-3" id="newhero">
+                       <a >最新发布</a>
+                   </ul>
+                   <ul class="col-md-3">显示中的信息</ul>
+                   <ul class="col-md-3">审核中的信息</ul>
+                   <ul class="col-md-3">已删除的信息</ul>
+                   <div class="onemyintro" style="margin-top: 3em;margin-left: 3em" >
+                       <ul class="hero-infoshow">
+                           <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                               href="#c" aria-expanded="false"
+                               aria-controls="c">html5</li>
+                           <li>求简洁大方的时间轴</li>
+                           <li>发布时间</li>
+                           <li>截止时间</li>
+                           <li><a href="askers.html" class="one-a">查看申请者</a></li>
+                           <div class="collapse" id="c">
+                               <div class="well hero-ask">
+                                   <li>1、css文件与js文件分开</li>
+                                   <li>2、代码需要简洁</li>
+                                   <li>3、外观简洁大方</li>
+                               </div>
+                           </div>
+                       </ul>
+                       <ul class="hero-infoshow">
+                           <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                               href="#co" aria-expanded="false"
+                               aria-controls="co">html5</li>
+                           <li>求简洁大方的时间轴</li>
+                           <li>发布时间</li>
+                           <li>截止时间</li>
+                           <div class="collapse" id="co">
+                               <div class="well hero-ask">
+                                   <li>1、css文件与js文件分开</li>
+                                   <li>2、代码需要简洁</li>
+                                   <li>3、外观简洁大方</li>
+                               </div>
+                           </div>
+                       </ul>
+                   </div>
+               </div>
+               <div id="mine3" hidden="hidden"class="row">
+                   <ul class="col-md-3" id="acxq"><a>活动详情</a></ul>
+                   <ul class="col-md-3">活动发起者</ul>
+                   <ul class="col-md-3">活动时间</ul>
+                   <div class="onemyintro" style="margin-top: 3em;margin-left: 3em" >
+                       <ul class="hero-infoshow">
+                           <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                               href="#c" aria-expanded="false"
+                               aria-controls="c">html5</li>
+                           <li>求简洁大方的时间轴</li>
+                           <li>发布时间</li>
+                           <li>截止时间</li>
+                           <li><a href="#" class="one-a">查看申请者</a></li>
+                           <div class="collapse" id="c">
+                               <div class="well hero-ask">
+                                   <li>1、css文件与js文件分开</li>
+                                   <li>2、代码需要简洁</li>
+                                   <li>3、外观简洁大方</li>
+                               </div>
+                           </div>
+                       </ul>
+                       <ul class="hero-infoshow">
+                           <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                               href="#co" aria-expanded="false"
+                               aria-controls="co">html5</li>
+                           <li>求简洁大方的时间轴</li>
+                           <li>发布时间</li>
+                           <li>截止时间</li>
+                           <div class="collapse" id="co">
+                               <div class="well hero-ask">
+                                   <li>1、css文件与js文件分开</li>
+                                   <li>2、代码需要简洁</li>
+                                   <li>3、外观简洁大方</li>
+                               </div>
+                           </div>
+                       </ul>
+                   </div>
+               </div>
+               <div id="mine4" hidden="hidden" class="row">
+                   <ul class="col-md-4">浏览人数</ul>
+                   <ul class="col-md-4">发布英雄帖boss动态</ul>
+                   <ul class="col-md-4">我的评价</ul>
+               </div>
+               <div id="mine5" hidden="hidden" class="row">
+                   <ul class="col-md-3" id="newac"><a>最新发布</a></ul>
+                   <ul class="col-md-3">显示中的活动</ul>
+                   <ul class="col-md-3">审核中的活动</ul>
+                   <ul class="col-md-3">已删除的活动</ul>
+                   <div class="onemyintro" style="margin-top: 3em;margin-left: 3em" >
+                       <ul class="hero-infoshow">
+                           <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                               href="#c" aria-expanded="false"
+                               aria-controls="c">html5</li>
+                           <li>求简洁大方的时间轴</li>
+                           <li>发布时间</li>
+                           <li>截止时间</li>
+                           <li><a href="#" class="one-a">查看申请者</a></li>
+                           <div class="collapse" id="c">
+                               <div class="well hero-ask">
+                                   <li>1、css文件与js文件分开</li>
+                                   <li>2、代码需要简洁</li>
+                                   <li>3、外观简洁大方</li>
+                               </div>
+                           </div>
+                       </ul>
+                       <ul class="hero-infoshow">
+                           <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                               href="#co" aria-expanded="false"
+                               aria-controls="co">html5</li>
+                           <li>求简洁大方的时间轴</li>
+                           <li>发布时间</li>
+                           <li>截止时间</li>
+                           <div class="collapse" id="co">
+                               <div class="well hero-ask">
+                                   <li>1、css文件与js文件分开</li>
+                                   <li>2、代码需要简洁</li>
+                                   <li>3、外观简洁大方</li>
+                               </div>
+                           </div>
+                       </ul>
+                   </div>
+               </div>
+               <div id="mine6" hidden="hidden">
+                   <ul class="col-md-4">最新动态</ul>
+                   <ul class="col-md-4">参加人数</ul>
+                   <ul class="col-md-4">活动详情</ul>
+               </div>
+               <div id="mine8" hidden="hidden">
+                   <img src="../img/person.png" alt=""/>
+               </div>
+               <div id="mine9" hidden="hidden">
+                   <h2>我的订单</h2>
+                   <ul class="hero-infoshow">
+                       <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                           href="#collapseExample4" aria-expanded="false"
+                           aria-controls="collapseExample4">html5</li>
+                       <li>求简洁大方的时间轴</li>
+                       <li>发布日期2016/4/12</li>
+                       <li>提交日期2016/4/18</li>
+                       <li style="float: right" >
+                           <button class="raterate">评价</button>
+                           <a class="dd">订单详情</a>
+                          </li>
+                       <div class="collapse" id="collapseExample4">
+                           <div class="well hero-ask">
+                               <li>1、css文件与js文件分开</li>
+                               <li>2、代码需要简洁</li>
+                               <li>3、外观简洁大方</li>
+                           </div>
+                       </div>
+                   </ul>
+                   <ul class="hero-infoshow">
+                       <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                           href="#collapseExample5" aria-expanded="false"
+                           aria-controls="collapseExample5">html5</li>
+                       <li>求简洁大方的时间轴</li>
+                       <li>发布时间</li>
+                       <li>截止时间</li>
+                       <li style="float: right" >
+                           <button class="raterate">评价</button>
+                           <a class="dd">订单详情</a>
+                       </li>
+
+                       <div class="collapse" id="collapseExample5">
+                           <div class="well hero-ask">
+                               <li>1、css文件与js文件分开</li>
+                               <li>2、代码需要简洁</li>
+                               <li>3、外观简洁大方</li>
+                           </div>
+                       </div>
+                   </ul>
+                   <ul class="hero-infoshow">
+                       <li class="btn btn-primary hero-infoshow hero-infoshow1"role="button" data-toggle="collapse"
+                           href="#collapseExample3" aria-expanded="false"
+                           aria-controls="collapseExample3">html5</li>
+                       <li>求简洁大方的时间轴</li>
+                       <li>发布时间</li>
+                       <li>截止时间</li>
+                       <li style="float: right">
+                           <button class="raterate">评价</button>
+                           <a class="dd">订单详情</a>
+                       </li>
+                       <div class="collapse" id="collapseExample3">
+                           <div class="well hero-ask">
+                               <li>1、css文件与js文件分开</li>
+                               <li>2、代码需要简洁</li>
+                               <li>3、外观简洁大方</li>
+                           </div>
+                       </div>
+                   </ul>
+
+                   <!--订单评价-->
+                   <div id="onerate">
+                       <p><b>您的建议至关重要！</b></p>
+                   <div class="onerate">
+                       <div class="rateleft row">
+                           <ul class="col-md-4">评价任务</ul>
+                           <ul class="col-md-8">
+                               <input type="text" style="height: 10em;width: 23em"
+                                      placeholder="愉快的交易结束了，认真的写一下您的评价吧。"/>
+                           </ul>
+                           <ul class="col-md-4">评价完成任务者</ul>
+                           <ul class="col-md-8">
+                               <input type="text" style="height: 10em;width: 23em"
+                                      placeholder="愉快的交易结束了，认真的写一下您的评价吧。"/>
+                           </ul>
+                       </div>
+                       <div class="rateright">
+                   <div class="shop-rating">
+                   <span class="title">满意程度：</span>
+                   <ul class="rating-level" id="stars1">
+                       <li><a class="one-star" star:value="100" href="#">100</a></li>
+                       <li><a class="two-stars" star:value="200" href="#">200</a></li>
+                       <li><a class="three-stars" star:value="300" href="#">300</a></li>
+                       <li><a class="four-stars" star:value="400" href="#">400</a></li>
+                       <li><a class="five-stars" star:value="500" href="#">500</a></li>
+                   </ul>
+                   <span class="result" id="stars1-tips"></span>
+                   <input type="hidden" id="stars1-input" name="a" value="" size="2" />
+               </div>
+                   <!--
+                       # 星级评分
+                       # star:value = 分数
+                   -->
+                   <div class="shop-rating">
+                       <span class="title">任务完成程度：</span>
+                       <ul class="rating-level" id="stars2">
+                           <li><a class="one-star" star:value="1" href="#">1</a></li>
+                           <li><a class="two-stars" star:value="2" href="#">2</a></li>
+                           <li><a class="three-stars" star:value="3" href="#">3</a></li>
+                           <li><a class="four-stars" star:value="4" href="#">4</a></li>
+                           <li><a class="five-stars" star:value="5" href="#">5</a></li>
+                       </ul>
+                       <span class="result" id="stars2-tips"></span>
+                       <input type="hidden" id="stars2-input" name="b" value="" size="2" />
+
+
+                   </div>
+                           <ul >
+                               <ul class="col-md-4"></ul>
+                           <button class="col-md-5 ratesub">提交订单</button>
+                       </ul>
+                       </div>
+
+                   </div>
+                   </div>
+                   <!-- END 星级评分 -->
+                   <!--<input type="button" value="test" onclick="teststars()" />-->
+                   <script type="text/javascript">
+                       var Class = {
+                           create: function() {
+                               return function() { this.initialize.apply(this, arguments); }
+                           }
+                       }
+                       var Extend = function(destination, source) {
+                           for (var property in source) {
+                               destination[property] = source[property];
+                           }
+                       }
+                       function stopDefault( e ) {
+                           if ( e && e.preventDefault ){
+                               e.preventDefault();
+                           }else{
+                               window.event.returnValue = false;
+                           }
+                           return false;
+                       }
+                       /**
+                        * 星星打分组件
+                        *
+                        * @author	Yunsd
+                        * @date		2010-7-5
+                        */
+                       var Stars = Class.create();
+                       Stars.prototype = {
+                           initialize: function(star,options) {
+                               this.SetOptions(options); //默认属性
+                               var flag = 999; //定义全局指针
+                               var isIE = (document.all) ? true : false; //IE?
+                               var starlist = document.getElementById(star).getElementsByTagName('a'); //星星列表
+                               var input = document.getElementById(this.options.Input) || document.getElementById(star+"-input"); // 输出结果
+                               var tips = document.getElementById(this.options.Tips) || document.getElementById(star+"-tips"); // 打印提示
+                               var nowClass = " " + this.options.nowClass; // 定义选中星星样式名
+                               var tipsTxt = this.options.tipsTxt; // 定义提示文案
+                               var len = starlist.length; //星星数量
+
+                               for(i=0;i<len;i++){ // 绑定事件 点击 鼠标滑过
+                                   starlist[i].value = i;
+                                   starlist[i].onclick = function(e){
+                                       stopDefault(e);
+                                       this.className = this.className + nowClass;
+                                       flag = this.value;
+                                       input.value = this.getAttribute("star:value");
+                                       tips.innerHTML = tipsTxt[this.value]
+                                   }
+                                   starlist[i].onmouseover = function(){
+                                       if (flag<999){
+                                           var reg = RegExp(nowClass,"g");
+                                           starlist[flag].className = starlist[flag].className.replace(reg,"")
+                                       }
+                                   }
+                                   starlist[i].onmouseout = function(){
+                                       if (flag< 999){
+                                           starlist[flag].className = starlist[flag].className + nowClass;
+                                       }
+                                   }
+                               };
+                               if (isIE){ //FIX IE下样式错误
+                                   var li = document.getElementById(star).getElementsByTagName('li');
+                                   for (var i = 0, len = li.length; i < len; i++) {
+                                       var c = li[i];
+                                       if (c) {
+                                           c.className = c.getElementsByTagName('a')[0].className;
+                                       }
+                                   }
+                               }
+                           },
+                           //设置默认属性
+                           SetOptions: function(options) {
+                               this.options = {//默认值
+                                   Input:			"",//设置触保存分数的INPUT
+                                   Tips:			"",//设置提示文案容器
+                                   nowClass:	"current-rating",//选中的样式名
+                                   tipsTxt:		["1分","2分-不合格","3分-合格","4分-优秀","5分-完美"]//提示文案
+                               };
+                               Extend(this.options, options || {});
+                           }
+                       }
+
+                       /* For TEST */
+//                       function teststars(){
+//                           alert(document.getElementById("stars1-input").value + "|" + document.getElementById("stars2-input").value)
+//                       }
+
+                       var Stars1 = new Stars("stars1",{nowClass:"current-rating",tipsTxt:["100分","200分","300分","400分","500分"]})
+                       var Stars2 = new Stars("stars2")
+                   </script>
+                   <div id="ddxq" hidden="hidden" class="ddxq">
+                       <ul>
+                           <li>英雄信息:coco</li>
+                           <li>联系电话:17085453123</li>
+                       </ul>
+                       <ul>
+                           <h1>订单信息</h1>
+                           <li>订单编号:111154587888</li>
+                           <li>成交时间:2016/1/5</li>
+                           <li>订单约定:除协议外酬金按时交付外，双方达成的协议</li>
+                       </ul>
+                   </div>
+               </div>
+
+           </div>
+    </div>
+<div class="container-fluid" id="bottom_all">
+        <div class="row">
+            <div class="col-lg-6">
+                <a href="#" class="font_bottom">关于我们</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">联系我们</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">企业入驻</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">友情链接</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">知了公益</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">知了社区</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <a href="#" class="font_bottom"> 京公网安备 11000002000088号</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">京ICP证070359号</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">网络文化经营许可证京网文[2014]2148-348号</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <a href="#" class="font_bottom">违法和不良信息举报电话：4006561155  Copyright © 2004-2016  知了ZL.com 版权所有</a>
+            </div>
+        </div>
+    </div>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

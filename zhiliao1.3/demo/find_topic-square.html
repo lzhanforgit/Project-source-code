@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/find_module.css"/>
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/side_nav.css"/>
+    <link rel="stylesheet" href="../css/bottom.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部top  nav-->
+    <div class="container-fluid " id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 top_height">
+                    <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                    <span>知了</span>
+                </div>
+                <div class="col-md-10 nav_height">
+                    <nav class="navbar navbar-right">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+                                    <li><a href="findperson.html">人脉</a></li>
+                                    <li><a href="find.html" id="nav_find">发现</a></li>
+                                    <li><a href="hero.html">英雄帖</a></li>
+                                    <li><a href="one.html">个人博客</a></li>
+                                </ul>
+                                <form class="navbar-form navbar-right" form-inline role="search" id="nav_search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="glyphicon glyphicon-search"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主体main-->
+    <div class="container" id="find_topic-square">
+        <div class="row">
+            <!--左侧  话题广场-->
+            <div class="col-lg-9" id="find_topic-square_left">
+                <div class="row">
+                    <div class="col-md-4 content_padding">
+                        <h4>
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            话题广场
+                        </h4>
+                    </div>
+                    <div class="col-md-8" style="padding-left:31em;padding-top: 1em">
+                        <a href="#" class="font_small-tag_title">
+                            已关注<span>8</span>个话题</a>
+                    </div>
+                </div>
+                <hr/>
+                <!--话题广场分组标签-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span class="module_topic active"><a href="#find_module-int" data-toggle="tab">互联网</a></span>
+                                <span class="module_topic"><a href="#find_module-food" data-toggle="tab">美食</a></span>
+                                <span class="module_topic"><a href="#find_module-int" data-toggle="tab">摄影</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">苹果公司</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">科幻</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">足球</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">数据分析</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">IT行业</a></span>
+                            </div>
+                        </div><br/>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span class="module_topic active"><a href="#find_module-game" data-toggle="tab">游戏</a></span>
+                                <span class="module_topic"><a href="#find_module-food" data-toggle="tab">文化</a></span>
+                                <span class="module_topic"><a href="#find_module-int" data-toggle="tab">旅行</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">金融</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">健康</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">电影</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">生物学</a></span>
+                                <span class="module_topic"><a href="#" data-toggle="tab">音乐</a></span>
+                            </div>
+                        </div><br/>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span class="module_topic active"><a href="#find_module-int" data-toggle="tab">游戏</a></span>
+                                <span class="module_topic"><a href="#find_module-food" data-toggle="tab">文化</a></span>
+                                <span class="module_topic"><a href="#find_module-int" data-toggle="tab">旅行</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div><hr/>
+                <div class="row"><!--这部分是一个container，跟上面标签分组对应，标签对应热门话题标签-->
+                    <div class="container-fluid tab-content" id="find_module-content">
+                        <!--game部分-->
+                        <div class="container-fluid tab-pane active" role="tabpanel"  id="find_module-game">
+                            <p><span class="font_small-tag_title">来自话题：</span>
+                                <a href="#" class="font_small-tag_title">游戏</a></p>
+                            <!--游戏第一行-->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game1.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">游戏是一种基于物质满足之上，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game2.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">单机游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">单机游戏相对于网络游戏，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                            <!--游戏第二行-->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game2.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">游戏是一种基于物质满足之上，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game1.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">单机游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">单机游戏相对于网络游戏，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                            <!--游戏第三行-->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game1.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">游戏是一种基于物质满足之上，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game2.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">单机游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">单机游戏相对于网络游戏，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                            <!--游戏第四行-->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game2.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">游戏是一种基于物质满足之上，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game1.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">单机游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">单机游戏相对于网络游戏，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                            <!--游戏第五行-->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game1.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">游戏是一种基于物质满足之上，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game2.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">单机游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">单机游戏相对于网络游戏，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                            <!--游戏第六行-->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game2.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">游戏是一种基于物质满足之上，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../img/find_topic-square_game1.png" alt=""/>
+                                        </div>
+                                        <div class="col-lg-10 modul-game_title_padding">
+                                            <div class="row">
+                                                <div class="col-lg-3"><a href="#" class="font_small-tag_title">单机游戏</a></div>
+                                                <div class="col-lg-9" style="padding-left: 12em">
+                                                    <a href="#" class="font_small-tag_title">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>关注</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <span class="font-tag_modul-game">单机游戏相对于网络游戏，在一种特定时间、空间
+                                                        范围内遵循...</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </div>
+                        <!--美食部分-->
+                        <div class="container-fluid tab-pane active" role="tabpanel"  id="find_module-food">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <a href="#"><img src="../img/find_module-internet.png" class="img_radius" alt=""/></a>
+                                    <a href="#">美食</a>
+                                </div>
+                                <div class="col-md-8" style="padding-left:29em;padding-top: 1em">
+                                    <a href="#" class="font_small-tag_title">热门排序</a>
+                                    <span class="font_small-tag_title">|</span>
+                                    <a href="#" class="font_small-tag_title">时间排序</a>
+                                </div>
+                            </div><hr/>
+
+                        </div>
+                    </div>
+                </div>
+                <!--加载中-->
+                <div style="width:55em;height:2em;background:#DDDDDD;text-align: center">加载中</div>
+            </div>
+            <!--右侧 热门话题-->
+            <div class="col-lg-3" style="padding-left: 2em" id="find_topic-square_right">
+                <h4 style="margin-left:-1.5em">热门话题&nbsp;Top5</h4>
+                <div class="row" id="find_topic-square_one">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../img/find_module-other1.png" alt=""/>
+                        </div>
+                        <div class="col-lg-8 module_find-other" style="font-size:1.2em;color:#888888;padding-top: 0em">
+                            <a href="#">计量史学</a><p class="font-tag_modul-game">3079人关注</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="#" class="font_tag">无论生在汉朝还是唐朝，同一阶层的人生活水平是一样的吗？古代的生活水平是
+                           如何被量化的...</a>
+                        </div>
+                    </div>
+                </div><hr/>
+                <div class="row" id="find_topic-square_two">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../img/find_module-other2.png" alt=""/>
+                        </div>
+                        <div class="col-lg-8 module_find-other" style="font-size:1.2em;color:#888888;padding-top: 0em">
+                            <a href="#">Spacex</a><p class="font-tag_modul-game">604人关注</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="#" class="font_tag">有些青少年迷恋SpaceX创造的「奇迹」，但对自己祖国航天取得的突破
+                                却漠不关心，甚至唱衰，请问为什么？</a>
+                        </div>
+                    </div>
+                </div><hr/>
+                <div class="row" id="find_topic-square_three">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="../img/find_module-other1.png" alt=""/>
+                        </div>
+                        <div class="col-lg-8 module_find-other" style="font-size:1.2em;color:#888888;padding-top: 0em">
+                            <a href="#">Spacex</a><p class="font-tag_modul-game">604人关注</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="#" class="font_tag">包贝尔和如家是来拯救疫苗事件的吗？</a>
+                        </div>
+                    </div>
+                </div><hr/>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <!--底部bottom-->
+    <div class="container-fluid" id="bottom_all">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="#" class="font_bottom">关于我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">联系我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">企业入驻</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">友情链接</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了公益</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了社区</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom"> 京公网安备 11000002000088号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">京ICP证070359号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">网络文化经营许可证京网文[2014]2148-348号</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom">违法和不良信息举报电话：4006561155 Copyright © 2004-2016 知了ZL.com 版权所有</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>

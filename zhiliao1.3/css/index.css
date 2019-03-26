@@ -1,0 +1,203 @@
+/*logo*/
+.indexlogo img{
+
+}
+.indexmologin {
+    width: 40em;
+    height: 30em;
+}
+.indexre{
+    width: 30em;
+    margin-left: 1em;
+}
+.indexlocenter{
+    margin-left: 5em;
+    width: 28em;
+}
+.indexnocenter{
+    margin-left: 5em;
+    width: 28em;
+}
+.indexlocenterul{
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+/*点击出现登录模态框*/
+.indexdeng,.indexdeng:focus,.indexdeng:active{
+    /*background-color: #F4F4F4;*/
+    background-color: #D5E3EE;
+    border: none;
+}
+.indexdeng:hover{
+    /*background-color: #F4F4F4;*/
+    background-color: #D5E3EE;
+    border: none;
+    color:#05121F ;
+}
+/*登录*/
+.indexlogin{
+    list-style: none;
+    margin-left: 55em;
+    position: absolute;
+    margin-top: 1em;
+}
+.indexlogin li{
+    display: inline-block;
+    font-size: 2em;
+    color: #05121F;
+    margin-top: 1em;
+    margin-left: 0.53em;
+}
+/*首页巨幕*/
+.index-first{
+    background-image: url("../img/apic5527.jpg");
+    background-size: 85em,60em;
+    width: 103em;
+    height: 60em;
+    font-family: myfont;
+    display: flex;
+    flex-direction: row;
+}
+#indexfont{
+    border: solid 0.1em #FFFFFF ;
+    background-color:#F4F4F4;
+    color:#FCB2B2 ;
+    font-size: 8em;
+    margin-left: 5em;
+    border-radius: 3%;
+    font-family: myfont;
+}
+.indexintro p{
+    color: #F4F4F4;
+    text-align: center;
+    font-size: 2em;
+    font-family: myfont;
+}
+.indexintro{
+    margin-top: 3em;
+    margin-bottom: 6em;
+    font-family: myfont;
+}
+#indexbtn{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin-left: 15em;
+    font-size: 3em;
+    background-color:#FFFFFF;
+    color:#FCB2B2 ;
+    font-family: myfont;
+}
+#indexbtn:hover{
+    color: #4ACAA8;
+}
+.indexbtn-style{
+    position:absolute;
+    right: -7em;
+    top: 5em;
+}
+.indexbtn-style li{
+    list-style: none;
+    width: 7em;
+    text-align: center;
+}
+.indexbtn-style li a{
+    color:#FCB2B2 ;
+    font-size: 1.5em;
+    line-height:6em;
+}
+.indexbtn-style li a:hover{
+   background-color:#FCB2B2;
+    color: #4ACAA8;
+    font-size: 1.5em;
+    line-height:6em;
+}
+.indexbtn{
+    font-size:3em;
+}
+.indexbtn:hover{
+    text-decoration: none;
+}
+.index-second{
+    position: relative;
+    background-color:#FAFAFA;
+    font-family: myfont;
+}
+.indexwhat{
+    text-align: center;
+    color: #53D0C6;
+    font-size: 3em;
+    font-family: myfont;
+}
+.index-manito{
+    width: 5em;
+    margin-left: 3em;
+    list-style: none;
+    text-align: center;
+    font-size: 3em;
+    color:#FCB2B2;
+    font-family: myfont;
+}
+.index-active{
+    width: 18em;
+    margin-left: 1.5em;
+    list-style: none;
+    text-align: center;
+    font-size: 1.8em;
+    color:#4ACAA8;
+}
+.index-third{
+    display: flex;
+    flex-direction: row;
+    font-family: myfont;
+}
+.index-tleft{
+    width: 40%;
+    font-family: myfont;
+}
+.index-tright{
+     width: 60%;
+    margin-left: 16em;
+    font-family: myfont;
+
+ }
+.index-tright1{
+   color: #53D0C6;
+    font-size: 3em;
+    line-height: 2em;
+    font-family: myfont;
+}
+.indexfour{
+    margin-bottom:4em;
+    margin-top:4em;
+}
+.indexhero{
+     font-size: 3em;
+    text-align: center;
+    list-style: none;
+    color: #53D0C6;
+    width: 13em;
+    margin-left: 0.38em;
+    background-color: #F4F4F4;
+    font-family: myfont;
+ }
+.indexhelp{
+    color: #FF5142;
+    font-size: 3em;
+    text-align: center;
+    list-style: none;
+    width: 14.13em;
+    background-color: #F4F4F4;
+    font-family: myfont;
+}
+.indeximg{
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    background-color: #FCB2B2;
+    padding-left: 0.8em;
+    padding-top: 0.5em;
+}
+.indeximg:hover{
+    background-color: #53D0C6;
+}

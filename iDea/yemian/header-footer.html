@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>上传您的美食菜谱，拿手家常菜-爱厨房</title>
+    <!--<meta name="description" content="iDea a Bootstrap-based, Responsive HTML5 Template">-->
+    <!--<meta name="author" content="htmlcoder.me">-->
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../imagesNew/favicon.ico">
+    <!-- Web Fonts -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="../cssNew/bootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="../fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Fontello CSS -->
+    <link href="../fonts/fontello/css/fontello.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <!--<link href="../cssNew/magnific-popup.css" rel="stylesheet">-->
+    <!--<link href="../cssNew/animations.css" rel="stylesheet">-->
+    <!--<link href="../cssNew/owl.carousel.css" rel="stylesheet">-->
+
+    <!-- iDea core CSS file -->
+    <link href="../cssNew/style.css" rel="stylesheet">
+
+    <!-- Color Scheme (In order to change the color scheme, replace the red.css with the color scheme that you prefer)-->
+    <link href="../cssNew/red.css" rel="stylesheet">
+
+    <!-- Custom css -->
+    <!--<link href="../cssNew/custom.css" rel="stylesheet">-->
+
+    <!--发布菜谱的css-->
+    <!--<link href="../cssNew/zqk_fbcp.css" rel="stylesheet">-->
+</head>
+
+<!-- body classes:
+        "boxed": boxed layout mode e.g. <body class="boxed">
+        "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1">
+-->
+
+
+<body>
+<!-- scrollToTop -->
+<!-- ================ -->
+<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+<!-- page wrapper start -->
+<!-- ================ -->
+<div class="page-wrapper">
+
+    <!-- header-top start -->
+    <!-- ================ -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+						<span id="" style="line-height: 30px;">
+							Hi,欢迎来到爱厨房
+						</span>
+                <div class="col-xs-10 col-sm-6" style="float: right;">
+
+                    <!-- header-top-second start -->
+                    <!-- ================ -->
+                    <div id="header-top-second"  class="clearfix">
+
+                        <!-- header top dropdowns start -->
+                        <!-- ================ -->
+                        <div class="header-top-dropdown">
+
+                            <!--搜索-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i> 搜索</button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                    <li>
+                                        <form role="search" class="search-box">
+                                            <div class="form-group has-feedback">
+                                                <input type="text" class="form-control" placeholder="搜索">
+                                                <i class="fa fa-search form-control-feedback"></i>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <!--登录-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 登录</button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                    <li>
+                                        <form class="login-form">
+                                            <div class="form-group has-feedback">
+                                                <label class="control-label">用户名:</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                                <i class="fa fa-user form-control-feedback"></i>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <label class="control-label">密码:</label>
+                                                <input type="password" class="form-control" placeholder="">
+                                                <i class="fa fa-lock form-control-feedback"></i>
+                                            </div>
+                                            <!--登录按钮-->
+                                            <button type="submit" class="btn btn-group btn-dark btn-sm">登录</button>
+                                            <span>or</span>
+
+                                            <button type="submit" class="btn btn-group btn-default btn-sm">注册</button>
+                                            <ul>
+                                                <li><a href="#">忘记密码？</a></li>
+                                            </ul>
+                                            <div class="divider"></div>
+                                            <span class="text-center">其他方式</span>
+                                            <ul class="social-links clearfix">
+                                                <li class="facebook"><a target="_blank" href="http://sc.chinaz.com"><i class="fa fa-qq"></i></a></li>
+                                                <li class="twitter"><a target="_blank" href="http://sc.chinaz.com"><i class="fa fa-weixin"></i></a></li>
+                                                <li class="googleplus"><a target="_blank" href="http://sc.chinaz.com"><i class="fa fa-weibo"></i></a></li>
+                                            </ul>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!--购物车-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i> 购物车</button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation cart">
+                                    <li>
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th class="quantity">数量</th>
+                                                <th class="product">产品</th>
+                                                <th class="amount">总价</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="quantity">2 x</td>
+                                                <td class="product"><a href="">Android 4.4 Smartphone</a><span class="small">4.7" Dual Core 1GB</span></td>
+                                                <td class="amount">$199.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="quantity">3 x</td>
+                                                <td class="product"><a href="">Android 4.2 Tablet</a><span class="small">7.3" Quad Core 2GB</span></td>
+                                                <td class="amount">$299.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="quantity">3 x</td>
+                                                <td class="product"><a href="">Desktop PC</a><span class="small">Quad Core 3.2MHz, 8GB RAM, 1TB Hard Disk</span></td>
+                                                <td class="amount">$1499.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="total-quantity" colspan="2">总共8项</td>
+                                                <td class="total-amount">$1997.00</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-body text-right">
+                                            <a href="" class="btn btn-group btn-default btn-sm">查看</a>
+                                            <a href="" class="btn btn-group btn-default btn-sm">结算</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!--  header top dropdowns end -->
+
+                    </div>
+                    <!-- header-top-second end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+
+
+<!-- header start (remove fixed class from header in order to disable fixed navigation mode) -->
+<!-- ================ -->
+<header class="header fixed clearfix">
+    <div class="container">
+        <div class="row">
+
+            <!--logo部分开始-->
+            <div class="col-md-3">
+
+                <!-- header-left start -->
+                <!-- ================ -->
+                <div class="header-left clearfix">
+
+                    <!-- logo -->
+                    <div class="logo">
+                        <a href="../首页.html"><img id="logo" src="../imagesNew/logo_red.png" alt="iDea"></a>
+                    </div>
+
+                    <!-- name-and-slogan -->
+                    <div class="site-slogan">&nbsp;爱厨房</div>
+                </div>
+                <!-- header-left end -->
+            </div>
+            <!--logo部分开始-->
+
+            <!--导航部分开始-->
+            <div class="col-md-9">
+
+                <!-- header-right start -->
+                <!-- ================ -->
+                <div class="header-right clearfix">
+
+                    <div class="main-navigation animated">
+
+                        <!-- 导航开始 -->
+                        <!-- ================ -->
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="container-fluid">
+
+                                <!-- Toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <!-- 导航 -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="dropdown">
+                                            <a href="../首页.html" class="dropdown-toggle" data-toggle="dropdown">首页</a>
+                                        </li>
+                                        <!-- 菜谱开始 -->
+                                        <!-- 菜谱 -->
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" >菜谱</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="菜谱_精选.html">精选</a></li>
+                                                <li><a href="菜谱_分类.html">分类</a></li>
+                                                <li><a href="菜谱_食材.html">食材</a></li>
+                                                <li><a href="菜谱_菜单.html">菜单</a></li>
+                                            </ul>
+                                        </li>
+                                        <!-- 写食派 -->
+                                        <li class="dropdown">
+                                            <a href="xieshipai.html" class="dropdown-toggle" data-toggle="dropdown">写食派</a>
+                                        </li>
+                                        <!-- 达人馆 -->
+                                        <li class="dropdown mega-menu active">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">达人馆</a>
+                                        </li>
+                                        <!-- 市集 -->
+                                        <li class="dropdown">
+                                            <a href="" class="dropdown-toggle" data-toggle="dropdown">市集</a>
+                                        </li>
+                                        <!--活动-->
+                                        <li class="dropdown">
+                                            <a href="活动.html" class="dropdown-toggle" data-toggle="dropdown">活动</a>
+                                        </li>
+                                        <!--个人中心-->
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </nav>
+                        <!-- 导航结束 -->
+
+                    </div>
+
+                </div>
+            </div>
+            <!--导航部分结束-->
+
+        </div>
+    </div>
+</header>
+<!-- header end -->
+
+
+<!--菜单下面的灰条-->
+<!-- page-intro start-->
+<!-- ================ -->
+<div class="page-intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home pr-10"></i><a style="color:black" href="../首页.html">主页</a></li>
+                    <li class="active">发布菜谱</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- page-intro end -->
+
+
+<!-- main-container start -->
+<section class="main-container">
+    <div class="container">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+</section>
+<!-- page-wrapper end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster
+================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script type="text/javascript" src="../jsNew/jquery.js"></script>
+<script type="text/javascript" src="../jsNew/bootstrap.min.js"></script>
+
+<!-- Modernizr javascript -->
+<!--<script type="text/javascript" src="../jsNew/modernizr.js"></script>-->
+
+<!-- Isotope javascript -->
+<!--<script type="text/javascript" src="../jsNew/isotope.pkgd.min.js"></script>-->
+<!---->
+<!-- Owl carousel javascript -->
+<!--<script type="text/javascript" src="../jsNew/owl.carousel.js"></script>-->
+
+<!-- Magnific Popup javascript -->
+<!--<script type="text/javascript" src="../jsNew/jquery.magnific-popup.min.js"></script>-->
+
+<!-- Appear javascript -->
+<!--<script type="text/javascript" src="../jsNew/jquery.appear.js"></script>-->
+
+<!-- Sharrre javascript -->
+<!--<script type="text/javascript" src="../jsNew/jquery.sharrre.js"></script>-->
+
+<!-- Count To javascript -->
+<!--<script type="text/javascript" src="../jsNew/jquery.countTo.js"></script>-->
+
+<!-- Parallax javascript -->
+<!--<script src="../jsNew/jquery.parallax-1.1.3.js"></script>-->
+
+<!-- Contact form -->
+<!--<script src="../jsNew/jquery.validate.js"></script>-->
+
+<!-- Initialization of Plugins -->
+<!--<script type="text/javascript" src="../jsNew/template.js"></script>-->
+
+<!-- Custom Scripts -->
+<!--<script type="text/javascript" src="../jsNew/custom.js"></script>-->
+
+<!--引入JQUERY文件-->
+<script type="javascript" src="../jsNew/jquery-1.7.2.min.js"></script>
+
+
+
+
+
+</body>
+</html>

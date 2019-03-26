@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="abced">
+			
+		</div>
+	</body>
+<!--<script src="../jsNew/jquery-2.1.4.js"></script>-->
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script language="JavaScript">
+				
+window.onload=function(){
+	alert("ok");
+	function abc(){
+		for(var i=0;i<5;i++){
+			var Div=document.createElement("div");
+			Div.style.border="1px solid black";
+			Div.style.width="100px";
+			Div.style.height="100px";
+			Div.style.backgroundColor="red";
+			Div.style.display = "inline-block";
+			document.getElementById("abced").appendChild(Div);
+        }
+	};
+	abc();
+}				
+</script>	
+
+</html>

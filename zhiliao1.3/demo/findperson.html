@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>找人界面</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/findperson.css">
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/bottom.css"/>
+    <link rel="stylesheet" href="../css/connection_map.css"/>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=N7EGYW2msGGm8kfbk5xBFY8ZpG8vufyh"></script>
+
+</head>
+<body>
+<!--头部top  nav-->
+<div class="container-fluid " id="nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 top_height">
+                <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                <span>知了</span>
+            </div>
+            <div class="col-md-10 nav_height">
+                <nav class="navbar navbar-right">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+                                <li><a href="findperson.html">人脉</a></li>
+                                <li><a href="find.html">发现</a></li>
+                                <li><a href="hero.html">英雄帖</a></li>
+                                <li><a href="one.html">个人博客</a></li>
+                            </ul>
+                            <form class="navbar-form navbar-right" form-inline role="search" id="nav_search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="glyphicon glyphicon-search"></button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--中间部分-->
+<div class="container fpdiv">
+<div class="fptop">
+    <span style="color: #5D6E98;font-size: 3em">我的人脉</span>
+    <span style="font-size: 1.2em;color: #57668D;">精彩从这里开始</span>
+</div>
+<div class="fpmain">
+<div class="fpleft">
+            <div class="row">
+                <div class="col-lg-11.5 fpleftbq">
+                    <li class="fpleftli"><span class="module_topic active">
+                        <a href="#fp_index" data-toggle="tab" class="fpleftlifont">首页</a></span></li>
+                    <li class="fpleftli"><span class="module_topic">
+                        <a href="#fp_school" data-toggle="tab" class="fpleftlifont">校友</a></span></li>
+                    <li class="fpleftli"><span class="module_topic"><a href="#fp_tongxing" class="fpleftlifont" data-toggle="tab">
+                        同行
+                    </a></span></li>
+                    <li class="fpleftli"><span class="module_topic"><a href="#fp_together" class="fpleftlifont" data-toggle="tab">
+                        同事/前同事</a></span></li>
+                    <li class="fpleftli"><span class="module_topic"><a href="#fp_near" class="fpleftlifont" data-toggle="tab">
+                        附近</a></span></li>
+                    <li class="fpleftli"><span class="module_topic"><a href="#fp_tel" class="fpleftlifont" data-toggle="tab">
+                        通讯录</a></span></li>
+                </div>
+            </div>
+    <div class="row"><!--这部分是一个container，跟上面标签分组对应，标签对应热门话题标签-->
+        <div class="container-fluid tab-content active"  id="find_module-content">
+            <div class="container-fluid tab-pane active" id="fp_index" role="tabpanel">
+                <ul class="ulschool row">
+                    <li class="col-md-12"><h3> 通讯录</h3></li>
+                    <li class="col-md-5 ulschoolli row">
+                        <div class="col-md-6">
+                            <img src="../img/fp1.jpg"
+                                 style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                        <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                            <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                            <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                        </div>
+
+                    </li>
+                    <li class="col-md-5 ulschoolli row">
+                        <div class="col-md-6">
+                            <img src="../img/fp1.jpg"
+                                 style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                        <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                            <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                            <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                        </div>
+
+                    </li>
+                    <li class="col-md-5 ulschoolli row">
+                        <div class="col-md-6">
+                            <img src="../img/fp1.jpg"
+                                 style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                        <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                            <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                            <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                        </div>
+
+                    </li>
+                    <li class="col-md-5 ulschoolli row">
+                        <div class="col-md-6">
+                            <img src="../img/fp1.jpg"
+                                 style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                        <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                            <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                            <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                        </div>
+
+                    </li>
+                    <li class="col-md-12" style="text-align: center;color: #333333">
+                        <a href="#fp_tel" data-toggle="tab" >查看更多</a></li>
+                </ul>
+                <ul class="ulschool row">
+                <li class="col-md-12"><h3>同行</h3></li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-12" style="text-align: center;color: #333333">
+                    <a href="#fp_tongxing" data-toggle="tab" >查看更多</a></li>
+            </ul>
+                <ul class="ulschool row">
+                <li class="col-md-12"><h3>同事/前同事</h3></li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-12" style="text-align: center;color: #333333">
+                    <a href="#fp_together" data-toggle="tab" >查看更多</a></li>
+            </ul>
+                <ul class="ulschool row">
+                <li class="col-md-12"><h3> 附近</h3></li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-5 ulschoolli row">
+                    <div class="col-md-6">
+                   <img src="../img/fp1.jpg"
+                        style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                    <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                       <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                        <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                    </div>
+
+                </li>
+                <li class="col-md-12" style="text-align: center;color: #333333">
+                    <a href="#fp_near" data-toggle="tab" >查看更多</a></li>
+            </ul>
+
+                <ul class="ulschool row">
+                    <li class="col-md-12"><h3>校友</h3></li>
+                    <li class="col-md-5 ulschoolli row">
+                        <div class="col-md-6">
+                            <img src="../img/fp1.jpg"
+                                 style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                        <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                            <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                            <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                        </div>
+
+                    </li>
+                    <li class="col-md-5 ulschoolli row">
+                        <div class="col-md-6">
+                            <img src="../img/fp1.jpg"
+                                 style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                        <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                            <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                            <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                        </div>
+
+                    </li>
+                    <li class="col-md-5 ulschoolli row">
+                        <div class="col-md-6">
+                            <img src="../img/fp1.jpg"
+                                 style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                        <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                            <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                            <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                        </div>
+
+                    </li>
+                    <li class="col-md-5 ulschoolli row">
+                        <div class="col-md-6">
+                            <img src="../img/fp1.jpg"
+                                 style="width:8em;height:8em;border-radius: 50%;text-align: center"/></div>
+                        <div class="col-md-6" style="text-align: center;margin-top: 2em">
+                            <span style="color: #EB7350"><b>岳云鹏</b></span> <br/>
+                            <span style="color: #333333;font-size: 0.8em">子牛基金创始人</span><br/>
+                        <span><button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080">
+                            <span style="color: #FA7D3C"><b>+</b></span><span>关注</span>
+                        </button></span>
+                        </div>
+
+                    </li>
+                    <li class="col-md-12" style="text-align: center;color: #333333">
+                        <a href="#fp_school" data-toggle="tab" >查看更多</a></li>
+                </ul>
+
+            </div>
+            <!--校友部分-->
+            <div class="container-fluid tab-pane " role="tabpanel"  id="fp_school">
+                <div class="container-fluid" id="connection_one-contacts">
+                    <article class="row">
+                        <div class="col-md-12">
+                            <h3>
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                和您同一所学校的
+                            </h3>
+                        </div>
+                    </article>
+                    <p></p>
+                    <article class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="../img/connection_connect.png" class="img_sl" alt="...">
+                                    </a>
+                                    <div class="caption">
+                                        <h3 class="center">姓名  职业</h3>
+                                        <p class="font_body-main center">话题、兴趣介绍</p>
+                                        <p class="center"><a href="#" class="btn btn-success button-connect" role="button">联系Ta</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="../img/connection_connect.png" class="img_sl" alt="...">
+                                    </a>
+                                    <div class="caption">
+                                        <h3 class="center">姓名  职业</h3>
+                                        <p class="font_body-main center">话题、兴趣介绍</p>
+                                        <p class="center"><a href="#" class="btn btn-success button-connect" role="button">联系Ta</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="../img/connection_connect.png" class="img_sl" alt="...">
+                                    </a>
+                                    <div class="caption">
+                                        <h3 class="center">姓名  职业</h3>
+                                        <p class="font_body-main center">话题、兴趣介绍</p>
+                                        <p class="center"><a href="#" class="btn btn-success button-connect" role="button">联系Ta</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="../img/connection_connect.png" class="img_sl" alt="...">
+                                    </a>
+                                    <div class="caption">
+                                        <h3 class="center">姓名  职业</h3>
+                                        <p class="font_body-main center">话题、兴趣介绍</p>
+                                        <p class="center"><a href="#" class="btn btn-success button-connect" role="button">联系Ta</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="../img/connection_connect.png" class="img_sl" alt="...">
+                                    </a>
+                                    <div class="caption">
+                                        <h3 class="center">姓名  职业</h3>
+                                        <p class="font_body-main center">话题、兴趣介绍</p>
+                                        <p class="center"><a href="#" class="btn btn-success button-connect" role="button">联系Ta</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="../img/connection_connect.png" class="img_sl" alt="...">
+                                    </a>
+                                    <div class="caption">
+                                        <h3 class="center">姓名  职业</h3>
+                                        <p class="font_body-main center">话题、兴趣介绍</p>
+                                        <p class="center"><a href="#" class="btn btn-success button-connect" role="button">联系Ta</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <p></p>
+                </div>
+            </div>
+            <!--同行部分-->
+            <div class="container-fluid tab-pane" role="tabpane2"  id="fp_tongxing">
+                同行部分
+            </div>
+            <div class="container-fluid tab-pane" role="tabpane3"  id="fp_together">
+
+            </div>
+
+            <div class="container-fluid tab-pane" role="tabpane4"  id="fp_near">
+
+
+            </div>
+
+            <div class="container-fluid tab-pane" role="tabpane5"  id="fp_tel">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fpright">
+    <ul class="fpsp">
+        <li><h3>特别推荐</h3></li>
+        <li class="row ">
+            <span class="col-md-3">
+                <img src="../img/fp1.jpg" alt="" style="width: 5em;height: 5em;border-radius: 50%"/>
+            </span>
+            <span class="col-md-4"><b>吕邵聪</b></br>
+                <span style="color: #808080;">微博时尚达人</span></span>
+            <span class="col-md-5">
+                <button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080;width: 6em;margin-top:1.2em">
+                    <span style="color: #FA7D3C;margin-right: 0.8em"><b>+</b></span>
+                    <span>关注</span>
+                </button>
+            </span>
+        </li>
+        <li class="row ">
+            <span class="col-md-3">
+                <img src="../img/fp1.jpg" alt="" style="width: 5em;height: 5em;border-radius: 50%"/>
+            </span>
+            <span class="col-md-4"><b>吕邵聪</b></br>
+                <span style="color: #808080;font-size: 0.8em">微博时尚达人</span></span>
+            <span class="col-md-5">
+                <button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080;width: 6em;margin-top:1.2em">
+                    <span style="color: #FA7D3C;margin-right: 0.8em"><b>+</b></span>
+                    <span>关注</span>
+                </button>
+            </span>
+        </li>
+        <hr style="width: 20em"/>
+        <li class="col-md-12" style="text-align: center;">
+            <a href="#fp_school" data-toggle="tab">查看更多</a>
+        </li>
+    </ul>
+    <ul class="fpsp">
+        <li><h3>同行</h3></li>
+        <li class="row ">
+            <span class="col-md-3">
+                <img src="../img/fp1.jpg" alt="" style="width: 5em;height: 5em;border-radius: 50%"/>
+            </span>
+            <span class="col-md-4"><b>吕邵聪</b></br>
+                <span style="color: #808080;">微博时尚达人</span></span>
+            <span class="col-md-5">
+                <button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080;width: 6em;margin-top:1.2em">
+                    <span style="color: #FA7D3C;margin-right: 0.8em"><b>+</b></span>
+                    <span>关注</span>
+                </button>
+            </span>
+        </li>
+        <li class="row ">
+            <span class="col-md-3">
+                <img src="../img/fp1.jpg" alt="" style="width: 5em;height: 5em;border-radius: 50%"/>
+            </span>
+            <span class="col-md-4"><b>吕邵聪</b></br>
+                <span style="color: #808080;font-size: 0.8em">微博时尚达人</span></span>
+            <span class="col-md-5">
+                <button style="background-color: #FFFFFF;outline: none;border: solid 0.08em #808080;width: 6em;margin-top:1.2em">
+                    <span style="color: #FA7D3C;margin-right: 0.8em"><b>+</b></span>
+                    <span>关注</span>
+                </button>
+            </span>
+        </li>
+        <hr style="width: 20em"/>
+        <li class="col-md-12" style="text-align: center;">
+            <a href="#fp_school" data-toggle="tab">查看更多</a>
+        </li>
+    </ul>
+    <ul class="row" id="connection_right_map">
+        <h3>人脉图</h3>
+        <ul class="col-lg-2"></ul>
+        <div class="col-lg-10" id="tagsList">
+            <a href="../demo/find.html"><img src="../img/connection_cloud1.png" alt=""/></a>
+            <a href="../demo/find.html"><img src="../img/connection_cloud1.png" alt=""/></a>
+            <a href="../demo/find.html"><img src="../img/connection_cloud1.png" alt=""/></a>
+            <a href="../demo/find.html"><img src="../img/connection_cloud1.png" alt=""/></a>
+            <a href="../demo/find.html"><img src="../img/connection_cloud1.png" alt=""/></a>
+            <a href="../demo/find.html"><img src="../img/connection_cloud1.png" alt=""/></a>
+            <a href="../demo/find.html"><img src="../img/connection_cloud1.png" alt=""/></a>
+        </div>
+    </ul><br/>
+</div>
+</div>
+</div>
+<!--底部bottom-->
+<div class="container-fluid" id="bottom_all">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <a href="#" class="font_bottom">关于我们</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">联系我们</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">企业入驻</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">友情链接</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">知了公益</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">知了社区</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <a href="#" class="font_bottom"> 京公网安备 11000002000088号</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">京ICP证070359号</a>
+                <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#" class="font_bottom">网络文化经营许可证京网文[2014]2148-348号</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <a href="#" class="font_bottom">违法和不良信息举报电话：4006561155  Copyright © 2004-2016  知了ZL.com 版权所有</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/tags.js"></script>
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>

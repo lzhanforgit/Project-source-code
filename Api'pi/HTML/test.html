@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>sas</title>
+    <script type="text/javascript" src="../js/jquery-2.2.2.min.js"></script>
+    <style type="text/css">
+        *{ margin:0px; padding:0px;}
+        .gs{
+            position:relative;
+            top:800px;
+            background-color:#099;
+            left:150px; width:80px;
+        }
+        .xz{
+
+            animation:roate 2s;
+            /*animation-fill-mode:forwards;*/
+            animation-direction:alternate;
+        }
+
+        @keyframes roate{
+            from { transform:rotate(0deg);
+                width:100px;
+                height:100px; }
+            to{transform:rotate(360deg);
+                width:200px;
+                height:200px;
+            }}
+        .xs{ width:50px; float: left; height:30px; background-color: #F90; position:fixed; left:700px; top:0px;}
+
+    </style>
+</head>
+
+<body>
+<script type="text/javascript">
+   /* function gdjz(div,cssname,offset){
+        var a,b,c,d;
+        d=$(div).offset().top;
+        a=eval(d + offset);
+        b=$(window).scrollTop();
+        c=$(window).height();
+        if(b+c>a){
+            $((div)).addClass((cssname));
+        }
+    }*/
+
+    $(function() {
+        $(window).scroll(function() {
+                    var a, b, c;
+                    a = $("#dh").offset().top;//元素相对于窗口的距离
+                    b = $(window).scrollTop(); //监控窗口已滚动的距离;
+                    c = $(document).height();//整个文档的高度
+                    d = $(window).height();//浏览器窗口的高度
+                    if (d + b > a + 100) {
+                        $("#dh").addClass("xz");
+                    }
+                }
+        );
+    });
+</script>
+<div style="height:1800px; background-color:#999; width:500px; float:left;">
+    <div id="dh" class="gs" >触发动画</div>
+</div>
+<div class="xs"></div>
+</body>
+</html>

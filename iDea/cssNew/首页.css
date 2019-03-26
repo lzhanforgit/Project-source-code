@@ -1,0 +1,385 @@
+.ph1 .h2-1{
+	
+	margin:  50px 0 0 100px;
+}
+.ph1 .h2-2{
+	margin:  -30px 0 0 1050px;
+	font-size: 20px;
+}
+.ph11 .h2-11{
+	
+	margin:  20px 0 -20px 100px;
+}
+.ph11 .h2-21{
+	margin:  -20px 0 20px 1180px;
+	font-size: 20px;
+}
+#shicaituijian{
+	width: 85%;
+	height: 200px;
+	/*border: solid 1px red;*/
+	margin: auto;
+	margin-top: 20px;
+}
+#shicaituijian .biaoti{
+	width: 10%;
+	height: 100%;
+	/*border: solid 1px blue;*/
+	float: left;
+}
+#shicaituijian .biaoti table{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+#shicaituijian .biaoti table tr{
+	background: white;
+	color: black;
+}
+#shicaituijian .biaoti table tr td:hover{
+	font-size: 1.5em;
+	color: white;
+	background: red;
+}
+#shicaituijian .fengzhi{
+	width: 90%;
+	height: 200px;
+/*	display:block;*/
+	float: left;
+	position: relative;/*当父div定位为relative，并且子div定位为absolute时，可以实现多个子div重叠*/
+}
+#shicaituijian .fengzhi .shuiguo{
+	width: 100%;
+	height: 200px;
+	/*background: red;*/
+	display: block;
+	float: left;
+	position: absolute;/*当父div定位为relative，并且子div定位为absolute时，可以实现多个子div重叠*/
+}
+
+#shicaituijian .fengzhi .shuiguo .table01{
+	width: 100%;
+	height: 70%;
+}
+#shicaituijian .fengzhi .shuiguo .table01 img{
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	cursor: pointer;
+}
+#shicaituijian .fengzhi .shuiguo .table02{
+	width: 100%;
+	height: 24%;
+	text-align: center;
+	cursor: pointer;
+} 
+#shicaituijian .fengzhi .shuiguo .table02 td:hover{
+	color: orangered;
+	text-decoration: underline;
+}
+
+#shicaituijian .fengzhi .shucai{
+	width: 100%;
+	height: 200px;
+/*	background: blue;*/
+	display: none;
+	position: absolute;/*当父div定位为relative，并且子div定位为absolute时，可以实现多个子div重叠*/
+}
+#shicaituijian .fengzhi .shucai .table01{
+	width: 100%;
+	height: 70%;
+}
+#shicaituijian .fengzhi .shucai .table01 img{
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	cursor: pointer;
+}
+#shicaituijian .fengzhi .shucai .table02{
+	width: 100%;
+	height: 24%;
+	text-align: center;
+	cursor: pointer;
+} 
+#shicaituijian .fengzhi .table02 td{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+#shicaituijian .fengzhi .shucai .table02 td:hover{
+	color: orangered;
+	text-decoration: underline;
+}
+
+
+#shicaituijian .fengzhi .wugu{
+	width: 100%;
+	height: 200px;
+	/*background: pink;*/
+	display: none;
+	float: left;
+	position: absolute;/*当父div定位为relative，并且子div定位为absolute时，可以实现多个子div重叠*/
+}
+#shicaituijian .fengzhi .wugu .table01{
+	width: 100%;
+	height: 70%;
+}
+#shicaituijian .fengzhi .wugu .table01 img{
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	cursor: pointer;
+}
+#shicaituijian .fengzhi .wugu .table02{
+	width: 100%;
+	height: 24%;
+	text-align: center;
+	cursor: pointer;
+} 
+#shicaituijian .fengzhi .wugu .table02 td:hover{
+	color: orangered;
+	text-decoration: underline;
+}
+
+#shicaituijian .fengzhi .shengxian{
+	width: 100%;
+	height: 200px;
+	/*background: yellow;*/
+	display: none;
+	float:left ;
+	position: absolute;/*当父div定位为relative，并且子div定位为absolute时，可以实现多个子div重叠*/
+}
+#shicaituijian .fengzhi .shengxian .table01{
+	width: 100%;
+	height: 70%;
+}
+#shicaituijian .fengzhi .shengxian .table01 img{
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	cursor: pointer;
+}
+#shicaituijian .fengzhi .shengxian .table02{
+	width: 100%;
+	height: 24%;
+	text-align: center;
+	cursor: pointer;
+} 
+#shicaituijian .fengzhi .shengxian .table02 td:hover{
+	color: orangered;
+	text-decoration: underline;
+}
+
+.col-md-12{
+	/*left: 150px;*/
+	margin: 0 50px 0 0;
+}
+
+.box-style-1 .overlay-container img{
+	width: 330px;
+	height: 200px;
+}
+
+
+
+#jiankangxinwenAndzixun{
+	width: 85%;
+	height: 360px;
+	/*border: solid 1px pink;*/
+	margin: auto;
+	margin-bottom: 50px;
+	/*background: #FAE8C8;*/
+}
+
+#jiankangxinwenAndzixun .left{
+	width: 47%;
+	height: 150px;
+	/*border: solid 1px deeppink;*/
+	background: white;
+}
+#jiankangxinwenAndzixun .left .tupian{
+	width: 30%;
+	height: 150px;
+	border: solid 1px grey;
+	position: relative;
+}
+#jiankangxinwenAndzixun .left .tupian img{
+	position: absolute;
+	cursor: pointer;
+}
+#jiankangxinwenAndzixun .left .wenzi{
+	width: 70%;
+	height: 150px;
+	/*border: solid 1px red;*/
+	float: right;
+	margin: -150px 0 0 0;	
+}
+#jiankangxinwenAndzixun .left .wenzi table{
+	width: 100%;
+	height: 150px;
+}
+#jiankangxinwenAndzixun .left .wenzi table tr td p{
+	margin-top: 10px;
+	text-align: center;
+}
+#jiankangxinwenAndzixun .left .wenzi table tr td p:hover{
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: orange;
+	cursor: pointer;
+}
+#jiankangxinwenAndzixun .left .wenzi table tr td input{
+	margin: 0 0 0 20px;
+}
+
+
+
+
+#jiankangxinwenAndzixun .right{
+	width: 47%;
+	height: 150px;
+	/*border: solid 1px deeppink;*/
+	background: white;
+	float: right;
+	margin: -150px 0 0 0;
+}
+#jiankangxinwenAndzixun .right .tupian{
+	width: 30%;
+	height: 150px;
+	border: solid 1px grey;
+	position: relative;
+}
+#jiankangxinwenAndzixun .right .tupian img{
+	position: absolute;
+	cursor: pointer;
+}
+#jiankangxinwenAndzixun .right .wenzi{
+	width: 70%;
+	height: 150px;
+	/*border: solid 1px red;*/
+	float: right;
+	margin: -150px 0 0 0;
+	position: relative;
+}
+#jiankangxinwenAndzixun .right .wenzi table{
+	width: 100%;
+	height:150px;
+}
+#jiankangxinwenAndzixun .right .wenzi table tr td p{
+	margin-top: 10px;
+	text-align: center;
+}
+#jiankangxinwenAndzixun .right .wenzi table tr td p:hover{
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: orange;
+	cursor: pointer;
+}
+
+
+
+
+
+
+#jiankangxinwenAndzixun .left1{
+	width: 47%;
+	height: 150px;
+	/*border: solid 1px deeppink;*/
+	background: white;
+}
+#jiankangxinwenAndzixun .left1 .tupian{
+	width: 30%;
+	height: 150px;
+	border: solid 1px grey;
+	position: relative;
+}
+#jiankangxinwenAndzixun .left1 .tupian img{
+	position: absolute;
+	cursor: pointer;
+}
+#jiankangxinwenAndzixun .left1 .wenzi{
+	width: 70%;
+	height: 150px;
+	/*border: solid 1px red;*/
+	float: right;
+	margin: -150px 0 0 0;	
+}
+#jiankangxinwenAndzixun .left1 .wenzi table{
+	width: 100%;
+	height: 150px;
+}
+#jiankangxinwenAndzixun .left1 .wenzi table tr td p{
+	margin-top: 10px;
+	text-align: center;
+}
+#jiankangxinwenAndzixun .left1 .wenzi table tr td p:hover{
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: orange;
+	cursor: pointer;
+}
+#jiankangxinwenAndzixun .left1 .wenzi table tr td input{
+	margin: 0 0 0 20px;
+}
+
+
+
+
+#jiankangxinwenAndzixun .right1{
+	width: 47%;
+	height: 150px;
+	/*border: solid 1px deeppink;*/
+	background: white;
+	float: right;
+	margin: -150px 0 0 0;
+}
+#jiankangxinwenAndzixun .right1 .tupian{
+	width: 30%;
+	height: 150px;
+	border: solid 1px grey;
+	position: relative;
+}
+#jiankangxinwenAndzixun .right1 .tupian img{
+	position: absolute;
+	cursor: pointer;
+}
+#jiankangxinwenAndzixun .right1 .wenzi{
+	width: 70%;
+	height: 150px;
+	/*border: solid 1px red;*/
+	float: right;
+	margin: -150px 0 0 0;
+	position: relative;
+}
+#jiankangxinwenAndzixun .right1 .wenzi table{
+	width: 100%;
+	height: 150px;
+}
+#jiankangxinwenAndzixun .right1 .wenzi table tr td p{
+	margin-top: 10px;
+	text-align: center;
+}
+#jiankangxinwenAndzixun .right1 .wenzi table tr td p:hover{
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: orange;
+	cursor: pointer;
+}
+#jiankangxinwenAndzixun input{
+	/*margin: 0 0 0 20px;*/
+
+	margin-left: 295px;
+	/*margin-top: 67px;*/
+	background: green;
+	color: white;
+	position: absolute;
+}
+
+
+
+
+
+

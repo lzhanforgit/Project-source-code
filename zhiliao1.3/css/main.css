@@ -1,0 +1,35 @@
+/*boot-1*/
+.boot_container{
+    height: 200px;
+    border: solid 1px blue;
+}
+.bgcolor{
+    background-color: #00A3CF;
+}
+/*@media screen and (max-width: 800px) {*/
+    /*.boot_container{*/
+        /*width: 750px;*/
+
+    /*}*/
+/*}*/
+
+/*@media screen and (min-width: 800px) {*/
+    /*.boot_container{*/
+        /*width: 1000px;*/
+    /*}*/
+/*}*/
+[id^='img']{
+    height: 100px;
+}
+/*end boot-1*/
+
+
+
+
+.center{
+    text-align: center;
+}
+
+.content_show{
+    padding-left: 0px;
+}

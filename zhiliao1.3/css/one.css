@@ -1,0 +1,234 @@
+.one-main{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0em;
+}
+.hero-search{
+    margin-left: 18em;
+}
+.oneli{
+    list-style: none;
+    background-color: #4ACAA8;
+    border-color: #4ACAA8;
+    color: #FFFFFF;
+    border: none;
+}
+.oneleft{
+    background-color: #4ACAA8;
+    font-size: 1.5em;
+    text-align: center;
+    width: 30%;
+    line-height: 3em;
+    height:35em;
+}
+.oneintro,.oneintro:focus,.oneintro:hover,.oneintro:active,.oneactive.active{
+    background-color: #4ACAA8;
+    color: #333333;
+    border-color:#4ACAA8 ;
+    display: block;
+    line-height: 3em;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #FFFFFF;
+    background-color: #4ACAA8;
+    border-color: #4ACAA8;
+}
+.oneright{
+    width: 69%;
+    margin-left: 1%;
+}
+.one-a{
+    color: black;
+}
+.one-a:hover{
+    border-bottom: solid;
+    border-bottom-color: #E96C1F;
+    text-decoration: none;
+    list-style: none;
+}
+.one-a:checked{
+    text-decoration: none;
+    list-style: none;
+}
+/*我的发布*/
+/*我的发布信息展示*/
+.oneinfo{
+    list-style: none;
+}
+.onemyintro{
+    position: absolute;
+}
+.newsee{
+    position: absolute;
+}
+.hero-infoshow,
+.hero-infoshow:focus,
+.hero-infoshow:active,
+.hero-infoshow:hover{
+    background-color: #FAFAFA;
+    border-color: #FAFAFA;
+    color: #666666;
+}
+.hero-infoshow li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 2em;
+}
+.onetale tr td{
+    margin: 14em;
+}
+.hero-infoshow1{
+    color: #FCB2B2;
+}
+.onetale{
+    width: 58em;
+    text-align: center;
+}
+.onetale tr{
+    line-height: 2em;
+}
+<!--
+/*body {background:#fff;text-align:center;margin:0 auto;padding: 0;font:12px Arial;color:#000;line-height:1.2em}*/
+/*div,form,img,ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border: 0;}*/
+/*h1,h2,h3,h4,h5,h6 { margin:0; padding:0;}*/
+/*table,td,tr,th{font-size:12px;}*/
+
+.onerate{
+    display: flex;
+    flex-direction: row;
+    background-color: #F6F6F6;
+    /*opacity: 0;*/
+}
+#onerate{
+    display: none;
+}
+.rateleft{
+    width: 65%;
+}
+.rateright{
+    width: 35%;
+}
+.ratesub{
+    margin-top: 15.3em;
+    background-color: #4BB748;
+    color: #FFFEFC;
+    outline: none;
+    border: none;
+}
+/* 星级评分 */
+.shop-rating {
+    height: 25px;
+    overflow: hidden;
+    zoom: 1;
+    padding: 2px 0px;
+    position: relative;
+    z-index: 999;
+}
+.ddxq li{
+    list-style: none;
+    line-height: 2em;
+    color: #555555;
+    font-size: 2em;
+}
+.shop-rating span {
+    height: 23px;
+    display: block;
+    line-height: 23px;
+    float: left;
+}
+
+.shop-rating span.title {
+    width: 125px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.shop-rating ul {
+    float: left;
+    margin:0;padding:0
+}
+
+.shop-rating .result {
+    margin-left: 20px;
+    padding-top: 2px;
+}
+
+.shop-rating .result span {
+    color: #ff6d02;
+}
+.shop-rating .result em {
+    color: #f60;
+    font-family: arial;
+    font-weight: bold;
+}
+.shop-rating .result strong {
+    color: #666666;
+    font-weight: normal;
+}
+.rating-level,
+.rating-level a {
+    background: url(http://a.tbcdn.cn/app/rc/img/star_v2.png) no-repeat scroll 1000px 1000px;
+}
+.rating-level {
+    background-position: 0px 0px;
+    width: 120px;
+    height: 23px;
+    position: relative;
+    z-index: 1000;
+}
+.rating-level li {
+    display: inline;
+}
+
+.rating-level a {
+    line-height: 23px;
+    height: 23px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-indent: -999em;
+    *zoom: 1;
+    outline: none;
+}
+
+
+.rating-level a.one-star {
+    width: 20%;
+    z-index: 6;
+}
+
+.rating-level a.two-stars {
+    width: 40%;
+    z-index: 5;
+}
+
+.rating-level a.three-stars {
+    width: 60%;
+    z-index: 4;
+}
+
+.rating-level a.four-stars {
+    width: 80%;
+    z-index: 3;
+}
+
+.rating-level a.five-stars {
+    width: 100%;
+    z-index: 2;
+}
+
+.rating-level .current-rating,.rating-level a:hover{background-position:0 -28px;}
+.rating-level a.one-star:hover,.rating-level a.two-stars:hover,.rating-level a.one-star.current-rating,.rating-level a.two-stars.current-rating{background-position:0 -116px;}
+.rating-level .three-stars .current-rating,.rating-level .four-stars .current-rating,.rating-level .five-stars .current-rating{background-position:0 -28px;}
+
+-->
+
+

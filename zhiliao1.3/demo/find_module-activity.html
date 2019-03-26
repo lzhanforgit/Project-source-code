@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/find_module.css"/>
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/side_nav.css"/>
+    <link rel="stylesheet" href="../css/bottom.css"/>
+</head>
+<body>
+<!--参加活动要填写的表单-->
+<div class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" id="myModal_actity">
+    <div class="modal-dialog" role="document" style="width:30em">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">活动报名</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <table>
+                        <tr>
+                            <td class="find_form-actity-label">姓名：</td>
+                            <td colspan="2" class="find_form-actity-input">
+                                <input type="text" name="u_name" value="" class="find_form-actity-input"/></td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">性别：</td>
+                            <td colspan="2"  >
+                                <label for="male">男</label>
+                                <input type="radio" name="sex" value="" id="male" checked/>
+                                <label for="male">女</label>
+                                <input type="radio" name="sex" value="" id="female"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">手机：</td>
+                            <td colspan="2">
+                                <input type="text" name="telephone" value="" class="find_form-actity-input"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">验证码：</td>
+                            <td>
+                                <input type="text" name="telphone" value="" class="find_form-input_small"/>
+                            </td>
+                            <td>
+                                <img src="../imag/444.png" alt=""/>
+                                <span style="font-size: small">看不清？</span>
+                                <a href="#" style="font-size: small">换一张</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">短信验证码：</td>
+                            <td>
+                                <input type="text" name="telphone" value="" class="find_form-input_small"/>
+                            </td>
+                            <td>
+                                <a href="">
+                                    <img src="../imag/555.png"/>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="find_form-actity-label">活动：</td>
+                            <td colspan="2">
+                                <textarea name="" id="" cols="26" rows="6" style="border-radius: 5px"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="text_left">
+                                <input type="checkbox"/>
+                                <span class="font">我已阅读并同意《知了活动安全协议》</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <!--头部top  nav-->
+    <div class="container-fluid" id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 top_height">
+                    <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                    <span>知了</span>
+                </div>
+                <div class="col-md-10 nav_height">
+                    <nav class="navbar navbar-right">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+                                    <li><a href="connection.html">人脉</a></li>
+                                    <li><a href="find.html" id="nav_find">发现</a></li>
+                                    <li><a href="hero2.html">英雄帖</a></li>
+                                    <li><a href="blog.html">个人博客</a></li>
+                                </ul>
+                                <form class="navbar-form navbar-right" form-inline role="search" id="nav_search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="glyphicon glyphicon-search"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主体main-->
+    <div class="container" id="find_hot-topic_module">
+        <div class="row">
+            <!--左侧  热门话题-->
+            <div class="col-lg-9" id="find_hot-topic_left">
+                <div class="row">
+                    <div class="col-md-4 content_padding">
+                        <h4>
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            热门活动
+                        </h4>
+                    </div>
+                    <div class="col-md-8" style="padding-left:31em;padding-top: 1em">
+                        <a href="#" class="font_small-tag_title">>>更多</a>
+                    </div>
+                </div>
+                <hr/>
+                <!--自己关注话题分组标签-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span class="module_topic active"><a href="#find_module-int" data-toggle="tab">精选</a></span>
+                        <span class="module_topic"><a href="#find_module-food" data-toggle="tab">青春</a></span>
+                        <span class="module_topic"><a href="#find_module-int" data-toggle="tab">摄影</a></span>
+                        <span class="module_topic"><a href="#" data-toggle="tab">爱情</a></span>
+                        <span class="module_topic"><a href="#" data-toggle="tab">户外</a></span>
+                        <span class="module_topic"><a href="#" data-toggle="tab">足球</a></span>
+                        <span class="module_topic"><a href="#" data-toggle="tab">旅行</a></span>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row"><!--这部分是一个container，跟上面标签分组对应，标签对应热门话题标签-->
+                    <div class="container-fluid tab-content" id="find_module-activity">
+                        <!--精选部分-->
+                        <div class="container-fluid tab-pane active" role="tabpanel"  id="find_module-int">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <a href="#"><img src="../img/find_module-internet.png" class="img_radius" alt=""/></a>
+                                    <a href="#">精选</a>
+                                </div>
+                                <div class="col-md-9" style="padding-left:30em;padding-top: 1em">
+                                    <a href="#" class="font_small-tag_title">热门排序</a>
+                                    <span class="font_small-tag_title">|</span>
+                                    <a href="#" class="font_small-tag_title">时间排序</a>
+                                </div>
+                            </div><hr/>
+                            <!--活动1-->
+                            <div class="row">
+                                <div class="col-lg-12 container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <span class="font_small-tag_title">来自：</span>
+                                            <a href="#" class="font_small-tag_title">精选</a></div>
+                                        <div class="col-lg-8" style="padding-left:27em;padding-top:-0.5em">
+                                            <button type="button" class="btn btn-primary" style="background:#0B69C7;border: none;outline: none" data-toggle="modal" data-target="#myModal_actity">
+                                                我要参加
+                                            </button></div>
+                                    </div>
+                                    <h5 style="margin-left: -1em"><a href="#">分享你偷偷拍下的照片</a></h5>
+
+                                    <p class="font_small-tag_title">
+                                        <span class="module_number">937</span>人参加
+                                        <span class="module_number">910</span>张照片
+                                    </p>
+                                    <p>
+                                        <span class="module_number">发起人</span>
+                                        <a href="#">蔡要要，</a><span class="font_small-tag_title">微信公号：蔡要要不吃药(caiyaoyao22)</span></p>
+
+                                    <div class="row">
+                                        <div class="col-md-12" style="padding-left:4.8em">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <img src="../img/find_module-material1.png" alt=""/>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <img src="../img/find_module-material2.png" alt=""/>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <img src="../img/find_module-material1.png" alt=""/>
+                                                </div>
+                                            </div>
+                                            <br/>
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-plus"
+                                                            aria-hidden="true"></span>关注</a>
+                                                    &nbsp;
+                                                    <a href="#" class="font_small-tag_title"><img
+                                                            src="../img/blog_comment.png" alt=""/>
+                                                        <span>615</span>条评论</a>&nbsp;
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-heart"
+                                                            aria-hidden="true"></span>感谢</a>
+                                                    &nbsp;
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-share-alt"
+                                                            aria-hidden="true"></span>分享</a>
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                            <!--活动2-->
+                            <div class="row">
+                                <div class="col-lg-12 container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <span class="font_small-tag_title">来自：</span>
+                                            <a href="#" class="font_small-tag_title">精选</a></div>
+                                        <div class="col-lg-8" style="padding-left:27em;padding-top:-0.5em">
+                                            <button type="button" class="btn btn-primary" style="background:#0B69C7;border: none;outline: none" data-toggle="modal" data-target="#myModal_actity">
+                                                我要参加
+                                            </button></div>
+                                    </div>
+                                    <h5 style="margin-left: -1em"><a href="#">阳光正好，你带着零食，我带着你，约吃喽</a></h5>
+                                    <p class="font_small-tag_title">
+                                        <span class="module_number">937</span>人参加
+                                        <span class="module_number">910</span>张照片
+                                    </p>
+                                    <p><span class="module_number">发起人</span>
+                                        <a href="#">蔡要要，</a><span class="font_small-tag_title">微信公号：蔡要要不吃药(caiyaoyao22)</span>
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-12" style="padding-left:4.8em">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img src="../img/find_module-material1.png" alt=""/>
+                                                </div>
+                                                <div class="col-lg-8" style="margin-left: -3em">
+                                                    <span class="font_small-tag_title">乡土气息的非常浓郁的我来了！专攻各种土特产，没有一样外国货，全部可以在淘宝搜到~直接
+                                                    搜索关键字就好咯！我不会提供具体卖家，免得有广告只嫌疑。1.潮汕猪头粽，强推！妥妥得都是实打
+                                                    实的肉，味道咸鲜，口感扎实，特别适合办公室下午吃，饱腹感很强，而且会...</span>
+                                                    <a href="#">显示全部</a>
+                                                </div>
+                                            </div>
+                                            <br/>
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-plus"
+                                                            aria-hidden="true"></span>关注</a>
+                                                    &nbsp;
+                                                    <a href="#" class="font_small-tag_title"><img
+                                                            src="../img/blog_comment.png" alt=""/>
+                                                        <span>615</span>条评论</a>&nbsp;
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-heart"
+                                                            aria-hidden="true"></span>感谢</a>
+                                                    &nbsp;
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-share-alt"
+                                                            aria-hidden="true"></span>分享</a>
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                            <!--活动3-->
+                            <div class="row">
+                                <div class="col-lg-12 container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <span class="font_small-tag_title">来自：</span>
+                                            <a href="#" class="font_small-tag_title">精选</a></div>
+                                        <div class="col-lg-8" style="padding-left:27em;padding-top:-0.5em">
+                                            <button type="button" class="btn btn-primary" style="background:#0B69C7;border: none;outline: none" data-toggle="modal" data-target="#myModal_actity">
+                                                我要参加
+                                            </button></div>
+                                    </div>
+                                    <h5 style="margin-left: -1em"><a href="#">你有哪些买了又买吃了又吃的的零食推荐？</a></h5>
+                                    <p><span class="module_number">3623</span>
+                                        <a href="#">蔡要要，</a><span class="font_small-tag_title">微信公号：蔡要要不吃药(caiyaoyao22)</span>
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="col-md-12" style="padding-left:4.8em">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img src="../img/find_module-material1.png" alt=""/>
+                                                </div>
+                                                <div class="col-lg-8" style="margin-left: -3em">
+                                                    <span class="font_small-tag_title">乡土气息的非常浓郁的我来了！专攻各种土特产，没有一样外国货，全部可以在淘宝搜到~直接
+                                                    搜索关键字就好咯！我不会提供具体卖家，免得有广告只嫌疑。1.潮汕猪头粽，强推！妥妥得都是实打
+                                                    实的肉，味道咸鲜，口感扎实，特别适合办公室下午吃，饱腹感很强，而且会...</span>
+                                                    <a href="#">显示全部</a>
+                                                </div>
+                                            </div>
+                                            <br/>
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-plus"
+                                                            aria-hidden="true"></span>关注</a>
+                                                    &nbsp;
+                                                    <a href="#" class="font_small-tag_title"><img
+                                                            src="../img/blog_comment.png" alt=""/>
+                                                        <span>615</span>条评论</a>&nbsp;
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-heart"
+                                                            aria-hidden="true"></span>感谢</a>
+                                                    &nbsp;
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-share-alt"
+                                                            aria-hidden="true"></span>分享</a>
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                            <!--活动4-->
+                            <div class="row">
+                                <div class="col-lg-12 container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <span class="font_small-tag_title">来自：</span>
+                                            <a href="#" class="font_small-tag_title">精选</a></div>
+                                        <div class="col-lg-8" style="padding-left:27em;padding-top:-0.5em">
+                                            <button type="button" class="btn btn-primary" style="background:#0B69C7;border: none;outline: none" data-toggle="modal" data-target="#myModal_actity">
+                                                我要参加
+                                            </button></div>
+                                    </div>
+                                    <h5 style="margin-left: -1em"><a href="#">淘宝上有哪些营养美味可以买来在寝室当主食的东西？</a></h5>
+
+                                    <p><span class="module_number">1135</span>
+                                        <a href="#">Paradise Kiss，</a><span class="font_small-tag_title">一个人生活的第四年</span>
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="col-md-12" style="padding-left:4.8em">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img src="../img/find_module-material2.png" alt=""/>
+                                                </div>
+                                                <div class="col-lg-8" style="margin-left: -3em">
+                                                    <span class="font_small-tag_title">乡土气息的非常浓郁的我来了！专攻各种土特产，没有一样外国货，全部可以在淘宝搜到~直接
+                                                    搜索关键字就好咯！我不会提供具体卖家，免得有广告只嫌疑。1.潮汕猪头粽，强推！妥妥得都是实打
+                                                    实的肉，味道咸鲜，口感扎实，特别适合办公室下午吃，饱腹感很强，而且会...</span>
+                                                    <a href="#">显示全部</a>
+                                                </div>
+                                            </div>
+                                            <br/>
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-plus"
+                                                            aria-hidden="true"></span>关注</a>
+                                                    &nbsp;
+                                                    <a href="#" class="font_small-tag_title"><img
+                                                            src="../img/blog_comment.png" alt=""/>
+                                                        <span>615</span>条评论</a>&nbsp;
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-heart"
+                                                            aria-hidden="true"></span>感谢</a>
+                                                    &nbsp;
+                                                    <a href="#" class="font_small-tag_title"><span
+                                                            class="glyphicon glyphicon-share-alt"
+                                                            aria-hidden="true"></span>分享</a>
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><hr/>
+                        </div>
+                        <!--美食部分-->
+                        <div class="container-fluid tab-pane active" role="tabpanel"  id="find_module-food">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <a href="#"><img src="../img/find_module-internet.png" class="img_radius" alt=""/></a>
+                                    <a href="#">美食</a>
+                                </div>
+                                <div class="col-md-8" style="padding-left:29em;padding-top: 1em">
+                                    <a href="#" class="font_small-tag_title">热门排序</a>
+                                    <span class="font_small-tag_title">|</span>
+                                    <a href="#" class="font_small-tag_title">时间排序</a>
+                                </div>
+                            </div><hr/>
+
+                        </div>
+                    </div>
+                </div>
+                <!--加载中-->
+                <div style="width:55em;height:2em;background:#DDDDDD;text-align: center">加载中</div>
+            </div>
+            <!--右侧 活动管理和热门标签-->
+            <div class="col-lg-3" style="padding-left: 2em" id="find_hot-topic_right">
+                <!--活动管理-->
+                <div class="row" id="find_hot-topic_right_topic-square">
+                    <p class="col-lg-12 font_tag" style="padding-left: 3.8em;padding-top:1.8em">
+                        <a href="#">512</a>个活动正在进行中</p>
+                    <div class="col-lg-5">
+                        <a href="find_activity-management.html" class="module_topic-square-btn">活动管理</a>
+                    </div>
+                </div>
+                <hr/>
+                <!--热门活动标签-->
+                <div class="row" id="find_hot-topic_right_other">
+                    <div class="row">
+                        <div class="col-lg-8 module_find-other" style="font-size: 1.2em;color:#888888">热门活动标签</div>
+                        <div class="col-lg-3 module_find-other">
+                            <a href="#">>>更多</a>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-lg-12 module_find-other">
+                            <p class="font_small-tag_title">
+                                    <a href="#"><span class="module_tag">照片</span></a>
+                                    <a href="#"><span class="module_tag">生活</span></a>
+                                    <a href="#"><span class="module_tag">摄影</span></a></p>
+                            <p class="font_small-tag_title">
+                                <a href="#"><span class="module_tag">徒步</span></a>
+                                <a href="#"><span class="module_tag">美食</span></a>
+                                <a href="#"><span class="module_tag">赛车</span></a></p>
+                            <p class="font_small-tag_title">
+                                <a href="#"><span class="module_tag">照片</span></a>
+                                <a href="#"><span class="module_tag">生活</span></a>
+                                <a href="#"><span class="module_tag">摄影</span></a></p>
+                            <p class="font_small-tag_title">
+                                <a href="#"><span class="module_tag">徒步</span></a>
+                                <a href="#"><span class="module_tag">美食</span></a>
+                                <a href="#"><span class="module_tag">赛车</span></a></p>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <!--底部bottom-->
+    <div class="container-fluid" id="bottom_all">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="#" class="font_bottom">关于我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">联系我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">企业入驻</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">友情链接</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了公益</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了社区</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom"> 京公网安备 11000002000088号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">京ICP证070359号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">网络文化经营许可证京网文[2014]2148-348号</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom">违法和不良信息举报电话：4006561155 Copyright © 2004-2016 知了ZL.com 版权所有</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>

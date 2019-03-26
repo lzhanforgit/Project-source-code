@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>菜谱_分类</title>
+    <link rel="stylesheet" type="text/css" href="../cssNew/分类汇总.css"/>
+
+
+    <meta name="description" content="iDea a Bootstrap-based, Responsive HTML5 Template">
+    <meta name="author" content="htmlcoder.me">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../imagesNew/favicon.ico">
+
+    <!-- Web Fonts -->
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../cssNew/bootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="../fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Fontello CSS -->
+    <link href="../fonts/fontello/css/fontello.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="../cssNew/magnific-popup.css" rel="stylesheet">
+    <link href="../cssNew/animations.css" rel="stylesheet">
+    <link href="../cssNew/owl.carousel.css" rel="stylesheet">
+
+    <!-- iDea core CSS file -->
+    <link href="../cssNew/style.css" rel="stylesheet">
+
+    <!-- Color Scheme (In order to change the color scheme, replace the red.css with the color scheme that you prefer)-->
+    <link href="../cssNew/red.css" rel="stylesheet">
+
+    <!-- Custom css -->
+    <link href="../cssNew/custom.css" rel="stylesheet">
+</head>
+
+<!-- body classes:
+        "boxed": boxed layout mode e.g. <body class="boxed">
+        "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1">
+-->
+<body>
+<!-- scrollToTop -->
+<!-- ================ -->
+<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+<!-- page wrapper start -->
+<!-- ================ -->
+<div class="page-wrapper">
+
+    <!-- header-top start -->
+    <!-- ================ -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+						<span id="" style="line-height: 30px;">
+							Hi,欢迎来到爱厨房
+						</span>
+
+                <div class="col-xs-10 col-sm-6" style="float: right;">
+
+                    <!-- header-top-second start -->
+                    <!-- ================ -->
+                    <div id="header-top-second" class="clearfix">
+
+                        <!-- header top dropdowns start -->
+                        <!-- ================ -->
+
+
+
+                        <div class="header-top-dropdown">
+
+                            <!--搜索-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-search"></i> 搜索
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                    <li>
+                                        <form role="search" class="search-box">
+                                            <div class="form-group has-feedback">
+                                                <input type="text" class="form-control" placeholder="搜索">
+                                                <i class="fa fa-search form-control-feedback"></i>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!--登录-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-user"></i> 登录
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                    <li>
+                                        <form class="login-form">
+                                            <div class="form-group has-feedback">
+                                                <label class="control-label">用户名:</label>
+                                                <input type="text" class="form-control" placeholder="">
+                                                <i class="fa fa-user form-control-feedback"></i>
+                                            </div>
+                                            <div class="form-group has-feedback">
+                                                <label class="control-label">密码:</label>
+                                                <input type="password" class="form-control" placeholder="">
+                                                <i class="fa fa-lock form-control-feedback"></i>
+                                            </div>
+                                            <!--登录按钮-->
+                                            <button type="submit" class="btn btn-group btn-dark btn-sm">登录</button>
+                                            <span>or</span>
+
+                                            <button type="submit" class="btn btn-group btn-default btn-sm">注册</button>
+                                            <ul>
+                                                <li><a href="#">忘记密码？</a></li>
+                                            </ul>
+                                            <div class="divider"></div>
+                                            <span class="text-center">其他方式</span>
+                                            <ul class="social-links clearfix">
+                                                <li class="facebook"><a target="_blank" href="http://sc.chinaz.com"><i
+                                                        class="fa fa-qq"></i></a></li>
+                                                <li class="twitter"><a target="_blank" href="http://sc.chinaz.com"><i
+                                                        class="fa fa-weixin"></i></a></li>
+                                                <li class="googleplus"><a target="_blank" href="http://sc.chinaz.com"><i
+                                                        class="fa fa-weibo"></i></a></li>
+                                            </ul>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!--购物车-->
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
+                                        class="fa fa-shopping-cart"></i> 购物车
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-animation cart">
+                                    <li>
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th class="quantity">数量</th>
+                                                <th class="product">产品</th>
+                                                <th class="amount">总价</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="quantity">2 x</td>
+                                                <td class="product"><a href="shop-product.html">Android 4.4
+                                                    Smartphone</a><span class="small">4.7" Dual Core 1GB</span></td>
+                                                <td class="amount">$199.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="quantity">3 x</td>
+                                                <td class="product"><a href="shop-product.html">Android 4.2
+                                                    Tablet</a><span class="small">7.3" Quad Core 2GB</span></td>
+                                                <td class="amount">$299.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="quantity">3 x</td>
+                                                <td class="product"><a href="shop-product.html">Desktop PC</a><span
+                                                        class="small">Quad Core 3.2MHz, 8GB RAM, 1TB Hard Disk</span>
+                                                </td>
+                                                <td class="amount">$1499.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="total-quantity" colspan="2">总共8项</td>
+                                                <td class="total-amount">$1997.00</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-body text-right">
+                                            <a href="shop-cart.html" class="btn btn-group btn-default btn-sm">查看</a>
+                                            <a href="shop-checkout.html" class="btn btn-group btn-default btn-sm">结算</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!--  header top dropdowns end -->
+
+                    </div>
+                    <!-- header-top-second end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header-top end -->
+
+
+    <!-- header start (remove fixed class from header in order to disable fixed navigation mode) -->
+    <header class="header fixed clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <!--logo图标-->
+                    <div class="logo">
+                        <a href="#">
+                            <div>
+                                <img id="logo" src="../imagesNew/logo_red.png" alt="iDea">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--logo下面的字-->
+                    <div class="site-slogan">&nbsp;爱厨房</div>
+                </div>
+
+
+                <div class="col-md-9">
+                    <!-- header-right start -->
+                    <!-- ================ -->
+                    <div class="header-right clearfix">
+                        <!-- main-navigation start -->
+                        <!-- ================ -->
+                        <div class="main-navigation animated">
+                            <!-- navbar start -->
+                            <!-- ================ -->
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div class="container-fluid">
+
+                                    <!-- Toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+
+                                        <!--导航开始-->
+                                        <ul class="nav navbar-nav navbar-right">
+
+                                            <li>
+                                                <a href="../index.html">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="菜谱_精选.html">菜谱</a>
+                                            </li>
+                                            <li>
+                                                <a href="xieshipai.html">写食派</a>
+                                            </li>
+                                            <li>
+                                                <a href="daren.html">达人馆</a>
+                                            </li>
+                                            <li>
+                                                <a href="市集.html">市集</a>
+                                            </li>
+                                            <li>
+                                                <a href="活动.html">活动</a>
+                                            </li>
+                                            <li>
+                                                <a href="personal.html">个人中心</a>
+                                            </li>
+
+
+                                        </ul>
+                                        <!--导航结束-->
+
+
+                                    </div>
+                                </div>
+                            </nav>
+                            <!-- navbar end -->
+                        </div>
+                        <!-- main-navigation end -->
+                    </div>
+                    <!-- header-right end -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- page-intro start-->
+    <div class="page-intro">
+        <div class="container">
+            <ol class="breadcrumb">
+                <!--<li><i class="fa fa-home"></i><a href="../index.html">首页</a></li>-->
+                <li class=""><a href="菜谱_精选.html">精选</a></li>
+                <li class=""><span>分类</span></li>
+                <li class=""><a href="菜谱_食材.html">食材</a></li>
+                <li class=""><a href="菜谱_菜单.html">菜单</a></li>
+                <li class=""><a href="zucai.html">智能选菜</a></li>
+
+            </ol>
+        </div>
+    </div>
+    <!-- page-intro end -->
+
+
+    <div id="fengleihuizong">
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">菜式</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">主食</th>
+                </tr>
+                <tr>
+                    <td>炒饭</td>
+                    <td>煲仔饭</td>
+                    <td>盖浇饭</td>
+                    <td>焗饭</td>
+                    <td>烩饭</td>
+                    <td>焖饭</td>
+                    <td>粥</td>
+                    <td>寿司</td>
+                </tr>
+                <tr>
+                    <td>饼</td>
+                    <td>炒饼</td>
+                    <td>意大利面</td>
+                    <td>披萨</td>
+                    <td>面条</td>
+                    <td>炒面</td>
+                    <td>焖面</td>
+                    <td>凉面</td>
+                </tr>
+                <tr>
+                    <td>拌面</td>
+                    <td>包子</td>
+                    <td>馒头</td>
+                    <td>饺子</td>
+                    <td>馄饨</td>
+                    <td>便当</td>
+                    <td>油条</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">烘焙</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">菜系</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">厨房工具</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">烹饪方法</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">口味</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">场景</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">人群</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">美容瘦身</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">功效</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">疾病调理</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div01">
+            <table border="0">
+                <tr>
+                    <th colspan="8">节日/时令</th>
+                </tr>
+                <tr>
+                    <td>家常菜</td>
+                    <td>下饭菜</td>
+                    <td>甜品</td>
+                    <td>肉类</td>
+                    <td>主食</td>
+                    <td>私家菜</td>
+                    <td>凉菜</td>
+                    <td>烘焙</td>
+                </tr>
+                <tr>
+                    <td>豆制品</td>
+                    <td>煲汤</td>
+                    <td>酒</td>
+                    <td>海鲜</td>
+                    <td>水产</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>冰品</td>
+                </tr>
+                <tr>
+                    <td>饮品</td>
+                    <td>创意菜</td>
+                    <td>下酒菜</td>
+                    <td>冰激凌</td>
+                    <td>小吃</td>
+                    <td>零食</td>
+                    <td>酱汁佐料</td>
+                    <td>更多>></td>
+                </tr>
+            </table>
+        </div>
+        <div id="kongbai">
+
+        </div>
+    </div>
+
+
+    <!-- main-container start -->
+    <!-- ================ -->
+
+    <!-- main-container end -->
+
+    <!-- section start -->
+    <!-- ================ -->
+
+
+    <!-- section end -->
+
+    <!-- footer start (Add "light" class to #footer in order to enable light footer) -->
+    <!-- ================ -->
+    <footer id="footer">
+
+        <!-- .footer start -->
+        <!-- ================ -->
+
+        <!-- .footer end -->
+
+        <!-- .subfooter start -->
+        <!-- ================ -->
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" style="text-align: center;">
+                        <p>Copyright &copy; 2015.Company name All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <!-- Toggle get grouped for better mobile display -->
+                            <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                                <ul class="nav navbar-nav" style="text-align: center; float: left;">
+                                    <li><a href="../index.html">首页</a></li>
+                                    <li><a href="page-about.html">关于</a></li>
+                                    <li><a href="blog-right-sidebar.html">博客</a></li>
+                                    <li><a href="portfolio-3col.html">记录</a></li>
+                                    <li><a href="page-contact.html">联系我们</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .subfooter end -->
+
+    </footer>
+    <!-- footer end -->
+
+</div>
+<!-- page-wrapper end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster
+================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script type="text/javascript" src="../jsNew/jquery.min.js"></script>
+<script type="text/javascript" src="../jsNew/bootstrap.min.js"></script>
+
+<!-- Modernizr javascript -->
+<script type="text/javascript" src="../jsNew/modernizr.js"></script>
+
+<!-- Isotope javascript -->
+<script type="text/javascript" src="../jsNew/isotope.pkgd.min.js"></script>
+
+<!-- Owl carousel javascript -->
+<script type="text/javascript" src="../jsNew/owl.carousel.js"></script>
+
+<!-- Magnific Popup javascript -->
+<script type="text/javascript" src="../jsNew/jquery.magnific-popup.min.js"></script>
+
+<!-- Appear javascript -->
+<script type="text/javascript" src="../jsNew/jquery.appear.js"></script>
+
+<!-- Count To javascript -->
+<script type="text/javascript" src="../jsNew/jquery.countTo.js"></script>
+
+<!-- Parallax javascript -->
+<script src="../jsNew/jquery.parallax-1.1.3.js"></script>
+
+<!-- Contact form -->
+<script src="../jsNew/jquery.validate.js"></script>
+
+<!-- Initialization of Plugins -->
+<script type="text/javascript" src="../jsNew/template.js"></script>
+
+<!-- Custom Scripts -->
+<script type="text/javascript" src="../jsNew/custom.js"></script>
+
+</body>
+</html>

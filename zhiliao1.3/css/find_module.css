@@ -1,0 +1,199 @@
+/*find_hot-topic_module页面部分*/
+#find_hot-topic{
+    background:#F4F4F4;
+}
+.font_small-tag_title{
+    font-size: 1em;
+    color:#888888;
+}
+#find_hot-topic_right_topic-square{
+    height: 10em;
+    background:#EFF6FA;
+}
+.module_topic-square-btn{
+    position:absolute;
+    height:2.5em;
+    width: 7em;
+    line-height: 2.5em;
+    background:#FC9F72;
+    text-align: center;
+    margin-top:-0.7em;
+    margin-left: 4.5em;
+    border-radius: 5px;
+}
+#module_topic-square-btn{
+    position:absolute;
+    height:2em;
+    background:#FC9F72;
+    text-align: center;
+    margin-top:3em;
+    margin-left: 4.5em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#module_topic-square-btn a:hover{
+    text-decoration: none;
+}
+.module_find-other{
+    padding-top: 0.6em;
+}
+.font_module-find_side-title{
+    font-size: 1.2em;
+    padding:0.5em;
+}
+#div_float-person{
+    position:fixed;
+    margin-top:8em;
+    margin-left:5em;
+    z-index: 100;
+
+}
+#div_float-person:hover{
+    display: block;
+}
+
+/*find_module-activity页面*/
+.find_form-actity-label{
+    text-align:left;
+    height: 2.5em;
+    width:6em;
+    line-height: 2.5em;
+}
+.find_form-actity-input{
+    height: 2.5em;
+    width:18em;
+    border-radius: 5px;
+    line-height: 2.5em;
+}
+.find_form-actity-btn{
+    width:9em;
+    height:2.5em;
+    background:#FC9F72;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.find_form-input_small{
+    height: 2em;
+    width:9.5em;
+    border-radius: 5px;
+    line-height: 2.5em;
+}
+.module_tag{
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right:0.5em;
+    width: 6em;
+    height:3em;
+    line-height: 3em;
+    text-align: center;
+    background:#EFF6FA;
+    /*border-radius:0.4em;*/
+}
+
+/*find_topic-square部分*/
+.modul-game_title_padding{
+    padding-left:0em;
+    padding-right: 0em;
+}
+.font-tag_modul-game{
+    font-size:0.8em;
+    color:#888888;
+}
+
+/*find的小组部分    find_group-topic*/
+.font_group-main{
+    font-size:0.9em;
+}
+.a_bg:hover{
+    background:#698EBF;
+}
+.col_text-right{
+    text-align: right;
+}
+.find_group-apply{
+    color:#CA6445;
+    font-size: 0.95em;
+}
+.find_group-apply:hover{
+    text-decoration: none;
+    color:#ffffff;
+    background:#CA6445;
+}
+
+/*find_group-h5-content 部分*/
+.find_group-h5-content{
+    width:56em;
+    background: #FFF4E8;
+}
+
+
+/*find所有module部分的公共类*/
+body{
+    background:#FFFFFF;
+    /*background: #929292;*/
+}
+#nav_find{
+    border-bottom: solid 2px black;
+    color:black;
+    opacity: 0.5;
+    animation:2s;
+}
+.module_topic{
+    display: inline-block;
+    padding-left:1em;
+    padding-right: 1em;
+    text-align: center;
+    border: solid 1.5px #698EBF;
+    border-radius: 16px;
+
+}
+.module_topic:hover{
+    background:#698EBF;
+}
+.module_topic a{
+    text-decoration:none;
+}
+.module_number{
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right:0.5em;
+    text-align: center;
+    background:#EFF6FA;
+    border-radius:0.4em;
+}
+.img_radius{
+    border-radius: 5px;
+}
+[id^=find_hot-topic_left],[id^=find_hot-topic_right_]{
+    background:#FFFFFF;
+}
+[id^=find_hot-topic_left]{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+.font_body-main{
+    font-size: 1.2em;
+    color:#888888;
+}
+.font_tag{
+    font-size: 1em;
+    color:#888888;
+}
+.font_a{
+    color:#777777;
+    border-bottom: none;
+}
+.button-connect{
+    width: 6.5em;
+    height: 2.5em;
+}
+.find_hot-topic-tag{
+    padding-left: 1em;
+    font-size:0.6em;
+}
+.center{
+    text-align: center;
+}
+

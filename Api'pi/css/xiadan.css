@@ -1,0 +1,30 @@
+.xiadan_table {
+    background-color: #ffffff;
+}
+
+.xiadan_table table{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.xiadan_table table tr td:first-child {
+    text-align: right;
+    padding-right: 2em;
+    color: #808080;
+    font-size: 1em;
+    line-height: 5em;
+}
+
+[type='text'] {
+    font-size: 1em;
+    width: 25em;
+    line-height: 2.5em;
+    color: #808080;
+}
+
+.xiadan_table button {
+    margin-top: 1em;
+    width: 15em;
+    height: 3em
+}

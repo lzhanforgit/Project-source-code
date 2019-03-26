@@ -1,0 +1,336 @@
+/*定义根元素的像素值，1rem=10px*/
+html {
+    font-size: 62.5%;
+    /*10 ÷ 16 × 100% = 62.5%*/
+}
+/*达人专访*/
+/*.dr_zf{*/
+    /*min-width:767px;*/
+    /*width: 100%;*/
+    /*height:330px;*/
+    /*margin: auto;*/
+    /*background-color: #000000;*/
+
+/*}*/
+.dr_zf>image{
+    min-width:767px;
+    width: 100%;
+    height:330px;
+    margin: auto;
+}
+/*图片淡入淡出*/
+.anim_fade_image {
+    position:absolute;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+.anim_fade_image:hover, .anim_fade_image_hover {
+    opacity:0;
+    filter: alpha(opacity=0);
+}
+/*达人专栏*/
+.dr_zl{
+    min-width:1000px;
+    height:380px;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+/*每个达人板块*/
+.dr_zl1{
+    border: solid 1px #8e8e8e;
+    width: 30%;
+    /*display:flex;*/
+    display: inline-block;
+    height: 380px;
+    background-color: #fcfcfc;
+}
+/*达人专栏整个头像部分*/
+.dr_d1{
+    display: inline-block;
+    height: 130px;
+    width: 100%;
+}
+/*达人用户顶部颜色板块*/
+.dr_zl1_top{
+    margin: 0;
+    padding: 0;
+    height:70px;
+    width: 100%;
+}
+
+/*达人用户1顶部颜色*/
+.dr_zl1_top_color1{
+    background-color:#3899FF;
+}
+
+/*达人用户2顶部颜色*/
+.dr_zl1_top_color2{
+    background-color:#FF3232;
+}
+
+/*达人用户3顶部颜色*/
+.dr_zl1_top_color3{
+    background-color:#F4B01E;
+}
+
+/*用户头像外部div*/
+.user_img{
+    margin:10px 20px;
+    float: left;
+    height: 110px;
+    width: 110px;
+    text-align: center;
+    border-radius:50%;
+    background-color: #ffffff;
+}
+/*用户头像*/
+.user_img>img:nth-child(1){
+    margin:5px 5px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+/*用户名的div*/
+.dr_zl1_name{
+    height:45px;
+    width: 180px;
+    padding-top: 30px;
+    margin-left:140px;
+}
+
+/*用户名的字体样式*/
+.dr_zl1_name>a:nth-child(1){
+    color: #ffffff;
+}
+.dr_zl1_name>a:nth-child(2){
+    text-decoration: none;
+}
+
+
+/*添加关注的DIV*/
+.addgzbtn{
+    height:25px;
+    width:70px;
+    margin-left:140px;
+    margin-top:28px;
+    background-color:red ;
+    line-height:25px;
+}
+
+
+/*关注按钮的字体样式*/
+.addgzbtn>a:nth-child(1){
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*达人叙述*/
+.dr_d2{
+    height:115px;
+    width: 100%;
+}
+
+/*达人描述让字居中显示的div*/
+.dr_d2_mid{
+    height:100%;
+    width: 90%;
+    margin:auto;
+}
+
+.dr_d2_p{
+    font-size:0.5em;
+    height:70px;
+}
+
+/*达人1主厨推荐*/
+.c1{
+    color:#3899FF;
+}
+
+/*达人2主厨推荐*/
+.c2{
+    color:#FF3232;
+}
+
+/*达人3主厨推荐*/
+.c3{
+    color:#F4B01E;
+}
+
+
+/*主厨推荐下的标签*/
+.dr_zllist{
+    height:35%;
+}
+.dr_zllist ul{
+    padding: 0;
+    height:100%;
+    list-style: none;
+}
+/*设置字体居两边显示*/
+.dr_zllist >ul >li{
+    width:100%;
+    line-height: 50px;
+    padding-left:20px;
+    padding-right: 20px;
+    height:33.3%;
+    border-top:solid 1px #EEEEEE;
+    text-align: center;
+    display: flex;
+
+    /*内容居两边显示*/
+    justify-content: space-between;
+}
+.dr_zllist >ul >li:hover{
+    background-color: #EEEEEE;
+}
+
+/*达人榜单*/
+.dr_bd{
+    height: 470px;
+}
+
+.dr_bd_cp{
+    height:410px;
+}
+
+/*达人榜单头部*/
+.dr_bd_title{
+    margin: 0;
+    height:60px;
+    line-height: 60px;
+    width:100%;
+    padding-left:20px;
+}
+
+/*达人榜单ul的样式*/
+.dr_bdlist{
+    height: 410px;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+/*达人榜单li的样式*/
+.dr_bdli{
+    height:65px;
+    width: 100%;
+    line-height: 50px;
+    padding-left:20px;
+    padding-right: 20px;
+    border-top:solid 1px #EEEEEE;
+    display: flex;
+    /*内容居两边显示*/
+    justify-content: space-between;
+}
+.dr_bdli:hover{
+    background-color: #EEEEEE;
+}
+
+/*达人榜单的头像*/
+.avatar{
+    height:64px;
+    width: 44px;
+    padding-top: 10px;
+}
+.avatar>img:nth-child(1){
+    height:44px;
+    width: 44px;
+    border-radius:50%;
+}
+
+.con{
+    display: flex;
+    flex:2;
+    /*width:250px;*/
+    height: 100%;
+    flex-direction: column;
+}
+
+/*包含按钮标签的div*/
+.dr_bd_addgz{
+    display: block;
+    flex: 1;
+    height: 100%;
+    /*width:100px;*/
+    text-align: center;
+    padding-top: 20px;
+    margin-right: -20px;
+}
+
+/*按钮标签*/
+.dr_bd_addgzbtn{
+    color: #ffffff;
+    text-decoration:none;
+    margin: auto;
+    display: block;
+    height:25px;
+    width: 60px;
+    background-color: #ff3408;
+    line-height:25px;
+}
+
+.dr_bd_addgzbtn:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+.con_name,.con_nc{
+    display: block;
+    height: 50%;
+    padding-left:5px;
+    font-size: 15px;
+    overflow: hidden;
+}
+.con_info{
+    display: block;
+    padding-left:5px;
+    height: 50%;
+    margin-top:-10px;
+    font-size:0.5em;
+    overflow: hidden;
+}
+.con_info_rq,.con_info_hy{
+    color: red;
+    overflow: hidden;
+}
+.con_name a:nth-child(1){
+    color:black;
+}
+
+.con_name a:nth-child(1):hover{
+    color:red;
+}
+.con_info a:nth-child(1){
+    color: #898989;
+}
+.con_info a:nth-child(1):hover{
+    color:red;
+}
+
+.con_nc a:nth-child(1){
+    color: #000000;
+    text-decoration: none;
+}
+.con_nc a:nth-child(2){
+    color:red;
+    text-decoration: none;
+}
+.con_date{
+    display: block;
+    flex: 1;
+    height: 100%;
+    width: 110%;
+    min-width: 50px;
+    text-align:center;
+    font-size: 1px;
+    padding-top: 10px;
+    overflow:hidden;
+}
+
+.drg_kb{
+    height: 100px;
+}

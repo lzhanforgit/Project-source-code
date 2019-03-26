@@ -1,0 +1,54 @@
+.askers li{
+  display: inline-block;
+    list-style: none;
+    margin: 3em;
+}
+.askerssee{
+  font-size: 3em;
+  color: #333333;
+  text-align: center;
+  background-color: #F4F4F4;
+}
+.askersdetail{
+}
+.detail1{
+  display: inline-block;
+  background-color: #FFCC55;
+  width: 33%;
+  list-style: none;
+  color:white ;
+  font-size: 3em;
+  height: 3.6em;
+  text-align: center;
+  padding-top: 0.3em;
+}
+.detail2{
+  display: inline-block;
+  background-color: #44C3DD;
+  width: 33%;
+  font-size: 3em;
+  height: 3.6em;
+  list-style: none;
+  color:white ;
+  text-align: center;
+  padding-top: 0.3em;
+}
+.detail3{
+  display: inline-block;
+  background-color:#9ACC55 ;
+  width: 33%;
+  font-size: 3em;
+  height: 3.6em;
+  list-style: none;
+  color:white ;
+  text-align: center;
+  padding-top: 0.3em;
+}
+.askertable{
+  background-color: #F4F4F4;
+}
+.askpaixu{
+  float: right;
+  margin-top: 1em;
+  margin-right: 1em;
+}

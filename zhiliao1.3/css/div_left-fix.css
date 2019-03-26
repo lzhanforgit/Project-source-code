@@ -1,0 +1,24 @@
+#div_left-fix{
+    position:fixed;
+    display: inline-block;
+    margin-top: 8em;
+    margin-left: 0em;
+    width: 20em;
+    height: 12em;
+    z-index: 1;
+}
+[id^=div_left0]{
+    width: 3em;
+    height: 3em;
+    background: #555555;
+    border-radius: 5px;
+    z-index: 2;
+    text-align: center;
+    line-height: 3em;
+}
+/*
+#div_left-fix span{
+    height: 3em;
+    height: 3em;
+    display: none;
+}*/

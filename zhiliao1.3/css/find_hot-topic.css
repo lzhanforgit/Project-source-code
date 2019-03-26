@@ -1,0 +1,55 @@
+body{
+    background:#F4F4F4;
+}
+#find_hot-topic{
+    background:#F4F4F4;
+}
+#nav_find{
+    border-bottom: solid 2px black;
+    color:black;
+    opacity: 0.5;
+    animation:2s;
+}
+[id^=find_hot-topic_left],[id^=find_hot-topic_right_]{
+    background:#FFFFFF;
+}
+[id^=find_hot-topic_left]{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+.font_body-main{
+    font-size: 1.2em;
+    color:#888888;
+}
+.font_tag{
+    font-size: 1em;
+    color:#888888;
+}
+.font_a{
+    color:#777777;
+    border-bottom: none;
+}
+.button-connect{
+    width: 6.5em;
+    height: 2.5em;
+}
+.find_hot-topic_tag{
+    padding-left: 1em;
+}
+/*.connection_one-connects_img{
+    height:15em;
+    width: 20em;
+}*/
+/*[id^=connection_]{
+    background:#FFFFFF;
+}*/
+.center{
+    text-align: center;
+}
+h5{
+    padding-left:1em;
+    color:#888888;
+    font-size: 1.2em;
+    line-height:1.2em;
+    font-weight:800;
+}

@@ -1,0 +1,22 @@
+#nav{
+    background:#4ACAA8;
+    height: 70px;
+}
+#nav span{
+    line-height:2em;
+    font-size: 1.8em;
+}
+#nav a{
+    line-height: 2em;
+    font-size:1.2em;
+}
+#nav_search{
+    line-height: 2.8em;
+}
+#nav button{
+    top: 0.2em;
+    height: 2.2em;
+    width: 4em;
+    background: #555555;
+    border: none;
+}

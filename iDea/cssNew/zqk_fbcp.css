@@ -1,0 +1,518 @@
+
+.fbcp_container {
+    margin-top: 15px;
+    width: 100%;
+    /*height: 2500px;*/
+    display: block;
+    /*background-color: #ff0000;*/
+    box-sizing: content-box;
+
+}
+
+.fbcp_container_con {
+    width: 70%;
+    min-width: 600px;
+    margin: auto;
+    /*height:100%;*/
+    /*background-color:blue;*/
+    box-sizing: content-box;
+    border: solid 1px #e3e3e3;
+    box-shadow: 2px 0 1px #e3e3e3;
+}
+
+.cpmc_txt {
+    padding-left: 5px;
+    margin-left: 5%;
+    margin-top: 20px;
+    font-size: 1em;
+    height: 3em;
+    width: 80%;
+    border-radius: 5px;
+    border: solid 1px #e7e7e7;
+}
+
+.cpmc_xlk {
+    border: solid 1px #e7e7e7;
+    margin-left: 10px;
+    font-size: 1em;
+    height: 2em;
+}
+
+.fbcp_hr {
+    width: 100%;
+    border: solid 1px #EEEEEE;
+}
+
+.fbcp_sczp {
+    margin: auto;
+    height: 400px;
+    width: 90%;
+    min-width: 500px;
+    background-color: #C7B8A3;
+    text-align: center;
+}
+
+.fbcp_sctp {
+    padding-top: 150px;
+    color: #ffffff;
+}
+
+/*上传图片板块中的加号标志*/
+.fbcp_sctp_jh {
+    font-size: 70px;
+}
+
+/*烹饪难度和烹饪时间选择的div*/
+.time_select {
+    margin: auto;
+    height: 55px;
+    width: 90%;
+    /*background-color: #ffff00;*/
+}
+
+/*烹饪难度和烹饪时间选择的下拉框*/
+.time_select_xlk {
+    margin-left: 5px;
+    height: 1.5em;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+/*故事选填的div*/
+.fbcp_story {
+    margin: auto;
+    height: 120px;
+    width: 90%;
+    /*background-color: #008000;*/
+}
+
+/*故事选填的输入框*/
+.story {
+    height: 120px;
+    width: 100%;
+    border: solid 1px #e7e7e7;
+}
+.fbcp_yl {
+    /*display: flex;*/
+    display: inline-block;
+    /*justify-content: space-between;*/
+    margin-left: 5%;
+    /*margin: auto;*/
+    min-height: 100px;
+    width: 90%;
+    /*background-color: #008000;*/
+    box-sizing: content-box;
+}
+
+/*用料添加模块*/
+
+.fbcp_yl_left {
+    /*min-width:320px;*/
+    box-sizing: content-box;
+    height: 100%;
+    width: 48%;
+    float: left;
+    background-color: #d2ceca;
+}
+
+.fbcp_yl_right {
+    /*min-width:320px;*/
+    /*margin-left:5%;*/
+    box-sizing: content-box;
+    /*min-width: 330px;*/
+    height: 100%;
+    width: 48%;
+    float: right;
+    background-color: #d2ceca;
+}
+
+/*每个用料板块上面放文字的div*/
+.fbcp_yl_left_top {
+    height: 40px;
+    width: 100%;
+    float: right;
+    padding-left: 5%;
+    /*background-color: #00A8FF;*/
+}
+
+/*“主料” 所在的span*/
+.liao {
+    /*background-color: #ffff00;*/
+    /*line-height: 40px;*/
+    margin-top: 15px;
+    width: 65%;
+    display: inline-block;
+}
+
+/*“用量” 所在的span*/
+.liang {
+    /*background-color: #005580;*/
+    /*line-height: 40px;*/
+    margin-top: 15px;
+    width: 30%;
+    float: right;
+}
+
+/*兼容上面的用料的div，不设置时显示有些错误*/
+.liao_qqq {
+    /*background-color: #008686;*/
+    width: 100%;
+    height: 40px;
+}
+
+/*放置用料和用量输入框的div*/
+.liang_div {
+    margin-top: 10px;
+    /*background-color: #008686;*/
+    /*margin-top: 5px;*/
+    width: 100%;
+    height: 30px;
+}
+
+/*放置用料输入框的span*/
+.liao_span {
+    /*background-color: #000000;*/
+    line-height: 40px;
+    height: 100%;
+    width: 60%;
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.liang_span {
+    /*background-color:#ff0000;*/
+    line-height: 40px;
+    height: 100%;
+    width: 23%;
+    display: inline-block;
+}
+
+/*适应屏幕分辨率1024*768的情况*/
+@media screen and (max-width:1100px){
+    .liaotxt {
+        font-size:5px;
+    }
+    .liangtxt {font-size: 5px}
+    /*批量上传后面的那个div*/
+
+    .tjbzt {width: 21%}
+    .plsc_txt {
+        width:73%;
+    }
+    .plsc_textarea {
+        width:93%;
+    }
+    .plsc_xh {
+        width:4%;
+        margin-left:2%;
+    }
+
+
+
+}
+@media screen and (min-width:1100px){
+    .liaotxt {
+        font-size: 1em;
+    }
+    .liangtxt {font-size: 1em;}
+    .plsc_txt {min-width:470px;}
+    .plsc_xh {width: 30px;margin-left:20px;}
+    .plsc_textarea {height: 90px;min-width: 450px;}
+    .tjbzt {width: 140px;}
+}
+
+
+/*主料的输入框*/
+.liaotxt {
+    /*font-size: 1em;*/
+    /*height:2.5em;*/
+    border: none;
+    width: 100%;
+    line-height: 2em;
+    padding-left: 5px;
+    border-radius: 2px;
+}
+
+/*用量的输入框*/
+.liangtxt {
+    width: 95%;
+    /*font-size: 1em;*/
+    /*height:2.5em;*/
+    border: solid 1px #e7e7e7;
+    line-height: 2em;
+    padding-left: 5px;
+    /*float: right;*/
+    border-radius: 2px;
+}
+
+/*用量的输入框后的x号*/
+.liao_del {
+    margin: 0;
+    display: inline-block;
+    line-height: 40px;
+    width: 5%;
+    /*background-color: #ffff00;*/
+    /*text-align:center;*/
+}
+
+/*定义X符号的大小和颜色*/
+.fa_del {
+    color: #999999;
+}
+
+/*增加一栏*/
+.liao_add {
+    display: inline-block;
+    line-height: 40px;
+    float: right;
+    margin-right: 30px;
+    color: #12937C;
+}
+
+/*步骤上传的DIV*/
+.bzsc {
+    margin: auto;
+    margin-top: 40px;
+    /*min-height:500px;*/
+    /*min-width: 600px;*/
+    width: 90%;
+    background-color: #ffffff;
+    box-sizing: content-box;
+}
+
+/*步骤所在的h3*/
+.bz_font {
+    height: 50px;
+    margin-top: 15px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+/*批量上传*/
+.plsc {
+    line-height: 30px;
+    margin-top: 10px;
+    height: 30px;
+    width: 60px;
+    display: inline-block;
+    background-color: #C5B4A0;
+    font-size: 12px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.plsc:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.plsc_font {
+    font-size: 10px;
+}
+
+/*添加步骤图所在的整个ul*/
+.tjbzt_ul {
+    min-height: 300px;
+    /*background-color: yellow;*/
+    box-sizing: content-box;
+    overflow: hidden;
+    min-width: 600px;
+}
+
+/*添加步骤图所在的每个div*/
+.tjbzt_ul_li {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    /*background-color: #ff0000;*/
+}
+
+/*添加步骤图div*/
+.tjbzt {
+    display: inline-block;
+    height: 90px;
+    /*width: 140px;*/
+    /*width:21%;*/
+    background-color: #C6B7A4;
+    text-align: center;
+    float: left
+}
+
+/*添加步骤图div里面的+号*/
+.tjbzt_add {
+    display: inline-block;
+    font-size: 25px;
+    color: #ffffff;
+    line-height:80px;
+}
+
+.tjbzt_span {
+    display: block;
+    margin-top:-20px;
+    font-size: 5px;
+    color: #ffffff;
+}
+
+.plsc_xh {
+    display: inline-block;
+    background-color: #6FBFB1;
+    height: 90px;
+    /*width: 30px;*/
+    /*width:4%;*/
+    /*margin-left:20px;*/
+    /*margin-left:2%;*/
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.plsc_txt {
+    height: 90px;
+    background-color: #ffffff;
+    display: inline-block;
+    /*min-width: 500px;*/
+    /*width:73%;*/
+}
+
+.plsc_textarea {
+    height: 90px;
+    /*min-width: 470px;*/
+    /*width:93%;*/
+}
+
+.sxgj {
+    height:90px;
+    width:20px;
+    /*background-color: #ffff00;*/
+    display: inline-block;
+    margin-left: -3px
+}
+
+.sxgj_a {
+    display: block;
+    height: 15px;
+    width: 15px;
+    float: left;
+    background-color: #e8e4df;
+    margin-top: 2px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 5px;
+    line-height: 15px
+}
+
+.xts {
+    width: 90%;
+    display: block;
+    height: 50px;
+    /*background-color: red;*/
+    margin: auto;
+    line-height: 50px
+}
+
+.xts_div {
+    width: 90%;
+    display: block;
+    height: 120px;
+    /*background-color: #008000;*/
+    margin: auto;
+    text-align: center
+}
+
+.xts_textarea {
+    width: 100%;
+    height: 90px;
+}
+
+.tjbq_span {
+    font-size: 10px;
+    color: #c4c4c4;
+}
+
+.tjbq_txt {
+    width: 90%;
+    display: block;
+    height: 60px;
+    /*background-color: #008000;*/
+    margin: auto;
+    line-height: 50px
+}
+
+.tjbq_txt_sapn {
+    width: 100%;
+    height: 40px;
+    border: solid 1px;
+    display: inline-block;
+    /*background-color: #00A8FF;*/
+    border-radius: 5px;
+    padding-top:8px;
+}
+
+.tjbq_input_txt {
+    height: 25px;
+    width: 200px;
+    font-size: 10px;
+    line-height: 25px;
+    padding-left: 5px;
+    float: left;
+    border: none;
+    /*display: none;*/
+}
+
+.fxsz {
+    width: 100%;
+    height: 50px;
+    /*background-color: #ffff00;*/
+}
+
+.fxsz_tb {
+    height: 20px;
+    width: 70%;
+    background-color: #ffffff;
+    display: inline-block;
+    margin-left: 15%
+}
+
+.fxsz_tb_tb {
+    width: 18px;
+    height: 18px;
+    border: solid 1px #7b7b7b;
+    display: inline-block;
+    line-height: 18px;
+    text-align: center
+}
+
+.fxsz_tb_tb_fx {
+    float: right;
+    color: #12937C;
+    font-size: 13px
+}
+
+.fb_div {
+    width: 100%;
+    height: 100px;
+    /*background-color: greenyellow;*/
+}
+
+.fb_ccg {
+    height: 48px;
+    width: 70%;
+    /*background-color: #ff0000;*/
+    margin-left: 15%;
+    text-align: center
+}
+
+.fb_btn, .ccg_btn {
+    width: 140px;
+    height: 48px;
+    color: #ffffff;
+    display: inline-block;
+    background-color: #6FBFB1;
+    border: none;
+    outline: none
+}
+
+.fb_btn:hover, .ccg_btn:hover {
+    background-color: #8CCCC1
+}

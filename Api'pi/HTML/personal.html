@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/personal.css"/>
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/注册.css"/>
+
+    <!--<link rel="stylesheet" href="../css/about.css"/>-->
+    <link rel="stylesheet" href="../css/index.css"/>
+    <script src="../js/jquery-2.2.2.js"> </script>
+
+</head>
+<body>
+<div class="container-fluid font">
+    <nav id="nav-header" class="row navbar-fixed-top">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logosmaller_white.png" alt="app" class="index_img"/>
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="col-md-8">
+            <div id="nav-navbar" class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html"><span>首页 <span class="border"></span></span></a></li>
+                    <li class="active"><a href="personal.html"><span>我的爱皮皮 <span class="border"></span></span></a></li>
+                    <li><a href="xiadan.html"><span>下单<span class="border"></span></span></a></li>
+                    <li><a href="app-zixun.html"><span>咨询<span class="border"></span></span></a></li>
+                    <li><a href="app-anli.html"><span>案例<span class="border"></span></span></a></li>
+                    <li><a href="about.html"><span>关于我们<span class="border"></span></span></a></li>
+                    <li>
+                        <button style="position: absolute;opacity: 0;z-index: 9999"
+                                type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target=".bs-example-modal-lg">Large modal
+                        </button>
+                        <a href="#" style="padding-right: 0px"><span>登录<span class="border"></span></span></a></li>
+                    <li><a href="#"><span>注册<span class="border"></span></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</div>
+<div class="row content_notice">
+    <div class="col-md-1"> </div>
+    <div class="col-md-10 notice">
+    <p class="glyphicon glyphicon-bullhorn">&nbsp;&nbsp;</p>
+        <span style="color: red">系统公告：</span>
+        &nbsp;&nbsp;
+        <span>如果您有一个完整的项目需要委托爱皮皮开发,您可以注册为雇主直接发布项目。
+     </span>
+    </div>
+    <div class="col-md-1"> </div>
+</div>
+<div class="row">
+    <div class="col-md-1"> </div>
+    <div class="col-md-10 article">
+        <!--模块一-->
+        <div id="headshot">
+            <img src="../img/10.jpg" alt="..." class="img-circle">
+            <h5>catherine</h5>
+        </div>
+        <!--模块二-->
+        <div id="information">
+
+            <ul style="background-color: #ffffff">
+                <li id="li_user"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户中心</li>
+                <li><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;个人信息</li>
+                <li><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;项目管理</li>
+                <li><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;我的消息</li>
+                <li id="li_protect"><span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;安全服务</li>
+                <li><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;我的账户</li>
+                <li><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;我的订单</li>
+                <li><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;退出</li>
+            </ul>
+        </div>
+        <!--模块三-->
+        <!--用户中心-->
+        <div id="div_user">
+            <table border="0">
+                <tr>
+                    <td>
+                        <h4 style="color: #fbb040">账户余额</h4>
+                        <h4 style="color: red">0.00<span style="color:#000000">元</span> </h4>
+                    </td>
+                    <td><h4 style="color: #fbb040">待受理项目</h4>
+                        <h4 style="color: red">0<span style="color:#000000">个</span> </h4>
+                    </td>
+                    <td><h4 style="color: #fbb040">进行中项目</h4>
+                        <h4 style="color: red">0<span style="color:#000000">个</span> </h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--模块四-->
+            <div id="div_user_message_img">
+                <img src="../img/6.png" alt=""/>
+            </div>
+        <div id="div_user_message">
+        <p>暂无数据...</p>
+            <a href="xiadan.html">
+                <input type="button" value="发布项目" id="btn_user_message"/>
+            </a>
+        </div>
+        <!--安全中心-->
+        <div id="div_protect">
+            <table border="0">
+                <tr>
+                    <td colspan="2">
+                        <div id="div_td_change">修改密码</div>
+                        <div id="div_td_book">交易密码</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="div_protect_wall">
+                            <span>当前登录账号 :</span> <span style="color: #007aff">asdfg</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td name="txt_now">当前密码</td>
+                    <td><input type="text" name="text_now"/></td>
+                </tr>
+                <tr>
+                    <td name="txt_new">新密码</td>
+                    <td><input type="text" name="text_new"/></td>
+                </tr>
+                <tr>
+                    <td name="txt_again">确认密码</td>
+                    <td><input type="text" name="text_again"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" id="div_protect_btn" value="修改"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+
+<div id="modal-dialog" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <!--改了宽度值-->
+    <div class="modal-dialog modal-lg modal-lg_c">
+        <div class="modal-content modal-content_c">
+            <div id="title">
+                <div id="div_login">登录</div>
+                <div id="div_sign">注册</div>
+            </div>
+            <!--模块一-->
+            <div id="sign">
+                <table>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><input type="text" id="text_tel" placeholder="请输入手机号"/></td>
+                                    <td>
+                                        <form action="http://www.helloweba.com/" method="post" name="myform">
+                                            <input type="button" class="button" value="获取手机验证码" id="phone_btn"
+                                                   name="phone" onclick="showtime(60)">
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="text_code" placeholder="请输入验证码"/>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="text_pass" placeholder="请输入密码"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="text_again" placeholder="确认密码"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" id="btn_sign" value="立即注册"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--模块二   -->
+            <div id="login">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" id="text_ltel" placeholder="请输入手机号或用户名"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="text_lpass" placeholder="请输入密码"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" id="btn_login" value="立即登录"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('#div_user_message_img').hide();
+        $('#div_protect').hide();
+        $('#li_user').click(function(){
+            $('#div_protect').hide();
+            $('#div_user').show();
+            });
+
+        $('#li_protect').click(function(){
+            $('#div_protect').show();
+            $('#div_user').hide();
+        });
+
+    });
+</script>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../js/jquery-2.2.2.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../js/bootstrap.js"></script>
+<script src="../js/index.js"></script>
+</body>
+</html>

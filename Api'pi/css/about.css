@@ -1,0 +1,190 @@
+.about_bgimg {
+    background-image: url("../img/aboutbg.png");
+    background-repeat: no-repeat;
+}
+
+.about_bgcol {
+    height: 50em;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.about_bgcol h1 {
+    color: #fbb040;
+    font-size: 5em;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.about_bgcol h2, .about_bgcol h4 {
+    font-family: "Roboto", arial, sans-serif;
+    color: #ffffff;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.icon-chevron-thin-down {
+    position: absolute;
+    left: 50%;
+    font-size: 3em;
+    color: #fff;
+    top: 83%;
+    animation-name: chevron-thin-down;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /*Safari and Chrome: */
+    -webkit-animation-name: chevron-thin-down;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.down_2 {
+    margin-top: 0.5em;
+    opacity: 0.7;
+}
+
+.down_3 {
+    margin-top: 1em;
+    opacity: 0.4;
+}
+
+@keyframes chevron-thin-down {
+    0% {
+        top: 83%;
+    }
+    100% {
+        top: 86%;
+    }
+}
+
+@-webkit-keyframes chevron-thin-down /*Safari and Chrome */
+{
+    0% {
+        top: 83%;
+    }
+    100% {
+        top: 86%;
+    }
+}
+
+div[id^='about'] > h1{
+    padding-top: 3em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+div[id^='about']:nth-child(2n+1){
+    background-color: #eaeaea;
+}
+#about_contact{
+    background-color: #464646;
+}
+.about_us,.about_server{
+    line-height: 2em;
+    text-align: center;
+    padding-bottom: 10em;
+}
+
+.about_us span,.about_server span{
+    text-align: center;
+    font-size: 5em;
+    color: #ffffff;
+}
+.circle{
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 12em;
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+    background-color: #b5b5b5;
+}
+.circle.active,.btn-default.active{
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+    background-color: #fbb040;
+}
+h4 + p{
+    margin-top: 2em;
+}
+p + button{
+    margin-top: 1.5em;
+}
+.about_ceo h2{
+    margin: 1.5em;
+}
+.about_ceo p{
+    line-height: 2em;
+    margin: 2em;
+    font-size: 1.1em;
+}
+.circle.another{
+    width: 7em;
+    height: 7em;
+    line-height: 7em;
+    border: solid 2px #fbb040;
+    background-color: transparent;
+}
+.circle.another span{
+    color: #fbb040;
+    font-size: 3em;
+}
+.server.active{
+    background-color: #fbb040;
+    color: #ffffff;
+    padding-bottom: 2em;
+}
+.server.active span{
+    color: #ffffff;
+}
+.server.active .circle.another{
+    border: solid 2px #fff;
+}
+
+#about_contact>div {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+#about_contact{
+    color: #ffffff;
+}
+.about_contact_info >div{
+    margin-bottom: 3em;
+}
+.about_contact_info ul li{
+    list-style-type: none;
+    line-height: 2em;
+}
+.about_contact_mesg tr:nth-child(2n+1){
+    display: block;
+    margin: 1em;
+    background-color: #000;
+}
+.about_contact_mesg tr:nth-child(2n){
+    display: block;
+    margin: 1em;
+    background-color: #fbb040;
+}
+.about_contact_mesg tr:last-child{background-color: transparent}
+.about_contact_mesg td{
+    font-size: 1.2em;
+    padding: 1em 1.5em;
+}
+[type='text'],textarea{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.about_contact_mesg button{
+    width: 8em;
+    font-size: 1.2em;
+    margin-left: -1em;
+    line-height: 2em;
+    background-color: #fbb040;
+    border: none;
+}

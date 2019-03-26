@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/find.css"/>
+    <link rel="stylesheet" href="../css/nav.css"/>
+    <link rel="stylesheet" href="../css/side_nav.css"/>
+    <link rel="stylesheet" href="../css/bottom.css"/>
+    <link rel="stylesheet" href="../css/icoroll.css" />
+    <script src="../js/jquery.js"></script>
+    <script src="../js/icoroll.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--右侧大固定页面导航条-->
+    <div id="side_nav">
+        <section id="header" class="skel-layers-fixed" style="top: 90px; backface-visibility: hidden; transition: -webkit-transform 0.5s ease, opacity 0.5s ease;">
+            <header>
+                <span class="image avatar"><img src="../img/side_nav.png" alt=""></span>
+                <h3 id="logo"><a href="#">索大（用户名)</a></h3>
+                <p class="font_side-nav">没有什么是不可能的（座右铭）</p>
+            </header>
+            <p></p>
+            <div id="side-nav_main">
+                <script>
+                    $(function(){
+                        icoroll(
+                                {
+                                    links:$('.scroll'),
+                                    tip_distance:30,
+                                    back_enabled:true,
+                                    time:1500
+                                }, {
+                                    position:'right',
+                                    elements:[
+                                        { 'class':'icon-home-2','href':'#find_hot-topic','content':'热门话题'},
+                                        { 'class':'icon-chrome','href':'#find_real-time-activity','content':'发布活动'},
+                                        { 'class':'icon-mobile','href':'#find_team','content':'我的小组'},
+                                        { 'class':'icon-pencil','href':'#find_job','content':'发布职业'},
+                                    ]
+                                });
+                    });
+                </script>
+            </div>
+        </section>
+    </div>
+    <!--头部top  nav-->
+    <div class="container-fluid " id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 top_height">
+                    <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                    <span>知了</span>
+                </div>
+                <div class="col-md-10 nav_height">
+                    <nav class="navbar navbar-right">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+                                    <li><a href="findperson.html">人脉</a></li>
+                                    <li><a href="find.html"  id="nav_find">发现</a></li>
+                                    <li><a href="hero.html">英雄帖</a></li>
+                                    <li><a href="one.html">个人博客</a></li>
+                                </ul>
+                                <form class="navbar-form navbar-right" form-inline role="search" id="nav_search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                    </div>
+                                    <button type="submit" class="glyphicon glyphicon-search"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主体main-->
+    <div class="container-fluid">
+        <div class="container" id="find">
+            <!--find  照片轮播-->
+            <article class="row">
+                <div class="col-lg-12">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active center_content">
+                                <img src="../img/find_bigScreen1.jpg" class="center_content" alt="...">
+                                <div class="carousel-caption">1.jpg</div>
+                            </div>
+                            <div class="item center_content">
+                                <img src="../img/find_bigScreen2.jpg" class="center_content" alt="...">
+                                <div class="carousel-caption">2.jpg</div>
+                            </div>
+                            <div class="item center_content">
+                                <img src="../img/find_bigScreen3.jpg" class="center_content" alt="...">
+                                <div class="carousel-caption">3.jpg</div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <p></p>
+            <!--find topic 简单分组提示-->
+            <div class="container-fluid" id="find_topic">
+                <article class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 center">
+                        <img src="../img/find_calendar.png" alt=""/>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 center">
+                        <img src="../img/find_calendar.png" alt=""/>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 center">
+                        <img src="../img/find_calendar.png" alt=""/>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 center">
+                        <span>活动</span>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 center">
+                        <span>实时资讯</span>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 center">
+                        <span>行业精英</span>
+                    </div>
+                </article>
+            </div>
+            <p></p>
+            <!--find  热门话题-->
+            <div class="container-fluid section" id="find_hot-topic">
+                <article class="row">
+                    <div class="col-md-2">
+                        <h3>
+                            <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                            <a href="find_hot-topic_module.html">热门话题</a>
+                        </h3>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-lg-4">
+                        <img src="../img/sl1.jpg" alt="" class="find_hot-topic_img"/>
+                    </div>
+                    <div class="col-lg-7">
+                    <span>
+                        <h4><a href="find_hot-topic.html" class="font_a">#工作不止眼前的苟且，还有诗和远方</a></h4>
+                        <p class="font_body-main">妈妈领着年幼的我和妹妹在颐和园长廊仰着头讲每幅画的意义，
+                            在每一座有对联的古老房子前面读那些抑扬顿挫的文字，在门厅回廊间让我们猜那些下
+                            马石和拴马桩的作用，从那些静止的物件开始讲述无比生动的历史。那些颓败但深蕴的
+                            历史告诉了我和妹妹世界之辽阔，人生之倏忽，而美之永恒。从小妈妈告诉我们的许多
+                            话里，迄今最真切的一句就是：这世界不止眼前的苟且，还有诗与远方——其实诗就是
+                            你心灵的最远处。</p>
+                    </span>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#移动互联网：iPhoneSE还是iPhone7？VR爆发遭质疑</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#2016年过去四分之一了</a></h4>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#谷歌钱包停止实体卡支付：将转向Android Pay</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#你人生职场的第一位领导</a></h4>
+                    </div>
+                </article>
+            </div><br/>
+            <!--find 发布活动-->
+            <div class="container-fluid section" id="find_real-time-activity">
+                <article class="row">
+                    <div class="col-md-2">
+                        <h3>
+                            <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                            <a href="find_module-activity.html">活动</a>
+                        </h3>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-lg-4">
+                        <img src="../img/sl1.jpg" alt="" class="find_hot-topic_img"/>
+                    </div>
+                    <div class="col-lg-7">
+                    <span>
+                        <h4><a href="#" class="font_a">#工作不止眼前的苟且，还有诗和远方</a></h4>
+                        <p class="font_body-main">妈妈领着年幼的我和妹妹在颐和园长廊仰着头讲每幅画的意义，
+                            在每一座有对联的古老房子前面读那些抑扬顿挫的文字，在门厅回廊间让我们猜那些下
+                            马石和拴马桩的作用，从那些静止的物件开始讲述无比生动的历史。那些颓败但深蕴的
+                            历史告诉了我和妹妹世界之辽阔，人生之倏忽，而美之永恒。从小妈妈告诉我们的许多
+                            话里，迄今最真切的一句就是：这世界不止眼前的苟且，还有诗与远方——其实诗就是
+                            你心灵的最远处。</p>
+                    </span>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#移动互联网：iPhoneSE还是iPhone7？VR爆发遭质疑</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#2016年过去四分之一了</a></h4>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#谷歌钱包停止实体卡支付：将转向Android Pay</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#你人生职场的第一位领导</a></h4>
+                    </div>
+                </article>
+            </div><br/>
+            <!--find 小组-->
+            <div class="container-fluid section" id="find_team">
+                <article class="row">
+                    <div class="col-md-2">
+                        <h3>
+                            <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                            <a href="find_group-topic.html">小组</a>
+                        </h3>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-lg-4">
+                        <img src="../img/sl1.jpg" alt="" class="find_hot-topic_img"/>
+                    </div>
+                    <div class="col-lg-7">
+                    <span>
+                        <h4><a href="#" class="font_a">#工作不止眼前的苟且，还有诗和远方</a></h4>
+                        <p class="font_body-main">妈妈领着年幼的我和妹妹在颐和园长廊仰着头讲每幅画的意义，
+                            在每一座有对联的古老房子前面读那些抑扬顿挫的文字，在门厅回廊间让我们猜那些下
+                            马石和拴马桩的作用，从那些静止的物件开始讲述无比生动的历史。那些颓败但深蕴的
+                            历史告诉了我和妹妹世界之辽阔，人生之倏忽，而美之永恒。从小妈妈告诉我们的许多
+                            话里，迄今最真切的一句就是：这世界不止眼前的苟且，还有诗与远方——其实诗就是
+                            你心灵的最远处。</p>
+                    </span>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#移动互联网：iPhoneSE还是iPhone7？VR爆发遭质疑</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#2016年过去四分之一了</a></h4>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#谷歌钱包停止实体卡支付：将转向Android Pay</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#你人生职场的第一位领导</a></h4>
+                    </div>
+                </article>
+            </div>
+            <p></p>
+            <!--find 实时资讯-->
+            <div class="container-fluid section" id="find_real-time-information">
+                <article class="row">
+                    <div class="col-md-2">
+                        <h3>
+                            <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                            实时资讯
+                        </h3>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-lg-4">
+                        <img src="../img/sl1.jpg" alt="" class="find_hot-topic_img"/>
+                    </div>
+                    <div class="col-lg-7">
+                    <span>
+                        <h4><a href="#" class="font_a">#工作不止眼前的苟且，还有诗和远方</a></h4>
+                        <p class="font_body-main">妈妈领着年幼的我和妹妹在颐和园长廊仰着头讲每幅画的意义，
+                            在每一座有对联的古老房子前面读那些抑扬顿挫的文字，在门厅回廊间让我们猜那些下
+                            马石和拴马桩的作用，从那些静止的物件开始讲述无比生动的历史。那些颓败但深蕴的
+                            历史告诉了我和妹妹世界之辽阔，人生之倏忽，而美之永恒。从小妈妈告诉我们的许多
+                            话里，迄今最真切的一句就是：这世界不止眼前的苟且，还有诗与远方——其实诗就是
+                            你心灵的最远处。</p>
+                    </span>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#移动互联网：iPhoneSE还是iPhone7？VR爆发遭质疑</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#2016年过去四分之一了</a></h4>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#谷歌钱包停止实体卡支付：将转向Android Pay</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#你人生职场的第一位领导</a></h4>
+                    </div>
+                </article>
+            </div><br/>
+            <!--find 发布职业-->
+            <div class="container-fluid section" id="find_job">
+                <article class="row">
+                    <div class="col-md-2">
+                        <h3>
+                            <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                            发布职业
+                        </h3>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-lg-4">
+                        <img src="../img/sl1.jpg" alt="" class="find_hot-topic_img"/>
+                    </div>
+                    <div class="col-lg-7">
+                    <span>
+                        <h4><a href="#" class="font_a">#工作不止眼前的苟且，还有诗和远方</a></h4>
+                        <p class="font_body-main">妈妈领着年幼的我和妹妹在颐和园长廊仰着头讲每幅画的意义，
+                            在每一座有对联的古老房子前面读那些抑扬顿挫的文字，在门厅回廊间让我们猜那些下
+                            马石和拴马桩的作用，从那些静止的物件开始讲述无比生动的历史。那些颓败但深蕴的
+                            历史告诉了我和妹妹世界之辽阔，人生之倏忽，而美之永恒。从小妈妈告诉我们的许多
+                            话里，迄今最真切的一句就是：这世界不止眼前的苟且，还有诗与远方——其实诗就是
+                            你心灵的最远处。</p>
+                    </span>
+                    </div>
+                </article>
+                <p></p>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#移动互联网：iPhoneSE还是iPhone7？VR爆发遭质疑</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#2016年过去四分之一了</a></h4>
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#谷歌钱包停止实体卡支付：将转向Android Pay</a></h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><a href="#" class="font_a">#你人生职场的第一位领导</a></h4>
+                    </div>
+                </article>
+            </div>
+            <p></p>
+        </div>
+    </div>
+    <!--底部bottom-->
+    <div class="container-fluid" id="bottom_all">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="#" class="font_bottom">关于我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">联系我们</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">企业入驻</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">友情链接</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了公益</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">知了社区</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom"> 京公网安备 11000002000088号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">京ICP证070359号</a>
+                    <span class="font_bottom">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="#" class="font_bottom">网络文化经营许可证京网文[2014]2148-348号</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <a href="#" class="font_bottom">违法和不良信息举报电话：4006561155  Copyright © 2004-2016  知了ZL.com 版权所有</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/classie.js"></script>
+<script src="../js/clipboard.min.js"></script>
+<script>
+    (function() {
+        [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+            var menuItems = menu.querySelectorAll('.menu__link'),
+                    setCurrent = function(ev) {
+                        ev.preventDefault();
+                        var item = ev.target.parentNode; // li
+                        if( classie.has(item, 'menu__item--current') ) {
+                            return false;
+                        }
+                        classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                        classie.add(item, 'menu__item--current');
+                    };
+            [].slice.call(menuItems).forEach(function(el) {
+                el.addEventListener('click', setCurrent);
+            });
+        });
+    })(window);
+</script>
+</body>
+</html>
